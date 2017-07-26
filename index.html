@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>作业</title>
+
+	</head>
+		<style>
+			input{
+				line-height: 60px;
+				width: 100%;				
+			}
+			ul{
+				margin: 0 auto;
+				overflow: hidden;
+				width: 100%;
+				padding: 0;
+				
+			}
+			ul li{
+				box-sizing: border-box;
+				border: 1px white solid;
+				line-height:80px;
+				width: 33.3%;
+				float: left;
+				background: skyblue;
+				display: block;
+				text-align: center;
+				
+			}
+			.box{
+				width: 100%;
+				overflow: hidden;
+			}
+			.box span{
+				box-sizing: border-box;
+				border: 1px white solid;
+				text-align: center;
+				line-height: 80px;
+				width: 25%;
+				float: left;
+				background: skyblue;
+				display: block;
+			}
+		</style>
+	<body>
+		<input type="" name="" id="" value="" />
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<div class="box">
+				<span>+</span>
+				<span>-</span>
+				<span>*</span>
+				<span>%</span>				
+			</div>			
+		</ul>
+		<script>
+			
+//			//最大值   第一题
+//	var a  = [1,12,8,5,9,7,-3,-5,8,3];
+////
+////		var	x  =a[0];
+////
+////		for(var i=1;i<a.length;i++){ 
+////
+//// 		if(x<a[i])x=a[i];
+////				
+////		}
+////		console.log(x);
+//			
+//		console.log(Math.max.apply(null, a));//最大值	
+//		console.log(Math.min.apply(null, a));//最小值	
+//				第二题
+//		var x=0
+//		for(var i=0;i<100;i++){
+//			x=i+x			
+//		}	
+//		console.log(x);
+				//第三题
+//			max=80;
+//			switch(true){
+//				case max>0 && max>60:					
+//					console.log("好")
+//					break;
+//				case max>0 && max<60:					
+//					console.log("差")
+//					break;					
+//				default :console.log("");				
+//			}
+		var lis=document.querySelector("ul li");
+		lis.addEventListener("click",function(){
+			e.target.style.background="bule";
+		})
+		
+		</script>
+	</body>
+</html>
