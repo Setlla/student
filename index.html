@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script>
+			
+			var a = [3,5,9,1,4,0,-1,19,3];
+			var max = a[0];
+			for(var i=0;i<10;i++){
+				if(a[i] > max) {
+					max = a[i];
+				}
+			}
+			console.log(max);
+			var min = a[0];
+			for(var n=0;n<10;n++){
+				if(a[n] < min){
+					min = a[n];
+				}
+			}
+			 console.log(min);
+			 
+			var result=78;
+			switch(true){
+				case result <60:
+					alert("不及格");
+					break;
+				
+				case result >60 && result <=70:
+					alert("及格");
+					break;
+				
+				case result >70 && result <=80:
+					alert("良好");
+					break;
+				
+				case result >80 && result <=90:
+					alert("优");
+					break;
+				default:
+					console.log('result is bogus');
+			}
+			
+			
+			var s=0,m=100;
+			for(var x=1;x<=m;x++){
+						s=x+s;
+			}
+					console.log(s);
+		</script>
+	</head>
+	<body>
+			<div class="one">
+				a[10]=[3,5,9,1,4,0,-1,19,3]中的max.min
+			</div>
+			<div class="two">成绩 switch</div>
+			
+	</body>
+</html>
