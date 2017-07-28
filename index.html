@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			a{
+				width: 50px; 
+				height: 50px;
+				background-color: red; 
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<a>change</a>
+		
+		
+		
+		<script>
+			document.querySelector("a").addEventListener('mousemove',function(lp){
+					lp.target.innerText="改变";	
+					console.log(lp);
+					lp.target.style.height="100px";
+					lp.target.style.width="100px";
+				})
+			document.querySelector("a").addEventListener('mouseout',function(lp){
+					lp.target.innerText="还原";	
+					console.log(lp);
+					lp.target.style.height="50px";
+					lp.target.style.width="50px";
+				})
+
+		</script>
+	</body>
+</html>
