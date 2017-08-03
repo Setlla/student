@@ -3,30 +3,26 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>作业</title>
+	<script type="text/javascript" src="js/jquery-3.2.1.js">
+		
+	</script>
 
 	</head>
 		<style>
 			input{
-				line-height: 60px;
-				width: 100%;				
+				line-height: 50px;
+				width: 500px;	
+				margin-left: 200px;			
 			}
-			ul{
-				margin: 0 auto;
-				overflow: hidden;
-				width: 100%;
-				padding: 0;
-				
-			}
-			ul li{
+			table{
 				box-sizing: border-box;
-				border: 1px white solid;
-				line-height:80px;
-				width: 33.3%;
-				float: left;
-				background: skyblue;
-				display: block;
+				width: 507px;
+				margin-left: 200px;
+				line-height: 50px;
+			}
+			table tr td{
 				text-align: center;
-				
+				width: 100px;
 			}
 			.box{
 				width: 100%;
@@ -44,25 +40,133 @@
 			}
 		</style>
 	<body>
-		<input type="" name="" id="" value="" />
-		<ul>
-			<li>1</li>
-			<li>2</li>
-			<li>3</li>
-			<li>4</li>
-			<li>5</li>
-			<li>6</li>
-			<li>7</li>
-			<li>8</li>
-			<li>9</li>
-			<div class="box">
-				<span>+</span>
-				<span>-</span>
-				<span>*</span>
-				<span>%</span>				
-			</div>			
-		</ul>
-		<script>
+			<input type="" name="" id="" value="" />
+			<table border="" cellspacing="" cellpadding="">
+				<tr>
+					<td>7</td>
+					<td>8</td>
+					<td>9</td>
+					<td>x</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>+</td>
+				</tr>
+				<tr>
+					<td>%</td>
+					<td>0</td>
+					<td>.</td>
+					<td>=</td>
+				</tr>				
+			</table>
+			<script>
+				
+				
+				
+				
+				
+				
+				
+				
+//					$(document).on("click","tr td",function(){
+//					
+//					$(this).css("background","red").siblings().css("background","#fff").parents().siblings().children().css("background","#fff");
+//					})
+																				
+					
+				/*var tds=document.querySelectorAll("td");
+					for(var i=0;i<tds.length;i++) {
+					tds[i].addEventListener("click",function(e){
+						if (e.target.style.background=="red") {
+							e.target.style.background="#fff";
+							
+						} else{
+							e.target.style.background="red";
+							
+						}
+					})
+				}*/
+					
+//				var a=document.querySelector("input");
+//				function reset(){					
+//					var tds=document.querySelectorAll("td");
+//					for(var i=0;i<tds.length;i++){
+//						tds[i].style.background="white";
+//					}				
+//				}									
+//				document.querySelector("table").addEventListener("click",function(e){
+//					reset();				
+//					e.target.style.background="red";				
+//					a.value+=e.target.innerHTML;	
+//					
+//				})
+//					function reset(){
+//						var tds=document.querySelectorAll("td");
+//						for (var i=0;i<tds.length;i++) {
+//							tds[i].style.background="white";							
+//						}
+//					}
+//				document.querySelector("table").addEventListener("click",function(e){
+//					reset();
+//					e.target.style.background="red";
+//					document.querySelector("input").value+=e.target.innerHTML;
+//				})
+					
+					
+				function test(){
+					var tds=document.querySelectorAll("td");
+					for (var i=0;i<tds.length;i++) {
+						tds[i].style.background="white";
+					}
+				}
+					
+				document.querySelector("table").addEventListener("click",function(e){
+					test();
+					e.target.style.background="red";
+					document.querySelector("input").value+=e.target.innerHTML;
+				})
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
 			
 //			//最大值   第一题
 //	var a  = [1,12,8,5,9,7,-3,-5,8,3];
@@ -78,7 +182,7 @@
 //			
 //		console.log(Math.max.apply(null, a));//最大值	
 //		console.log(Math.min.apply(null, a));//最小值	
-//				第二题
+				//第二题
 //		var x=0
 //		for(var i=0;i<100;i++){
 //			x=i+x			
@@ -95,11 +199,16 @@
 //					break;					
 //				default :console.log("");				
 //			}
-		var lis=document.querySelector("ul li");
-		lis.addEventListener("click",function(){
-			e.target.style.background="bule";
-		})
-		
+
+//			var num = [1,-3,10,2,-2,-8];
+//			num.sort(compire);
+//			function compire(a,b) {
+//				if(a>b) {
+//					return true;
+//				}
+//			}
+//			console.log(num.sort(compire));
+			
 		</script>
 	</body>
 </html>
