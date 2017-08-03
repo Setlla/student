@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			ul li{
+				list-style-type: none;
+				width: 100px;
+				height: 100px;
+				background-color: white;
+			}
+		</style>
+	</head>
+	<body>
+			<ul>
+			<li>白</li>
+			<li>白</li>
+			<li>白</li>						
+		</ul>
+		<script> 
+			var w=document.querySelectorAll("li");
+			for(i=0; i<w.length; i++){
+				w [i].addEventListener("click",function(e){
+					backgroundColor=e.target.style.backgroundColor;
+					if(e.target.style.backgroundColor=="white"){
+						e.target.style.backgroundColor="blue";
+					}
+					else{
+						e.target.style.backgroundColor="white";
+					}
+				})
+			}
+
+		</script>
+	</body>
+</html>
