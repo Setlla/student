@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>简单的计算机</title>
+	</head>
+	<body>
+		<style>
+			input{
+				line-height: 50px;
+				width: 500px;	
+				margin-left: 100px;			
+			}
+			table{
+				box-sizing: border-box;
+				width: 507px;
+				margin-left: 100px;
+				line-height: 50px;
+				outline: none;
+				cursor: pointer;
+			}
+			table tr td{
+				text-align: center;
+				width: 100px;
+			}
+			.box{
+				width: 100%;
+				overflow: hidden;
+			}
+			.box span{
+				box-sizing: border-box;
+				border: 1px white solid;
+				text-align: center;
+				line-height: 80px;
+				width: 25%;
+				float: left;
+				background: skyblue;
+				display: block;
+			}			
+		</style>	
+			<input type="" name="" id="" value="" />
+			<table border="" cellspacing="" cellpadding="">
+				<!--<tr>
+					<td class="clisck">AC</td>
+					<td></td>
+					<td>←</td>
+					<td>→</td>
+				</tr>-->
+				<tr>
+					<td>7</td>
+					<td>8</td>
+					<td>9</td>
+					<td>*</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>+</td>
+				</tr>
+				<tr>
+					<td>/</td>
+					<td>0</td>
+					<td>.</td>
+					<td class="dbq">=</td>
+				</tr>				
+			</table>
+			<script>
+				var input=document.querySelector("input");
+				function test(){
+					var tds=document.querySelectorAll("td");		
+					for (var i=0;i<tds.length;i++) {
+						tds[i].style.background="white";
+					}
+				}				
+				document.querySelector("table").addEventListener("click",function(e){
+					test();
+					e.target.style.background="red";
+//					if (e.target.innerHTML != "=") {
+						input.value+=e.target.innerHTML;
+//					}					
+				})				
+				var results="";
+				var calresults="";
+				var dbq=document.querySelector(".dbq");
+				dbq.addEventListener("click",function(e){
+					 results=input.value;
+				     calresults=eval(results);
+      				 results=calresults;
+     				 input.value=calresults;
+				 	 e.stopPropagation(); 			
+				})	
+					
+			</script>
+	</body>
+</html>
