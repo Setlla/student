@@ -82,17 +82,11 @@
 				document.querySelector("table").addEventListener("click",function(e){
 					test();
 					e.target.style.background="red";
-//					if (e.target.innerHTML != "=") {
-						input.value+=e.target.innerHTML;
-//					}					
+					input.value+=e.target.innerHTML;
 				})				
-				var results="";
-				var calresults="";
 				var dbq=document.querySelector(".dbq");
 				dbq.addEventListener("click",function(e){
-					 results=input.value;
-				     calresults=eval(results);
-      				 results=calresults;
+				     var calresults=eval(input.value);
      				 input.value=calresults;
 				 	 e.stopPropagation(); 			
 				})	
