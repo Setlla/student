@@ -9,6 +9,7 @@
 				width:20px;
 				height:20px;
 				text-align: center;
+				background-color: white;
 			}
 			
 		</style>
@@ -19,39 +20,110 @@
 				<td>7</td>
 				<td>8</td>
 				<td>9</td>
-				<td class="multipli">x</td>
+				<td class="sign">x</td>
 			</tr>
 			<tr>
 				<td>4</td>
 				<td>5</td>
 				<td>6</td>
-				<td class="subtra">-</td>
+				<td class="sign">-</td>
 			</tr>
 			<tr>
 				<td>1</td>
 				<td>2</td>
 				<td>3</td>
-				<td class="add">+</td>
+				<td class="sign">+</td>
 			</tr>
 			<tr>
 				<td>0</td>
 				<td>c</td>
-				<td class="division">/</td>
-				<td class="to">=</td>
+				<td class="sign">/</td>
+				<td class="equal">=</td>
 			</tr>
 		</table>
 		<div></div>
 		
 		<script>
-			var x = document.querySelectorAll("td");
+			
+			function setColor() {
+				var x = document.querySelectorAll("td");
 				for(var i = 0;i < x.length;i++){
-					
-					x[i].addEventListener("click",function(e){
-						
-					console.log(e.target.innerHTML);
-//					document.querySelector("div").innerHTML = e.target.innerHTML;
+					x[i].style.background = 'white';
 				}
-			)}
+			}
+			
+			document.querySelector("table").addEventListener("click",function(e) {
+				setColor();
+				e.target.style.backgroundColor = 'orange';
+				document.querySelector("div").innerHTML += e.target.innerHTML;
+			}) //事件委托
+			
+			document.querySelector(".equal").addEventListener("click",function(e) {
+				var s = document.querySelector("div").innerHTML;
+				var result = eval(s);
+				document.querySelector("div").innerHTML = result;
+				e.stopPropagation(); //阻止冒泡
+			})
+			
+//			var setColor = function() {
+//				var x = document.querySelectorAll("td");
+//				for(var i = 0;i < x.length;i++){
+//					x[i].style.background = 'white';
+//				}
+//			}
+//			
+//			var x = document.querySelectorAll("td");
+//				for(var i = 0;i < x.length;i++){
+//					
+//					x[i].addEventListener("click",function(e){
+////					console.log(e.target.innerHTML);
+//					document.querySelector("div").innerHTML += e.target.innerHTML;
+//				}
+//			)}
+//				
+//
+//				document.querySelectorAll("td");addEventListener("click",function(e){
+//					console.log(e.target.innerHTML);
+//					setColor();
+//					e.target.style.background = "orange";
+//				})
+//				
+				
+				
+//				eval("5+6")  // eval 代码注入   
+				
+//				document.querySelector(".equal").addEventListener("click",function(){
+////					console.log(e.innerHTML);
+//				
+//				
+////				function bt(){
+//				var m,n,s;
+//				m = document.querySelectorAll("td");
+//				n = document.querySelectorAll("td");
+//				s = document.querySelectorAll("td");
+//				h = document.getElementById(".sign");
+//				if(h == "+")
+//				{
+//					s=m+n;
+//					
+//				}
+//				if(h == "-") 
+//				{
+//					s=m-n;
+//				}
+//				if(h == "x")
+//				{
+//					s=m*n;
+//				}
+//				if(h == "/")
+//				{
+//					s=m/n;
+//				}
+////				default:
+////				break;
+//				console.log(s);
+////				}
+//				});
 		</script>
 	</body>
 </html>
