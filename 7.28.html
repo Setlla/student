@@ -20,7 +20,7 @@
 				<td>7</td>
 				<td>8</td>
 				<td>9</td>
-				<td class="sign">x</td>
+				<td class="sign">*</td>
 			</tr>
 			<tr>
 				<td>4</td>
@@ -52,7 +52,36 @@
 				}
 			}
 			
+//			document.querySelector("table").addEventListener("click",function(e){
+//				var str1 = e.target.innerHTML;
+//				var str = document.querySelector('div').innerHTML
+//				var str2 = str.charAt(str.length-1);
+//				console.log(str2);
+//				if(str1=='+'||str1=='-'||str1=='*'||str1=='/'){
+//					if(str2=='+'||str2=='-'||str2=='*'||str2=='/'){
+//						div.value.length
+//					}
+//				}
+//				var div = e.target.value.length-1; 
+//			
+//				var str2 = div.target.value,string.charAt(0,div.target.length-1);
+//			})
+			
+			
+			
 			document.querySelector("table").addEventListener("click",function(e) {
+				var str1 = e.target.innerHTML;
+				var str = document.querySelector('div').innerHTML;
+				var str2 = str.charAt(str.length-1);
+				console.log(str2);
+				if(str1=='+'||str1=='-'||str1=='*'||str1=='/'){
+					if(str2=='+'||str2=='-'||str2=='*'||str2=='/'){
+					document.querySelector('div').innerHTML = str.substring(0,str.length-1);
+					}
+				}
+				
+				
+				
 				setColor();
 				e.target.style.backgroundColor = 'orange';
 				document.querySelector("div").innerHTML += e.target.innerHTML;
