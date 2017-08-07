@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>简易计算器</title>
+		<style>
+			div{
+				text-align: center;
+			}
+			table{
+				margin: 0 auto;
+				width: 200px;
+				height: 100px;
+				text-align: center;
+				
+			}
+			table tr td{
+				background-color: white;
+				border: 1px solid #a69c9c;
+			}
+			input{
+				margin: 0 auto;
+				width: 192px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+        	作者：492680716@qq.com
+        	时间：2017-07-26
+        	描述：计算器
+        -->
+		<div>
+			<input type="text" disabled="disabled" name="input" value="" placeholder="计算结果"/>
+			<table>
+				<tr>
+					<td class="td2">C</td>
+					<td>+</td>
+					<td>-</td>
+					<td>*</td>
+					
+				</tr>
+				<tr>
+					<td>7</td>
+					<td>8</td>
+					<td>9</td>
+					<td>/</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+					<td rowspan="3" class="result">=</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+				</tr>
+				<tr>
+					<td>%</td>
+					<td>0</td>
+					<td>.</td>
+				</tr>
+			</table>
+		</div>
+		
+		
+		<script>
+			//计算器
+			//清空input内容
+			document.querySelector('.td2').addEventListener("click",function(e){
+				document.querySelector("input").value="";
+				e.stopPropagation(); //阻止冒泡
+			})
+			//事件委托父级 点击下去变灰色
+			document.querySelector("table").addEventListener("mousedown",function(tab){
+				tab.target.style.backgroundColor="#a69c9c";
+				var str = tab.target.innerHTML;
+				var str1=document.querySelector('input').value;
+				var str2=str1.charAt(str1.length-1);
+				//运算符覆盖
+				if (str=="+" || str=="-"|| str=="*"|| str=="/") {
+					if(str2=="+"||str2=="-"||str2=="*"||str2=="/"){
+						document.querySelector('input').value=str1.replace(str1.charAt(str1.length-1),"");
+					}
+				}
+				if(str!='='){
+					document.querySelector('input').value+=str;
+				}
+			})
+			//事件委托父级 释放鼠标变白色
+			document.querySelector("table").addEventListener("mouseup",function(tab){
+				tab.target.style.backgroundColor="#FFFFFF";
+				
+			})
+			//等于号的点击事件，eval用来计算
+			document.querySelector(".result").addEventListener('click',function(e){
+				var ipt=document.querySelector('input').value;
+				var result=eval(ipt);
+				document.querySelector('input').value=result;
+			})
+		</script>
+	</body>
+</html>
