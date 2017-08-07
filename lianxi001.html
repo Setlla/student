@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>练习</title>
+	</head>
+	<body>
+		<input class="sendcode" type="button" name="" id="" value="点我"/>
+		<div class="img_one">
+			<p>111</p>
+			<p>222</p>
+			<p>333</p>
+			<img src="img/member-1.jpg"/style width="500px" height="500px">
+			<img src="img/author.jpg"/ style width="500px" height="500px">
+		</div>
+		<script>
+				var i=0;
+				document.querySelector("img").addEventListener("click",function(e){				
+					console.log(i);
+					if(i%2==1) {
+						e.target.style.width="500px";
+						e.target.style.height="500px";	
+					} 
+					if(i%2==0){
+						e.target.style.width="100px";
+						e.target.style.height="100px";	
+					}
+					i++;
+				})
+				var input=document.querySelector("input");
+				var i=0;
+				var set=function(){	
+					if(i<=10){
+						input.value=i;
+					}					
+					i++;
+				}
+				input.addEventListener("click",function(){
+					setInterval('set()',1000);
+				})
+
+				
+		</script>
+	</body>
+</html>
