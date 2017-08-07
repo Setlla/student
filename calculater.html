@@ -50,22 +50,22 @@
 					<td>7</td>
 					<td>8</td>
 					<td>9</td>
-					<td>*</td>
+					<td class="numberkey">*</td>
 				</tr>
 				<tr>
 					<td>4</td>
 					<td>5</td>
 					<td>6</td>
-					<td>-</td>
+					<td class="numberkey">-</td>
 				</tr>
 				<tr>
 					<td>1</td>
 					<td>2</td>
 					<td>3</td>
-					<td>+</td>
+					<td class="numberkey">+</td>
 				</tr>
 				<tr>
-					<td>/</td>
+					<td class="numberkey">/</td>
 					<td>0</td>
 					<td>.</td>
 					<td class="dbq">=</td>
@@ -76,21 +76,36 @@
 				function test(){
 					var tds=document.querySelectorAll("td");		
 					for (var i=0;i<tds.length;i++) {
-						tds[i].style.background="white";
+						tds[i].style.background="white";	//循环所有td背景变白色
 					}
 				}				
 				document.querySelector("table").addEventListener("click",function(e){
-					test();
-					e.target.style.background="red";
-					input.value+=e.target.innerHTML;
+					test();									//调用test内容
+					e.target.style.background="red";	
+					//点击当前背景变成红色
+					var input=document.querySelector("input");
+					var str1=e.target.innerHTML;
+					var str2=input.value.charAt(input.value.length-1);
+					if(str1=='+'||str1=='-'||str1=='*'||str1=='/'||str1=='='){
+					if(str2=='+'||str2=='-'||str2=='*'||str2=='/'||str2=='='){	
+						input.value=input.value.substring(0,input.value.length-1)												
+					}
+					}
+					
+					console.log(str1);
+					console.log(str2);
+//					if (e.target.innerHTML != "=") {
+						input.value+=e.target.innerHTML;	//输入框的内容=table+table.innerHtml
+//					}					
 				})				
+
 				var dbq=document.querySelector(".dbq");
 				dbq.addEventListener("click",function(e){
-				     var calresults=eval(input.value);
-     				 input.value=calresults;
-				 	 e.stopPropagation(); 			
+				     var calresults=eval(input.value);	//计算机=eval(运算)									
+     				 input.value=calresults;	//输入框的内容=计算机结果
+				 	 e.stopPropagation(); 		//阻止冒泡		
 				})	
-					
+			
 			</script>
 	</body>
 </html>
