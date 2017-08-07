@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				
+			}
+			table tr td{
+				width: 30px;
+				height: 30px;
+				text-align: center;
+				border: solid red 1px;
+				/*display: inline-block;*/
+				text-align: center;
+				line-height: 30px;
+			}
+			p{
+				width: 145px;
+				height: 30px;
+				margin: 0;
+				line-height: 30px;
+				border: solid #cecece 1px;
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td>AC</td>
+				<td>*</td>
+				<td>/</td>
+				<td>X</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>8</td>
+				<td>9</td>
+				<td>-</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+				<td>+</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>( )</td>
+			</tr>
+			<tr>
+				<td>%</td>
+				<td>0</td>
+				<td>.</td>
+				<td class="d">=</td>
+			</tr>
+			<p></p>
+		</table>
+		
+		
+		<script>
+			
+			//事件委托 ，td  table  
+		 
+//		  console.log(s)
+//		  for (var i=0; i<s.length; i++) {
+//		  	s[i].addEventListener("click",function(e){
+//		   	document.querySelector("p").innerHTML+=e.target.innerHTML;		   	
+//		    setColor();		    		  			 
+//		  	e.target.style.backgroundColor="blue";		  	    		 
+//		  	})
+//		  }
+			//子级事件点击变白
+            function setColor() {
+			  	var s=document.querySelectorAll("td");
+			  	for (var i=0; i<s.length; i++){		  			                 
+	               s[i].style.backgroundColor="white";             
+			   	}
+		    }
+        	//父级表格P标签接受的字符串
+		    document.querySelector("table").addEventListener("click",function(e) {
+		    	 var str=e.target.innerHTML;
+			     var str1=document.querySelector("p").innerHTML;
+			     var str3=document.querySelector("p");
+			     var str2=str1.charAt(str1.length-1);
+			     if (str=="+" || str=="-" || str=="*" || str=="/"){
+			     	if(str2=="+"||str2=="-"||str2=="*"||str2=="/"){
+			     		str3.innerHTML = str3.innerHTML.substring(0,str3.innerHTML.length-1);
+			     	}
+			     	
+			     }
+				setColor();
+				e.target.style.backgroundColor="blue";
+				if(e.target.innerHTML!="="){
+					document.querySelector("p").innerHTML+=e.target.innerHTML;
+				}
+		   })
+		  
+		 	//等于号的结果事件
+		    document.querySelector(".d").addEventListener("click",function(e){
+			    var x=document.querySelector("p").innerHTML;
+			    var result=eval(x);//计算结果
+			    document.querySelector("p").innerHTML=result;
+			    e.stopPropagation();//阻止冒泡
+		    })
+		    
+		    
+		</script>
+	</body>
+</html>
