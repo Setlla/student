@@ -82,7 +82,7 @@
 				//运算符覆盖
 				if (str=="+" || str=="-"|| str=="*"|| str=="/") {
 					if(str2=="+"||str2=="-"||str2=="*"||str2=="/"){
-						document.querySelector('input').value=str1.replace(str1.charAt(str1.length-1),"");
+						document.querySelector('input').value=str1.substring(0,str1.length-1);
 					}
 				}
 				if(str!='='){
