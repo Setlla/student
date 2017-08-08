@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			img{
+				width: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="img/timg.jpg" />
+		
+		
+		
+		<script>
+			document.querySelector("img").addEventListener("click",function(e){
+				if(e.target.style.width=="200px"){
+			 			e.target.style.width="80px";
+			 		}else{
+			 			e.target.style.width="200px";
+			 		}
+			});
+			 	 
+		</script>
+	</body>
+</html>
