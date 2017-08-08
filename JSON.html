@@ -44,16 +44,19 @@
         }
     ]
 }
-	var lia=document.querySelector(".lia");
-	var lib=document.querySelector(".lib");
-	var lic=document.querySelector(".lic");
-	var lid=document.querySelector(".lid");
-	lia.innerHTML=s.result[0].menuName;
-	lib.innerHTML=s.result[1].menuName;
-	lic.innerHTML=s.result[2].menuName;
-	lid.innerHTML=s.result[3].menuName;
-	console.log(lia);
-		
+//	var lia=document.querySelector(".lia");
+//	var lib=document.querySelector(".lib");
+//	var lic=document.querySelector(".lic");
+//	var lid=document.querySelector(".lid");
+//	lia.innerHTML=s.result[0].menuName;
+//	lib.innerHTML=s.result[1].menuName;
+//	lic.innerHTML=s.result[2].menuName;
+//	lid.innerHTML=s.result[3].menuName;
+	var lis=document.querySelectorAll("li");
+	lis[0].innerHTML=s.result[0].menuName;
+	lis[1].innerHTML=s.result[1].menuName;
+	lis[2].innerHTML=s.result[2].menuName;
+	lis[3].innerHTML=s.result[3].menuName;
  </script>			
 	</body>
 </html>
