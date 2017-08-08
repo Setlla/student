@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			ul{
+				list-style-type: none;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li class="one">1</li>
+			<li class="two">2</li>
+			<li class="three">3</li>
+			<li class="four">4</li>
+		</ul>
+		
+		<script>
+		var t={
+		    "isSuccess": true,
+		    "result": [
+        {
+            "id": 1,
+            "menuName": "主页",
+            "createdAt": null,
+            "updatedAt": null
+        },
+        {
+            "id": 2,
+            "menuName": "活动",
+            "createdAt": null,
+            "updatedAt": null
+        },
+        {
+            "id": 3,
+            "menuName": "博客",
+            "createdAt": null,
+            "updatedAt": null
+        },
+        {
+            "id": 4,
+            "menuName": "联系我们",
+            "createdAt": null,
+            "updatedAt": null
+        }
+          ]
+        }
+		console.log(t.result[0].menuName);
+		console.log(document.querySelector("li").innerHTML);
+		var s=document.querySelectorAll("li");
+		for( var i=0;i<s.length;i++){
+			s[i].innerHTML=t.result[i].menuName;
+		}
+//  document.querySelector(".one").innerHTML=t.result[0].menuName;
+//  document.querySelector(".two").innerHTML=t.result[1].menuName;
+//  document.querySelector(".three").innerHTML=t.result[2].menuName;
+//  document.querySelector(".four").innerHTML=t.result[3].menuName;
+		</script>
+	</body>
+</html>
