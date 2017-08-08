@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>计时器</title>
+	</head>
+	<body>
+		<ul>
+			<li>11</li>
+			<li>22</li>
+			<li>33</li>
+			<li>44</li>
+		</ul>
+		
+		
+		<script>
+			var table={
+			    "isSuccess": true,
+			    "result": [
+			        {
+			            "id": 1,
+			            "menuName": "主页",
+			            "createdAt": null,
+			            "updatedAt": null
+			        },
+			        {
+			            "id": 2,
+			            "menuName": "活动",
+			            "createdAt": null,
+			            "updatedAt": null
+			        },
+			        {
+			            "id": 3,
+			            "menuName": "博客",
+			            "createdAt": null,
+			            "updatedAt": null
+			        },
+			        {
+			            "id": 4,
+			            "menuName": "联系我们",
+			            "createdAt": null,
+			            "updatedAt": null
+			        }
+			    ]
+			}
+		var s=document.querySelectorAll("li");
+		for (var i =0;i<s.length;i++) {
+			s[i].innerText=table.result[i].menuName;
+			console.log(s[i]);
+		}
+		
+		</script>
+	</body>
+</html>
