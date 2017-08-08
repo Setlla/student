@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Count down</title>
+	</head>
+	<body>
+		<style type="text/css">
+			button{
+				border-radius: 16px;
+				background: burlywood;
+				margin: 100px auto;
+				border: 1px solid greenyellow;
+				width: 200px;
+				line-height: 60px;
+				text-align: center;
+				color: white;
+				outline: none;
+			}
+		</style>
+		<button>点劳资试试</button>
+		
+		
+		
+		<script>
+			var p=document.querySelector("button");
+			var i;		
+			var set=function(){	
+				if(i>0){
+					i-1;
+					p.disabled=true;
+					p.style.background="gold"
+				}
+				else{
+					i="劳资不想动了"
+					clearInterval(t);
+					p.disabled=false;
+					p.style.background="burlywood"
+				}
+				p.innerHTML=i; 
+				i--;				
+				}
+			p.addEventListener("click",function(e){
+				i=60;
+				t=setInterval(set,50);
+			})
+		</script>
+	</body>
+</html>
