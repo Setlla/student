@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JSON</title>
+	</head>
+	<body>
+		<ul>
+			<li class="lia">11</li>
+			<li class="lib">22</li>
+			<li class="lic">33</li>
+			<li class="lid">44</li>
+		</ul>				
+		
+ <script type="text/javascript">
+ 	
+	var s=
+		{
+    "isSuccess": true,
+    "result": [
+        {
+            "id": 1,
+            "menuName": "主页",
+            "createdAt": null,
+            "updatedAt": null
+        },
+        {
+            "id": 2,
+            "menuName": "活动",
+            "createdAt": null,
+            "updatedAt": null
+        },
+        {
+            "id": 3,
+            "menuName": "博客",
+            "createdAt": null,
+            "updatedAt": null
+        },
+        {
+            "id": 4,
+            "menuName": "联系我们",
+            "createdAt": null,
+            "updatedAt": null
+        }
+    ]
+}
+	var lia=document.querySelector(".lia");
+	var lib=document.querySelector(".lib");
+	var lic=document.querySelector(".lic");
+	var lid=document.querySelector(".lid");
+	lia.innerHTML=s.result[0].menuName;
+	lib.innerHTML=s.result[1].menuName;
+	lic.innerHTML=s.result[2].menuName;
+	lid.innerHTML=s.result[3].menuName;
+	console.log(lia);
+		
+ </script>			
+	</body>
+</html>
