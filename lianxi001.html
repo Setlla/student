@@ -15,21 +15,31 @@
 			<p>111</p>
 			<p>222</p>
 			<p>333</p>
-			<img src="img/member-1.jpg"/style width="500px" height="500px">
-			<img src="img/author.jpg"/ style width="500px" height="500px">
+			<img class="img" src="img/member-1.jpg" width="500" height="500"/>
+			<img class="img_two" src="img/author.jpg" width="500" height="500"/ >
 			<a>点点点点我</a>
 		</div>
 		<script>
-				i=0;
+				var img=document.querySelector("img");
+				var imgs=document.querySelector(".img_two");
+				var	i=0;
 				document.querySelector("a").addEventListener("click",function(e){
 					if(i%2==1) {
-						document.querySelector("img").style.width="400px";
-						document.querySelector("img").style.height="400px";
+						img.width="400";
+						img.height="400";
+						imgs.width="400";
+						imgs.height="400";
+						img.src="img/parallax/testimonial.jpg"
+						imgs.src="img/portfolio/item.jpg"
 					} 
 				
 					if(i%2==0) {
-						document.querySelector("img").style.width="100px";
-						document.querySelector("img").style.height="100px";
+						img.width="100";
+						img.height="100";
+						imgs.width="100";
+						imgs.height="100";	
+						img.src="img/author.jpg"
+						imgs.src="img/member-1.jpg"						
 					} 
 					i++;
 				})
