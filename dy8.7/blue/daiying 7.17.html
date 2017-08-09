@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			body{
+				margin: 0;
+				padding:0;
+			}
+			.creen{
+				padding:500px;
+				/*background-color:rgba(47,89,175,0.5);*/
+			}
+			.scrolling{
+				background:url(img/testimonial.jpg) no-repeat;
+				background-size:100% ;
+				background-attachment:fixed;
+			}
+			ul{
+				list-style-type: none;
+				margin: 0;
+				padding:0;
+				width:50%;
+			}
+			ul img{
+				width:100%;
+			}
+			.cover{
+				padding:3% 5%;
+				color:#fff;
+				background-color: rgba(43,43,43,0.7);
+				position:absolute;
+				bottom:-120px;
+				transition:all 0.4s ease 0s;
+				-webkit-transition:all 0.4s ease 0s ;
+				-o-transition:all 0.4s ease 0s ;
+				-moz-transition:all 0.4s ease 0s ;  				
+			}
+			ul li{
+				overflow: hidden;
+				width:100%;
+				position: relative;
+			}
+			ul li p,li span{
+				margin: 0;
+			}
+			 li:hover .cover{
+			 	bottom:0;
+			 } 
+		</style>
+	</head>
+	<body>
+		<div class="scrolling">
+			<div class="creen">
+			雪上霜，霜上屋，屋上人
+			</div>
+		</div>
+		<ul>
+			<li>
+				<img src="img/member-1.jpg" />
+				<div class="cover">
+					<p>English text</p>
+					<span>Teach him that for every scoundrel
+						there is a hero;that for every crooked 
+						politician there is a dedicated leader;
+					</span>
+				</div>
+			</li>
+		</ul>
+	</body>
+</html>
