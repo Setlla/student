@@ -1,5 +1,5 @@
-			var two=new XMLHttpRequest();
-			var xmlhttp;
+//			var two=new XMLHttpRequest();
+			var two;
 			var a;
 			var shop = document.querySelector(".p");
 			var shop1 = document.querySelector(".p1");
@@ -7,10 +7,10 @@
 			var shop2 = document.querySelector(".p2");
 			var shop3 = document.querySelector(".p3");
 			if(window.XMLHttpRequest){
-				XMLHttp=new XMLHttpRequest();
+				two=new XMLHttpRequest();
 			}
 			else{
-				XMLHttp=new ActiveXObject("Microsoft.XMLHTTP");
+				two=new ActiveXObject("Microsoft.XMLHTTP");
 			}
 			two.open('post','http://192.168.0.127:8000/shop','ture');
 			two.send();

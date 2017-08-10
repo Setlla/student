@@ -1,12 +1,12 @@
-			var able=new XMLHttpRequest();
-			var xmlhttp;
+//			var able=new XMLHttpRequest();
+			var able;
 			var a;
 			var dd = document.querySelectorAll(".head2 a");
 			if(window.XMLHttpRequest){
-				XMLHttp=new XMLHttpRequest();
+				able=new XMLHttpRequest();
 			}
 			else{
-				XMLHttp=new ActiveXObject("Microsoft.XMLHTTP");
+				able=new ActiveXObject("Microsoft.XMLHTTP");
 			}
 			able.open('post','http://192.168.0.127:8000/menu','ture');
 			able.send();
@@ -19,5 +19,16 @@
 				}
 			   }
 			}
+			
+			var car = document.querySelector(".car")
+			var zz=	document.querySelector(".head2");
+			    car.addEventListener("click",function(){
+					if(zz.style.display=="block"){
+					zz.style.display = 'none';
+				}
+				else{
+					zz.style.display= 'block';
+				}
+			})
 			
 				

@@ -20,7 +20,7 @@
 						mm.innerHTML= c.result[0].title;
 						aa.innerHTML= c.result[0].name;
 						bb.innerHTML= c.result[0].describe;
-						cc.baseURI= c.result[0].header;
+						cc.src= c.result[0].header;
 						bgimg.style.background = "url('"+c.result[0].bgimg+"')";
 					}
 				}
