@@ -1,9 +1,7 @@
 	var	xhrs=new XMLHttpRequest();
 	var bb;
-	var one=document.querySelector(".one");
-	var two=document.querySelector(".two");
-	var three=document.querySelector(".three");
-	var four=document.querySelector(".four");	
+	var zz=document.querySelector(".head_font");
+	var oo=document.querySelector(".projects_title");	
 	var span1=document.querySelector(".span1")
 	var bjt=document.querySelector(".head");
 	var xmlhttp;
@@ -23,10 +21,10 @@
 	xhrs.onreadystatechange=function(){
 		if(xhrs.readyState==4&&xhrs.status==200){
 			bb=JSON.parse(xhrs.responseText);
-					one.innerText=bb.result[0].name;
-					two.innerText=bb.result[0].describe;
-					three.innerText=bb.result[0].projectsTitle;
-					four.innerText=bb.result[0].projectsDescribe;
+					zz.children[0].innerText=bb.result[0].name;
+					zz.children[1].innerText=bb.result[0].describe;
+					oo.children[0].innerText=bb.result[0].projectsTitle;
+					oo.children[2].innerText=bb.result[0].projectsDescribe;
 					bjt.style.background="url('"+bb.result[0].img+"')";
 		}
 	}

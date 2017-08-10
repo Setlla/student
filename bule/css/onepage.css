@@ -84,12 +84,27 @@
 					display: inline-block;
 					float: right;
 					display: block;
-				}
+				}.title1
 				.title1{
 					display: none;
 				}
 			}*/
 			
+				@media only screen and (max-width: 600px){
+					.laozi{			
+					}
+				 	 .laozi a{
+				 	 	position: absolute;
+							display: block;
+		
+							
+										
+				 	 }
+
+				 	 
+				 	
+						}
+						
 			/*头部动画部分*/
 			.head_font{
 				width: 100%;

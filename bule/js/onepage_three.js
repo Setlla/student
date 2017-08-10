@@ -22,7 +22,7 @@
 			for(var i=0;i<ps.length;i++){			
 				ps[i].querySelector("p:nth-of-type(1)").innerText=ff.result[i].title;			
 				ps[i].querySelector("p:nth-of-type(2)").innerHTML=ff.result[i].subtitle;
-				lis[i].namespaceURI=ff.result[i].bgimg;
+				lis[i].src=ff.result[i].bgimg;
 			}
 		}
 	}
