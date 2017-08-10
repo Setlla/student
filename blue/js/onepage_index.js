@@ -106,6 +106,7 @@
 			var fixcircle=document.querySelector(".fixed_circle");
 			console.log(img2);
 			document.querySelector(".fixed").style.background="url('"+img1+"')";
+			document.querySelector(".fixed").style.backgroundAttachment='fixed';
 			fixcircle.style.background="url('"+img2+"')";
 			fixcircle.style.backgroundPositionX='center';
 			fixcircle.style.backgroundPositionY='center';
