@@ -7,19 +7,33 @@
 					line-height: 1.4rem;
 					background-color: rgba(21,21,21,0.7);
 					padding: 0rem 5%;
-					overflow: hidden;
+					display: block;
+					position: relative;
 				}
 				.head_menu{
 					width: 0.7rem;
 					height: 0.7rem;
 					border-radius: 0.1rem;
 					border: 2px solid #FFFFFF;
-					display: inline-block;
+					/*display: inline-block;*/
 					float: right;
 					display: block;
 				}
 				.title1{
+					position: absolute;
+					top: 1rem;
+					left: 0rem;
+					transform: translate(0rem,0rem);
+					background-color: rgba(21,21,21,0.7);
+					width: 100%;
+					height: auto;
 					display: none;
+				}
+				.title1 a {
+					display: block;
+					height: 0.9rem;
+					padding: 0rem 0.1rem;
+					font-size: 0.22rem;
 				}
 				
 				
