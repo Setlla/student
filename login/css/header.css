@@ -1,0 +1,50 @@
+	.head{
+		width: 100%;
+		position: relative; 
+		margin-bottom: 0.24rem;
+	}
+	.head_banner{
+		width: 100%;
+	}
+	.header{
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 1.2rem;
+		background: rgba(0,0,0,0.4);
+		display: flex;
+		display: -webkit-flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.header_left{
+		margin: 0rem 0.2rem;
+	}
+	.header_left img{
+		margin: 0 auto;
+		display: block;
+		width: 0.5rem;
+	}
+	.header_left a{
+		display: block;
+		font-size: 0.28rem;
+		color: #ffffff;
+	}
+	.head_input{
+		width: 60%;
+		height: 0.76rem;
+		border-radius: 0.1rem;
+		flex-grow:2;
+		border: 0rem;
+		padding: 0rem 1.4rem 0rem 0.2rem;
+		background: url(../img/icon/icon_09.png)96% 50% no-repeat;
+		background-size: 0.46rem 0.46rem;
+		background-color: #FFFFFF;
+	}
+	.head_input::-webkit-input-placeholder{
+			font-size: 0.34rem;
+	}
+	.img1{
+		margin: 0rem 0.2rem;
+		width: 0.6rem;
+	}
