@@ -39,35 +39,36 @@
 		var xhr=new XMLHttpRequest();
 		xhr.open("POST","http://192.168.0.127:3900/reg");
 		xhr.setRequestHeader("content-type","application/json");
-		var connten={
+		var content={
 			phone:phone.value,
 			email:email.value,
 			password:hex_md5(password.value)
 		}		
-		xhr.send(JSON.stringify(connten));
+		xhr.send(JSON.stringify(content));
 		xhr.onreadystatechange=function(){
 			if(xhr.readyState==4&&xhr.status==200){
-				connten=xhr.responseText;
+				var result = JSON.parse(xhr.responseText);
+				 if(result.isSuccess == true ) {
+				 	location.href="dengru.html";
+				 }else {
+				 	console.log(result)
+				 }
 			}
 		}							
 	}	
-	
-
 
 	document.querySelector(".register").addEventListener("click",function(){
 		if(isphone){
 			if(valiphone()){
-				submit();
-				alert("注册成功")
+				submit();				
 			}
 		}
 		else{
 			if(valiemail()){
 				submit();
-				alert("注册成功")
 			}
 		}
-//		location.href="dengru.html";
+		
 	})
 
 
