@@ -1,0 +1,135 @@
+		html{
+			font-size:20px;
+		}
+		
+		a{
+			text-decoration: none;
+		}
+		ul{
+			list-style-type: none;
+			margin:0 5%;
+			padding:0;
+			border: solid 1px #c9c9c9;
+			border-radius:.2rem ;
+		}
+		.head{
+			position: relative;
+			background-color: #33ccff;
+			line-height: 6.5rem;
+		}
+		.head a{
+			margin-left: 1.5rem;
+			width: 1rem;
+			height:1rem;
+			border-bottom: solid #fff;
+			border-left:solid #fff;
+			transform: rotate(45deg) translateY(-50%)scale(0.8);
+			position: absolute;
+			left:1%;
+			top:50%;
+			display: inline-block;
+		}
+		.head p{
+			font-size: 2rem;
+			color:#fff;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+		}
+		.phone{
+			display: flex;
+			justify-content: space-around;
+			padding-bottom:1.5rem;
+		}
+		.phone a:first-child{
+			border-bottom: solid 1px #c9c9c9;
+		}
+		.phone a:last-child{
+			border-bottom: solid 1px #33ccff;
+		}
+		.phone a{
+			color:#333333;
+			font-size: 1.5rem;
+			width:50%;
+			text-align: center;
+			padding:1.4rem 0;
+		}
+		
+		.content li{
+			padding:1.5rem 0;
+		}
+		.content li:not(:last-child){
+			border-bottom: solid 1px #c9c9c9;
+		}
+		.content input{
+			border: none;
+			outline: none;
+			font-size:1.4rem;
+			width:50%;
+		}
+		.content input::-webkit-input-placeholder{
+			color:#969696;
+		} 
+		.one span{
+			font-size: 1.6rem;
+			color:#969696;
+			display: inline-block;
+			padding-left: 1.7rem;
+			padding-right: 2.2rem;
+		}
+		.two img{
+			width:1.7rem;
+			vertical-align: middle;
+			padding-left: 1.7rem;
+			padding-right: 2.2rem;
+		}
+		.three span{
+			text-align: center;
+			vertical-align: middle;
+			width:2.1rem;
+			height:2.1rem;
+			border:solid 1px #197fee;
+			border-radius:1.05rem;
+			display: inline-block;
+			margin-left: 1.7rem;
+			margin-right: 2.2rem;
+		}
+		.number{
+			font-size:.7rem;
+			line-height: 2.1rem;
+		}
+		.three img{
+			width:6.6rem;
+			vertical-align: middle;
+		}
+		.foot{
+			text-align: center;
+			background-color:#33CCFF ;
+			color:#fff;
+			font-size: 1.5rem;
+			border-radius:.4rem ;
+			margin: 1.8rem 5%;
+			padding:1.4rem 0;
+		}
+		
+		
+		@media only screen and (min-width:320px) and (max-width:413px){
+			html{
+				font-size:10px !important;
+			}
+			.three span{
+				margin-right: 0;
+			}
+			.two img{
+				padding-right: 0;
+			}
+			.one span{
+				padding-right: 0;
+			}
+		}
+		@media only screen and (min-width:414px) and (max-width:640px){
+			html{
+				font-size:13px !important;
+			}
+		}
+		
