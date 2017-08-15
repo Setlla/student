@@ -1,0 +1,80 @@
+i{
+	display: block;
+	width: 188px;
+	height: 188px;
+	background: url("img/images/timg.jpg")100% no-repeat;
+	border: solid #fff 1px;
+	border-radius: 94px;
+	margin: 0 auto;
+	/*margin-top: 65px;*/
+}
+.blue{
+	background-color: #33ccff;
+	/*width: 100%;*/
+	height: 320px;
+	margin-bottom: 70px;
+	padding-top: 100px;
+}
+input{
+	font-size: 28px;
+	color: #bfbfbf;
+	border: solid red 0;
+	border-bottom: solid #12a2e5 1px;
+	background: url("img/input_19.png")4%  no-repeat;
+	padding: 20px 80px;
+	width: 70%;
+	display: block;
+	margin: 0 auto;
+}
+.password{
+	font-size: 28px;
+	color: #bfbfbf;
+	border: solid red 0;
+	border-bottom: solid #12a2e5 1px;
+	background:url("img/input_23.png")4%  no-repeat;
+	padding: 20px 80px;
+	width: 70%;
+	display: block;
+	margin: 80px auto;
+}
+.denglu{
+	font-size: 32px;
+	display: block;
+	color: #33ccff;	
+	background-color: #fff;
+	border: solid #33ccff 1px;
+	width: 80%;
+	margin: 0 auto;
+	/*text-align: center;*/
+	padding: 20px 80px;
+	border-radius: 5px;
+	/*text-decoration: none;*/
+}
+.bottom{
+	margin-top: 30%;
+	overflow: hidden;
+	position: relative;
+}
+
+.zuo{
+	border: solid red 0;
+	border-bottom:solid #12a2e5 1px;
+	background-color: #FFFFFF;
+	text-decoration: underline;
+	color: #33ccff;
+	font-size: 24px;
+	text-decoration: none;
+	position: absolute;
+	bottom:10px ;
+	left: 10px;
+}
+ .you{
+	border: solid #33ccff 1px;
+	padding: 15px 45px;
+	border-radius: 5px;
+	background-color: #FFFFFF;
+	color:#33ccff;
+	font-size: 24px;
+	float: right;
+}
+

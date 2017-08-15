@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="denglu.css"/>
+	</head>
+	<body>
+	<div class="blue">			
+		<i></i>
+	</div>
+		<input type="text"  class="phone" name="phone" placeholder="输入手机 / 邮箱" />
+		<input type="text" class="password" name="password" placeholder="输入密码" />
+		<button class="denglu">登陆</button>
+	<div class="bottom">
+		<a class="zuo" href="#">忘记密码？</a>
+		<button class="you">注册</button>
+	</div>
+		
+		
+	<script>
+		document.querySelector(".denglu").addEventListener('click',function(){
+			var xhr;
+			 if(window.XMLHttpRequest){
+			 	xhr=new XMLHttpRequest();
+			 }else{
+			 	xhr=new ActiveXObject();
+			 }
+			 var phone=document.querySelector(".phone").value;
+			 var password=document.querySelector(".password").value;
+			 var user= {
+			 	phone:phone,
+			 	password:password
+			 }
+			 
+			 xhr.open('post','http://192.168.0.127:3900/login',true);
+			 xhr.setRequestHeader("content-type","application/json");
+			 xhr.send(JSON.stringify(user));
+			 
+			 xhr.onreadystatechange=function(){
+			 	if(xhr.readyState==4 && xhr.status==200){
+			 		
+			 	}
+			 }
+		})
+		
+	</script>
+	</body>
+</html>
