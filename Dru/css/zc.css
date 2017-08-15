@@ -30,18 +30,19 @@
 	overflow: hidden;
 }
 .qh span{
+	display: block;
 	float: left;
 	text-align: center;
 	width: 50%;	
 	font-size:0.3rem;
 	line-height: 1.2rem;	
-	margin-bottom: .4rem;
 }
 .phoReg{
 	border-bottom: 4px solid #33ccff;
 }
 .content{
 	margin: .32rem;
+	padding-top: .4rem;
 }
 .content input{
 	outline: none;

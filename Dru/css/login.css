@@ -20,20 +20,22 @@
 }
 .zhanghao{	
 	width: 100%;
-	padding-left: .8rem;
+	padding-left: 1rem;
 	font-size: 0.28rem;
 	height: 1.04rem;
-	background:url(../image/tips_07.png) no-repeat left;
+	background:url(../image/tips_07.png) no-repeat .16rem;
+	background-size: .4rem;
 	border: none;
 	border-bottom: 1px #12a2e5 solid;
 	box-sizing: border-box;
 }
 .mima{
 	width: 100%;
-	padding-left: .8rem;
+	padding-left: 1rem;
 	font-size: .28rem;
 	height: 1.04rem;
-	background:url(../image/tips_08.png) no-repeat left;
+	background:url(../image/tips_08.png) no-repeat .16rem;
+	background-size: .4rem;
 	border: none;
 	border-bottom: 1px #12a2e5 solid;
 	box-sizing: border-box;
