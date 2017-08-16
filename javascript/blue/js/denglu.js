@@ -20,9 +20,16 @@
 				xhr.onreadystatechange=function(){
 					if(xhr.readyState == 4 && xhr.status == 200){
 						user = xhr.responseText;
+						location.href = "daiying work.html";
 					}
 				}
 				})
+			var reg = document.querySelector(".register");
+			reg.addEventListener("click",function(){
+				location.href = "8.14.html";
+			})
+				
+				
 				
 				
 				

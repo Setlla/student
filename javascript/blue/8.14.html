@@ -2,27 +2,31 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title></title>
+		<title>注册页面</title>
 		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<link rel="stylesheet" href="css/2017.8.14.css" />
 	</head>
 	<body>
 		<div class="head">
-			<p><a href="#"></a>注册</p>
+			<p><a href="8.13.html"></a>注册</p>
 		</div>
-		<div class="phone">
-			<a href="#">手机注册</a>
-			<a href="#">邮箱注册</a>
+		<div class="register">
+			<a class="phones" href="#">手机注册</a>
+			<a class="emails" href="#">邮箱注册</a>
 		</div>
 		<div class="content">
 			<ul class="max">
-				<li class="one">
+				<li class="one one1">
 					<span> @ </span>
-					<input type="text" name="" id="" placeholder="请输入真实邮箱" />
+					<input type="text" class="email" name="email" id="" placeholder="请输入真实邮箱" />
+				</li>
+				<li class="one one2" style="display:none;">
+					<span> @ </span>	
+					<input type="text" class="phone" name="phone" id="" placeholder="请输入手机号码" />
 				</li>
 				<li class="two">
 					<img src="img/zhuce_03.png" />
-					<input type="text" name="" id="" placeholder="6~32位密码" />
+					<input type="password" class="password" name="password" id="" placeholder="6~32位密码" />
 				</li>
 				<li class="three">
 					<span>
@@ -35,6 +39,8 @@
 		</div>
 		
 			<div class="foot">注册</div>
-		
+		<script type="text/javascript" src="js/util.js" ></script>
+		<script type="text/javascript" src="js/md5js/md5.js" ></script>
+		<script type="text/javascript" src="js/zhuce8.15.js" ></script>
 	</body>
 </html>
