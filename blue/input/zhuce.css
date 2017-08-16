@@ -1,51 +1,54 @@
 html{
 	font-size: 100px;
 }
+/*@media only screen and (min-width: 100px) and (max-width: 640px) {
+	html{
+		font-size: ;
+	}
+}*/
 .blue{
 	background-color: #33ccff;
-	height: 2.3rem;
+	height: 1.3rem;
 	text-align: center;
-	position: relative;
+	overflow: hidden;
 }
 .blue p{
 	font-size: .3rem;
 	color: #fff;	
 	margin: 0;
-	display: inline-block;
-	position: absolute;
-	top: 50%;
-	left: 50%;
+	display: block;
+	line-height: 1.3rem;
+	
 }
 .blue span{
-	display: inline-block;
+	display: block;
 	width: .2rem;
 	height: .2rem;
 	border-left: solid #fff .04rem;
 	border-top: solid #fff .04rem;
 	-webkit-transform:rotate(5deg);
 	-webkit-transform:skew(40deg,-40deg);
-	/*float: left;*/
-	margin-left: .2rem;
-	position: absolute;
-	left: 4%;
-	top: 50%;
+	float: left;
+	margin-left: .3rem;
+	margin-top: .5rem;
 }
 .zhuce{
 	overflow: hidden;
 }
-.zhuce a:hover{
+/*.zhuce a:hover{
 	border-bottom: solid #33ccff .03rem;
 	padding: .19rem 0;
-}
+}*/
 .zhuce a{
 	width: 50%;
+	/*height: .8rem;*/
 	text-decoration: none;
 	color: #333;
 	font-size: .3rem;
 	display: inline-block;
 	float: left;
 	text-align: center;
-	padding: .2rem 0;
+	padding: .4rem 0;
 	border-bottom: solid #ddd 1px;
 }
 input{
@@ -59,11 +62,16 @@ input{
 	padding-left: .8rem;
 	font-size: .24rem;
 }
+.mob{
+	background: url("img/logo-test-7.png")0 50% no-repeat;
+	/*display: block;*/
+}
 .emal{
 	background: url("img/images/注册_03.png")0 50% no-repeat;
+	display: none;
 	/*background-size: 5%;*/
 }
-.nub{
+.pasd{
 	background: url("img/zc_06.png")0 50% no-repeat;
 	/*background-size: 5%;*/
 }
@@ -80,11 +88,11 @@ i{
 	background: url("img/zc_10.png")100% 50% no-repeat;
 	display: block;
 	width: 2rem;
-	height: 1.2rem;
+	height: 1rem;
 	background-size: 100%;
 	position: absolute;	
 	right: 10%;
-	bottom: 30%;	
+	bottom: 20%;	
 }
 .bot{
 	text-decoration: none;
@@ -94,7 +102,7 @@ i{
 	background-color: #33ccff;
 	padding: .2rem 0;
 	width:85%;
-	margin: 1rem auto;
+	margin: .4rem auto;
 	text-align: center;
 	border-radius: .1rem;
 }
