@@ -26,25 +26,17 @@
 			pwd_ipt.value="";
 		}
 	})
-	
-	//注册按钮-注册邮箱或者手机号
-	document.querySelector(".reg").addEventListener("click",function(){
-		var xmlhttp;
-		if (window.XMLHttpRequest) {
-			xmlhttp=new XMLHttpRequest();
-		} else{
-			xmlhttp=new ActiveXObject();
-		}
-		
-		xmlhttp.open("POST","http://192.168.0.127:3900/reg","true");
-		
-		var phone=document.querySelector(".phone_ipt").value;
+	//用来判断电话跟邮箱的格式
+	var phone;
+	var mail;
+	var pwd;
+	var judge=function(){
+		phone=document.querySelector(".phone_ipt").value;
 		var p=/^1[34578]\d{9}$/.test(phone);
 		
-		var mail=document.querySelector(".mail_ipt");
+		mail=document.querySelector(".mail_ipt");
 		var m=/^[A-Za-z0-9\u4e00-\u9fa5]+@[a -zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/.test(mail);
-		
-		var pwd=document.querySelector(".pwd_ipt").value;
+		pwd=document.querySelector(".pwd_ipt").value;
 		//判断手机号是否符合正则
 		if(!p && phone_ipt.style.display=="block"){
 			alert("请输入正确的11位手机号！");
@@ -55,7 +47,18 @@
 			alert("请输入正确的邮箱!");
 			document.querySelector(".mail_ipt").focus();
 		}
+	}
+	//注册按钮-注册邮箱或者手机号
+	document.querySelector(".reg").addEventListener("click",function(){
+		var xmlhttp;
+		if (window.XMLHttpRequest) {
+			xmlhttp=new XMLHttpRequest();
+		} else{
+			xmlhttp=new ActiveXObject();
+		}
 		
+		xmlhttp.open("POST","http://192.168.0.127:3900/reg","true");
+		judge();
 		xmlhttp.setRequestHeader("Content-Type","application/JSON");
 		var use={
 			phone:phone,
@@ -65,7 +68,11 @@
 		xmlhttp.send(JSON.stringify(use));
 		xmlhttp.onreadystatechange=function(){
 			if(xmlhttp.readyState==4 && xmlhttp.status==200){
-				console.log(xmlhttp.responseText);
+				var isSuc=JSON.parse(xmlhttp.responseText);
+				if(isSuc.isSuccess==true){
+					alert("恭喜注册成功！^_^");
+					location.href="http://192.168.0.115:8020/login/login.html"; 
+				}
 			}
 		}
 	})
