@@ -23,8 +23,8 @@
         	描述：手机注册 邮箱注册
         -->
         <div class="register">
-        	<a href="#">手机注册</a>
-        	<a href="#">邮箱注册</a>
+        	<a href="#" class="phone_reg">手机注册</a>
+        	<a href="#" class="mail_reg">邮箱注册</a>
         </div>
         <!--
         	作者：492680716@qq.com
@@ -32,14 +32,16 @@
         	描述：密码 邮箱 验证码
         -->
         <div class="btn_proving">
-        	<input placeholder="请输入真实邮箱"/>
-        	<input type="password" placeholder="6~32位密码"/>
-        	<input placeholder="请输入右侧的验证码"/>
+        	<input class="phone_ipt" placeholder="请输入手机号码"/>
+        	<input class="mail_ipt" placeholder="请输入真实邮箱"/>
+        	<input class="pwd_ipt" type="password" placeholder="6~32位密码"/>
+        	<input class="code_ipt" placeholder="请输入右侧的验证码"/>
         	<img src="img/register/icon_10.png" />
         </div>
         <div class="foot">
         	<a href="#" class="reg">注册</a>
         </div>
-        
+        <script type="text/javascript" src="js/md5.js" ></script>
+        <script type="text/javascript" src="js/register.js" ></script>
 	</body>
 </html>
