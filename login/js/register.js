@@ -4,6 +4,7 @@
 	var mail_ipt=document.querySelector(".mail_ipt");
 	var phone_ipt=document.querySelector(".phone_ipt");
 	var pwd_ipt=document.querySelector(".pwd_ipt");
+	var isflag=false;
 	
 	document.querySelector(".register").addEventListener("click",function(e){
 		//手机注册
@@ -14,6 +15,7 @@
 			phone_ipt.style.display="block";
 			phone_ipt.value="";
 			pwd_ipt.value="";
+			isflag=true;
 		} 
 		//邮箱注册
 		if (e.target.innerText=="邮箱注册") {
@@ -23,44 +25,49 @@
 			document.querySelector(".phone_ipt").style.display="none";
 			mail_ipt.value="";
 			pwd_ipt.value="";
+			isflag=false;
 		}
 	})
 	//用来判断电话跟邮箱的格式
 	var judge=function(){
-		//判断手机号是否符合正则
-		if(!phones(phone_ipt.value) && phone_ipt.style.display=="block"){
-			document.querySelector(".phone_ipt").focus();
-		}
-		//判断邮箱是否符合正则
-		if(!mails(mail_ipt.value) && mail_ipt.style.display=="block"){
-			document.querySelector(".mail_ipt").focus();
+		//判断是手机注册click || 邮箱注册click
+		if (isflag==true) {
+			phones(phone_ipt.value);
+		} else{
+			mails(mail_ipt.value);
 		}
 	}
-	//注册按钮-注册邮箱或者手机号
+	//注册按钮事件
 	document.querySelector(".reg").addEventListener("click",function(){
-		var xmlhttp;
-		if (window.XMLHttpRequest) {
-			xmlhttp=new XMLHttpRequest();
-		} else{
-			xmlhttp=new ActiveXObject();
-		}
-		
-		xmlhttp.open("POST","http://192.168.0.127:3900/reg","true");
-		judge();
-		xmlhttp.setRequestHeader("Content-Type","application/JSON");
-		var use={
-			phone:phone,
-			email:mail.value,
-			password:hex_md5(pwd)
-		};
-		xmlhttp.send(JSON.stringify(use));
-		xmlhttp.onreadystatechange=function(){
-			if(xmlhttp.readyState==4 && xmlhttp.status==200){
-				var isSuc=JSON.parse(xmlhttp.responseText);
-				if(isSuc.isSuccess==true){
-					alert("恭喜注册成功！^_^");
-					location.href="http://192.168.0.115:8020/login/login.html"; 
+		if(judge()) {
+			var xmlhttp;
+			if (window.XMLHttpRequest) {
+				xmlhttp=new XMLHttpRequest();
+			} else{
+				xmlhttp=new ActiveXObject();
+			}
+			
+			xmlhttp.open("POST","http://192.168.0.127:3900/reg","true");
+			xmlhttp.setRequestHeader("Content-Type","application/JSON");
+			var use={
+				phone:phone_ipt.value,
+				email:mail_ipt.value,
+				password:hex_md5(pwd_ipt.value)
+			};
+			xmlhttp.send(JSON.stringify(use));
+			xmlhttp.onreadystatechange=function(){
+				if(xmlhttp.readyState==4 && xmlhttp.status==200){
+					var isSuc=JSON.parse(xmlhttp.responseText);
+					if(isSuc.isSuccess==true){
+						alert("恭喜注册成功！^_^");
+						location.href="http://192.168.0.115:8020/login/login.html"; 
+					}
 				}
 			}
 		}
+	})
+	
+	//注册返回
+	document.querySelector(".header_arr").addEventListener("click",function(){
+		location.href="http://192.168.0.115:8020/login/login.html";
 	})

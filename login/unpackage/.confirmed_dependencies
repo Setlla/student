@@ -1,0 +1,42 @@
+{
+	"index.html": {
+		"resources": [
+			"css/index.css",
+			"img/icon/icon_43.png",
+			"img/icon/icon_40.png",
+			"img/ware/ware_24.png",
+			"img/icon/icon_42.png",
+			"css/ware_public.css",
+			"img/ware/ware_27.png",
+			"css/public.css",
+			"img/icon/icon_44.png",
+			"img/icon/icon_41.png",
+			"img/ware/ware_20.png"
+		],
+		"refer": []
+	},
+	"login.html": {
+		"resources": [
+			"img/member-1.jpg",
+			"js/util.js",
+			"css/login.css",
+			"img/login/pwd.png",
+			"js/login.js",
+			"css/public.css",
+			"img/login/account.png",
+			"js/md5.js",
+			"css/index.css"
+		]
+	},
+	"hockshop.html": {
+		"resources": [
+			"img/ware/ware_24.png",
+			"css/ware_public.css",
+			"img/ware/ware_27.png",
+			"img/icon/icon_45.png",
+			"css/hockshop.css",
+			"css/public.css",
+			"img/ware/ware_20.png"
+		]
+	}
+}

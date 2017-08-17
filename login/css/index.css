@@ -1,0 +1,70 @@
+	/*头部*/
+	.head{
+		height: 1.4rem;
+		line-height: 1.4rem;
+		background-color: #33ccff;
+		color: #ffffff;
+		font-size: 0.4rem;
+		text-align: center;
+		position: relative;
+		
+	}
+	.head i{
+		width: 0.38rem;
+		height: 0.36rem;
+		border-left: 2px solid #FFFFFF;
+		border-bottom: 2px solid #FFFFFF;
+		transform: rotate(45deg);
+		position: absolute;
+		top: 0.56rem;
+		left: 0.6rem;
+	}
+	/*分类*/
+	.all{
+		height: 1.8rem;
+		border-bottom: 1px solid #bbbbbb;
+		font-size: 0.26rem;
+		text-align: center;
+		color: #999999;
+	}
+	.all_ul{
+		overflow: hidden;	
+	}
+	.all_ul li{
+		float: left;
+		width: 20%;
+		height: 2rem;
+		padding: 0.28rem;
+	}
+	
+	.all_ul li i{
+		display: inline-block;
+		width: 0.8rem;
+		height: 0.8rem;
+		border-radius: 0.4rem;
+		border: 1px solid #bfbfbf;
+	}
+	.all_ul li:nth-child(1){
+		color: #333333;
+	}
+	.all_ul li:nth-child(1) i{
+		background: url(../img/icon/icon_40.png)50% 50% no-repeat;
+		background-color: #33CCFF;
+		border: 1px solid #33CCFF;
+		background-size: 0.44rem 0.44rem;
+	}
+	.all_ul li:nth-child(2) i{
+		background: url(../img/icon/icon_41.png)50% 50% no-repeat;
+		background-size: 0.38rem 0.48rem;
+	}
+	.all_ul li:nth-child(3) i{
+		background: url(../img/icon/icon_42.png)50% 50% no-repeat;
+		background-size: 0.5rem 0.5rem;
+	}
+	.all_ul li:nth-child(4) i{
+		background: url(../img/icon/icon_43.png)50% 50% no-repeat;
+		background-size: 0.44rem 0.44rem;
+	}
+	.all_ul li:nth-child(5) i{
+		background: url(../img/icon/icon_44.png)50% 50% no-repeat;
+	}

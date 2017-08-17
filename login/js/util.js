@@ -6,8 +6,8 @@
 		if (!p) {
 			alert("请输入正确的11位手机号！");
 			return false;
-		} 
-		else {
+		}
+		else{
 			return true;
 		}
 	}
@@ -17,7 +17,8 @@
 		if (!m) {
 			alert("请输入正确的邮箱号！");
 			return false;
-		} else{
+		}
+		else{
 			return true;
 		}
 	}
