@@ -1,0 +1,121 @@
+html{
+	font-size: 100px;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+/*@media only screen and (min-width: 400px) and (max-width: 640px) {
+	html{
+		font-size: 50px;
+	}
+}*/
+.blue{
+	background-color: #33ccff;
+	width: 100%;
+	height: 1.3rem;
+	/*text-align: center;*/
+	overflow: hidden;
+	/*padding: 0 .3rem;*/
+}
+.blue p{
+	font-size: .4rem;
+	color: #fff;	
+	margin: 0;
+	display: block;
+	line-height: 1.3rem;	
+	/*float: left;*/
+	text-align: center;
+}
+.blue span{
+	display: block;
+	width: .2rem;
+	height: .2rem;
+	border-left: solid #fff .04rem;
+	border-top: solid #fff .04rem;
+	-webkit-transform:rotate(5deg);
+	-webkit-transform:skew(40deg,-40deg);
+	float: left;
+	margin-left: .3rem;
+	margin-top: .5rem;
+}
+.zhuce{
+	overflow: hidden;
+}
+/*.zhuce a:hover{
+	border-bottom: solid #33ccff .03rem;
+	padding: .19rem 0;
+}*/
+.zhuce a{
+	width: 50%;
+	/*height: .8rem;*/
+	text-decoration: none;
+	color: #333;
+	font-size: .3rem;
+	display: inline-block;
+	float: left;
+	text-align: center;
+	padding: .4rem 0;
+	border-bottom: solid #ddd 1px;
+}
+input{
+	display: block;
+	border: solid #333 0;
+	border-bottom: solid #ddd 1px;
+	width: 65%;
+	margin: 0 auto;
+	margin-top: 1rem;
+	padding: .3rem 0;
+	padding-left: .6rem;
+	font-size: .14rem;
+}
+.mob{
+	background: url("../img/logo-test-7.png")5% 50% no-repeat;
+	/*display: block;*/
+}
+.emal{
+	background: url("../img/zc_03.png")5% 50% no-repeat;
+	display: none;
+	/*background-size: 5%;*/
+}
+.pasd{
+	background: url("../img/zc_06.png")5% 50% no-repeat;
+	/*background-size: 5%;*/
+}
+.code{
+	background: url("../img/zc_13.png")5% 50% no-repeat;
+	/*background: url("img/zc_10.png")80% 50% no-repeat;*/
+	/*background-size: 7%;*/
+	/*border-bottom: solid red 0;*/
+}
+.go{
+	position: relative;
+}
+i{
+	background: url("../img/zc_10.png")100% 50% no-repeat;
+	display: block;
+	width: 1rem;
+	height: .6rem;
+	background-size: 100%;
+	position: absolute;	
+	right: .4rem;
+	bottom: 25%;	
+}
+.bot{
+	text-decoration: none;
+	display: block;
+	font-size: .36rem;
+	color: #FFFFFF;
+	background-color: #33ccff;
+	padding: .2rem 0;
+	width:85%;
+	margin: 0 auto;
+	margin-top: .35rem;
+	text-align: center;
+	border-radius: .1rem;
+}
+@media only screen and (min-width: 414px) and (max-width: 640px) {
+	html{
+		font-size: 64.7px;
+	}
+}
