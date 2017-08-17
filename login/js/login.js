@@ -10,6 +10,7 @@
 		xmlhttp.open("POST","http://192.168.0.127:3900/login","true");
 		var account=document.querySelector(".account").value;
 		var pwd=document.querySelector(".password").value;
+		var s=phones(account);
 		xmlhttp.setRequestHeader("Content-Type","application/JSON");
 		var user={
 			phone:account,

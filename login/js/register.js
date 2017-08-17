@@ -14,7 +14,6 @@
 			phone_ipt.style.display="block";
 			phone_ipt.value="";
 			pwd_ipt.value="";
-
 		} 
 		//邮箱注册
 		if (e.target.innerText=="邮箱注册") {
@@ -27,24 +26,13 @@
 		}
 	})
 	//用来判断电话跟邮箱的格式
-	var phone;
-	var mail;
-	var pwd;
 	var judge=function(){
-		phone=document.querySelector(".phone_ipt").value;
-		var p=/^1[34578]\d{9}$/.test(phone);
-		
-		mail=document.querySelector(".mail_ipt");
-		var m=/^[A-Za-z0-9\u4e00-\u9fa5]+@[a -zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/.test(mail);
-		pwd=document.querySelector(".pwd_ipt").value;
 		//判断手机号是否符合正则
-		if(!p && phone_ipt.style.display=="block"){
-			alert("请输入正确的11位手机号！");
+		if(!phones(phone_ipt.value) && phone_ipt.style.display=="block"){
 			document.querySelector(".phone_ipt").focus();
 		}
 		//判断邮箱是否符合正则
-		if(!m && mail_ipt.style.display=="block"){
-			alert("请输入正确的邮箱!");
+		if(!mails(mail_ipt.value) && mail_ipt.style.display=="block"){
 			document.querySelector(".mail_ipt").focus();
 		}
 	}
