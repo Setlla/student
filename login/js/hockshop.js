@@ -1,23 +1,10 @@
 	//物品书籍切换
-	var isflag=false;
-	var article=document.querySelector(".article");
-	var books=document.querySelector(".books");
-	document.querySelector(".classify").addEventListener("click",function(e){
-		//点击事件为物品CLASS
-		if (e.target.className=="article") {
-			article.style.backgroundColor="#33ccff";
-			article.style.color="#FFFFFF";
-			books.style.backgroundColor="#bfe6f3";
-			books.style.color="#33ccff";
-			
+	var all=document.querySelectorAll(".classify a");
+	document.querySelector(".classify").addEventListener("click",function(e){		
+		for (var i=0;i<all.length;i++) {
+			all[i].classList.remove("article");
 		}
-		//点击事件为书籍CLASS
-		if(e.target.className=="books"){
-			article.style.backgroundColor="#bfe6f3";
-			article.style.color="#33ccff";
-			books.style.backgroundColor="#33ccff";
-			books.style.color="#FFFFFF";
-		}
+		e.target.classList.add("article");
 	})
 	
 	
@@ -29,7 +16,7 @@
 		xmlhttp=new ActiveXObject();
 	}
 	
-	xmlhttp.open("POST","http://192.168.0.127:3900/productList",true);
+	xmlhttp.open("POST","http://192.168.0.146:3900/productList",true);
 	xmlhttp.send();
 	
 	

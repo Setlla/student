@@ -43,18 +43,18 @@
 		height: 100%;
 		width: 50%;
 		text-align: center;
-		/*align-self: center;*/
-	}
-	.article{
 		float: left;
-		background: #33ccff;
-		color: #FFFFFF;
-	}
-	.books{
-		float: right;
 		background: #bfe6f3;
 		color: #33ccff;
 	}
+	.article{
+		background: #33ccff!important;
+		color: #FFFFFF!important;
+	}
+	/*.books{
+		background: #bfe6f3;
+		color: #33ccff;
+	}*/
 	.head_img{
 		width: 0.8rem;
 		height: 0.78rem;
@@ -107,3 +107,4 @@
 		width: 0.62rem;
 		height: 0.64rem;
 	}
+	
