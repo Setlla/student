@@ -11,7 +11,7 @@
 				var	password = document.querySelector(".password").value;
 				var user ={
 					phone:phone,
-					password:password
+					password:hex_md5(password)
 				}
 				xhr.open('post','http://192.168.0.127:3900/login');
 				xhr.setRequestHeader("Content-Type","application/json");
