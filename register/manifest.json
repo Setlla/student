@@ -10,7 +10,7 @@
     "icons": {
         "72": "icon.png"
     },
-    "launch_path": "denglu.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+    "launch_path": "dp.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
     "developer": {
         "name": "",/*开发者名称*/
         "email": "",/*开发者邮箱地址*/
@@ -226,6 +226,18 @@
 					"img/注册_03.png",
 					"css/all.css",
 					"img/zc_03.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"dp.html": {
+				"resources": [
+					"img/dp_03.png",
+					"css/dp.css",
+					"img/dp_10.png",
+					"img/dp_12.png",
+					"img/dp_07.png",
+					"css/all.css"
 				],
 				"refer": [],
 				"priority": 0
