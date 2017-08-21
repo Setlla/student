@@ -30,8 +30,8 @@
 	}
 	.header_arr{
 		display: block;
-		width: 0.38rem;
-		height: 0.36rem;
+		width: 0.34rem;
+		height: 0.34rem;
 		border-left: 2px solid #FFFFFF;
 		border-bottom: 2px solid #FFFFFF;
 		transform: rotate(45deg) skew(0deg);

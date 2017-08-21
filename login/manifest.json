@@ -242,7 +242,12 @@
 					"img/icon/icon_45.png",
 					"css/hockshop.css",
 					"css/public.css",
-					"img/ware/ware_20.png"
+					"img/ware/ware_20.png",
+					"js/hockshop.js",
+					"img/icon/icon_46.png",
+					"img/icon/icon_49.png",
+					"img/icon/icon_47.png",
+					"img/icon/icon_48.png"
 				],
 				"refer": [],
 				"priority": 0
