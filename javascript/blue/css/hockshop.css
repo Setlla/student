@@ -13,16 +13,6 @@ ul{
 	margin: 0;
 	list-style-type: none;
 }
-@media only screen and (min-width:320px) and (max-width:413px) {
-	html{
-		font-size: 32px;
-	}
-}
-@media only screen and (max-width:320px) {
-	html{
-		font-size: 25px;
-	}
-}
 .head{
 	height:1.66rem;
 	background-color: #33ccff;
@@ -75,6 +65,7 @@ ul{
 	display: flex;
 }
 .bicycle img{
+	width:2.6rem;
 	margin-top: .56rem;
 }
 .shanghai{
@@ -147,6 +138,7 @@ ul{
 	justify-content: space-around;
 	margin-top: /*2.4rem*/16.5%;
 	border-top:solid 1px #808080;
+	background-color: #fff;
 }
 .foot li{
 	
@@ -161,4 +153,7 @@ ul{
 .foot li img{
 	width:.6rem;
 	padding: .16rem 0 .16rem 0;
+}
+.footer{
+	height:3rem;
 }
