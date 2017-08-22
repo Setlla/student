@@ -24,12 +24,119 @@ html{
 	display: block;
 	line-height: 1.28rem;
 }
-.book{
-	position: relative;
-}
 .book img{
 	width:2.44rem;
+	margin: 0 auto;
+	margin-top: .5rem;
+	display: block;
+}
+.book span{
+	display: inline-block;
+	width:.12rem;
+	height:.12rem;
+	border: solid 1px #c9c9c9;
+	border-radius:.06rem;
+}
+.book span:first-child{
+	background-color: #33ccff;
+}
+.round{
+	margin-top: .24rem;
+	text-align: center;
+	padding:.1rem;
+	border-bottom: solid .2rem #ebeced;
+}
+.heighter p{
+	font-size: .3rem;
+	color: #333;
+}
+.heighter{
+	padding: .2rem;
+	border-bottom: solid .2rem #ebeced;
+}
+.math{
+	position: relative;
+}
+.math span:nth-child(3){
+	color: #ff9900;
+	font-size:.4rem;
+}
+.math span:nth-child(4){
+	font-size: .24rem;
+	color: #999;
+	text-decoration: line-through;
+	padding-left:.23rem;
+}
+button{
+	font-size: .2rem;
+	color: #fff;
+	background-color: #33cc33;
+	outline: none;
+	border: none;
 	position: absolute;
-	left:50%;
-	transform: translate(-50%,11.4%);
+	right:0;
+	bottom: .1rem;
+}
+.express{
+	display:flex;
+	justify-content: space-between;
+}
+.express span{
+	font-size: .24rem;
+	color: #999;
+}
+.content{
+	margin-bottom:1rem;
+}
+.content p:first-child{
+	font-size: .28rem;
+	color:#333;
+	padding-left: .22rem;
+	margin: .2rem 0 .2rem .22rem;
+	border-left:solid #33CCFF 2px;
+}
+.content p:nth-child(2){
+	border-top:solid 1px #333;
+	font-size: .28rem;
+	color:#999;
+	margin-left:.2rem;
+	padding:.2rem .2rem .2rem 0;
+}
+.buy{
+	width: 100%;
+	position: fixed;
+	bottom:0;
+	
+}
+.buy li{
+	width: 33.33%;
+	height:.98rem;
+	float:left;
+	text-align: center;
+}
+.Mrs p:first-child{
+	padding-top: .1rem;
+	font-size: .24rem;
+	color: #fff;
+	line-height:.42rem;
+}
+.Mrs p:nth-child(2){
+	font-size: .2rem;
+	color: #fff;
+	line-height:.45rem;
+}
+.buy li:first-child{
+	background-color: #33ccff;
+}
+.buy li:nth-child(2){
+	background-color:#ff9933;
+	font-size: .28rem;
+	color:#fff;
+	line-height: .98rem;
+}
+.buy li:nth-child(3){
+	background-color:#ff6600;
+	font-size: .28rem;
+	color:#fff;
+	line-height: .98rem;
 }
