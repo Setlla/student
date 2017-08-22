@@ -1,0 +1,14 @@
+html{
+	font-size: 100px;
+}
+.head{
+	background-color: #33ccff;
+}
+.head a{
+	width:.3rem;
+	height:.3rem;
+	border-bottom: solid 1px #fff;
+	border-left: solid 1px #fff;
+	transform: rotate(45deg);
+	display: block;
+}
