@@ -6,6 +6,11 @@ html{
 		font-size: 64.7px;
 	}
 }
+@media only screen and (min-width: 320px) and (max-width: 414px) {
+	html{
+		font-size:50px ;
+	}
+}
 .head{
 	/*width: 100%;*/
 	height: 1.28rem;
@@ -35,8 +40,11 @@ select{
 	display:inline-block;	
 	font-size: .3rem;
 	color:#fff ;
-	padding: .17rem .35rem;
-	
+	padding: .17rem .35rem;	
+}
+.bton .res{
+	background-color: #d6f5ff;
+	color: #33ccff;
 }
 .res{
 	border-top-left-radius: .05rem;
@@ -44,10 +52,10 @@ select{
 .book{
 	border-top-right-radius: .05rem;
 }
-.bton a:hover{
+/*.bton a:hover{
 	background-color: #d6f5ff;
 	color: #33ccff;
-}
+}*/
 .head span{
 	display: inline-block;
 	width: .09rem;
@@ -73,6 +81,8 @@ select{
 	width: 6rem;
 	height: 2rem;
 	overflow: hidden;
+	padding-bottom: .1rem;
+	/*display: none;*/
 }
 .bike img{
 	width: 2rem;
@@ -84,6 +94,9 @@ select{
 	font-size: .3rem;
 	display: block;
 	margin-bottom: .1rem;
+}
+.bike .title{
+	word-break: break-all;
 }
 .bike span{
 	font-size: .2rem;
@@ -126,24 +139,25 @@ select{
 	margin-top: .1rem;
 	margin-left: .6rem;
 }
-.bike .dot{
+/*.bike .dot{
 	font-size: .08rem;
 	color: #999;
 	float: right;	
 	margin-right: .2rem;
-}
+}*/
 .much{
-	border-bottom: solid #e5e5e5 1px;
+	/*border-bottom: solid #e5e5e5 1px;*/
 }
-.much3{
-	border: none;
-}
-.bike3{
-	border-bottom: solid #e5e5e5 1px;
-	margin-bottom: 1.8rem;
-}
+
 .bot{
-	width: 6.4rem;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 999;
+	/*margin-top: 1.86rem;*/
+	border-top: solid #808080 1px;
+	padding-top: .1rem;
+	display: block;
 }
 .bot li{
 	width: 24%;
@@ -158,4 +172,47 @@ select{
 }
 .bot li img{
 	display: inline-block;
+}
+.serch{
+	display: none;
+}
+input{
+	padding: .15rem  0;
+	padding-left: 2.5rem;
+	background: url("../img/sj_03.png") 35% 50% no-repeat;
+/*	background-size: .3rem;*/
+	font-size: .3rem;
+	color: #bbb;
+	background-color: #ebeced;
+	border-radius:.5rem ;
+	border: none;
+	margin: .15rem auto;
+	display: block;
+}
+.list p{
+	font-size: .3rem;
+	color: #333;
+	display: inline-block;
+}
+.list select{
+	background-color: #fff;
+	font-size: .24rem;
+	color: #999;
+	/*float: right;*/
+}
+.list span{
+	display: inline-block;
+	width: .1rem;
+	height: .1rem;
+	border-bottom: solid #999 1px;
+	border-right: solid #999 1px;
+	-webkit-transform:rotate(5deg);
+	-webkit-transform:skew(40deg,-40deg);
+	/*float: right;*/
+}
+.thing{
+	overflow: hidden;
+}
+.books{
+	display: none;
 }
