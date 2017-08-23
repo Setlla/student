@@ -41,8 +41,11 @@
 	float: left;
 	box-sizing: border-box;
 }
+.cur{
+	background:#d6f5ff ;
+}
 .qh p:nth-child(1){
-	background: #d6f5ff;
+	/*background: #d6f5ff;*/
 	border-right: 0;
 	border-radius: 2px 0 0 2px;	
 }
