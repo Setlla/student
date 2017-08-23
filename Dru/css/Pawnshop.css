@@ -137,6 +137,9 @@
 }
 .bottom_nav{
 	padding-top: 1.1rem;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
 }
 .tips{
 	overflow: hidden;

@@ -57,9 +57,9 @@
 						+'<a></a>'
 					+'</div>'
 				
-			var node=document.createElement("div");
-			node.setAttribute("class","textContent");
-			node.innerHTML=textContent;
+			var node=document.createElement("div");  //创造一个元素DIV 
+			node.setAttribute("class","textContent");  //设置一个属性textContent
+			node.innerHTML=textContent;			//选取HTML 的内容 
 //			textContent.innerHTML=node;
 				
 			if(result.result[i].IsBook==0){
