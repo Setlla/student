@@ -134,7 +134,7 @@
 		text-decoration: line-through;
 	}
 	.ware_explain p:nth-of-type(3) span:nth-of-type(5){
-		font-size: 0.1rem;
+		font-size: 0.08rem;
 		color: #c3c3c3;
 		margin-left: 1rem;
 	}
