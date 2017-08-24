@@ -18,6 +18,7 @@
 		for (var i=0;i<s.result.length;i++) {
 			var textCT=
 				'<div class="ware">'
+				+'<div class="id">'+s.result[i].id+'</div>'
 	       	    +'<div class="ware_pic">'
 	        	+'<img src="'+s.result[i].Image+'" />'
 	        	+'</div>'
@@ -38,10 +39,20 @@
 	    	
 	        //动态插入，判断是否为书籍
 	        if (s.result[i].IsBook==0) {
-	        	$('.list').prepend(textCT);
+	        	$('.list').append(textCT);
 	        } else{
-	        	$('.list1').prepend(textCT);
+	        	$('.list1').append(textCT);
 	        }
 		}
+		//点击物品按钮
+		$('.list div').click(function(){
+			var id=$(this).children('.id').text();
+	        location.href="http://192.168.0.130:8020/login/DetailsPage.html?id=" + id;
+	   	})
+		//点击书籍按钮
+	    $('.list1 div').click(function(){
+	    	var id=$(this).children('.id').text();
+	        location.href="http://192.168.0.130:8020/login/DetailsPage.html?id=" + id;
+	   	})
 	})
 

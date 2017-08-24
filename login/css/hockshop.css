@@ -69,6 +69,11 @@
 		display: flex;/*为了左边的图片居中*/
 		display: -webkit-flex;
 	}
+	.id{
+		display: none;
+	}
+	
+	
 	.ware_pic{
 		width: 40%;
 		float: left;
