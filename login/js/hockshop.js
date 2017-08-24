@@ -17,7 +17,8 @@
 		//商品列表
 		for (var i=0;i<s.result.length;i++) {
 			var textCT=
-	       	    '<div class="ware_pic">'
+				'<div class="ware">'
+	       	    +'<div class="ware_pic">'
 	        	+'<img src="'+s.result[i].Image+'" />'
 	        	+'</div>'
 	        	+'<div class="ware_explain">'
@@ -32,17 +33,14 @@
 	    		+'<span>价格：￥</span><span>'+s.result[i].OldPrice+'</span>'
 	    		+'<span>●●●</span>'
 	        	+'</p>'
+	        	+'</div>'
 	        	+'</div>';
 	    	
-	    	var d=$('<div></div>');
-	    	console.log(d);
-	        d.attr('class','ware');
-	        var a=d.html(textCT);
 	        //动态插入，判断是否为书籍
 	        if (s.result[i].IsBook==0) {
-	        	$('.list').prepend(a);
+	        	$('.list').prepend(textCT);
 	        } else{
-	        	$('.list1').prepend(a);
+	        	$('.list1').prepend(textCT);
 	        }
 		}
 	})
