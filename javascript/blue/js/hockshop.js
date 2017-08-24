@@ -1,8 +1,27 @@
 //$(document).ready(function(){
-	var xhr = new XMLHttpRequest;
-//	var $things=$("div.max");
-//	var $book=$("div.books");
-//	var $all=$("div.things");
+//	var xhr = new XMLHttpRequest;
+	
+	
+	
+
+
+	
+	var id = $(document).on("click",".books",function(e){
+		location.href = "details.html";
+		
+			
+	$.ajax({
+	type:"post",
+	url:"http:192.168.0.146:3900/productDetail",
+	async:true,
+	contentType:application,
+	data:id,
+	success:
+	})
+	}
+
+
+
 	$(document).on("click",".things",function(e){
 		if(e.target.className == "thing"){
 			$(".thing").css("background","rgba(225,225,225,0.8)");
