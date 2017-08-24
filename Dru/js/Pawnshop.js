@@ -1,4 +1,5 @@
 
+
 $.ajax({
 	type:"post",
 	url:" http://192.168.0.146:3900/productList",
@@ -8,12 +9,18 @@ $.ajax({
 		setProduct(result.result);
 	},
 })
-
+	
+	$(document).on("click",".content_noe",function(e){
+		console.log(e.target);
+		$(this).addClass("cur").siblings().removeClass("cur");
+	})
+	
+	
 	$(document).on("click",".qh p",function	()	{
 		$(this).addClass("cur").siblings().removeClass("cur");  //点击当前添加标签CUR。所有兄弟元素删除标签CUR。
 		$(".content").eq($(this).index()).show();		//选择点击对应的内容显示
 		$(".content").eq($(this).index()).siblings(".content").hide();	//拿到当前内容块，另外内容块隐藏。
-
+//		$(".content").toggle();
 
 //		if (this.className=="left_click") {
 //			$(".right_click").css("background","#33CCFF");
@@ -34,7 +41,7 @@ $.ajax({
 	function setProduct(result){
 				
 		for(var i=0;i<result.length;i++){
-			var	textContent='<div class="content_noe">'
+			var	textContent='<div class="content_noe" data-id="'+result[i].id+'">'
 					+'<img src="'+result[i].Image+'"/ width="180" height="140">'
 					+'<div class="right_one">'
 					+'<p>'+result[i].Des+'</p>'
@@ -57,7 +64,7 @@ $.ajax({
 //////			textContent.innerHTML=node;
 				
 				
-				//判断 。
+				//判断 。111
 			if(result[i].IsBook==0){
 				$(".content_two").append(textContent);
 			}else{
@@ -65,7 +72,11 @@ $.ajax({
 			}
 		}
 	}
-
+	$(document).on("click",".content_noe",function(){
+//		var id = $(this).data("id");
+//		location.href="/student/Dru/details.html?id="+id;	
+	location.href="details.html?id="+$(this).data("id");//跳转
+})
 
 
 
