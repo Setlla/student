@@ -6,31 +6,29 @@
 
 
 	
-	var id = $(document).on("click",".books",function(e){
-		location.href = "details.html";
-		
-			
-	$.ajax({
-	type:"post",
-	url:"http:192.168.0.146:3900/productDetail",
-	async:true,
-	contentType:application,
-	data:id,
-	success:
-	})
-	}
+//	var id = $(document).on("click",".books",function(e){
+//		location.href = "details.html";
+//		
+//			
+//	$.ajax({
+//	type:"post",
+//	url:"http:192.168.0.146:3900/productDetail",
+//	async:true,
+//	contentType:application,
+//	data:id,
+//	success:
+//	})
+//	}
 
 
 
-	$(document).on("click",".things",function(e){
-		if(e.target.className == "thing"){
-			$(".thing").css("background","rgba(225,225,225,0.8)");
-			$(".book").css("background","#33ccff");
+	$(document).on("click",".things a",function(e){
+		console.log(this)
+		$(this).addClass("cur").siblings().removeClass("cur");
+		if(e.target.className == "thing cur"){
 			$(".max").show();
 			$(".books").hide();
 		}else{
-			$(".book").css("background","rgba(225,225,225,0.8)");
-			$(".thing").css("background","#33ccff");
 			$(".max").hide();
 			$(".books").show();
 		 }

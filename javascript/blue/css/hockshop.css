@@ -44,10 +44,6 @@ ul{
 	width: 50%;
 	text-align: center;
 }
-.things a:first-child{
-	background-color:rgba(225,225,225,0.8);
-}
-
 .things{
 	overflow: hidden;
 	width:3rem;
@@ -56,6 +52,10 @@ ul{
 	text-align: center;
 	height:.72rem;
 	line-height: .72rem;
+}
+.cur{
+	background: rgba(225,225,225,0.8);
+	color:#33ccff;
 }
 .news img{
 	width:.6rem;
