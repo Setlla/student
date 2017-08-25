@@ -74,8 +74,12 @@
 		}
 		var it=setInterval(zidong,1000);
 
-
-
+		$('.ware_pic img').mousemove(function(){
+			clearInterval(it);
+		})
+		$('.ware_pic img').mouseout(function(){
+			it=setInterval(zidong,1000);
+		})
 //		$('.dot span').click(function(){				
 //			$(this).addClass('dotscolor').siblings().removeClass('dotscolor');
 //			var index=$('.dot span').index(this);
