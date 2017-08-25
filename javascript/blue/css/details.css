@@ -25,6 +25,7 @@ html{
 	line-height: 1.28rem;
 }
 .book img{
+	height:3rem;
 	width:2.44rem;
 	margin: 0 auto;
 	margin-top: .5rem;
