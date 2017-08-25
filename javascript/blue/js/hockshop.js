@@ -1,27 +1,3 @@
-//$(document).ready(function(){
-//	var xhr = new XMLHttpRequest;
-	
-	
-	
-
-
-	
-//	var id = $(document).on("click",".books",function(e){
-//		location.href = "details.html";
-//		
-//			
-//	$.ajax({
-//	type:"post",
-//	url:"http:192.168.0.146:3900/productDetail",
-//	async:true,
-//	contentType:application,
-//	data:id,
-//	success:
-//	})
-//	}
-
-
-
 	$(document).on("click",".things a",function(e){
 		console.log(this)
 		$(this).addClass("cur").siblings().removeClass("cur");
@@ -35,10 +11,8 @@
 			
 		})
 	$.post('http://192.168.0.146:3900/productList',function(data,status){
-		
-
 		   for(var n=0;n<data.result.length;n++){
-			   var strings='<div class="bicycle">'
+			   var strings='<div class="bicycle" data-id='+data.result[n].id+'>' 
 							  +'<div class="img">'
 							  +'<img src='+data.result[n].Image+'/>'
 							  +'</div>'
@@ -67,6 +41,14 @@
 		   }
 		}
 	})
+	
+				      
+			 $(document).on("click",".bicycle",function(e){
+			 	console.log(this);
+				var id=$(this).data("id");
+				location.href = "/student/javascript/blue/details.html?id="+id;      
+			})
+	
 
 //var xhr =new XMLHttpRequest;
 //var things = document.querySelector(".max");

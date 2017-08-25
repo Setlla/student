@@ -53,7 +53,7 @@ ul{
 	height:.72rem;
 	line-height: .72rem;
 }
-.cur{
+.things .cur{
 	background: rgba(225,225,225,0.8);
 	color:#33ccff;
 }
