@@ -1,15 +1,18 @@
 $.post('http://192.168.0.146:3900/productList',function(data,status){
 	for(var i=0;i<data.result.length;i++ ){
-    	var resContent = '<div class="bike">'
+    	var resContent = '<div class="bike" data-id='+ data.result[i].id +'>'
     					+ '<img class="img" src="'+ data.result[i].Image +'" />'
     					+ '<p class="title">'+data.result[i].Des +'</p>'
-    					+ '<span>'+ data.result[i].Carriage +'</span>'
-    					+ '<span class="city">'+ data.result[i].Destination +'</span>'
+    					+ '<div class="way">'
+    					+ '<span>'+ data.result[i].Carriage +'</span>'    					
+    					+ '<span>'+ data.result[i].Destination +'</span>'
+    					+ '</div>'
     					+ '<button>'+ data.result[i].Status +'</button>'
     					+ '<div class="much"> '
     					+ '<p class="nub">'
     					+ '<span>￥</span>'+ data.result[i].CurPrice +'</p>'
     					+ '<p class="nub2">￥' + data.result[i].OldPrice +'</p>'
+//  					+ '<i class="dot">● ● ●</i>'
     					+ '</div>'
     					+ '</div>'
     	
@@ -25,6 +28,11 @@ $.post('http://192.168.0.146:3900/productList',function(data,status){
     	}else{
     		$('.books').append(resContent);
     	}
+    	$(".bike").click(function(){
+    		var id=$(this).data("id")
+    		location.href="/next/detail.html?id="+id;
+    	})
+    		
     }
 })
 
