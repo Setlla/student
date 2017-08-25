@@ -2,11 +2,9 @@
 	$('.classify a').click(function(){
 		$(this).addClass('article').siblings().removeClass('article');
 		if($(this).text()=="书籍"){
-			$('.list').css('display','none');
-			$('.list1').css('display','block');
+			$('.list').css('display','none').siblings().css('display','block');
 		}else{
-			$('.list').css('display','block');
-			$('.list1').css('display','none');
+			$('.list').css('display','block').siblings().css('display','none');
 		}
 	})
 	
@@ -41,14 +39,9 @@
 	        }
 		}
 		//点击物品按钮
-		$('.list div').click(function(){
+		$('.alllist div div').click(function(){
 			var id=$(this).data('id');
 	        location.href="http://192.168.0.130:8020/login/DetailsPage.html?id=" + id;
-	   	})
-		//点击书籍按钮
-	    $('.list1 div').click(function(){
-	    	var id=$(this).data('id');
-	        location.href="http://192.168.0.130:8020/login/DetailsPage.html?id=" + id;
-	   	})
+	   })
 	})
 
