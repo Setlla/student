@@ -7,16 +7,8 @@
 		
 		var id=getParams('id');
 		
-		$.ajax({			
-			type:"post",
-			url:"http://192.168.0.146:3900/productDetail",
-			async:true,
-			contentType:'application/JSON',
-			data:JSON.stringify({
-				id:id
-			}),
-			success:function(data,status){
-				console.log(data.result.product.Name);
+		//定义一个函数来获取动态数据
+		var datas = function(data){
 				var content=
 					'<div class="ware_pic">'
 		        	+'<img id="imgid1" src="'+data.result.product.Image+'" />'
@@ -50,6 +42,22 @@
 	        		+'</div>';
 					
 					$('.baby').append(content2);
+		}
+		
+		
+		
+		
+		$.ajax({			
+			type:"post",
+			url:"http://192.168.0.146:3900/productDetail",
+			async:true,
+			contentType:'application/JSON',
+			data:JSON.stringify({
+				id:id
+			}),
+			success:function(data,status){
+				console.log(data.result.product.Name);
+				datas(data);//插入动态数据
 			}
 		})
 		//箭头返回当铺页面
