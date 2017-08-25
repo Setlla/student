@@ -19,7 +19,9 @@
 			success:function(data,status){
 				console.log(data.result.product.Name);
 				var content=
-				'<img class="ware_pic" src="'+data.result.product.Image+'" />';
+				'<div class="ware_pic">'
+	        	+'<img src="'+data.result.product.Image+'" />'
+        		+'</div>'
 				
 				$('.ware').append(content);
 				
@@ -55,4 +57,30 @@
 		$('.header_arr').click(function(){
 			location.href="/login/hockshop.html";
 		})
-	})
+		
+		//轮郭效果
+		$('.dot span').click(function(){
+				$(this).addClass('dotscolor').siblings().removeClass('dotscolor');
+				switch (this.id){
+					case 'dotid1':
+						$('.ware_pic img').eq(0).show().siblings().hide();
+						break;
+					case 'dotid2':
+						$('.ware_pic img').eq(1).show().siblings().hide();
+						break;
+					case 'dotid3':
+						$('.ware_pic img').eq(2).show().siblings().hide();
+						break;
+					case 'dotid4':
+						$('.ware_pic img').eq(3).show().siblings().hide();
+						break;
+					case 'dotid5':
+						$('.ware_pic img').eq(4).show().siblings().hide();
+						break;
+					default:
+						console.log('这尼玛是本书');
+						break;
+				}
+		})
+		
+	})//ready的括号

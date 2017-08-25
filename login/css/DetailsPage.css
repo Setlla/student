@@ -10,7 +10,7 @@
 		position: relative;
 		margin-bottom: 0.4rem;
 	}
-	.ware_pic{
+	.ware_pic img{
 		width: 2.4rem;
 		height: 3rem;
 		margin: 0.7rem 0rem;
@@ -33,10 +33,15 @@
 		display: block;
 		margin: 0rem 0.08rem;
 	}
-	.dot span:nth-of-type(1){
+	.dotscolor{
 		background: #33ccff;
 		border: #33CCFF;
 	}
+	.ware_pic_none{
+		display: none;
+	}
+	
+	
 	/*商品详细介绍*/
 	.details{
 		padding: 0.4rem;
