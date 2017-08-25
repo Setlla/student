@@ -60,27 +60,24 @@
 				//判断 。111
 
 
-	$(document).on("click",".round a",function(e){
-	        console.log(e.target.dataset.id);
-   			var id = e.target.dataset.id;
+		var id = 0;// 自动播放时的图片索引	
+		var length=$(".round a").length; 	//当前图片总数
+		$(document).on("click",".round a",function(e){
+	        var index =$(".round a").index(this);
 			$(this).css("background","#33CCFF").siblings().css("background","white");
-			$(".banner").children().eq(id).show().siblings("img").hide();	
-			if(parseInt(id)!=ToDisplayPicNumber){
-				ToDisplayPicNumber = parseInt(id) + 1;
-				//$(".banner").children().eq(this).next().show().siblings("img").hide();
-			}
-	})
+			$(".banner").children().eq(index).show().siblings("img").hide();
+			id = index ;	//
+		})
+		var a=setInterval("PicNumClick()",1000);	
+			$(".banner img").mouseover(function(){
+		 		clearTimeout(a)
+		 	})
+			$(".banner img").mouseout(function(){
+		 	a=	setInterval("PicNumClick()",1000);
+		 })			
 	
-	
-		
-	var PicTotal = 5;// 当前图片总数
-	var CurrentIndex;// 当前鼠标点击图片索引
-	var ToDisplayPicNumber = 0;// 自动播放时的图片索引		
-		
-		
 	function PicNumClick() {
-		$(".banner .round a").eq(ToDisplayPicNumber).trigger("click");
-		ToDisplayPicNumber = (ToDisplayPicNumber +1) % PicTotal;
-		setTimeout("PicNumClick()",1000);
+		$(".round a").eq(id).trigger("click");
+		id = (id +1) % length;
+//		a=	setInterval("PicNumClick()",1000);
 	}
-		setTimeout("PicNumClick()",1000);
