@@ -64,7 +64,11 @@
 	        console.log(e.target.dataset.id);
    			var id = e.target.dataset.id;
 			$(this).css("background","#33CCFF").siblings().css("background","white");
-			$(".banner").children().eq(id).show().siblings("img").hide();			
+			$(".banner").children().eq(id).show().siblings("img").hide();	
+			if(parseInt(id)!=ToDisplayPicNumber){
+				ToDisplayPicNumber = parseInt(id) + 1;
+				//$(".banner").children().eq(this).next().show().siblings("img").hide();
+			}
 	})
 	
 	
@@ -77,6 +81,6 @@
 	function PicNumClick() {
 		$(".banner .round a").eq(ToDisplayPicNumber).trigger("click");
 		ToDisplayPicNumber = (ToDisplayPicNumber +1) % PicTotal;
-//		setTimeout("PicNumClick()",1000);
+		setTimeout("PicNumClick()",1000);
 	}
-//		setTimeout("PicNumClick()",1000);
+		setTimeout("PicNumClick()",1000);
