@@ -36,6 +36,7 @@
 		} else{
 			mails(mail_ipt.value);
 		}
+		return true;
 	}
 	//注册按钮事件
 	document.querySelector(".reg").addEventListener("click",function(){
@@ -47,7 +48,7 @@
 				xmlhttp=new ActiveXObject();
 			}
 			
-			xmlhttp.open("POST","http://192.168.0.127:3900/reg","true");
+			xmlhttp.open("POST","http://192.168.0.158:3900/reg","true");
 			xmlhttp.setRequestHeader("Content-Type","application/JSON");
 			var use={
 				phone:phone_ipt.value,
@@ -60,7 +61,7 @@
 					var isSuc=JSON.parse(xmlhttp.responseText);
 					if(isSuc.isSuccess==true){
 						alert("恭喜注册成功！^_^");
-						location.href="http://192.168.0.115:8020/login/login.html"; 
+						location.href="login.html"; 
 					}
 				}
 			}
@@ -69,5 +70,5 @@
 	
 	//注册返回
 	document.querySelector(".header_arr").addEventListener("click",function(){
-		location.href="http://192.168.0.115:8020/login/login.html";
+		location.href="login.html";
 	})

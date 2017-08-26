@@ -25,7 +25,16 @@
 			"css/public.css",
 			"img/login/account.png",
 			"js/md5.js",
-			"css/index.css"
+			"css/index.css",
+			"js/jquery-3.2.1.js",
+			"re_pwd.html",
+			"register.html",
+			"hockshop.html"
+		],
+		"refer": [
+			"re_pwd.html",
+			"register.html",
+			"hockshop.html"
 		]
 	},
 	"hockshop.html": {
@@ -41,7 +50,52 @@
 			"img/icon/icon_46.png",
 			"img/icon/icon_49.png",
 			"img/icon/icon_47.png",
-			"img/icon/icon_48.png"
+			"img/icon/icon_48.png",
+			"DetailsPage.html"
+		],
+		"refer": [
+			"DetailsPage.html"
+		]
+	},
+	"re_pwd.html": {
+		"resources": [
+			"js/re_pwd.js",
+			"css/re_pwd.css",
+			"js/jquery-3.2.1.js",
+			"css/public.css",
+			"js/md5.js",
+			"login.html"
+		],
+		"refer": [
+			"login.html"
+		]
+	},
+	"register.html": {
+		"resources": [
+			"img/register/icon_10.png",
+			"img/register/icon_03.png",
+			"img/register/icon_11.png",
+			"js/register.js",
+			"css/register.css",
+			"img/register/icon_07.png",
+			"img/register/icon_2.png",
+			"login.html"
+		],
+		"refer": [
+			"login.html"
+		]
+	},
+	"DetailsPage.html": {
+		"resources": [
+			"img/author.jpg",
+			"js/DetailsPage.js",
+			"img/ware/ware_24.png",
+			"img/ware/ware_28.png",
+			"css/DetailsPage.css",
+			"hockshop.html"
+		],
+		"refer": [
+			"hockshop.html"
 		]
 	}
 }

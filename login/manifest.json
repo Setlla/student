@@ -1,7 +1,7 @@
 {
     "@platforms": ["android", "iPhone", "iPad"],
     "id": "",/*应用的标识，创建应用时自动生成，勿手动修改*/
-    "name": "login1",/*应用名称，程序桌面图标名称*/
+    "name": "login",/*应用名称，程序桌面图标名称*/
     "version": {
         "name": "1.0",/*应用版本名称*/
         "code": ""
@@ -10,7 +10,7 @@
     "icons": {
         "72": "icon.png"
     },
-    "launch_path": "hockshop.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+    "launch_path": "login.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
     "developer": {
         "name": "",/*开发者名称*/
         "email": "",/*开发者邮箱地址*/
@@ -229,7 +229,11 @@
 					"css/public.css",
 					"img/login/account.png",
 					"js/md5.js",
-					"css/index.css"
+					"css/index.css",
+					"js/jquery-3.2.1.js",
+					"re_pwd.html",
+					"register.html",
+					"hockshop.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -247,7 +251,46 @@
 					"img/icon/icon_46.png",
 					"img/icon/icon_49.png",
 					"img/icon/icon_47.png",
-					"img/icon/icon_48.png"
+					"img/icon/icon_48.png",
+					"DetailsPage.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"re_pwd.html": {
+				"resources": [
+					"js/re_pwd.js",
+					"css/re_pwd.css",
+					"js/jquery-3.2.1.js",
+					"css/public.css",
+					"js/md5.js",
+					"login.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"register.html": {
+				"resources": [
+					"img/register/icon_10.png",
+					"img/register/icon_03.png",
+					"img/register/icon_11.png",
+					"js/register.js",
+					"css/register.css",
+					"img/register/icon_07.png",
+					"img/register/icon_2.png",
+					"login.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"DetailsPage.html": {
+				"resources": [
+					"img/author.jpg",
+					"js/DetailsPage.js",
+					"img/ware/ware_24.png",
+					"img/ware/ware_28.png",
+					"css/DetailsPage.css",
+					"hockshop.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -261,14 +304,11 @@
 				"img/ware/ware_53.png",
 				"img/icon/icon_95.png",
 				"mobile_JT.html",
-				"img/register/icon_07.png",
 				"img/icon/icon_23.png",
 				"css/header.css",
-				"img/register/icon_10.png",
 				"img/ware/ware_47.png",
 				"img/icon/icon_33.png",
 				"img/icon/icon_39.png",
-				"css/register.css",
 				"img/ware/ware_46.png",
 				"img/icon/icon_17.png",
 				"img/banner/banner_2_03.png",
@@ -276,15 +316,10 @@
 				"img/ware/ware_74.png",
 				"img/icon/icon_09.png",
 				"img/ware/ware_67.png",
-				"img/register/icon_03.png",
 				"img/icon/icon_18.png",
 				"img/icon/icon_36.png",
 				"img/icon/icon_30.png",
 				"img/ware/ware_61.png",
-				"img/register/icon_11.png",
-				"js/register.js",
-				"img/author.jpg",
-				"register.html",
 				"img/icon/icon_89.png",
 				"img/icon/icon_04.png",
 				"css/foot.css",
@@ -297,7 +332,6 @@
 				"img/ware/ware_76-22.png",
 				"css/network.css",
 				"img/icon/icon_03.png",
-				"img/register/icon_2.png",
 				"img/icon/icon_91.png"
 			]
 		}

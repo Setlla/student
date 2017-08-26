@@ -6,36 +6,39 @@
 		margin: 0.6rem 0rem;
 		padding: 0rem 0.7rem 0rem 0.7rem;
 	}
-	.retrieve_password input{
+	.phone_ipt,.pwd_ipt{
+		width: 100%;
 		border-radius: 0.5rem;
 		border: 1px solid #e8e8ea;
 		height: 1.2rem;
-		margin: 0.16rem 0 0.16rem 0;
-	}
-	
-	.phone_ipt,.pwd_ipt{
-		width: 100%;
-	}
-	.phone_ipt::-webkit-input-placeholder,
-	.pwd_ipt::-webkit-input-placeholder,
-	.isflag_left_ipt::-webkit-input-placeholder{
 		padding-left: 0.6rem;
 	}
 	.isflag{
-		overflow: hidden;
+		position: relative;
 	}
 	.isflag_left_ipt{
-		float: left;
 		width: 70%;
+		border-radius: 0.5rem;
+		border: 1px solid #e8e8ea;
+		height: 1.2rem;
+		padding-left: 0.6rem;
+		
 	}
 	.isflag_right_ipt{
-		width: 30%;
+		width: 27%;
+		height: 1.2rem;
 		background: #fa6c62;
 		text-align: center;
-		float: right;
-	}
-	.isflag_right_ipt::-webkit-input-placeholder{
+		display: block;
+		border-radius: 0.4rem;
+		outline: none;
+		border: 0;
+		font-size: 0.3rem;
 		color: #FFFFFF;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		transform: translate(0,0);
 	}
 	.foot{
 		width: 100%;

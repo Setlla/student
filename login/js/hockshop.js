@@ -8,7 +8,7 @@
 		}
 	})
 	
-	$.post('http://192.168.0.146:3900/productList',function(s,status){
+	$.post('http://192.168.0.158:3900/productList',function(s,status){
 		//商品列表
 		for (var i=0;i<s.result.length;i++) {
 			var textCT=
@@ -41,7 +41,7 @@
 		//点击物品按钮
 		$('.alllist div div').click(function(){
 			var id=$(this).data('id');
-	        location.href="http://192.168.0.130:8020/login/DetailsPage.html?id=" + id;
+	        location.href="DetailsPage.html?id=" + id;
 	   })
 	})
 

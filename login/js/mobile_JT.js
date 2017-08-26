@@ -5,7 +5,7 @@
 		xmlhttp=new ActiveXObject();
 	}
 	
-	xmlhttp.open("POST","http://192.168.0.127:3900/shop","true");
+	xmlhttp.open("POST","http://192.168.0.158:3900/shop","true");
 	xmlhttp.send();
 	
 	var druger=document.querySelectorAll(".druger li");

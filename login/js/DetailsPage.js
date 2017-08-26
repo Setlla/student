@@ -49,7 +49,7 @@
 		
 		$.ajax({			
 			type:"post",
-			url:"http://192.168.0.146:3900/productDetail",
+			url:"http://192.168.0.158:3900/productDetail",
 			async:true,
 			contentType:'application/JSON',
 			data:JSON.stringify({
@@ -62,32 +62,35 @@
 		})
 		//箭头返回当铺页面
 		$('.header_arr').click(function(){
-			location.href="/login/hockshop.html";
+			location.href="hockshop.html";
 		})
 		
 		//轮郭效果
 		var leng=$('.ware_pic img').length;
-		var index=0;
-		
+		var index=0;		
 		function zidong(){
-			if(index==leng){
-				index=0;
-			}
-			$('.dot span').click(function(){
-				index=$('.dot span').index(this);
-			})
 			$('.ware_pic img').eq(index).show().siblings().hide();
 			$('.dot span').eq(index).addClass('dotscolor').siblings().removeClass('dotscolor');
-			index++;
+			index=(index+1)%leng;
 		}
+		$('.dot span').click(function(){
+				index=$('.dot span').index(this);
+				zidong();
+		})
 		var it=setInterval(zidong,1000);
 
-		$('.ware_pic img').mousemove(function(){
+		$('.ware_pic img').hover(function(){
 			clearInterval(it);
-		})
-		$('.ware_pic img').mouseout(function(){
+		},function(){
 			it=setInterval(zidong,1000);
 		})
+
+//		$('.ware_pic img').mousemove(function(){
+//			clearInterval(it);
+//		})
+//		$('.ware_pic img').mouseout(function(){
+//			it=setInterval(zidong,1000);
+//		})
 //		$('.dot span').click(function(){				
 //			$(this).addClass('dotscolor').siblings().removeClass('dotscolor');
 //			var index=$('.dot span').index(this);
