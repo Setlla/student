@@ -33,10 +33,11 @@
 		//判断是手机注册click || 邮箱注册click
 		if (isflag==true) {
 			phones(phone_ipt.value);
+			return true;
 		} else{
 			mails(mail_ipt.value);
+			return true;
 		}
-		return true;
 	}
 	//注册按钮事件
 	document.querySelector(".reg").addEventListener("click",function(){

@@ -6,13 +6,11 @@
 			var t=setTimeout(time,1000);
 			if (num==0) {
 				clearTimeout(t);
-				$('.isflag_right_ipt').attr('disabled');
-				$('.isflag_right_ipt').css("background",'#fa6c62');
+				$('.isflag_right_ipt').attr('disabled').css("background",'#fa6c62');
 				$('.isflag_right_ipt').text('发送验证码');				
 				num=60;
 			}else{
-				$('.isflag_right_ipt').attr('disabled','disabled');
-				$('.isflag_right_ipt').css("background",'#c0baba');
+				$('.isflag_right_ipt').attr('disabled','disabled').css("background",'#c0baba');
 				num--;
 			}
 		}
