@@ -2,7 +2,7 @@
 
 $.ajax({
 	type:"post",
-	url:" http://192.168.0.146:3900/productList",
+	url:" http://192.168.0.143:3900/productList",
 	contentType:"application/json",
 	success:function(result){
 		console.log(result);

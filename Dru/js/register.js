@@ -1,4 +1,5 @@
 
+
 	var phone=document.querySelector(".phone");
 	var email=document.querySelector(".email");
 	var password=document.querySelector(".password");
@@ -24,8 +25,8 @@
 	})	
 	function submit(){			//提交数据
 		var xhr=new XMLHttpRequest();
-		xhr.open("POST","http://192.168.0.127:3900/reg");
-		xhr.setRequestHeader("content-type","application/json");
+		xhr.open("POST","http://192.168.0.143:3900/reg");
+		xhr.setRequestHeader("Content-Type","application/json");
 		var content={
 			phone:phone.value,
 			email:email.value,
@@ -36,7 +37,7 @@
 			if(xhr.readyState==4&&xhr.status==200){
 				var result = JSON.parse(xhr.responseText);
 				 if(result.isSuccess == true ) {
-				 	location.href="dengru.html";
+				 	location.href="loginLo.html";
 				 }else {
 				 	console.log(result)
 				 }
@@ -46,12 +47,12 @@
 
 	document.querySelector(".register").addEventListener("click",function(){
 		if(isphone){
-			if(valiphone()){
+			if(valiphone(phone.value)){
 				submit();				
 			}
 		}
 		else{
-			if(valiemail()){
+			if(valiemail(email.value)){
 				submit();
 			}
 		}	

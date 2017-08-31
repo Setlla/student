@@ -2,7 +2,7 @@
 
 	$.ajax({
 		type:"post",
-		url:"http://192.168.0.146:3900/productDetail",
+		url:"http://192.168.0.143:3900/productDetail",
 		async:true,
 		contentType:"application/json",
 		data:JSON.stringify({
@@ -22,11 +22,11 @@
 		 }
 			//内容拼接。
 	 function setBanner(result){
-		$(".banner img").attr("src",result.product.Image);
+			$(".banner img").attr("src",result.product.Image);
 	 }	
 	 
 	 function setName(result){
-		   var cont='<p>'+result.product.Name+'</p>'
+		    var cont='<p>'+result.product.Name+'</p>'
 			+'<ul>'
 				+'<li>'
 					+'<span class="CurPrice">￥'+result.product.CurPrice+'</span>'
@@ -39,11 +39,11 @@
 					+'<span class="address">'+result.product.Destination+'</span>'	
 			    +'</li>'
 			+'</ul>';				
-		$(".content").html(cont);
+			$(".content").html(cont);
 	}
 	function setDenote(result){
-		var ameP='<i>'+result.product.Des+'</i>';	
-		$(".denote").append(ameP);
+			var ameP='<i>'+result.product.Des+'</i>';	
+			$(".denote").append(ameP);
 	}
 
 
