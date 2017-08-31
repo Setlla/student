@@ -1,0 +1,148 @@
+	body{
+		background: #EEEEEE;
+	}
+	button{
+		outline: none;
+		border-radius: 0.08rem;
+		border: 1px solid #c8c8c8;
+		background: #FFFFFF;
+	}
+	/*公有头部1CS*/
+	.header{
+		width: 100%;
+		height: 0.88rem;
+		line-height: 0.88rem;
+		background: #FFFFFF;
+		text-align: center;
+		font-size: 0.3rem;
+		color: #333333;
+		position: relative;
+		border-bottom: 1px solid #a7a7a7;
+	}
+	.header_arr{
+		display: block;
+		width: 0.24rem;
+		height: 0.24rem;
+		border-left: 2px solid #5c5c5c;
+		border-bottom: 2px solid #5c5c5c;
+		position: absolute;
+		top: 50%;
+		left: 0.34rem;
+		transform: translate(0,-50%) rotate(45deg) ;
+	}
+	.header_dot{
+		position: absolute;
+		right: 0.34rem;
+		font-size: 0.28rem;
+		color: #676767!important;
+	}
+	.header img{
+		width: 0.37rem;
+		height: 0.37rem;
+		position: absolute;
+		top: 50%;
+		right: 1rem;
+		transform: translate(0,-50%);
+	}
+	
+	/*搜索栏*/
+	.search{
+		display: flex;
+		display: -webkit-flex;
+		justify-content: center;
+	}
+	.search input{
+		width: 100%;
+		border: 0;
+		margin: 0.2rem;
+		height: 0.55rem;
+		display: block;
+		padding-left: 40%;
+		background: url(../img/icon/icon_68.png)38% 50% no-repeat;
+		background-color: #FFFFFF;
+		background-size: 0.34rem 0.34rem;
+	}
+	.search input::-webkit-input-placeholder{
+		color: #c4c4c6;
+	}
+
+
+		/*话费充值店标题*/
+	.monopoly{
+		height: 0.85rem;
+		line-height: 0.85rem;
+		background: #FFFFFF;
+		font-size: 0.28rem;
+		color: #333333;
+		position: relative;
+		
+	}
+	.monopoly img{
+		width: 0.38rem;
+		height: 0.31rem;
+		margin: 0 0.28rem;
+		vertical-align: middle;
+	}
+	.mon_arr{
+		display: block;
+		width: 0.2rem;
+		height: 0.2rem;
+		border-right: 2px solid #999999;
+		border-top: 2px solid #999999;
+		position: absolute;
+		top: 50%;
+		left: 60%;
+		transform: translate(-60%,-50%) rotate(45deg);
+	}
+	.mon_success{
+		color: #d4215b;
+		position: absolute;
+		top: 50%;
+		right: 0.2rem;
+		transform: translate(0,-50%);
+	}
+	
+	/*充值*/
+	.recharge{
+		font-size: 0.28rem;
+		display: flex;
+		display: -webkit-flex;
+	}
+	.recharge img{
+		width: 1.92rem;
+		height: 1.92rem;
+		vertical-align: middle;
+	}
+	.recharge li:nth-of-type(2){
+		flex: 1;
+	}
+	.recharge li{
+		padding: 0 0.2rem;
+		margin: 0.2rem 0;
+		text-align: center;
+	}
+	.recharge li p:not(:nth-of-type(1)){
+		text-align: right;
+		color: #999999;
+	}
+	
+	/*页尾*/
+	.foot{
+		background: #FFFFFF;
+		font-size: 0.24rem;
+		text-align: right;
+	}
+	.foot li{
+		height: 1rem;
+		line-height: 1rem;
+		border-bottom: 1px solid #EEEEEE;
+	}
+	.foot button{		
+		height: 0.54rem;
+		width: 1.54rem;
+		margin: 0.2rem;
+	}
+	.judge_btn{
+		color: #d4215b!important;
+		border: 1px solid #d4215b!important;
+	}
