@@ -8,11 +8,31 @@
 		display: -webkit-flex;
 		align-items: center;
 	}
+	/*公共按钮*/
 	.list_radio{
 		margin: 0rem 0rem 0rem 0.14rem;
+		width: 0.28rem;
+		height: 0.28rem;
+		border-radius: 0.14rem;
+		border: 1px solid #a1a1a1;
+		display: inline-block;	
+		position: relative;
 	}
+	.list_icon_radio{
+		position: absolute;
+		width: 0.15rem;
+		height: 0.14rem;
+		border-radius: 0.075rem;
+		border: 0;
+		background: #33CCFF;
+		display: none;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);	
+	}
+	
 	.ware_pic{
-		width: 35%;
+		width: 30%;
 		float: left;
 		text-align: center;/*为了左边的图片左右居中*/
 	}
