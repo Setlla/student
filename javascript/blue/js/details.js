@@ -48,7 +48,7 @@
 		
 
 
-
+			//setTimeout 的方法
 //
 //		var length=$(".round span").length;
 //		var id=0;
@@ -72,6 +72,12 @@
 //			a=setTimeout(Carousel,1000);
 //		})
 			
+			
+			
+			
+			
+			//setInterval 的方法
+			//不需要在函数里面引用
 		var length=$(".round span").length;
 		var id=0;
 		$(".round span").click(function(){
@@ -86,7 +92,6 @@
 		var Carousel=function(){
 			$(".round span").eq(id).trigger("click");
 			 id=(id+1)% length;
-			
 		}
 		$(".book img").hover(function(){
 			clearInterval(a);

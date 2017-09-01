@@ -36,7 +36,7 @@ var xhr =new XMLHttpRequest;
 var register = document.querySelector(".foot");
 	register.addEventListener("click",function(){	
 	if(isphone){
-		if(viliphone(ph.value)){
+		if(viliphone(ph.value) && checkPwd(pass.value)){
 			submit();
 		}
 	}else{
@@ -55,16 +55,16 @@ var register = document.querySelector(".foot");
 		var user ={
 			phone:ph.value,
 			email:em.value,
-			passward:hex_md5(pass.value)
+			password:hex_md5(pass.value)
 		}
-		xhr.open('post','http://192.168.0.127:3900/reg');
+		xhr.open('post','http://192.168.0.143:3900/reg');
 		xhr.setRequestHeader("Content-Type","application/json");
 		xhr.send(JSON.stringify(user));
 		xhr.onreadystatechange=function(){
 			if(xhr.readyState==4 && xhr.status==200){
 				var result=JSON.parse(xhr.responseText);
 				if(result.isSuccess==true){
-					location.href="8.13.html";
+					location.href="denglu.html";
 				}else{
 					console.log(result);
 				}
