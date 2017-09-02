@@ -1,101 +1,101 @@
 {
-	"index.html": {
-		"resources": [
-			"css/index.css",
-			"img/icon/icon_43.png",
-			"img/icon/icon_40.png",
-			"img/ware/ware_24.png",
-			"img/icon/icon_42.png",
-			"css/ware_public.css",
-			"img/ware/ware_27.png",
-			"css/public.css",
-			"img/icon/icon_44.png",
-			"img/icon/icon_41.png",
-			"img/ware/ware_20.png"
-		],
-		"refer": []
-	},
-	"login.html": {
-		"resources": [
-			"img/member-1.jpg",
-			"js/util.js",
-			"css/login.css",
-			"img/login/pwd.png",
-			"js/login.js",
-			"css/public.css",
-			"img/login/account.png",
-			"js/md5.js",
-			"css/index.css",
-			"js/jquery-3.2.1.js",
-			"re_pwd.html",
-			"register.html",
-			"hockshop.html"
-		],
-		"refer": [
-			"re_pwd.html",
-			"register.html",
-			"hockshop.html"
-		]
-	},
-	"hockshop.html": {
-		"resources": [
-			"img/ware/ware_24.png",
-			"css/ware_public.css",
-			"img/ware/ware_27.png",
-			"img/icon/icon_45.png",
-			"css/hockshop.css",
-			"css/public.css",
-			"img/ware/ware_20.png",
-			"js/hockshop.js",
-			"img/icon/icon_46.png",
-			"img/icon/icon_49.png",
-			"img/icon/icon_47.png",
-			"img/icon/icon_48.png",
-			"DetailsPage.html"
-		],
-		"refer": [
-			"DetailsPage.html"
-		]
-	},
-	"re_pwd.html": {
-		"resources": [
-			"js/re_pwd.js",
-			"css/re_pwd.css",
-			"js/jquery-3.2.1.js",
-			"css/public.css",
-			"js/md5.js",
-			"login.html"
-		],
-		"refer": [
-			"login.html"
-		]
-	},
-	"register.html": {
-		"resources": [
-			"img/register/icon_10.png",
-			"img/register/icon_03.png",
-			"img/register/icon_11.png",
-			"js/register.js",
-			"css/register.css",
-			"img/register/icon_07.png",
-			"img/register/icon_2.png",
-			"login.html"
-		],
-		"refer": [
-			"login.html"
-		]
-	},
-	"DetailsPage.html": {
-		"resources": [
-			"img/author.jpg",
-			"js/DetailsPage.js",
-			"img/ware/ware_24.png",
-			"img/ware/ware_28.png",
-			"css/DetailsPage.css",
-			"hockshop.html"
-		],
-		"refer": [
-			"hockshop.html"
-		]
-	}
+  "index.html": {
+    "resources": [
+      "css/index.css",
+      "img/icon/icon_43.png",
+      "img/icon/icon_40.png",
+      "img/ware/ware_24.png",
+      "img/icon/icon_42.png",
+      "css/ware_public.css",
+      "img/ware/ware_27.png",
+      "css/public.css",
+      "img/icon/icon_44.png",
+      "img/icon/icon_41.png",
+      "img/ware/ware_20.png"
+    ],
+    "refer": []
+  },
+  "login.html": {
+    "resources": [
+      "img/member-1.jpg",
+      "js/util.js",
+      "css/login.css",
+      "img/login/pwd.png",
+      "js/login.js",
+      "css/public.css",
+      "img/login/account.png",
+      "js/md5.js",
+      "css/index.css",
+      "js/jquery-3.2.1.js",
+      "re_pwd.html",
+      "register.html",
+      "hockshop.html"
+    ],
+    "refer": [
+      "re_pwd.html",
+      "register.html",
+      "hockshop.html"
+    ]
+  },
+  "hockshop.html": {
+    "resources": [
+      "img/ware/ware_24.png",
+      "css/ware_public.css",
+      "img/ware/ware_27.png",
+      "img/icon/icon_45.png",
+      "css/hockshop.css",
+      "css/public.css",
+      "img/ware/ware_20.png",
+      "js/hockshop.js",
+      "img/icon/icon_46.png",
+      "img/icon/icon_49.png",
+      "img/icon/icon_47.png",
+      "img/icon/icon_48.png",
+      "DetailsPage.html"
+    ],
+    "refer": [
+      "DetailsPage.html"
+    ]
+  },
+  "re_pwd.html": {
+    "resources": [
+      "js/re_pwd.js",
+      "css/re_pwd.css",
+      "js/jquery-3.2.1.js",
+      "css/public.css",
+      "js/md5.js",
+      "login.html"
+    ],
+    "refer": [
+      "login.html"
+    ]
+  },
+  "register.html": {
+    "resources": [
+      "img/register/icon_10.png",
+      "img/register/icon_03.png",
+      "img/register/icon_11.png",
+      "js/register.js",
+      "css/register.css",
+      "img/register/icon_07.png",
+      "img/register/icon_2.png",
+      "login.html"
+    ],
+    "refer": [
+      "login.html"
+    ]
+  },
+  "DetailsPage.html": {
+    "resources": [
+      "img/author.jpg",
+      "js/DetailsPage.js",
+      "img/ware/ware_24.png",
+      "img/ware/ware_28.png",
+      "css/DetailsPage.css",
+      "hockshop.html"
+    ],
+    "refer": [
+      "hockshop.html"
+    ]
+  }
 }

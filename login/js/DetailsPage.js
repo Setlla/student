@@ -7,6 +7,7 @@
 		 }
 		
 		var id=getParams('id');
+		var token="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.W3siaWQiOjM0LCJwaG9uZSI6IjEzNjE3NDU2Njk4IiwiZW1haWwiOiIiLCJwYXNzd29yZCI6IjEyMzQ1NiIsImhlYWRJbWFnZSI6bnVsbCwibmFtZSI6bnVsbCwiZ2VuZGVyIjpudWxsLCJhZGRyZXNzIjpudWxsLCJjcmVhdGVkQXQiOiIyMDE3LTA5LTAyVDAyOjM1OjI3LjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDE3LTA5LTAyVDAyOjM4OjM4LjAwMFoifV0.sHa6n3yyS61iA0TeZDyTp3sDsxfHhwuAJVPB4dSFTeY";
 		
 		//定义一个函数来获取动态数据
 		var datas = function(data){
@@ -44,23 +45,42 @@
 					
 					$('.baby').append(content2);
 		}
-		
-		
-		
-		
+		//详情数据渲染
 		$.ajax({			
 			type:"post",
-			url:"http://192.168.0.158:3900/productDetail",
+			url:"http://39.108.219.59/productDetail",
 			async:true,
 			contentType:'application/JSON',
 			data:JSON.stringify({
-				id:id
+				id:id,
+				token:token
 			}),
 			success:function(data,status){
 				console.log(data.result.product.Name);
-				datas(data);//插入动态数据
+				datas(data);//插入动态数据				
 			}
 		})
+		//购物车
+		$('.addshopcar').click(function(){
+			$.ajax({
+				type:"post",
+				url:"http://39.108.219.59/addShopCar",
+				async:true,
+				contentType:'application/JSON',
+				data:JSON.stringify({
+					id:id,
+					token:token
+				}),
+				success:function(data,status){
+					if (data.isSuccess==true) {
+						location.href="shopping_trolley.html";
+					} else{
+						alert('添加失败');
+					}
+				}
+			});
+		})
+
 		//箭头返回当铺页面
 		$('.header_arr').click(function(){
 			location.href="hockshop.html";

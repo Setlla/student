@@ -8,7 +8,7 @@
 		}
 	})
 	
-	$.post('http://192.168.0.158:3900/productList',function(s,status){
+	$.post('http://39.108.219.59/productList',function(s,status){
 		//商品列表
 		for (var i=0;i<s.result.length;i++) {
 			var textCT=

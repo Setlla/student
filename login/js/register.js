@@ -49,7 +49,7 @@
 				xmlhttp=new ActiveXObject();
 			}
 			
-			xmlhttp.open("POST","http://192.168.0.158:3900/reg","true");
+			xmlhttp.open("POST","http://39.108.219.59/reg","true");
 			xmlhttp.setRequestHeader("Content-Type","application/JSON");
 			var use={
 				phone:phone_ipt.value,
