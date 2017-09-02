@@ -10,11 +10,11 @@
 		 }
 			
 		})
-	$.post('http://192.168.0.146:3900/productList',function(data,status){
+	$.post('http://39.108.219.59/productList',function(data,status){
 		   for(var n=0;n<data.result.length;n++){
 			   var strings='<div class="bicycle" data-id='+data.result[n].id+'>' 
 							  +'<div class="img">'
-							  +'<img src='+data.result[n].Image+'/>'
+							  +'<img src="'+data.result[n].Image+'"/>'
 							  +'</div>'
 							  +'<div class="shanghai min">'
 							  +'<div class="free">'

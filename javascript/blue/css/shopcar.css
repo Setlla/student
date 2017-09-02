@@ -1,0 +1,170 @@
+html{
+	font-size: 100px;
+}
+.head{
+	overflow: hidden;
+	text-align: center;
+	height:1.28rem;
+	background-color: #33ccff;
+	line-height: 1.28rem;
+	padding:0 .15rem;
+}
+.head a{
+	float:left;
+	color:#fff;
+	font-size: .28rem;
+	
+}
+.head span{
+	color:#fff;
+	font-size: .32rem;
+}
+.news{
+	width:.48rem;
+	float:right;
+	transform:  translate(0,100%);
+}
+.content{
+	padding:.2rem 0 0 .68rem;
+}
+.round{
+	display: block;
+	width:.28rem;
+	height:.28rem;
+	border: solid 1px #000;
+	border-radius: .14rem;
+	position: absolute;
+    top: 50%;
+    left: -.4rem;
+    transform: translate(-50%,-50%);
+}
+.bicycle{
+	display: inline-block;
+	margin-top: .2rem;
+	position: relative;
+	display: flex;
+}
+.bicycle img{
+	width:1.69rem;
+	height:1.6rem;
+	margin-top: .4rem;
+}
+.right{
+	padding-left: .2rem;
+	flex: 1;
+}
+.top p:first-child{
+	word-break: break-all;
+	font-size:.3rem ;
+	color:#000;
+	font-weight:bold;
+}
+.top span{
+	display: inline-block;
+	font-size:.24rem ;
+	color:#999;
+	padding: .2rem .5rem .15rem 0;
+}
+.top a{
+	text-align: center;
+	color:#fff;
+	font-size: .2rem;
+	display: block;
+	width:1rem;
+	background-color: #33cc33;
+	padding:.08rem .15rem;
+}
+.undown{
+	position: relative;
+	padding-bottom:.1rem;
+	border-bottom: solid 1px #999;
+}
+.undown span:first-child{
+	color:#ff9900;
+	font-size: .4rem;
+}
+.undown span:nth-child(2){
+	color:#999;
+	font-size: .2rem;
+	padding-left:.25rem ;	
+}
+.undown span:nth-child(3){
+	font-size: .28rem;
+	position: absolute;
+    bottom: .1rem;
+    right: .15rem;
+}
+.foot{
+	
+	
+	
+	display: flex;
+	justify-content: space-around;
+	border-top:solid 1px #808080;
+	background-color: #fff;
+}
+.foot li{
+	text-align: center;
+	display: inline-block;
+}
+.foot p{
+	font-size: .2rem;
+	color:#808080;
+	padding-bottom: .18rem;	
+}
+.foot li img{
+	width:.47rem;
+	height:.46rem;
+	padding-top: .16rem;
+}
+.tail{
+	overflow: hidden;
+	width: 100%;
+	height:.9rem;
+	background-color: #fff;
+	border-top:solid 1px #808080;
+}
+.dot{
+	display: block;
+	width:.28rem;
+	height:.28rem;
+	border: solid 1px #000;
+	border-radius: .14rem;
+	float:left;
+	margin:0 .15rem;
+}
+.all{
+	float: left;
+    /*width: 2.17rem;*/
+   width:35%;
+    padding: .25rem 0;
+}
+.all span:nth-child(2){
+	font-size: .3rem;
+}
+.clearing{
+	float: left;
+	width:35%;
+	padding: .13rem 0;
+    /*width: 2.46rem;*/
+    text-align: right;
+}
+.clearing span,p{
+	font-size:.24rem;
+}
+.clearing i{
+	font-size: .24rem;
+	color:#ee8219;
+}
+.two{
+	padding: .25rem;
+    background: #ee8219;
+    float: right;
+    color:#fff;
+    font-size: .3rem;
+}
+.max{
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+}

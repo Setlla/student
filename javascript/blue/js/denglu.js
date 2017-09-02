@@ -16,7 +16,7 @@
 					phone:phone,
 					password:hex_md5(password)
 				}
-				xhr.open('post','http://192.168.0.143:3900/login');
+				xhr.open('post','http://39.108.219.59/login');
 				xhr.setRequestHeader("Content-Type","application/json");
 				xhr.send(JSON.stringify(user));
 				

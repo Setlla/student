@@ -34,7 +34,7 @@ $(".foot").click(function(){
 		if(viliphone(ph.val()) && checkPwd(pass.val())){
 			$.ajax({
 			type:"post",
-			url:"http://192.168.0.143:3900/changepwd",
+			url:"http://39.108.219.59/changepwd",
 			async:true,
 			contentType:"application/json",
 			data: JSON.stringify(_data),
