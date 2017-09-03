@@ -1,35 +1,82 @@
 	$(document).ready(function(){
-		var length=$('.list_radio').length;
+		var length=$('.list_icon_radio').length;
 		var index=0;
 		//全选按钮
 		$('.select_radio').click(function(){
-			if ($('.select_icon_radio').css("display")=="none") {
-				$('.select_icon_radio').css("display","inline-block");
-				$(this).css("border","1px solid #33CCFF");
-				$('.list_radio').children().eq(index).css("display","inline-block").siblings().css("display","inline-block");
-				$('.list_radio').eq(index).css("border","1px solid #33CCFF");
-				
-			} else{
-				$('.select_icon_radio').css("display","none");
-				$(this).css("border","1px solid #a1a1a1");
-				$('.list_radio').children().eq(index).css("display","none").siblings().css("display","none");
-				$('.list_radio').eq(index).css("border","1px solid #a1a1a1");
-			}	
-			index=(index+1)%length;
-		})	
-		//单选按钮
-		$('.list_radio').click(function(){
-			if ($('.list_icon_radio').css("display")=="none") {
-				$('.list_icon_radio').eq(index).css("display","inline-block");
-				$(this).eq(index).css("border","1px solid #33CCFF");
-			} else{
-				$('.list_icon_radio').eq(index).css("display","none");
-				$(this).eq(index).css("border","1px solid #a1a1a1");
-			}
+	        if (index%2==0) {
+	        	$(this).addClass('radio_1');
+	        	$(this).children().addClass('radio_icon_1');
+	        	$(".list_icon_radio").addClass('radio_icon_1');
+	        }
+	        if(index%2==1){
+	        	$(this).removeClass('radio_1');
+	        	$(this).children().removeClass('radio_icon_1');
+	        	$(".list_icon_radio").removeClass('radio_icon_1');
+	        }
+	        index++;
 		})
-			
-			
-			
-			
+		//单选按钮
+		console.log(length);
+		$('.list_radio').click(function(){
+			//点击单个按钮的inline-block和none切换
+	    	for (var i=0;i<length;i++) {
+	    		$(this).children().eq(i).toggleClass('radio_icon_1');
+	    	}
+	    	//内圆长度等于外圆长度，全选按钮亮
+		    if ($('.list_icon_radio.radio_icon_1').length==$('.list_radio').length) {
+	    		$('.select_icon_radio').addClass('radio_icon_1');
+	    	} 
+	    	else{
+	    		$('.select_icon_radio').removeClass('radio_icon_1');
+	    	}
+	    })
+		
+		
+		
+		
+//		//渲染函数	
+//		var datas=function(data){
+//			for (var i=0;i<data.result.length;i++) {
+//				var content=
+//					'<li class="ware">'
+//					+'<span class="list_radio">'
+//		        	+'<span class="list_icon_radio"></span>'
+//		        	+'</span>'			
+//					+'<div class="ware_pic">'
+//				    +'<img src="'+data.result[i].product.Image+'" />'
+//				    +'</div>'
+//				    +'<div class="ware_explain">'
+//				    +'<p>'+data.result[i].product.Name+'</p>'
+//				    +'<p>'
+//				    +'<span>'+data.result[i].product.Carriage+'</span>'
+//				    +'<span>'+data.result[i].product.Destination+'</span>'
+//				    +'</p>'
+//				    +'<a href="#">'+data.result[i].product.Status+'</a>'
+//				    +'<p>'
+//				    +'<span>￥</span>'+'<span>'+data.result[i].product.CurPrice+'</span>'
+//					+'<span>价格：￥</span>'+'<span>'+data.result[i].product.OldPrice+'</span>'
+//					+'<span>'+data.result[i].ProductNumber+'</span>'
+//				    +'</p>'
+//				    +'</div>'
+//					+'</li>'
+//					
+//					$('.list').append(content);
+//			}
+//		}
+//			
+//		//购物车页面渲染
+//		var token=localStorage.getItem("token");
+//		$.ajax({
+//			type:"post",
+//			url:"http://39.108.219.59/getShopCar ",
+//			async:true,
+//			contentType:'application/JSON',
+//			data:JSON.stringify({
+//				token:token
+//			}),
+//			success:function(data,status){
+//				datas(data);//调用渲染函数
+//			}
+//		});
 		
 	})//ready的括号

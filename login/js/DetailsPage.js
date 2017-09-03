@@ -7,7 +7,7 @@
 		 }
 		
 		var id=getParams('id');
-		var token="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.W3siaWQiOjM0LCJwaG9uZSI6IjEzNjE3NDU2Njk4IiwiZW1haWwiOiIiLCJwYXNzd29yZCI6IjEyMzQ1NiIsImhlYWRJbWFnZSI6bnVsbCwibmFtZSI6bnVsbCwiZ2VuZGVyIjpudWxsLCJhZGRyZXNzIjpudWxsLCJjcmVhdGVkQXQiOiIyMDE3LTA5LTAyVDAyOjM1OjI3LjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDE3LTA5LTAyVDAyOjM4OjM4LjAwMFoifV0.sHa6n3yyS61iA0TeZDyTp3sDsxfHhwuAJVPB4dSFTeY";
+		var token=localStorage.getItem("token");
 		
 		//定义一个函数来获取动态数据
 		var datas = function(data){

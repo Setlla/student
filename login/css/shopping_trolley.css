@@ -60,6 +60,15 @@
 		left: 50%;
 		transform: translate(-50%,-50%);	
 	}
+	.radio_1{
+		border: 1px solid #33CCFF!important;	
+	}
+	.radio_icon_1{
+		display: inline-block!important;
+	}
+	/*全选按钮结束*/
+	
+	
 	
 	.foot_count{
 		width: 30%;
