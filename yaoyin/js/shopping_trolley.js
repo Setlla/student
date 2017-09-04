@@ -7,20 +7,24 @@
 	        	$(this).addClass('radio_1');
 	        	$(this).children().addClass('radio_icon_1');
 	        	$(".list_icon_radio").addClass('radio_icon_1');
+	        	$('.result').text($('.list_icon_radio.radio_icon_1').length);
 	        }
 	        if(index%2==1){
 	        	$(this).removeClass('radio_1');
 	        	$(this).children().removeClass('radio_icon_1');
 	        	$(".list_icon_radio").removeClass('radio_icon_1');
+	        	$('.result').text(0);
 	        }
 	        index++;
 		})
 		//单选按钮
 		console.log(length);
+		console.log($('.new_price').text());
 		$('.list_radio').click(function(){
 			//点击单个按钮的inline-block和none切换
 	    	for (var i=0;i<length;i++) {
 	    		$(this).children().eq(i).toggleClass('radio_icon_1');
+	    		
 	    	}
 	    	//内圆长度等于外圆长度，全选按钮亮
 		    if ($('.list_icon_radio.radio_icon_1').length==$('.list_radio').length) {
@@ -29,9 +33,10 @@
 	    	else{
 	    		$('.select_icon_radio').removeClass('radio_icon_1');
 	    	}
+	    	//结算价格
+	    	$('.result').text($('.list_icon_radio.radio_icon_1').length);
+//	    	$('.price').text($('.new_price').text()*$('.new_number').text());
 	    })
-		
-		
 		
 		
 //		//渲染函数	
