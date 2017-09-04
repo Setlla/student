@@ -114,6 +114,6 @@ $(".shopcar").click(function(){
 			location.href="shopcar.html";
 		}
 	}
-});
+    });
 })
 

@@ -1,0 +1,95 @@
+html{
+	font-size: 100px;
+}
+.head{
+	text-align: center;
+	height:.94rem;
+	background-color: #33ccff;
+	line-height: .94rem;
+	position: relative;
+}
+.head a{
+	width:.2rem;
+	height:.2rem;
+	border-bottom: solid 3px #fff;
+	border-left:solid 3px #fff;
+	transform: rotate(45deg) translateY(-50%);
+	display: inline-block;
+	position: absolute;
+	left:.3rem;
+	top:50%;
+}
+.head span{
+	font-size: .34rem;
+	color:#fff;	
+	display: inline-block;
+}
+.people{
+	position: relative;
+	padding:.38rem 0;
+	border-bottom: solid #eee .18rem;
+}
+.people img{
+	width:.29rem;
+	position: absolute;
+	top:50%;
+	left:.33rem;
+	transform: translateY(-50%);
+}
+.detail{
+	width: 4.15rem;
+	margin: 0 auto;
+}
+.people a{
+	width: .2rem;
+	height:.2rem;
+	border-bottom: solid 1px #bdbdbd;
+	border-right:solid 1px #bdbdbd;
+	transform: rotate(-45deg) translateY(-50%);
+	display: inline-block;
+	position: absolute;
+	top:50%;
+	right:.33rem;
+}
+.detail span:first-child{
+	font-size:.28rem;
+	padding-right:.82rem;
+}
+.detail span:nth-child(2){
+	font-size:.24rem;
+}
+.detail p:nth-child(3){
+	font-size: .24rem;
+}
+.detail p:nth-child(4){
+	font-size: .2rem;
+	color:#d9a952;
+}
+.cat{
+	width:.34rem;
+	padding:.3rem .24rem;
+}
+.shop span:nth-child(2){
+	font-size: .24rem;
+	padding-top: .3rem;
+	display: inline-block;
+}
+.book{
+	position: relative;
+}
+.book img{
+	padding: .15rem .24rem;
+	width:1.54rem;
+}
+.seven{
+	width:2.7rem;
+	position: absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%,-100%);
+}
+.number{
+	position: absolute;
+	right: .26rem;
+    top: .2rem;
+}

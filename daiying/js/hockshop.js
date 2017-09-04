@@ -46,7 +46,7 @@
 			 $(document).on("click",".bicycle",function(e){
 			 	console.log(this);
 				var id=$(this).data("id");
-				location.href = "/student/javascript/blue/details.html?id="+id;      
+				location.href = "/student/daiying/details.html?id="+id;      
 			})
 	
 
