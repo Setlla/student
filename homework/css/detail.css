@@ -38,8 +38,12 @@ html{
 	left: 40%;
 	bottom: .1rem;
 }
-.dot span{
-	
+.math img{
+	display: block;
+	/*width: 30%;*/
+	height: 2.5rem;
+}
+.dot span{	
 	display: inline-block;
 	width: .1rem;
 	height: .1rem;

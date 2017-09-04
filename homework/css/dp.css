@@ -11,12 +11,17 @@ html{
 		font-size:50px ;
 	}
 }
+.bton .into{
+	background-color: #D6F5FF;
+	color: #33ccff;
+}
 .head{
-	/*width: 100%;*/
 	height: 1.28rem;
 	background-color: #33ccff;
 	position: relative;
 	overflow: hidden;
+	/*display: flex;*/
+	/*justify-content: space-between;*/
 }
 select{
 		-webkit-appearance: none;	
@@ -34,7 +39,7 @@ select{
 		border: solid #FFFFFF 1px;
 		border-radius: .05rem;
 		display:inline-block;
-		margin-left: .8rem;
+		margin-left: 1.5rem;
 	}
 .bton a{
 	display:inline-block;	
@@ -43,8 +48,8 @@ select{
 	padding: .17rem .35rem;	
 }
 .bton .res{
-	background-color: #d6f5ff;
-	color: #33ccff;
+	/*background-color: #d6f5ff;
+	color: #33ccff;*/
 }
 .res{
 	border-top-left-radius: .05rem;
@@ -78,7 +83,7 @@ select{
 .bike{
 	margin-top: .2rem;
 	margin-left: .2rem;
-	width: 6rem;
+	width: 100%;
 	height: 2rem;
 	overflow: hidden;
 	padding-bottom: .1rem;
@@ -104,11 +109,11 @@ select{
 	margin-right: .5rem;
 	margin-bottom: .1rem;
 }
-.bike .city{
-	display: inline-block;
-	width: 30%;
-	/*float: left;*/
+.bike .way{
+	width:100%;
+	margin-bottom:.2rem;
 }
+
 .bike button{
 	display: inline-block;
 	color:#fff;
@@ -136,22 +141,23 @@ select{
 	color: #999;
 	text-decoration: line-through;
 	display: inline-block;
-	margin-top: .1rem;
+	margin-top: .05rem;
 	margin-left: .6rem;
 }
-/*.bike .dot{
+.bike .dot{
 	font-size: .08rem;
 	color: #999;
 	float: right;	
 	margin-right: .2rem;
-}*/
+	margin-top: .05rem;
+}
 .much{
 	/*border-bottom: solid #e5e5e5 1px;*/
 }
 
 .bot{
 	position: fixed;
-	bottom: 0;
+	bottom: .1rem;
 	width: 100%;
 	z-index: 999;
 	/*margin-top: 1.86rem;*/

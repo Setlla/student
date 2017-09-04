@@ -66,24 +66,24 @@ input{
 	margin: 0 auto;
 	margin-top: 1rem;
 	padding: .3rem 0;
-	padding-left: .6rem;
+	padding-left: .7rem;
 	font-size: .14rem;
 }
 .mob{
-	background: url("../img/logo-test-7.png")5% 50% no-repeat;
+	background: url("../img/logo-test-7.png")0% 50% no-repeat;
 	/*display: block;*/
 }
 .emal{
-	background: url("../img/zc_03.png")5% 50% no-repeat;
+	background: url("../img/zc_03.png")0% 50% no-repeat;
 	display: none;
 	/*background-size: 5%;*/
 }
 .pasd{
-	background: url("../img/zc_06.png")5% 50% no-repeat;
+	background: url("../img/zc_06.png")0% 50% no-repeat;
 	/*background-size: 5%;*/
 }
 .code{
-	background: url("../img/zc_13.png")5% 50% no-repeat;
+	background: url("../img/zc_13.png")0% 50% no-repeat;
 	/*background: url("img/zc_10.png")80% 50% no-repeat;*/
 	/*background-size: 7%;*/
 	/*border-bottom: solid red 0;*/
@@ -92,13 +92,13 @@ input{
 	position: relative;
 }
 i{
-	background: url("../img/zc_10.png")100% 50% no-repeat;
+	background: url("../img/zc_10.png")50% no-repeat;
 	display: block;
 	width: 1rem;
 	height: .6rem;
 	background-size: 100%;
 	position: absolute;	
-	right: .4rem;
+	right: .8rem;
 	bottom: 25%;	
 }
 .bot{

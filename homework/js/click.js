@@ -4,21 +4,15 @@ $(document).ready(function(){
 		var bton=$("div.bton");
 		var res=$("a.res");
 		var book=$("a.book");
-bton.click(function(e){
+$(".bton a").click(function(e){
+	  $(this).addClass("into").siblings().removeClass("into");
+	  
 		 if(e.target.innerHTML=="物品"){
-		 	 res.css("background-color","#d6f5ff");
-		 	 book.css("background-color","#33ccff");
-		 	 res.css("color","#33ccff");
-		 	 book.css("color","#FFFFFF");
-		 	 thing.css("display","block");
-		 	 books.css("display","none");
+		 	thing.show();
+		 	books.hide();		 
 		 }else{
-		 	res.css("background-color","#33ccff");
-		 	book.css("background-color","#d6f5ff");
-		 	res.css("color","#FFFFFF");
-		 	book.css("color","#33ccff");
-		 	thing.css("display","none");
-		 	books.css("display","block");
+		 	thing.hide();
+		 	books.show();	 			 	
 		 }
 	});
 });

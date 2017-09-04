@@ -19,18 +19,11 @@ var zc=document.querySelector(".zhuce");
    	}	   	   	 	  	   	   	 
    })
    
-	function phonename(){
-	var iphoneRegex=/^1[34578]\d{9}$/.test(mob);
-	var emailRegex=
-	/^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/.test(emal);
-	    if(!iphoneRegex && mob.style.display == "block"){
-	    	alert("请输入正确手机号.")
-	    }
-	    if(!emailRegex && emal.style.display == "block"){
-	    	alert("请输入正确的邮箱")
-	    }
-	}
-    
+
+	
+//  phonename();
+//	emailname();	
+//  
 
 
 var submit = function(){
@@ -46,26 +39,33 @@ var xhr;
 	   xhr=new ActiveXObject();
 	}
 
-	xhr.open("post","http://192.168.0.127:3900/reg",true);
+	xhr.open("post","http://39.108.219.59/reg",true);
 	phonename();
 	xhr.setRequestHeader("content-type","application/json");	
 	var user={
-		mob:mob.value,
-		emal:emal.value,
-		pasd:hex_md5(pasd.value)		
+		phone:mob.value,
+		email:emal.value,
+		password:hex_md5(pasd.value)		
 	}
+	
 	xhr.send(JSON.stringify(user));
 	xhr.onreadystatechange=function(){	  
 		  if (xhr.readyState==4 && xhr.status==200){	   
 		      var result = JSON.parse(xhr.responseText);
-		      if(result.isSuccess == true)
-		      alert("注册成功")
-		         location.href="http://127.0.0.1:8020/input/denglu.html";
-			  }
-		    
+		      if(result.isSuccess == true){
+		      	 alert("注册成功")
+		         console.log("result");
+		         location.href="http://127.0.0.1:8020/next/denglu.html";
+		      }else{
+		      	alert("请重新注册")
+		      }
+		      
+			 }		    
 		    }
 	})
+   
 }
+submit();
 
 
 	 	

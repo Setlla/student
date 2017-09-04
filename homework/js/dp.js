@@ -1,4 +1,4 @@
-$.post('http://192.168.0.146:3900/productList',function(data,status){
+$.post('http://39.108.219.59/productList',function(data,status){
 	for(var i=0;i<data.result.length;i++ ){
     	var resContent = '<div class="bike" data-id='+ data.result[i].id +'>'
     					+ '<img class="img" src="'+ data.result[i].Image +'" />'
@@ -35,35 +35,3 @@ $.post('http://192.168.0.146:3900/productList',function(data,status){
     		
     }
 })
-
-//var xhr;
-//	if(window.XMLHttpRequest){
-//		xhr=new XMLHttpRequest();
-//	}else{
-//		xhr=new ActiveXObject();
-//	}
-//	
-//	xhr.open('POST','http://192.168.0.146:3900/productList',true);
-//	xhr.send();
-//	
-//	xhr.onreadystatechange=function(){
-//		 	if(xhr.readyState==4 && xhr.status==200){
-//		 		var result = JSON.parse(xhr.responseText);
-//	            console.log(result)
-//	            
-	            
-//	            	
-//	            }
-//	         <div class="bike">
-//				<img class="img" src="img/dp_07.png" />
-//				<p class="title">捷安特24速变速一体轮可折叠自行车</p>
-//				<span>包邮</span><span class="city">上海</span>
-//				<button>挂起</button>
-//				<div class="much"> 
-//					<p class="nub"><span>￥</span>350</p>
-//				    <p class="nub2">￥1358</p>
-//				    <p class="dot">● ● ●</p>
-//				</div>			
-//			</div>
-//		 	}
-//		 }

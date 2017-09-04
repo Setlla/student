@@ -5,10 +5,30 @@ $(document).ready(function(){
 	            if (r != null) return unescape(r[2]); return null; //返回参数值           
 			 }
 	 var id=getParams('id');
+	 	 
+	 $(".join a").click(function(){
+		$.ajax({
+		type:"post",
+		url:"http://39.108.219.59/addShopCar",
+		async:true,
+		contentType:"application/JSON",
+		data:JSON.stringify({
+			"id": id,
+			token:localStorage.getItem("token"),
+		}),
+		success:function(data){
+			if(data.isSuccess == true){
+				location.href="shop car.html"
+			}else{
+				console.log(data)
+			}
+		}
+       })
+})
 	
 	$.ajax({
 		type:"post",
-		url:"http://192.168.0.146:3900/productDetail",
+		url:"http://39.108.219.59/productDetail",
 		async:true,
 		contentType:"application/JSON",
 		data:JSON.stringify({"id": id}),
@@ -35,56 +55,10 @@ $(document).ready(function(){
 		
 	});
 })
-	
+
+
+
 	 
 
 
 
-//<div class="head">
-//			<span></span>
-//			<p>详情</p>
-//		</div>
-//		<div class="math">
-//			<img src="img/detail_03.png" />
-//			<div class="dot">
-//				<span></span>
-//				<span></span>
-//				<span></span>
-//				<span></span>
-//				<span></span>
-//			</div>
-//		</div>
-//		<div class="price">
-//			<p class="present">高等数学（上册）大学高等数学课程创新新教材邱维声</p>
-//			<div class="rate">
-//				<p>￥<span>35</span></p>
-//				<i>价格 128</i>
-//				<button>7成新</button>
-//			</div>
-//			<div class="city">
-//				<p>快递 5.00元</p>
-//				<p>23人看过</p>
-//				<P>上海 宝山</P>
-//			</div>
-//		</div>
-//		<div class="describe">
-//			<p class="baby">宝贝描述</p>
-//			<div class="depict">
-//				<p>
-//					高等数学（上册）大学高等数学课程创新新教材是由全国首届高等学校国家级数学名师倾力
-//					打造内容精华:重基础,讲想法,理论深刻,典型例题。
-//				</p>
-//			</div>
-//		</div>
-//		<div class="bottom">
-//			<div class="chen">
-//				<p> 陈先生</p>
-//				<span>13841896324-上海</span>
-//			</div>
-//			<div class="join">
-//				<a href="#">加入购物车</a>
-//			</div>
-//			<div class="buy">
-//				<a href="#">立即购买</a>
-//			</div>
-//		</div>
