@@ -51,50 +51,50 @@
 		}
 		
 		//渲染函数	
-//		var datas=function(data){
-//			for (var i=0;i<data.result.length;i++) {
-//				var content=
-//					'<li class="ware">'
-//					+'<span class="list_radio">'
-//		        	+'<span class="list_icon_radio"></span>'
-//		        	+'</span>'			
-//					+'<div class="ware_pic">'
-//				    +'<img src="'+data.result[i].product.Image+'" />'
-//				    +'</div>'
-//				    +'<div class="ware_explain">'
-//				    +'<p>'+data.result[i].product.Name+'</p>'
-//				    +'<p>'
-//				    +'<span>'+data.result[i].product.Carriage+'</span>'
-//				    +'<span>'+data.result[i].product.Destination+'</span>'
-//				    +'</p>'
-//				    +'<a href="#">'+data.result[i].product.Status+'</a>'
-//				    +'<p>'				   
-//				   	+'<span>￥</span><span class="new_price">'+data.result[i].product.CurPrice+'</span>'
-//					+'<span>价格：￥</span><span>'+data.result[i].product.OldPrice+'</span>'
-//					+'<span>X<span class="new_number">'+data.result[i].ProductNumber+'</span></span>'
-//				    +'</p>'
-//				    +'</div>'
-//					+'</li>'
-//					
-//					$('.list').append(content);
-//			}
-//			
-//		}
-//			
-//		//购物车页面渲染
-//		var token=localStorage.getItem("token");
-//		$.ajax({
-//			type:"post",
-//			url:"http://39.108.219.59/getShopCar ",
-//			async:true,
-//			contentType:'application/JSON',
-//			data:JSON.stringify({
-//				token:token
-//			}),
-//			success:function(data,status){
-//				datas(data);//调用渲染函数
-//			}
-//		});		
+		var datas=function(data){
+			for (var i=0;i<data.result.length;i++) {
+				var content=
+					'<li class="ware">'
+					+'<span class="list_radio">'
+		        	+'<span class="list_icon_radio"></span>'
+		        	+'</span>'			
+					+'<div class="ware_pic">'
+				    +'<img src="'+data.result[i].product.Image+'" />'
+				    +'</div>'
+				    +'<div class="ware_explain">'
+				    +'<p>'+data.result[i].product.Name+'</p>'
+				    +'<p>'
+				    +'<span>'+data.result[i].product.Carriage+'</span>'
+				    +'<span>'+data.result[i].product.Destination+'</span>'
+				    +'</p>'
+				    +'<a href="#">'+data.result[i].product.Status+'</a>'
+				    +'<p>'				   
+				   	+'<span>￥</span><span class="new_price">'+data.result[i].product.CurPrice+'</span>'
+					+'<span>价格：￥</span><span>'+data.result[i].product.OldPrice+'</span>'
+					+'<span>X<span class="new_number">'+data.result[i].ProductNumber+'</span></span>'
+				    +'</p>'
+				    +'</div>'
+					+'</li>'
+					
+					$('.list').append(content);
+			}
+			
+		}
+			
+		//购物车页面渲染
+		var token=localStorage.getItem("token");
+		$.ajax({
+			type:"post",
+			url:"http://39.108.219.59/getShopCar ",
+			async:true,
+			contentType:'application/JSON',
+			data:JSON.stringify({
+				token:token
+			}),
+			success:function(data,status){
+				datas(data);//调用渲染函数
+			}
+		});		
 		
 		
 		
