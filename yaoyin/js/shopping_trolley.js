@@ -2,7 +2,7 @@
 		var length=$('.list_icon_radio').length;
 		var index=0;
 		//全选按钮
-		('.select_radio').click(function(){
+		$('.select_radio').click(function(){
 	        if ($(this).hasClass("radio_1")) {
 	        	$(this).removeClass('radio_1');
 	        	$(this).children().removeClass('radio_icon_1');
