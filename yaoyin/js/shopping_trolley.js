@@ -22,6 +22,8 @@
 	    	for (var i=0;i<$('.list_icon_radio').length;i++) {
 	    		$(this).children().eq(i).toggleClass('radio_icon_1');
     			$(this).eq(i).toggleClass('radio_1');
+    			$('.result').text(0);
+	        	$('.price').text(0);
 	    	}   	
 	    	//内圆长度等于外圆长度，全选按钮亮
 		    if ($('.list_icon_radio.radio_icon_1').length==$('.list_radio').length) {
@@ -55,9 +57,11 @@
 			for (var i=0;i<data.result.length;i++) {
 				var content=
 					'<li class="ware">'
+					+'<div class="ware_radio">'
 					+'<span class="list_radio">'
 		        	+'<span class="list_icon_radio"></span>'
-		        	+'</span>'			
+		        	+'</span>'
+		        	+'</div>'
 					+'<div class="ware_pic">'
 				    +'<img src="'+data.result[i].product.Image+'" />'
 				    +'</div>'
