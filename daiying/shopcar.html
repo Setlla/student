@@ -14,9 +14,9 @@
 			<span>购物车</span>
 			<img  class="news" src="img/shopcar/shopcar_03.png" />
 		</div>
-		<ul class="content">
-			<li class="bicycle">
-				<a class="round"></a>
+		<ul class="content ">
+			<!--<li class="bicycle">
+				<a class="round"><span class="dots"></span></a>
 				<img src="img/shopcar/shopcar_07.png" />
 				<div class="right">
 					<div class="top">
@@ -26,14 +26,14 @@
 						<a>7成新</a>
 					</div>
 					<div class="undown">
-						<span>￥350</span>
-						<span>价格￥： 1350</span>
-						<span>X 2</span>
+						<span>￥<i class="newPrice">350</i></span>
+						<span>价格￥：<i>1350</i> </span>
+						<span>X <i class="number">2</i></span>
 					</div>
 				</div>
 			</li>
 			<li class="bicycle">
-				<a class="round"></a>
+				<a class="round"><span class="dots"></span></a>
 				<img src="img/shopcar/shopcar_11.png"/>
 				<div class="right">
 					<div class="top">
@@ -43,14 +43,14 @@
 						<a>9成新</a>
 					</div>
 					<div class="undown">
-						<span>￥2800</span>
-						<span>价格￥：4998</span>
-						<span>X 1</span>
+						<span>￥<i class="newPrice">2800</i></span>
+						<span>价格￥：<i>4998</i></span>
+						<span>X <i class="number">1</i></span>
 					</div>
 				</div>
 			</li>
 			<li class="bicycle">
-				<a class="round"></a>
+				<a class="round"><span class="dots"></span></a>
 				<img src="img/shopcar/shopcar_14.png" />
 				<div class="right">
 					<div class="top">
@@ -60,14 +60,14 @@
 						<a>9成新</a>
 					</div>
 					<div class="undown">
-						<span>￥3500</span>
-						<span>价格￥： 7868</span>
-						<span>X 1</span>
+						<span >￥<i class="newPrice">3500</i></span>
+						<span>价格￥： <i>7868</i></span>
+						<span >X <i class="number">1</i></span>
 					</div>
 				</div>
 			</li>
 			<li class="bicycle">
-				<a class="round"></a>
+				<a class="round"><span class="dots"></span></a>
 				<img src="img/shopcar/shopcar_16.png" />
 				<div class="right">
 					<div class="top">
@@ -77,27 +77,27 @@
 						<a>9成新</a>
 					</div>
 					<div class="undown">
-						<span>￥350</span>
-						<span>价格￥： 786</span>
-						<span>X 1</span>
+						<span>￥<i class="newPrice">350</i></span>
+						<span>价格￥： <i>786</i></span>
+						<span>X <i class="number">1</i></span>
 					</div>
 				</div>
-			</li>
+			</li>-->
 		</ul>
 		
 		
 <div class="max">		
 	<div class="tail">
 		<div class="all">
-			<a class="dot"></a>
+			<a class="dot"><span class="dots"></span></a>
 			<span>全选</span>
 		</div>
 		<div class="clearing">
 			<span>合计：</span>
-			<i>￥3150</i>
+			<i>￥<a class="sum">0</a></i>
 			<p>不含运费</p>
 		</div>
-			<a class="two">结算（2）</a>
+			<a class="two">结算<span class="zero">（0）</span></a>
 	</div>	
 		<ul class="foot">
 				<li>
@@ -121,6 +121,7 @@
 <div style="height:2.5rem;">
 </div>
 
-<script type="text/javascript" src="js/shopcar.js" ></script>
+<script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
+<script src="js/shopcar.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 </html>

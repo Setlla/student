@@ -38,6 +38,17 @@ html{
     left: -.4rem;
     transform: translate(-50%,-50%);
 }
+.dots{
+	display: block;
+	width:.18rem;
+	height:.18rem;
+	background-color: white;
+	border-radius: .09rem;
+	margin: .05rem auto;
+}
+.cur{
+	background: #33CCFF !important;
+}
 .bicycle{
 	display: inline-block;
 	margin-top: .2rem;

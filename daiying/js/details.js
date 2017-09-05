@@ -106,7 +106,7 @@ $(".shopcar").click(function(){
 	async:true,
 	contentType:"application/json",
 	data:JSON.stringify({
-		token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.W3siaWQiOjM1LCJwaG9uZSI6IjEzMDM2NzQ1NjM5XG4iLCJlbWFpbCI6bnVsbCwicGFzc3dvcmQiOiIxMjM0NTYiLCJoZWFkSW1hZ2UiOm51bGwsIm5hbWUiOm51bGwsImdlbmRlciI6bnVsbCwiYWRkcmVzcyI6bnVsbCwiY3JlYXRlZEF0IjoiMjAxNy0wOS0wMlQwNjozNDo0MS4wMDBaIiwidXBkYXRlZEF0IjoiMjAxNy0wOS0wMlQwNjozNDo0MS4wMDBaIn1d.XfBj5-WvZDFtNGEP3B7e7OtFthlS_og8zDNL-KDTWfA",
+		token:localStorage.getItem("token"),
 		id: getParams('id')
 	}),
 	success:function(data){
