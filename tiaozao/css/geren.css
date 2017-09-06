@@ -1,0 +1,22 @@
+.top_nav{
+	background: #33CCFF;
+	line-height: 1rem;
+	position: relative;
+}
+.top_nav a{
+    position: absolute;
+    left: .2rem;
+    top: 50%;
+    width: .16rem;
+    height: .16rem;
+    border-bottom: .03rem solid white;
+    border-left: .03rem solid white;
+    transform: translateY(-50%) rotate(45deg);	
+}
+.top_nav span{
+	display: block;
+	text-align: center;
+	font-size: .32rem;
+	color: white;
+	
+}

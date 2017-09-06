@@ -12,7 +12,7 @@
 	});
 
 	//物品 个件点击事件
-	$(document).on("click",".content_one .round ",function()	{
+	$(document).on("click",".content_one .round ",function() {
 		if($(this).hasClass("cur")){			
 			$(this).removeClass("cur");
 			$(".information_small .round").removeClass("cur");			
@@ -21,9 +21,10 @@
 		}	
 		if ($(".content .round").length==$(".content .cur").length) {
 			$(".information_small .round").addClass("cur");
-		} else{
-			$(".information_small .round").removeClass("cur");
 		}
+//		else{
+//			$(".information_small .round").removeClass("cur");
+//		}
 		setsum();
 	})
 	
@@ -83,7 +84,7 @@
 				+'</div></div>'		
 				
 		var tt='<div class="content_four" data-id = '+result[i].id+'>'
-				+'<div class="round"style="border-color: #5d5d5d;">'		
+				+'<div class="round">'		
 				+'<a href="#" style="display: none"></a>'
 				+'</div>'		
 				+'<img src='+result[i].product.Image+' style="width: 1.7rem; height: 2rem;"/>'
@@ -99,17 +100,21 @@
 		}
 	}
 	//完成。编辑全部的切换
-	$(document).on("click",".qh",function() {
-		if ($(this).children(".qh_a").css("display")=="none") {
-			$(".qh_a").show().siblings().hide();
-			$(".content").show();
-			$(".content_three").hide();
-		}else {
-			$(".qh_a").hide().siblings().show();
-			$(".content").hide();
-			$(".content_three").show();
-		}
+	$(document).on("click",".qh_a",function() {
+		$(this).hide().siblings().show();
+		$(".content").hide();
+		$(".content_three").show();
 	})
+//		if ($(".qh_a").css("display")=="none") {
+//			$(".qh_a").show().siblings().hide();
+//			$(".content").show();
+//			$(".content_three").hide();
+//		}else {
+//			$(".qh_a").hide().siblings().show();
+//			$(".content").hide();
+//			$(".content_three").show();
+//		}
+	
 	// 完成AJAX数据
 	$(document).on("click",".qh_b",function() {
 		var products = [];
