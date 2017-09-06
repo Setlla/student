@@ -3,13 +3,13 @@
 		margin-bottom: 3rem;
 	}
 	.ware{
-		height: 2.7rem;
+		height: 2.5rem;
 		display: flex;/*为了左边的图片居中*/
 		display: -webkit-flex;
 		align-items: center;
 	}
 	.ware_radio{
-		padding-bottom: 0.6rem;
+		padding-bottom: 0.5rem;
 	}
 	/*公共按钮*/
 	.list_radio{
@@ -36,7 +36,7 @@
 	
 	.ware_pic{
 		width: 30%;
-		height: 2.7rem;
+		height: 2.5rem;
 		line-height: 2.4rem;
 		text-align: center;/*为了左边的图片左右居中*/
 	}
@@ -47,15 +47,16 @@
 	}
 	.ware_explain{
 		width: 65%;
-		height: 2.7rem;
+		height: 2.5rem;
 		padding: 0.08rem;
 		border-bottom: 1px solid #e5e5e5;
+		display: block;
 	}
 	.ware_explain p:nth-of-type(1){
-		font-size: 0.26rem;
+		font-size: 0.24rem;
 		font-weight: 500;
 		color: #666666;
-		margin: 0.14rem 0rem;
+		margin: 0.16rem 0rem;
 	}
 	.ware_explain p:nth-of-type(2){
 		font-size: 0.24rem;

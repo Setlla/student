@@ -44,7 +44,8 @@
 	        location.href="DetailsPage.html?id=" + id;
 	   })
 		
-		//当铺页面跳转
+	})
+			//当铺页面跳转
 		$('.shopping_trolley').click(function(){
 			location.href="shopping_trolley.html";
 		})
@@ -53,5 +54,4 @@
 		$('.personal_message').click(function(){
 			location.href="personal_center.html";
 		})
-	})
 

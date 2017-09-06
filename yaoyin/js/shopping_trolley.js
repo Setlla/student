@@ -56,7 +56,7 @@
 		var datas=function(data){
 			for (var i=0;i<data.result.length;i++) {
 				var content=
-					'<li class="ware">'
+					'<div class="ware" data-id="'+data.result[i].id+'">'
 					+'<div class="ware_radio">'
 					+'<span class="list_radio">'
 		        	+'<span class="list_icon_radio"></span>'
@@ -78,6 +78,18 @@
 					+'<span>X<span class="new_number">'+data.result[i].ProductNumber+'</span></span>'
 				    +'</p>'
 				    +'</div>'
+				    +'<ul class="show">'
+			    	+'<li class="ware_delete">'
+			    	+'<div class="modify">'
+			    	+'<span class="jian">-</span>'
+			    	+'<span class="amount">'+data.result[i].ProductNumber+'</span>'
+			    	+'<span class="jia">+</span>'
+			    	+'</div>'
+			    	+'<div class="delete">'
+			    	+'<button class="btn_del">删除</button>'
+			    	+'</div>'
+			    	+'</li>'
+			    	+'</ul>'
 					+'</li>'
 					
 					$('.list').append(content);
@@ -100,8 +112,79 @@
 			}
 		});		
 		
+		//编辑全部
+		$(document).on("click",".head_left",function(){
+			$(this).css("display","none");
+			$('.head_left1').css("display","block");
+			$('.ware_explain').css("display","none");
+			$('.show').css("display","block");
+		})
+		
+		//完成按钮
+		$(document).on("click",".head_left1",function(){
+			var length=$(".ware").length;			
+			var products =[];
+			for (var i=0;i<length;i++) {
+				var t1={};
+				t1.id=$(".ware").eq(i).data('id'),
+				t1.ProductNumber=$(".ware").eq(i).find('.amount').text();
+				products.push(t1);
+			}
+//			"products":[{"id":"29","ProductNumber":"4"},{"id":"28","ProductNumber":"4"}]
+
+			$.ajax({
+				type:"post",
+				url:"http://39.108.219.59/updateShopCar",
+				async:true,
+				contentType:'application/JSON',
+				data:JSON.stringify({
+					token:token,
+					products:products
+				}),
+				success:function(data,status){
+					location.href="shopping_trolley.html";
+				}
+			})
+			
+		})
+		
+		//加商品数量
+		$(document).on("click",".jia",function(){
+			var t=$(this).parents(".ware").find('.amount');
+			$(this).parents(".ware").find('.amount').text(parseInt(t.text())+1);
+		})
+		//减商品数量
+		$(document).on("click",".jian",function(){
+			var t=$(this).parents(".ware").find('.amount');
+			if (parseInt(t.text())>1) {			
+				$(this).parents(".ware").find('.amount').text(parseInt(t.text())-1);
+			} else{
+				alert('商品数量不能小于1件！');
+			}
+
+		})
 		
 		
+		//删除数据渲染
+		$(document).on("click",".btn_del",function(){
+			var id =$(this).parents(".ware").data('id');
+			$.ajax({
+				type:"post",
+				url:"http://39.108.219.59/delShopCar",
+				async:true,
+				contentType:'application/JSON',
+				data:JSON.stringify({
+					token:token,
+					id:id
+				}),
+				success:function(data,status){					
+					$(this).parents(".ware").remove();
+					location.href="shopping_trolley.html";
+				}
+			})
+		})
+
+	
 		//当铺页面跳转
 		$('.hockshop').click(function(){
 			location.href="hockshop.html";
