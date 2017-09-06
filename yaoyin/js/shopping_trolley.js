@@ -3,11 +3,11 @@
 		//全选按钮
 		$(document).on("click",".select_radio",function() {
 	        if ($(this).hasClass("radio_1")) {
-	        	$(this).removeClass('radio_1').children().removeClass('radio_icon_1');
-	        	$(".list_radio").removeClass('radio_1').children().removeClass('radio_icon_1');				
+	        	$(this).removeClass('radio_1');
+	        	$(".list_radio").removeClass('radio_1');				
 	        }else {
-	        	$(this).addClass('radio_1').children().addClass('radio_icon_1');
-	        	$(".list_radio").addClass('radio_1').children().addClass('radio_icon_1');
+	        	$(this).addClass('radio_1');
+	        	$(".list_radio").addClass('radio_1');
 	        }
 	        num();
 		})
@@ -15,17 +15,17 @@
 		//单选按钮
 		$(document).on("click",".list_radio",function() {			
 			if ($(this).hasClass("radio_1")) {
-				$(this).removeClass('radio_1').children().removeClass('radio_icon_1');
+				$(this).removeClass('radio_1');
 			} 
 			else{
-				$(this).addClass('radio_1').children().addClass('radio_icon_1');
+				$(this).addClass('radio_1');
 			}
 	    	//内圆长度等于外圆长度，全选按钮亮
-		    if ($('.list_icon_radio.radio_icon_1').length==$('.list_radio').length) {
-	    		$(".select_radio").addClass('radio_1').children().addClass('radio_icon_1');
+		    if ($('.list_radio.radio_1').length==$('.list_radio').length) {
+	    		$(".select_radio").addClass('radio_1');
 	    	} 
 	    	else{
-	    		$(".select_radio").removeClass('radio_1').children().removeClass('radio_icon_1');
+	    		$(".select_radio").removeClass('radio_1');
 	    	}
 	    	num();  	
 		})
@@ -33,7 +33,7 @@
 		var num=function(){
 			var s=0;
 			var s1=0;
-			var list=$('.list_icon_radio.radio_icon_1');
+			var list=$('.list_radio.radio_1');
 			//商品选中数量
 			var new_number=list.parents(".ware").find(".new_number");
 			//商品选中价格
@@ -52,9 +52,7 @@
 				var content=
 					'<div class="ware" data-id="'+data.result[i].id+'">'
 					+'<div class="ware_radio">'
-					+'<span class="list_radio">'
-		        	+'<span class="list_icon_radio"></span>'
-		        	+'</span>'
+					+'<span class="list_radio"></span>'
 		        	+'</div>'
 					+'<div class="ware_pic">'
 				    +'<img src="'+data.result[i].product.Image+'" />'

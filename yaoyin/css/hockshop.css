@@ -44,12 +44,12 @@
 		width: 50%;
 		text-align: center;
 		float: left;
-		background: #bfe6f3;
-		color: #33ccff;
+		background: #33ccff;
+		color: #FFFFFF;
 	}
 	.article{
-		background: #33ccff!important;
-		color: #FFFFFF!important;
+		background: #bfe6f3!important;
+		color: #33ccff!important;
 	}
 	.head_img{
 		width: 0.8rem;

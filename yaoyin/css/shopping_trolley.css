@@ -45,11 +45,14 @@
 		text-align: center;
 	}
 	.modify{
-		flex: 1;
+		flex: 1;		
 	}
 	.amount{
+		border-top: 1px solid #A1A1A1;
+		border-bottom: 1px solid #A1A1A1;
 		width: 0.6rem;
 		height: 0.4rem;
+		align-self: center;
 		display: inline-block;
 	}
 	.delete{
@@ -59,8 +62,9 @@
 	.jia,.jian{
 		border: 1px solid #A1A1A1;
 		color: #A1A1A1;
-		width: 0.4rem;
+		width: 0.6rem;
 		height: 0.4rem;
+		align-self: center;
 		display: inline-block;
 	}
 	.btn_del{
@@ -90,31 +94,18 @@
 	}
 	/*全选按钮设置*/
 	.select_radio{
-		margin: 0rem 0.14rem;
+		margin: 0 0.14rem;
 		width: 0.28rem;
 		height: 0.28rem;
 		border-radius: 0.14rem;
 		border: 1px solid #a1a1a1;
-		display: inline-block;	
-		position: relative;
-	}
-	.select_icon_radio{
-		position: absolute;
-		width: 0.15rem;
-		height: 0.14rem;
-		border-radius: 0.075rem;
-		border: 0;
-		background: #33CCFF;
-		display: none;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%,-50%);	
+		background: #FFFFFF;
+		display: inline-block;
+		box-shadow: 0 0 0 3px #FFFFFF inset;
 	}
 	.radio_1{
-		border: 1px solid #33CCFF!important;	
-	}
-	.radio_icon_1{
-		display: inline-block!important;
+		border: 1px solid #33CCFF!important;
+		background: #33CCFF!important;
 	}
 	/*全选按钮结束*/
 	
