@@ -4,13 +4,12 @@
 		$(document).on("click",".select_radio",function() {
 	        if ($(this).hasClass("radio_1")) {
 	        	$(this).removeClass('radio_1').children().removeClass('radio_icon_1');
-	        	$(".list_radio").removeClass('radio_1').children().removeClass('radio_icon_1');
-				num();
+	        	$(".list_radio").removeClass('radio_1').children().removeClass('radio_icon_1');				
 	        }else {
 	        	$(this).addClass('radio_1').children().addClass('radio_icon_1');
 	        	$(".list_radio").addClass('radio_1').children().addClass('radio_icon_1');
-	        	num();
 	        }
+	        num();
 		})
 		
 		//单选按钮
@@ -115,10 +114,9 @@
 		})
 		
 		//完成按钮
-		$(document).on("click",".head_left1",function(){
-			var length=$(".ware").length;			
+		$(document).on("click",".head_left1",function(){		
 			var products =[];
-			for (var i=0;i<length;i++) {
+			for (var i=0;i<$(".ware").length;i++) {
 				var t1={};
 				t1.id=$(".ware").eq(i).data('id'),
 				t1.ProductNumber=$(".ware").eq(i).find('.amount').text();
