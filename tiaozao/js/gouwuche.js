@@ -68,8 +68,8 @@
 	// 购物的数据渲染
 	function  setproduct(result) {
 		for (var i=0;i<result.length;i++) {		
-		var cont='<div class="content_one"><div class="round" style="border-color: #5d5d5d;">'
-				+'<a class="blue_round" href="#" style="display: none;"></a>'
+		var cont='<div class="content_one"><div class="round">'
+//				+'<a class="blue_round" href="#" style="display: none;"></a>'
 				+'</div>'			
 				+'<img src='+result[i].product.Image+'>'
 				+'<div class="right">'
