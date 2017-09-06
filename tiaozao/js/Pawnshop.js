@@ -35,6 +35,12 @@ $.ajax({
 //		}
 })
 
+	$(document).on("click",".tips li",function(){
+	  	 $(this).children("span").css("color","#33CCFF");
+		 $(this).siblings().children("span").css("color","black");
+	     $(this).children("i").addClass("cur");
+		 $(this).siblings().children("i").removeClass("cur");  		  	
+	  })
 
 
 		//内容拼接。

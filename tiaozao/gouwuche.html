@@ -10,9 +10,12 @@
 	</head>
 	<body>
 		<div class="top_nav">
-			<span>编辑全部</span>
-			<span>购物车</span>
-			<img src="image/dang_03.png"/>
+			<div class="qh">
+				<span class="qh_a">编辑全部</span>
+				<span class="qh_b" style="display: none;">完成</span>				
+			</div>
+			<span class="title">购物车</span>
+			<img src="image/dang_03.png"/ style="width: 35px;">
 		</div>
 		<div class="content">
 			<!--<div class="content_one">
@@ -61,13 +64,41 @@
 				</div>
 			</div>		-->		
 		</div>
+		<div class="content_three "style="display: none;">
+			<!--<div class="content_four "data-id = '0'>
+				<div class="round"style="border-color: #5d5d5d;">
+					<a href="#" style="display: none"></a>
+				</div>			
+				<img src="image/dang_11.png" style="width: 1.7rem; height: 2rem;"/>
+				<ul class=list>
+					<li class="reduce">-</li>
+					<li class="num">0</li>
+					<li class="Plus">+</li>
+				</ul>
+				<span><a>删除</a></span>
+			</div>
+			<div class="content_four" data-id = '1'>
+				<div class="round"style="border-color: #5d5d5d;">
+					<a href="#" style="display: none"></a>
+				</div>			
+				<img src="image/dang_14.png" style="width: 1.7rem; height: 2rem;"/>
+				<ul>
+					<li class="reduce">-</li>
+					<li class="num">0</li>
+					<li class="Plus">+</li>
+				</ul>
+				<span><a class="delete">删除</a></span>
+			</div>			-->
+		</div>
+		
+		
 		<div class="settlement">		
 			<span class="information">
 				<div class="information_small">
-					<div class="round bottom_round"style="border-color: #5d5d5d;">
-						<a href="#" style="display: none"></a>
-					</div>
-					<i>全选</i>	
+						<div class="round bottom_round"style="border-color: #5d5d5d;">
+							<a style="display: none"></a>
+						</div>
+						<i>全选</i>	
 				</div>		
 			</span>
 			<span class="shopCart">合计：<strong class="sum">￥0</strong><i>不含运费</i></span>
@@ -79,9 +110,9 @@
 					<i style="background-position:0px 0px;"></i>
 					<span>商品</span>	
 				</li>	
-				<li>
-					<i style="background-position:0px -26px;"></i>
-					<span>购物车</span>	
+				<li >
+					<i style="background-position:-26px -26px;"></i>
+					<span class="car">购物车</span>	
 				</li>	
 				<li class="cur">
 					<a href="Pawnshop.html">
