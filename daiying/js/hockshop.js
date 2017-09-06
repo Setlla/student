@@ -1,54 +1,54 @@
-	$(document).on("click",".things a",function(e){
-		console.log(this)
-		$(this).addClass("cur").siblings().removeClass("cur");
-		if(e.target.className == "thing cur"){
-			$(".max").show();
-			$(".books").hide();
-		}else{
-			$(".max").hide();
-			$(".books").show();
-		 }
-			
-		})
-	$.post('http://39.108.219.59/productList',function(data,status){
-		   for(var n=0;n<data.result.length;n++){
-			   var strings='<div class="bicycle" data-id='+data.result[n].id+'>' 
-							  +'<div class="img">'
-							  +'<img src="'+data.result[n].Image+'"/>'
-							  +'</div>'
-							  +'<div class="shanghai min">'
-							  +'<div class="free">'
-							  +'<p>'+data.result[n].Name+'</p>'
-							  +'<span>'+data.result[n].Carriage+'</span>'
-							  +'<span>'+data.result[n].Destination+'</span>'
-							  +'<a href="#">'+data.result[n].Status+'</a>'
-							  +'</div>'
-							  +'<div class="price prices">'
-							  +'<span>'+data.result[n].CurPrice+'</span>'
-							  +'<span>'+data.result[n].OldPrice+'<span>'
-							  +'<div class="round">'
-							  +'<p></p>'
-							  +'<p></p>'
-							  +'<p></p>'
-							  +'</div>'
-						 	  +'</div>'
-						      +'</div>'
-			
-			if(data.result[n].IsBook=="0"){
-				$(".max").append(strings);
-			}else{
-				$(".books").append(strings);
-		   }
-		}
+$(document).on("click",".things a",function(e){
+	console.log(this)
+	$(this).addClass("cur").siblings().removeClass("cur");
+	if(e.target.className == "thing cur"){
+		$(".max").show();
+		$(".books").hide();
+	}else{
+		$(".max").hide();
+		$(".books").show();
+	 }
+		
 	})
-	
-				      
-			 $(document).on("click",".bicycle",function(e){
-			 	console.log(this);
-				var id=$(this).data("id");
-				location.href = "/student/daiying/details.html?id="+id;      
-			})
-	
+$.post('http://39.108.219.59/productList',function(data,status){
+	   for(var n=0;n<data.result.length;n++){
+		   var strings='<div class="bicycle" data-id='+data.result[n].id+'>' 
+						  +'<div class="img">'
+						  +'<img src="'+data.result[n].Image+'"/>'
+						  +'</div>'
+						  +'<div class="shanghai min">'
+						  +'<div class="free">'
+						  +'<p>'+data.result[n].Name+'</p>'
+						  +'<span>'+data.result[n].Carriage+'</span>'
+						  +'<span>'+data.result[n].Destination+'</span>'
+						  +'<a href="#">'+data.result[n].Status+'</a>'
+						  +'</div>'
+						  +'<div class="price prices">'
+						  +'<span>'+data.result[n].CurPrice+'</span>'
+						  +'<span>'+data.result[n].OldPrice+'<span>'
+						  +'<div class="round">'
+						  +'<p></p>'
+						  +'<p></p>'
+						  +'<p></p>'
+						  +'</div>'
+					 	  +'</div>'
+					      +'</div>'
+		
+		if(data.result[n].IsBook=="0"){
+			$(".max").append(strings);
+		}else{
+			$(".books").append(strings);
+	   }
+	}
+})
+
+			      
+$(document).on("click",".bicycle",function(e){
+ 	console.log(this);
+	var id=$(this).data("id");
+	location.href = "/student/daiying/details.html?id="+id;      
+})
+
 
 //var xhr =new XMLHttpRequest;
 //var things = document.querySelector(".max");
@@ -68,8 +68,8 @@
 //		 }
 //	})
 //	
-	
-	
+
+
 //if(window.XMLHttpRequest){
 //	xhr=new XMLHttpRequest();
 //}

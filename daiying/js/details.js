@@ -117,3 +117,6 @@ $(".shopcar").click(function(){
     });
 })
 
+$(document).on("click",".head a",function(){
+	location.href="hockshop.html";
+})

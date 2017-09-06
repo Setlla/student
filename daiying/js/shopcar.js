@@ -6,13 +6,14 @@ $.ajax({
 	data:JSON.stringify({token:localStorage.getItem("token")}),
 	success:function(data){
 		setData(data);
+		setdelet(data);
 	}
 });
 var setData=function(data){
 	for(var n=0;n<data.result.length;n++){
 		var strings='<li class="bicycle">'
 					+'<a class="round"><span class="dots"></span></a>'
-					+'<img src='+data.result[n].product.Image+' />'
+					+'<img src='+data.result[n].product.Image+'/>'
 					+'<div class="right">'
 					+'<div class="top">'
 					+'<p>'+data.result[n].product.Des+'</p>'
@@ -23,7 +24,7 @@ var setData=function(data){
 					+'<div class="undown">'
 					+'<span>￥ <i class="newPrice">'+data.result[n].product.CurPrice+'</i></span>'
 					+'<span>价格￥：<i>'+ data.result[n].product.OldPrice+'</i></span>'
-					+'<span>X<i class="number">1</i></span>'
+					+'<span>X<i class="number">'+data.result[n].ProductNumber+'</i></span>'
 					+'</div>'
 					+'</div>'
 					+'</li>'
@@ -68,7 +69,6 @@ function setsum(){
  		 sum=sum+newPrice*number;
  	}
  	$(".sum").html(sum);
-
 }
 function setnum(){
 	var num=0;
@@ -80,7 +80,46 @@ function setnum(){
 	$(".zero").html("("+num+")");
 	}
 
+var setdelet=function(data){
+	for(var n=0;n<data.result.length;n++){
+		var things='<div class="contents" data-id='+data.result[n].id+'>'
+					+'<a class="round"><span></span></a>'
+					+'<img src='+data.result[n].product.Image+'/>'
+					+'<div class="numbers">'
+					+'<a>-</a>'
+					+'<span>'+data.result[n].ProductNumber+'</span>'
+					+'<a>+</a>'
+					+'</div>'
+					+'<a class="delete">删除</a>'
+					+'</div>'
+					$(".shops").append(things);
+	}
+}
 
+$(document).on("click",".switch a",function(e){
+	$(this).hide().siblings().show();
+	if($(".rrr").css("display") == "block"){
+		$(".content").show();
+		$(".shops").hide();
+	}else {
+		$(".content").hide();
+		$(".shops").show();
+	}
+})
 
-
+$(document).on("click",".delete",function(e){
+	var id = $(this).parents(".contents").data("id");
+	$.ajax({
+		type:"post",
+		url:"http://39.108.219.59/delShopCar",
+		async:true,
+		contentType:"application/json",
+		data:JSON.stringify({token: localStorage.getItem("token"),id: id}),
+		success:function(data){
+			if(data.isSuccess==true){
+				location.href="shopcar.html";
+			}
+		}
+	});
+})
 

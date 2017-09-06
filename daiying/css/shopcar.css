@@ -10,10 +10,10 @@ html{
 	padding:0 .15rem;
 }
 .head a{
+	width: 1.2rem;
 	float:left;
 	color:#fff;
 	font-size: .28rem;
-	
 }
 .head span{
 	color:#fff;
@@ -105,10 +105,46 @@ html{
     bottom: .1rem;
     right: .15rem;
 }
+.shops{
+	padding-left: .68rem;
+}
+.contents{
+	position: relative;
+	border-bottom: solid 1px #999;
+}
+.contents img{
+	width:1.8rem;
+	padding:.3rem 0;
+}
+.numbers{
+	overflow: hidden;
+	position: absolute;
+	top:50%;
+	left:60%;
+	transform: translate(-50%,-50%);
+	border: solid 1px #999;
+}
+.numbers a,.numbers span{
+	font-size:.24rem;
+	float:left;
+	padding:.2rem .25rem;
+}
+.numbers span{
+	border-left: solid 1px #999;
+	border-right: solid 1px #999;
+}
+.delete{
+	font-size: .24rem;
+	color:#fff;
+	position: absolute;
+	top:50%;
+	right:.3rem;
+	transform: translateY(-50%);
+	padding:.7rem .3rem;
+	background-color: #ff2239;
+}
+
 .foot{
-	
-	
-	
 	display: flex;
 	justify-content: space-around;
 	border-top:solid 1px #808080;
@@ -146,8 +182,7 @@ html{
 }
 .all{
 	float: left;
-    /*width: 2.17rem;*/
-   width:35%;
+   	width:35%;
     padding: .25rem 0;
 }
 .all span:nth-child(2){
@@ -157,7 +192,6 @@ html{
 	float: left;
 	width:35%;
 	padding: .13rem 0;
-    /*width: 2.46rem;*/
     text-align: right;
 }
 .clearing span,p{
@@ -173,7 +207,7 @@ html{
     float: right;
     color:#fff;
     font-size: .3rem;
-}
+}	
 .max{
 	width: 100%;
 	position: fixed;
