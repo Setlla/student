@@ -14,10 +14,12 @@
 		
 		//单选按钮
 		$(document).on("click",".list_radio",function() {			
-	    	for (var i=0;i<$('.list_icon_radio').length;i++) {
-	    		$(this).children().eq(i).toggleClass('radio_icon_1');
-    			$(this).eq(i).toggleClass('radio_1');
-	    	}   	
+			if ($(this).hasClass("radio_1")) {
+				$(this).removeClass('radio_1').children().removeClass('radio_icon_1');
+			} 
+			else{
+				$(this).addClass('radio_1').children().addClass('radio_icon_1');
+			}
 	    	//内圆长度等于外圆长度，全选按钮亮
 		    if ($('.list_icon_radio.radio_icon_1').length==$('.list_radio').length) {
 	    		$(".select_radio").addClass('radio_1').children().addClass('radio_icon_1');
