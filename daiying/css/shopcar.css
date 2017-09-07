@@ -4,9 +4,9 @@ html{
 .head{
 	position: relative;
 	text-align: center;
-	height:1.28rem;
+	height:.9rem;
 	background-color: #33ccff;
-	line-height: 1.28rem;
+	line-height: .9rem;
 }
 .head a{
 	position: absolute;
@@ -22,9 +22,10 @@ html{
 }
 .news{
 	position: absolute;
-	right:.15rem;	
-	width:.48rem;
-	transform:  translate(0,100%);
+    right: .15rem;
+    width: .48rem;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .content{
 	padding-left:.68rem;
