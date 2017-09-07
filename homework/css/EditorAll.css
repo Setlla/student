@@ -1,0 +1,35 @@
+
+.editor{
+	float: right;
+	width: 3.8rem;
+	height: 2rem;
+	display: none;
+}
+.number{
+	border: solid #808080 1px;
+	display: inline-block;
+	margin-top: .8rem;
+	font-size: .24rem;
+}
+.number span{
+	display: inline-block;
+	padding:.1rem .3rem;
+}
+.amount{
+	border-left: solid #808080 1px;
+	border-right: solid #808080 1px;
+}
+.delete{
+	border: solid #ff6666 1px;
+	background-color: #ff6666;
+	width: .8rem;
+	height: 1rem;
+	margin-left: .4rem;
+	font-size: .2rem;
+	color: #FFFFFF;
+}
+
+
+
+
+
