@@ -31,23 +31,22 @@ html{
 	display: block;
 	width:.28rem;
 	height:.28rem;
-	border: solid 1px #000;
-	border-radius: .14rem;
+	background-color: #fff;
+	box-sizing: border-box;
+	box-shadow: 0px 0px 0px 1px #999;
+	border-radius:.5rem;
+	border:solid 4px #fff;
+}
+.dots{
+	margin: .05rem auto;
 	position: absolute;
     top: 50%;
     left: -.4rem;
     transform: translate(-50%,-50%);
 }
-.dots{
-	display: block;
-	width:.18rem;
-	height:.18rem;
-	background-color: white;
-	border-radius: .09rem;
-	margin: .05rem auto;
-}
 .cur{
-	background: #33CCFF !important;
+	background: #33ccff !important;
+	box-shadow: 0px 0px 0px 1px #33ccff;
 }
 .bicycle{
 	display: inline-block;
@@ -172,11 +171,6 @@ html{
 	border-top:solid 1px #808080;
 }
 .dot{
-	display: block;
-	width:.28rem;
-	height:.28rem;
-	border: solid 1px #000;
-	border-radius: .14rem;
 	float:left;
 	margin:0 .15rem;
 }
@@ -212,4 +206,7 @@ html{
 	width: 100%;
 	position: fixed;
 	bottom: 0;
+}
+.last{
+	display: none;
 }

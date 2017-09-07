@@ -76,6 +76,7 @@ html{
 }
 .book{
 	position: relative;
+	background-color: #f6f6f6;
 }
 .book img{
 	padding: .15rem .24rem;

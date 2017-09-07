@@ -6,13 +6,12 @@ $.ajax({
 	data:JSON.stringify({token:localStorage.getItem("token")}),
 	success:function(data){
 		setData(data);
-		setdelet(data);
 	}
 });
 var setData=function(data){
 	for(var n=0;n<data.result.length;n++){
 		var strings='<li class="bicycle">'
-					+'<a class="round"><span class="dots"></span></a>'
+					+'<span class="dots round"></span>'
 					+'<img src='+data.result[n].product.Image+'/>'
 					+'<div class="right">'
 					+'<div class="top">'
@@ -28,6 +27,18 @@ var setData=function(data){
 					+'</div>'
 					+'</div>'
 					+'</li>'
+					
+		var sb='<div class="contents" data-id='+data.result[n].id+'>'
+					+'<span class="dots round"></span>'
+					+'<img src='+data.result[n].product.Image+'/>'
+					+'<div class="numbers">'
+					+'<a class="decrease">-</a>'
+					+'<span class="one">'+data.result[n].ProductNumber+'</span>'
+					+'<a class="add">+</a>'
+					+'</div>'
+					+'<a class="delete">删除</a>'
+					+'</div>'
+					$(".shops").append(sb);
 					$(".content").append(strings);
 	}
 }
@@ -39,15 +50,15 @@ $(document).on("click",".bicycle .dots",function(e){
 	} else{
 		$(this).addClass("cur");
 	}
-	if($(".bicycle .dots").length==$(".round .cur").length){
-		$(".dot .dots").addClass("cur");
+	if($(".bicycle .dots").length==$(".bicycle .cur").length){
+	   $(".all .dot").addClass("cur");
 	}else{
-		$(".dot .dots").removeClass("cur");
+	   $(".all .dot").removeClass("cur");
 	}
 	setsum();
 	setnum();
 })
-$(document).on("click",".dot .dots",function(e){
+$(document).on("click",".all .dot",function(e){
 	var round=$(".bicycle .dots");
 	if ($(this).hasClass("cur")) {
 		$(this).removeClass("cur");
@@ -80,21 +91,6 @@ function setnum(){
 	$(".zero").html("("+num+")");
 	}
 
-var setdelet=function(data){
-	for(var n=0;n<data.result.length;n++){
-		var things='<div class="contents" data-id='+data.result[n].id+'>'
-					+'<a class="round"><span></span></a>'
-					+'<img src='+data.result[n].product.Image+'/>'
-					+'<div class="numbers">'
-					+'<a>-</a>'
-					+'<span>'+data.result[n].ProductNumber+'</span>'
-					+'<a>+</a>'
-					+'</div>'
-					+'<a class="delete">删除</a>'
-					+'</div>'
-					$(".shops").append(things);
-	}
-}
 
 $(document).on("click",".switch a",function(e){
 	$(this).hide().siblings().show();
@@ -117,9 +113,48 @@ $(document).on("click",".delete",function(e){
 		data:JSON.stringify({token: localStorage.getItem("token"),id: id}),
 		success:function(data){
 			if(data.isSuccess==true){
-				location.href="shopcar.html";
+				location.reload();
 			}
 		}
 	});
 })
 
+$(document).on("click",".add",function(){
+ 	var add=parseInt($(this).parent(".numbers").find(".one").html())+1;
+   		$(this).parent(".numbers").find(".one").html(add);
+})
+$(document).on("click",".decrease",function(){
+	var decrease=parseInt($(this).parent(".numbers").find(".one").html())-1;
+	if(decrease>0){
+   		$(this).parent(".numbers").find(".one").html(decrease);
+	}
+})
+
+
+$(document).on("click",".complete",function(){
+	var products = [];
+	for(var i = 0; i<$(".contents").length;i++){
+		var id = $(".contents").eq(i).data("id");
+		var ProductNumber = $(".contents").eq(i).find(".one").html();
+		var product = {
+			id: id,
+			ProductNumber: ProductNumber
+		}
+		products.push(product);
+	}
+	$.ajax({
+		type:"post",
+		url:"http://39.108.219.59/updateShopCar ",
+		async:true,
+		contentType:"application/json",
+		data:JSON.stringify({
+			token:localStorage.getItem("token"),
+			products:products
+		}),
+		success:function(data){
+			if(data.isSuccess==true){
+				location.reload();
+			}
+		}
+	})	
+})
