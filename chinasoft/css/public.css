@@ -1,0 +1,9 @@
+ 	/*公共标签样式*/
+ 	*{box-sizing: border-box;margin: 0;padding: 0;}
+	a{text-decoration: none;}
+	html{font-family: "微软雅黑";}
+	ul{list-style-type: none;}
+	body{font-family:"微软雅黑", Arial;min-width: 1024px;background: #f7f7f7;}
+	input{outline: none;}
+	textarea{outline: none;}
+	i,em{font-style: normal;}

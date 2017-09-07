@@ -1,0 +1,113 @@
+	/*头部login标志*/
+	.head_login,.head_onpage{
+		overflow: hidden;
+		width: 1200px;
+		height: 84px;
+		margin: 0 auto;	
+	}
+	.head_login li{
+		float: left;
+		overflow: hidden;
+		height: 100%;
+	}
+	.head_login li:nth-of-type(1){
+		width: 48%;
+		font-size: 14px;
+		padding-top: 15px;
+	}
+	.head_login li span:nth-of-type(1){
+		width: 36px;
+		height: 36px;
+		margin-right: 20px;
+		border-radius: 18px;
+		display: block;
+		border: 1px solid #333333;
+		float: left;
+	}
+	.head_login li:not(:nth-of-type(1)){
+		width: 13%;
+		font-size: 12px;
+		padding-top: 25px;
+	}
+	.head_login li:nth-of-type(1) div{
+		float: left;
+		overflow: hidden;
+	}
+	.head_login a{
+		color: #333333;
+	}
+	.head_login a:hover{
+		color: blue;
+	}
+	.head_login li:nth-of-type(2) span{
+		background: url(../img/icon/icon_01.gif)50% 50% no-repeat;
+	}
+	.head_login li:nth-of-type(3) span{
+		background: url(../img/icon/icon_02.gif)50% 50% no-repeat;
+	}
+	.head_login li:nth-of-type(4) span{
+		background: url(../img/icon/icon_04.gif)50% 50% no-repeat;
+	}
+	.head_login li:nth-of-type(5) span{
+		background: url(../img/icon/icon_03.gif)50% 50% no-repeat;
+	}
+	.brand{
+		border-left: 1px solid #666666;
+		width: 244px;
+		height: 39px;
+		padding-left: 15px;
+		margin: 10px 0 0 15px;
+	}
+	.brand p:nth-child(1){
+		color: #333333;
+	}
+	.brand p:nth-child(2){
+		color: #666666;
+	}
+	
+	/*首页按钮等*/
+	.head{
+		width: 100%;
+		height: 62px;
+		line-height: 62px;
+		border-bottom: 1px solid #e3e3e3;
+	}
+	.head a{
+		font-size: 16px;
+		color: #333333;
+		display: block;
+	}
+	.head a:hover{
+		background: #018dd6;
+		color: #FFFFFF;
+	}
+	.head_onpage{
+		overflow: hidden;
+		width: 1200px;
+		height: 100%;
+	}
+	.head_onpage li{
+		float: right;
+		width: 8%;
+		text-align: center;
+	}
+	/*首页按钮点击效果*/
+	.head_onpage li ul{
+		display: none;
+		overflow: hidden;
+		position: absolute;
+		height: 30px;
+		line-height: 30px;
+	}
+	.head_onpage li ul li{
+		width: 600px;
+	}
+	.head_onpage li ul li a{
+		float: left;
+		width: 20%;
+	}
+	.head_onpage li:hover ul{
+		display: block;
+	}
+	
+
