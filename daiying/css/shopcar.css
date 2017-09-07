@@ -2,16 +2,17 @@ html{
 	font-size: 100px;
 }
 .head{
-	overflow: hidden;
+	position: relative;
 	text-align: center;
 	height:1.28rem;
 	background-color: #33ccff;
 	line-height: 1.28rem;
-	padding:0 .15rem;
 }
 .head a{
+	position: absolute;
+	text-align: left;
+	left: .15rem;
 	width: 1.2rem;
-	float:left;
 	color:#fff;
 	font-size: .28rem;
 }
@@ -20,12 +21,13 @@ html{
 	font-size: .32rem;
 }
 .news{
+	position: absolute;
+	right:.15rem;	
 	width:.48rem;
-	float:right;
 	transform:  translate(0,100%);
 }
 .content{
-	padding:.2rem 0 0 .68rem;
+	padding-left:.68rem;
 }
 .round{
 	display: block;
@@ -38,7 +40,6 @@ html{
 	border:solid 4px #fff;
 }
 .dots{
-	margin: .05rem auto;
 	position: absolute;
     top: 50%;
     left: -.4rem;
@@ -56,7 +57,7 @@ html{
 }
 .bicycle img{
 	width:1.69rem;
-	height:1.6rem;
+	height:1.8rem;
 	margin-top: .4rem;
 }
 .right{
@@ -82,7 +83,7 @@ html{
 	display: block;
 	width:1rem;
 	background-color: #33cc33;
-	padding:.08rem .15rem;
+	padding:.05rem 0;
 }
 .undown{
 	position: relative;
@@ -101,7 +102,7 @@ html{
 .undown span:nth-child(3){
 	font-size: .28rem;
 	position: absolute;
-    bottom: .1rem;
+    bottom: .12rem;
     right: .15rem;
 }
 .shops{

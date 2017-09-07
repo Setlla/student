@@ -102,10 +102,15 @@ html{
 	display: inline-block;
 }
 .number{
+	text-align: right;
 	position: absolute;
 	right: .26rem;
     top: .15rem;
 }
-.number{
-	font-size: .2rem;
+.number p{
+	font-size: .20rem;
+}
+.number a{
+	font-size: .18rem;
+	color:#a4a4a4;
 }

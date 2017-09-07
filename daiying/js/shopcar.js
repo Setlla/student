@@ -22,7 +22,7 @@ var setData=function(data){
 					+'</div>'
 					+'<div class="undown">'
 					+'<span>￥ <i class="newPrice">'+data.result[n].product.CurPrice+'</i></span>'
-					+'<span>价格￥：<i>'+ data.result[n].product.OldPrice+'</i></span>'
+					+'<span>价格￥: '+ data.result[n].product.OldPrice+'</span>'
 					+'<span>X<i class="number">'+data.result[n].ProductNumber+'</i></span>'
 					+'</div>'
 					+'</div>'
@@ -155,3 +155,7 @@ $(document).on("click",".shopcar",function(){
 $(document).on("click",".hockshop",function(){
 	location.href="hockshop.html";
 })
+
+
+
+
