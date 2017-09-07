@@ -97,7 +97,8 @@ html{
 .undown span:nth-child(2){
 	color:#999;
 	font-size: .2rem;
-	padding-left:.25rem ;	
+	padding-left:.25rem;
+	text-decoration: line-through;	
 }
 .undown span:nth-child(3){
 	font-size: .28rem;
