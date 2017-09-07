@@ -3,17 +3,19 @@
 		margin-bottom: 3rem;
 	}
 	.ware{
-		height: 2.5rem;
+		height: 2.7rem;
 		display: flex;/*为了左边的图片居中*/
 		display: -webkit-flex;
 		align-items: center;
 	}
 	.ware_radio{
-		padding-bottom: 0.5rem;
+		height: 100%;
+		width: 9%;
+		position: relative;
 	}
 	/*公共按钮*/
 	.list_radio{
-		margin: 0rem 0rem 0rem 0.14rem;
+		/*margin: 0rem 0rem 0rem 0.14rem;*/
 		width: 0.28rem;
 		height: 0.28rem;
 		border-radius: 0.14rem;
@@ -21,23 +23,27 @@
 		background: #FFFFFF;
 		display: inline-block;
 		box-shadow: 0 0 0 3px #FFFFFF inset;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
 	}
 	
 	.ware_pic{
 		width: 30%;
-		height: 2.5rem;
-		line-height: 2.4rem;
+		height: 2.7rem;
+		line-height: 2.7rem;
 		text-align: center;/*为了左边的图片左右居中*/
 	}
 	.ware_pic img{
 		width: 1.7rem;
-		height: 2.0rem;
+		height: 1.9rem;
 		vertical-align: middle;
 	}
 	.ware_explain{
-		width: 65%;
-		height: 2.5rem;
-		padding: 0.08rem;
+		width: 61%;
+		height: 2.7rem;
+		padding: 0.24rem 0rem 0rem 0.08rem;
 		border-bottom: 1px solid #e5e5e5;
 		display: block;
 	}
@@ -68,7 +74,8 @@
 	
 	.ware_explain p:nth-of-type(3){
 		font-size: 0.24rem;
-		margin: 0.14rem 0rem;
+		margin: 0.16rem 0rem 0.1rem 0rem;
+		position: relative;
 	}
 	.ware_explain p:nth-of-type(3) span:nth-of-type(1){
 		color: #ff9900;
@@ -92,7 +99,10 @@
 	.ware_explain p:nth-of-type(3) span:nth-of-type(5){
 		font-size: 0.28rem;
 		color: #333333;
-		margin-left: 0.4rem;
+		position: absolute;
+		top: 50%;
+		right: 0.08rem;
+		transform: translate(0,-50%);
 	}
 	.new_number{
 		color: #333333!important;
