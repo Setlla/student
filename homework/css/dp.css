@@ -16,12 +16,11 @@ html{
 	color: #33ccff;
 }
 .head{
-	height: 1.28rem;
 	background-color: #33ccff;
 	position: relative;
 	overflow: hidden;
-	/*display: flex;*/
-	/*justify-content: space-between;*/
+	display: flex;
+	justify-content: space-between;
 }
 select{
 		-webkit-appearance: none;	
@@ -29,38 +28,29 @@ select{
 		border: none;	
 		font-size: .3rem;
 		color: #fff;
-		display:inline-block;
-		line-height: 1.28rem;
-		height: 100%;
 		margin-left: .2rem;
-		/*margin-right: 1.2rem;*/
+		float: left;
 	}
 .bton{
-		border: solid #FFFFFF 1px;
-		border-radius: .05rem;
-		display:inline-block;
-		margin-left: 1.5rem;
+		overflow: hidden;
+		padding: .3rem 0;
 	}
 .bton a{
 	display:inline-block;	
+	border: solid #FFFFFF 1px;
 	font-size: .3rem;
 	color:#fff ;
 	padding: .17rem .35rem;	
-}
-.bton .res{
-	/*background-color: #d6f5ff;
-	color: #33ccff;*/
+	float: left;
 }
 .res{
-	border-top-left-radius: .05rem;
+	border-bottom-left-radius: .1rem;
+	border-top-left-radius: .1rem;
 }
 .book{
-	border-top-right-radius: .05rem;
+	border-top-right-radius: .1rem;
+	border-bottom-right-radius: .1rem;
 }
-/*.bton a:hover{
-	background-color: #d6f5ff;
-	color: #33ccff;
-}*/
 .head span{
 	display: inline-block;
 	width: .09rem;
@@ -69,16 +59,14 @@ select{
 	border-left: solid #ddd 1px;				
 	-webkit-transform:translateY(-50%) rotate(-135deg);
 	position: absolute;
-	bottom:.5rem;
+	bottom:.6rem;
 	left: .9rem;
 }
 .head img{
 	width: .47rem;
-	/*line-height: 1.28rem;
-	display: inline-block;*/
 	float: right;
-	margin-right: .2rem;
-	margin-top: .4rem;
+	margin-right: .2rem;	
+	padding: .3rem 0;
 }
 .bike{
 	margin-top: .2rem;
@@ -214,11 +202,17 @@ input{
 	border-right: solid #999 1px;
 	-webkit-transform:rotate(5deg);
 	-webkit-transform:skew(40deg,-40deg);
-	/*float: right;*/
+}
+.bot .hockshop{
+	color: #33ccff;
 }
 .thing{
 	overflow: hidden;
 }
 .books{
 	display: none;
+}
+.fill{
+	display: block;
+	height: 1.1rem;
 }
