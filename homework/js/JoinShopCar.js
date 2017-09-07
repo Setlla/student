@@ -12,7 +12,7 @@ var montage=function(data){
 	for(var i=0;i<data.result.length;i++){
 		var carContent='<div class="bike">'
 		              +'<span class="button">'
-		              +'<i class="single"></i>'
+//		              +'<i class="single"></i>'
 		              +'</span>'
 		              +'<img src="'+ data.result[i].product.Image +'" />'
 		              +'<div class="present">'
@@ -25,7 +25,7 @@ var montage=function(data){
 		              +'<div class="price">'
 		              +'<p class="now"> ￥ <span class="money">' + data.result[i].product.CurPrice +'</span></p>'
 		              +'<p class="before">价格：￥'+data.result[i].product.OldPrice +'</p>'
-		              +'<p>X <span class="power">'+data.result[i].ProductNumber+'</span></p>'
+		              +'<p class="muiltiple">X <span class="power">'+data.result[i].ProductNumber+'</span></p>'
 		              +'</div>'
 		              +'</div>'
 		              +'<div class="editor" data-id='+ data.result[i].id +'>'		              		              
