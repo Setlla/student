@@ -86,11 +86,26 @@ html{
 	width:2.7rem;
 	position: absolute;
 	left:50%;
-	top:50%;
-	transform: translate(-50%,-100%);
+	top:.15rem;
+	transform: translate(-50%);
+}
+.seven p{
+	font-size:.24rem;
+}
+.seven a{
+	font-size: .18rem;
+	color:#de2d3d;
+	padding:0 .07rem;
+	border:solid 1px #de2d3d;
+	border-radius:.05rem ;
+	margin-top: .16rem;
+	display: inline-block;
 }
 .number{
 	position: absolute;
 	right: .26rem;
-    top: .2rem;
+    top: .15rem;
+}
+.number{
+	font-size: .2rem;
 }

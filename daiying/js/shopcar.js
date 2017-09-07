@@ -28,7 +28,7 @@ var setData=function(data){
 					+'</div>'
 					+'</li>'
 					
-		var sb='<div class="contents" data-id='+data.result[n].id+'>'
+		var things='<div class="contents" data-id='+data.result[n].id+'>'
 					+'<span class="dots round"></span>'
 					+'<img src='+data.result[n].product.Image+'/>'
 					+'<div class="numbers">'
@@ -38,8 +38,8 @@ var setData=function(data){
 					+'</div>'
 					+'<a class="delete">删除</a>'
 					+'</div>'
-					$(".shops").append(sb);
-					$(".content").append(strings);
+		$(".shops").append(things);
+		$(".content").append(strings);
 	}
 }
 
@@ -56,7 +56,6 @@ $(document).on("click",".bicycle .dots",function(e){
 	   $(".all .dot").removeClass("cur");
 	}
 	setsum();
-	setnum();
 })
 $(document).on("click",".all .dot",function(e){
 	var round=$(".bicycle .dots");
@@ -68,38 +67,27 @@ $(document).on("click",".all .dot",function(e){
 		round.addClass("cur");
 		}
 	setsum();
-	setnum();		
 })
 
 function setsum(){
  	var sum=0;
+ 	var num=0;
  	var content=$(".bicycle .cur");
  	for (var i=0;i<content.length;i++) {
  		 var newPrice=parseInt(content.eq(i).parents(".bicycle").find(".newPrice").html());
  		 var number=parseInt(content.eq(i).parents(".bicycle").find(".number").html());
  		 sum=sum+newPrice*number;
+ 		 num=num+number;
  	}
  	$(".sum").html(sum);
+ 	$(".zero").html("("+num+")");
 }
-function setnum(){
-	var num=0;
-	var content=$(".bicycle .cur");		
-	for (var i=0;i<content.length;i++) {
-		var number=parseInt(content.eq(i).parents(".bicycle").find(".number").html());
-		num=num+number;
-	}
-	$(".zero").html("("+num+")");
-	}
-
 
 $(document).on("click",".switch a",function(e){
 	$(this).hide().siblings().show();
-	if($(".rrr").css("display") == "block"){
-		$(".content").show();
-		$(".shops").hide();
-	}else {
-		$(".content").hide();
-		$(".shops").show();
+	if($(".edit").css("display") == "none"){
+	   $(".content").hide();
+	   $(".shops").show();
 	}
 })
 
@@ -156,5 +144,14 @@ $(document).on("click",".complete",function(){
 				location.reload();
 			}
 		}
-	})	
+	});	
+})
+$(document).on("click",".shop",function(){
+	location.href="details.html";
+})
+$(document).on("click",".shopcar",function(){
+	location.href="shopcar.html";
+})
+$(document).on("click",".hockshop",function(){
+	location.href="hockshop.html";
 })

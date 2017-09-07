@@ -49,6 +49,16 @@ $(document).on("click",".bicycle",function(e){
 	location.href = "/student/daiying/details.html?id="+id;      
 })
 
+$(document).on("click",".shop",function(){
+	location.href="details.html";
+})
+$(document).on("click",".shopcar",function(){
+	location.href="shopcar.html";
+})
+$(document).on("click",".hockshop",function(){
+	location.href="hockshop.html";
+})
+
 
 //var xhr =new XMLHttpRequest;
 //var things = document.querySelector(".max");
