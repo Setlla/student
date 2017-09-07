@@ -18,7 +18,7 @@ var montage=function(data){
 		              +'<div class="present">'
 		              +'<p>'+ data.result[i].product.Name +'</p>'
 		              +'<div class="post">'
-		              +'<span>'+ data.result[i].product.Carriage +'</span>'
+		              +'<span class="bag">'+ data.result[i].product.Carriage +'</span>'
 		              +'<span>'+ data.result[i].product.Destination +'</span>'
 		              +'</div>'
 		              +'<a>'+ data.result[i].product.Status + '</a>'
