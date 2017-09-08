@@ -10,18 +10,21 @@ html{
 }
 .head a{
 	display: inline-block;
-	width:.2rem;
-	height:.2rem;
-	border-bottom: solid 2px #fff;
-	border-left: solid 2px #fff;
-	transform: rotate(45deg) translateY(-50%);
+	font-size: .28rem;
+	color:#fff;
+	transform: translateY(-50%);
 	position: absolute;
 	top:50%;
+}
+.head a:first-child{
 	left:.22rem;
 }
 .head span{
 	font-size: .32rem;
 	color:#fff;
+}
+.head a:nth-child(3){
+	right:.22rem;
 }
 .top{
 	text-align: center;

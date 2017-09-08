@@ -1,0 +1,97 @@
+html{	
+	font-size:100px;
+	background: #eee;
+}
+.head{
+	height:.9rem;
+	background-color: #33ccff;
+	line-height: .9rem;
+	position: relative;
+	text-align: center;
+}
+.head a{
+	width:.2rem;
+	height:.2rem;
+	border-bottom: solid 2px #fff;
+	border-left:solid 2px #fff;
+	display: inline-block;
+	transform: rotate(45deg) translateY(-50%);
+	position: absolute;
+	top:50%;
+	left:.22rem;
+}
+.head span{
+	font-size: .32rem;
+	color:#fff;
+}
+.content{
+	background: #fff;
+}
+.headPortrait img{
+	width:1.14rem;
+	height:1.14rem;
+	border-radius:50%;
+	border: solid 2px #999;
+	float: right;
+	margin-right:.67rem;
+}
+.headPortrait span{
+	line-height: 1.14rem;
+}
+.content li{
+	margin-left: .22rem;
+	position: relative;
+	overflow: hidden;
+	padding:.3rem 0;
+	border-bottom: solid 1px #eee;
+}
+.content li span{
+	font-size: .3rem;
+	color:#000;
+}
+.sex select{
+	float:right;
+	margin-right: .67rem;
+	border: none;
+	height:.4rem;
+	outline: none;
+	-webkit-appearance:none;
+}
+.nickname input,.address input{
+	float: right;
+	margin-right: .67rem;
+	border: none;
+	outline: none;
+	/*line-height: .38rem;*/
+	height:.36rem;
+}
+input::-webkit-input-placeholder{
+	font-size: .24rem;
+	color:#787878;
+	text-align: right;
+}
+.content li a{
+	display: block;
+	width: .2rem;
+	height:.2rem;
+	border-bottom: solid 1px #999;
+	border-right:solid 1px #999;
+	transform: rotate(-45deg) translateY(-50%);
+	position:absolute;
+	top:50%;
+	right:.22rem;
+}
+.back{
+	height:5.22rem;
+}
+.foot{
+	display: block;
+	font-size: .3rem;
+	color:#fff;
+	padding:.15rem 0;
+	border-radius:.3rem;
+	background-color: #33ccff;
+	text-align: center;
+	margin:0 .22rem;
+	margin-top: .5rem;
+}
