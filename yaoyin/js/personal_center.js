@@ -14,6 +14,10 @@ $(document).ready(function(){
 			location.href="personal_message.html";
 		})
 	
-	
+		//注销
+		$(document).on("click",".header_dot",function(){
+			localStorage.removeItem("token");
+			location.href="login.html";
+		})
 		
 })//ready的括号

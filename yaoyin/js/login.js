@@ -21,8 +21,8 @@
 			if(xmlhttp.readyState==4 && xmlhttp.status==200){		
 				var islog=JSON.parse(xmlhttp.responseText);
 				//判断登录成功和失败
-				if(islog.islogin==true){
-					localStorage.setItem("token",islog.token);
+				if(islog.islogin==true){					
+					localStorage.setItem("token",islog.token);					
 					alert("登录成功，欢迎"+account+"回来！^_^");
 					location.href="hockshop.html"; 
 				}else{
