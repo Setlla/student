@@ -8,4 +8,12 @@ $(document).ready(function(){
 		$('.hockshop').click(function(){
 			location.href="hockshop.html";
 		})
-})
+		
+		//设置跳转到个人信息		
+		$(document).on("click",".header_left",function(){
+			location.href="personal_message.html";
+		})
+	
+	
+		
+})//ready的括号
