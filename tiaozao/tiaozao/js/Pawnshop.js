@@ -35,6 +35,12 @@ $.ajax({
 //		}
 })
 
+	$(document).on("click",".tips li",function(){
+	  	 $(this).children("span").css("color","#33CCFF");
+		 $(this).siblings().children("span").css("color","black");
+	     $(this).children("i").addClass("cur");
+		 $(this).siblings().children("i").removeClass("cur");  		  	
+	  })
 
 
 		//内容拼接。
@@ -42,7 +48,7 @@ $.ajax({
 				
 		for(var i=0;i<result.length;i++){
 			var	textContent='<div class="content_noe" data-id="'+result[i].id+'">'
-					+'<img src="'+result[i].Image+'"/ width="180" height="140">'
+					+'<img src='+result[i].Image+'/>'
 					+'<div class="right_one">'
 					+'<p>'+result[i].Des+'</p>'
 					+'<span>'+result[i].Carriage+'</span>'

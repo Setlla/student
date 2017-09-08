@@ -1,0 +1,105 @@
+html{
+	background: #eeeeee;
+}
+
+
+.top_nav{	
+	line-height: 1rem;
+	background: #33CCFF;	
+	position: relative;
+	text-align: center;
+}
+.top_nav a{
+	position: absolute;
+	left: .2rem;
+	top: 50%;	
+	width: .16rem;
+	height: .16rem;
+	border-bottom: .03rem solid white;
+	border-left: .03rem solid white;
+	transform: translateY(-50%) rotate(45deg);	
+}
+.top_nav span{
+	font-size: .3rem;
+	color: white;	
+}
+.Submit{
+	background: white;
+}
+.Submit li{
+	margin-left: .22rem;
+	border-bottom: 1px solid #eeeeee;
+	overflow: hidden;
+	line-height: .9rem;
+	position: relative;
+}
+.lis_one{
+	line-height: 1.7rem;
+}
+.lis_one span{
+	line-height: 1.7rem;
+}
+.Submit  li span{
+	font-size: .3rem;
+	float: left;
+}
+.Submit  li img{
+	margin: .3rem .7rem .25rem 0;
+	float: right;
+	display: block;
+	border-radius: 50%;
+	width: 1.2rem;
+	height: 1.2rem;
+}
+.aa{
+    margin-top: .2rem;
+    width: .8rem;
+    text-align: center;
+    height: .5rem;
+    float: right;
+    margin-right: .7rem;
+    font-size: .24rem;
+    color: #999;  
+    outline: none;
+    -webkit-appearance: none; 
+    border: 0;
+}
+
+.Submit  li a{
+	position: absolute;
+	right: .22rem;
+	top: 50%;	
+	width: .16rem;
+	height: .16rem;
+	border-bottom: .03rem solid #999999;
+	border-left: .03rem solid #999999;
+	transform: translateY(-50%) rotate(-135deg);		
+}
+.Submit  li input{
+	width: 1rem;	
+	line-height: .9rem;
+	float: right;
+	padding-right: .5rem;
+	font-size: .24rem;
+}
+.Submit li .address{
+	text-align: right;
+	margin-right: .2rem;
+	width: 10rem;
+}
+.bottom_nav	{
+	height: 10rem;
+}
+.bottom_nav button{
+	text-align: center;
+	background: #33CCFF;
+	font-size: .3rem;
+	line-height: 1rem;
+	display: block;
+	width: 90%;
+	margin: 0 auto;
+	color: white;
+	margin-top: 1rem;
+	outline: none;
+	border: 0;
+}

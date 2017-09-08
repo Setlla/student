@@ -6,16 +6,19 @@
 		<link rel="stylesheet" type="text/css" href="css/gouwuche.css"/>
 		<link rel="stylesheet" type="text/css" href="css/yangshi.css"/>
 		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
-		
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 	</head>
 	<body>
 		<div class="top_nav">
-			<span>编辑全部</span>
-			<span>购物车</span>
-			<img src="image/dang_03.png"/>
+			<div class="qh">
+				<span class="qh_a">编辑全部</span>
+				<span class="qh_b" style="display: none;">完成</span>				
+			</div>
+			<span class="title">购物车</span>
+			<img src="image/dang_03.png"/ style="width: 35px;">
 		</div>
 		<div class="content">
-			<div class="content_one">
+			<!--<div class="content_one">
 				<div class="round"style="border-color: #5d5d5d;">
 					<a href="#" style="display: none"></a>
 				</div>			
@@ -31,7 +34,7 @@
 				</div>
 			</div>
 			<div class="content_one">
-				<div class="round"style="border-color: #5d5d5d;">
+				<!--<div class="round"style="border-color: #5d5d5d;">
 					<a href="#" style="display: none;"></a>
 				</div>			
 				<img src="image/dang_11.png" style="width: 1.7rem; height: 2rem;" />
@@ -42,11 +45,11 @@
 						<span class="nine">9成新</span>
 						<strong>￥<em class="newPrice">2800</em></strong>
 						<i class="OldPrice">价格：￥4900</i>
-						<a>X<i class="number">1</i></a>							
+						<a>X<i class="number">5</i></a>							
 				</div>
 			</div>
 			<div class="content_one">
-				<div class="round" style="border-color: #5d5d5d;">
+				<!--<div class="round" style="border-color: #5d5d5d;">
 					<a class="blue_round" href="#" style="display: none;"></a>
 				</div>			
 				<img src="image/dang_14.png" style="width: 1.7rem; height: 2rem;" />
@@ -57,21 +60,49 @@
 						<span class="nine">9成新</span>
 						<strong>￥<em class="newPrice">3500</em></strong>
 						<i class="OldPrice">价格：￥7868</i>
-						<a>X<i class="number">1</i></a>							
+						<a>X<i class="number">3</i></a>							
 				</div>
-			</div>				
+			</div>		-->		
 		</div>
+		<div class="content_three "style="display: none;">
+			<!--<div class="content_four "data-id = '0'>
+				<div class="round"style="border-color: #5d5d5d;">
+					<a href="#" style="display: none"></a>
+				</div>			
+				<img src="image/dang_11.png" style="width: 1.7rem; height: 2rem;"/>
+				<ul class=list>
+					<li class="reduce">-</li>
+					<li class="num">0</li>
+					<li class="Plus">+</li>
+				</ul>
+				<span><a>删除</a></span>
+			</div>
+			<div class="content_four" data-id = '1'>
+				<div class="round"style="border-color: #5d5d5d;">
+					<a href="#" style="display: none"></a>
+				</div>			
+				<img src="image/dang_14.png" style="width: 1.7rem; height: 2rem;"/>
+				<ul>
+					<li class="reduce">-</li>
+					<li class="num">0</li>
+					<li class="Plus">+</li>
+				</ul>
+				<span><a class="delete">删除</a></span>
+			</div>			-->
+		</div>
+		
+		
 		<div class="settlement">		
 			<span class="information">
 				<div class="information_small">
-					<div class="round bottom_round"style="border-color: #5d5d5d;">
-						<a href="#" style="display: none"></a>
-					</div>
-					<i>全选</i>	
+						<div class="round bottom_round">
+							<!--<a style="display: none"></a>-->
+						</div>
+						<i>全选</i>	
 				</div>		
 			</span>
 			<span class="shopCart">合计：<strong class="sum">￥0</strong><i>不含运费</i></span>
-			<span class="buy">结算（<em>2</em>）</span>
+			<span class="buy">结算（<em>0</em>）</span>
 		</div>
 		<div class="bottom_nav">
 			<ul class="tips">
@@ -79,11 +110,11 @@
 					<i style="background-position:0px 0px;"></i>
 					<span>商品</span>	
 				</li>	
-				<li>
-					<i style="background-position:0px -26px;"></i>
-					<span>购物车</span>	
+				<li >
+					<i style="background-position:-26px -26px;"></i>
+					<span class="car">购物车</span>	
 				</li>	
-				<li class="cur">
+				<li >
 					<a href="Pawnshop.html">
 						<i style="background-position:0px -50px;"></i>
 						<span>当铺</span>						
@@ -91,13 +122,13 @@
 
 				</li>	
 				<li>
-					<!--<a href="dengru.html">-->
+					<a href="geren.html">
 						<i style="background-position:0px -75px;"></i>
 						<span>个人中心</span>
-					<!--</a>-->
+					</a>
 				</li>	
 			</ul>					
-		</div>	
+		</div>			
 	<script src="js/gouwuche.js" type="text/javascript" charset="utf-8"></script>	
 	</body>
 </html>
