@@ -22,6 +22,14 @@
 	}
 	.header_dot{
 		position: absolute;
+		top: 50%;
 		right: 0.34rem;
-		font-size: 0.3rem;
+		transform: translate(0,-50%);		
+	}
+	
+	.header_left{
+		position: absolute;
+		top: 50%;
+		left: 0.34rem;
+		transform: translate(0,-50%);	
 	}
