@@ -55,7 +55,7 @@
 			$('.name').val(data.result[0].name);
 			$('.sex option:selected').text(data.result[0].gender);
 			$('.address').val(data.result[0].address);
-			$('.intercalate_head')[0].src=data.result[0].headImage;
+			$('.intercalate_head').attr('src',data.headImage);
 		}					
 	
 		//修改昵称地址性别		
@@ -63,7 +63,6 @@
 			var name=$('.name').val();
 			var sex=$('.sex option:selected').val();
 			var address=$('.address').val();
-			var headImage=$('.intercalate_head')[0].src;
 			$.ajax({
 				type:"post",
 				url:"http://39.108.219.59/setPerson",
@@ -74,7 +73,6 @@
 					name:name,
 					gender:sex,
 					address:address,
-					headImage:headImage
 				}),
 				success:function(data){
 					if(data.isSuccess==true){
