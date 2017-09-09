@@ -5,7 +5,7 @@ $(document).ready(function(){
 		//获取后台用户中心的头像，姓名函数
 		var  modify=function(data){
 			$('.scu_name').text(data.result[0].name);
-			$('.scu_circle')[0].src=data.result[0].headImage;
+			$('.scu_circle').attr('src',data.result[0].headImage);
 		}
 		
 		//渲染函数

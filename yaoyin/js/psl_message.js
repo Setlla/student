@@ -55,7 +55,7 @@
 			$('.name').val(data.result[0].name);
 			$('.sex option:selected').text(data.result[0].gender);
 			$('.address').val(data.result[0].address);
-			$('.intercalate_head').attr('src',data.headImage);
+			$('.intercalate_head').attr('src',data.result[0].headImage);
 		}					
 	
 		//修改昵称地址性别		
@@ -84,6 +84,6 @@
 		
 		//箭头跳转回个人中心
 		$(document).on("click",".header_arr",function(){
-			location.href="personal_center.html";
+			history.go(-1);
 		})
 	})//ready括号
