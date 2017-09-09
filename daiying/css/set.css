@@ -20,6 +20,15 @@ html{
 	top:50%;
 	left:.22rem;
 }
+.imgInput{
+	border: 0;
+	outline: none;
+	position: absolute;
+    top: 50%;
+    right: -2.1rem;
+    transform: translateY(-50%);
+    opacity: 0;
+}
 .head span{
 	font-size: .32rem;
 	color:#fff;
@@ -57,13 +66,14 @@ html{
 	outline: none;
 	-webkit-appearance:none;
 }
-.nickname input,.address input{
+.nickname input,.my input{
 	float: right;
 	margin-right: .67rem;
 	border: none;
 	outline: none;
 	/*line-height: .38rem;*/
 	height:.36rem;
+	text-align: right;
 }
 input::-webkit-input-placeholder{
 	font-size: .24rem;
@@ -95,3 +105,4 @@ input::-webkit-input-placeholder{
 	margin:0 .22rem;
 	margin-top: .5rem;
 }
+ 

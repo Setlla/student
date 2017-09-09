@@ -23,7 +23,7 @@ xhr.send(JSON.stringify(user));
 xhr.onreadystatechange=function(){
 	if(xhr.readyState == 4 && xhr.status == 200){
 		var result=JSON.parse(xhr.responseText);
-		var localStorage.setItem("token",result.token);
+		var a= localStorage.setItem("token",result.token);
 		user = xhr.responseText;
 		if(result.islogin==true){
 			location.href = "hockshop.html";

@@ -58,7 +58,9 @@ $(document).on("click",".shopcar",function(){
 $(document).on("click",".hockshop",function(){
 	location.href="hockshop.html";
 })
-
+$(document).on("click",".menCenter",function(){
+	location.href="menCenter.html";
+})
 
 //var xhr =new XMLHttpRequest;
 //var things = document.querySelector(".max");
