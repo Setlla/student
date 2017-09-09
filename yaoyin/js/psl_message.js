@@ -31,6 +31,7 @@
 				}
 			})
 		})
+		//渲染函数
 		var xuanran=function(){
 			$.ajax({
 				type:"post",
@@ -42,7 +43,7 @@
 					}),
 				success:function(data){
 					modify(data);
-					console.log(data+"啊");
+					console.log(data+"测试数据");
 				}
 			})
 		}
@@ -54,15 +55,15 @@
 			$('.name').val(data.result[0].name);
 			$('.sex option:selected').text(data.result[0].gender);
 			$('.address').val(data.result[0].address);
+			$('.intercalate_head')[0].src=data.result[0].headImage;
 		}					
-
-		
-		
+	
 		//修改昵称地址性别		
 		$(document).on("click",".reg",function(){
 			var name=$('.name').val();
 			var sex=$('.sex option:selected').val();
 			var address=$('.address').val();
+			var headImage=$('.intercalate_head')[0].src;
 			$.ajax({
 				type:"post",
 				url:"http://39.108.219.59/setPerson",
@@ -72,7 +73,8 @@
 					token:token,
 					name:name,
 					gender:sex,
-					address:address
+					address:address,
+					headImage:headImage
 				}),
 				success:function(data){
 					if(data.isSuccess==true){
