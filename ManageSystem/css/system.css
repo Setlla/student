@@ -1,0 +1,241 @@
+	/*头部head*/
+	body,html{
+		overflow: hidden;
+		height: 100%;
+		min-width: 1600px;
+	}
+	.head{
+		overflow: hidden;
+		background: #2b3b4b;
+	}
+	.head li{
+		height: 50px;
+		line-height: 50px;
+		color: #eaebec;
+	}
+	.head_left{
+		width: 15%;
+		float: left;
+		font-size: 16px;
+		background: #304354;
+		padding-left: 30px;
+	}
+	.head_left span{
+		font-weight: 700;
+	}
+	.head_right{
+		float: right;
+		font-size: 14px;		
+	}
+	.quit{
+		margin: 0 28px 0 60px;
+		color: #FFFFFF;
+	}
+	.quit:hover{
+		color: #e34e42;
+	}
+	
+	/*管理列表*/
+	.managelist{
+		width: 15%;
+		height: 100%;		
+		font-size: 15px;
+		color: #eaebec;
+		background: #34485b;
+		padding-top: 15px;
+		float: left;
+	}
+	.managelist li{
+		border-bottom: 1px solid #384e61;
+		position: relative;
+	}
+	.managelist li span:nth-of-type(1){
+		background: url(../img/icon/icon_07.png)50% 50% no-repeat;
+		width: 20px;
+		height: 18px;
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 10px 0 35px;
+	}
+	.managelist>li:not(:nth-of-type(3)){
+		height: 55px;
+		line-height: 55px;
+	}
+	.managelist>li:not(:nth-of-type(3)):hover{
+		background:#e34e42;
+	}
+	.motion{
+		width: 100%;
+		height: 53px;
+		line-height: 53px;
+		position: relative;
+	}
+	.motion:hover{
+		background:#e34e42;		
+	}
+	.arr{
+		display: block;
+		width: 7px;
+		height: 7px;
+		border-left: 2px solid #ffffff;
+		border-bottom: 2px solid #ffffff;
+		position: absolute;
+		top: 50%;
+		right: 23px;
+		transform: translate(0,-50%) rotate(45deg);
+	}
+	/*2级菜单*/
+	.managelist li ul{
+		display: none;
+	}
+	.managelist li ul li{
+		width: 100%;
+		padding-left: 70px;
+	}
+	.managelist li:hover ul{
+		display: block;
+	}
+	.managelist li ul li a{
+		color: #FFFFFF;
+		font-size: 14px;
+	}
+	.managelist li ul li a:hover{
+		color: #e34e42;
+	}
+	
+	/*管理内容---检索*/
+	.content{
+		width: 85%;
+		height: 100%;
+		background: #e7eaed;
+		padding: 20px;
+		float: right;
+		font-size: 16px;
+	}
+	.search{
+		margin: 0 auto;
+		background: #FFFFFF;
+		padding: 15px 20px;
+		height: 112px;
+		
+	}
+	.search select{
+		width: 120px;
+		height: 32px;
+		background: #efefef;
+	}
+	.search input{
+		height: 33px;
+	}
+	.search p{
+		margin-bottom: 15px;
+	}
+	.area{
+		display: inline-block;
+		position: relative;	
+	}
+	.area input{
+		width: 200px;
+	}
+	.area_btn{
+		width: 33px;
+		height: 33px;
+		border: 0;
+		outline: none;
+		background: url(../img/icon/icon_05.gif)50% 50% no-repeat;
+		background-color: #64b660;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translate(0,-50%);		
+	}
+	/*最新注册模块*/
+	.reg{
+		height: 100%;
+		margin-top: 20px;
+		background: #FFFFFF;
+		padding: 15px 20px;
+	}
+	.reg_head{
+		overflow: hidden;
+		margin-bottom: 10px;
+	}
+	.reg_head span{
+		font-size: 16px;
+	}
+	
+	.add{
+		overflow: hidden;
+		float: right;				
+	}
+	.add li{
+		float: left;
+	}
+	.add li a{
+		display: block;
+		width: 100px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		font-size: 12px;
+		background: #ece9e9;
+		margin-left: 25px;
+		color: #444444;		
+	}
+	.add li a:hover{
+		background: #e34e42;	
+		color: #FFFFFF;
+	}
+	
+	/*表数据*/
+	.data{
+		width: 100%;
+		border-color: #e4e4e4;
+		color: #5b646c;
+	}
+	.first{
+		height: 30px!important;
+		background: #ece9e9;
+		font-weight: 600;
+	}
+	.data tr{
+		height: 70px;
+	}
+	.data tr td{
+		padding: 15px;
+	}
+	.data tr td a{
+		color: blue;
+	}
+	.data tr td a:hover{
+		color: red;
+	}
+	/*左右翻页*/
+	.numlist{
+		overflow: hidden;
+		margin-top: 15px;
+	}
+	.numlist li{
+		float: left;
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		border: 1px solid #e9e9e9;
+		position: relative;
+	}
+	.numlist li a{
+		display: block;
+		color: #e55f55;
+		font-size: 12px;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+	.numlist li a:hover{
+		background: #b9b6b6;
+		color: blue;
+	}
