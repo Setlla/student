@@ -191,16 +191,4 @@
 			}
 		})
 		
-		
-	
-		//当铺页面跳转
-		$('.hockshop').click(function(){
-			location.href="hockshop.html";
-		})
-		
-		//用户页面跳转
-		$('.personal_message').click(function(){
-			location.href="personal_center.html";
-		})
-		
 	})//ready的括号

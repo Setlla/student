@@ -109,8 +109,6 @@
 	}
 	/*全选按钮结束*/
 	
-	
-	
 	.foot_count{
 		width: 30%;
 		font-size: 0.24rem;
@@ -139,4 +137,8 @@
 		width: 100%;
 		height: 100%;
 		background: #ee8219;
+	}
+	/*购物车按钮*/
+	.foot_warelist li:nth-of-type(2) span{
+		color: #33CCFF;
 	}

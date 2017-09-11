@@ -2,6 +2,9 @@
 		background: #efefef;
 	}
 	/*头像部分*/
+	.header{
+		line-height: 0.9rem!important;
+	}
 	.sculpture{
 		background: url(../img/banner/banner_3.png)50% 50% no-repeat;
 		background-size: 100% auto;
@@ -110,9 +113,6 @@
 	}
 	
 	/*尾部除公共样式public_foot.css外设置的属性*/
-	.foot_warelist li:nth-of-type(2) span{
-		color: #808080 !important;
-	}
 	.foot_warelist li:nth-of-type(4) span{
-		color: #33CCFF !important;
+		color: #33CCFF;
 	}
