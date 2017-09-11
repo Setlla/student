@@ -33,6 +33,10 @@
 		}
 	})
 	
+	//动态头像	
+	var user=JSON.parse(localStorage.getItem("user"));
+	$('.circle').attr("src",user.headImage);
+	
 	//登录界面的注册按钮功能
 	document.querySelector(".register").addEventListener("click",function(){
 		location.href="register.html";

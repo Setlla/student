@@ -21,6 +21,7 @@
 		transform: translate(0,-50%) rotate(45deg) ;
 	}
 	.header_dot{
+		font-size: 0.28rem!important;
 		position: absolute;
 		top: 50%;
 		right: 0.34rem;
@@ -31,5 +32,6 @@
 		position: absolute;
 		top: 50%;
 		left: 0.34rem;
+		font-size: 0.28rem!important;
 		transform: translate(0,-50%);	
 	}

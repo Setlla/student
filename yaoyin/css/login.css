@@ -10,8 +10,8 @@
 		width: 2.4rem;
 		height: 2.4rem;
 		border-radius: 1.2rem;
-		background: url(../img/member-1.jpg)50% 50% no-repeat;
-		background-size: 100% auto;
+		/*background: url(../img/member-1.jpg)50% 50% no-repeat;
+		background-size: 100% auto;*/
 		border: 2px solid #FFFFFF;
 		position: absolute;
 		top: 50%;

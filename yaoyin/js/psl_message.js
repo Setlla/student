@@ -24,14 +24,15 @@
 		
 		//公用token
 		var token=localStorage.getItem("token");
+		var user=JSON.parse(localStorage.getItem("user"));
 		//调用个人中心页面的存储用户信息
-		var user=function(){
-			$('.address').val(localStorage.address);
-			$('.name').val(localStorage.name);
-			$('.sex option:selected').text(localStorage.gender);
-			$('.intercalate_head').attr('src',localStorage.headImage);
+		var users=function(){
+			$('.address').val(user.address);
+			$('.name').val(user.name);
+			$('.sex option:selected').text(user.gender);
+			$('.intercalate_head').attr('src',user.headImage);
 		}
-		user();
+		users();
 
 		//修改本地图片为动态图片		
 		$(document).on("change",".file_img",function(){
