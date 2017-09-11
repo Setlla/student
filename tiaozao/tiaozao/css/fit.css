@@ -36,6 +36,15 @@ html{
 .lis_one{
 	line-height: 1.7rem;
 }
+.ggg{
+	text-align: left;
+	position: absolute;
+	top: 50%;
+	opacity: 0;
+	transform: translateY(-50%);
+	right: .4rem;
+	width: 3rem;
+}
 .lis_one span{
 	line-height: 1.7rem;
 }
@@ -51,13 +60,13 @@ html{
 	width: 1.2rem;
 	height: 1.2rem;
 }
-.aa{
+.gender{
     margin-top: .2rem;
     width: .8rem;
-    text-align: center;
+    text-align: right;
     height: .5rem;
     float: right;
-    margin-right: .7rem;
+    margin-right: .2rem;
     font-size: .24rem;
     color: #999;  
     outline: none;
@@ -85,7 +94,7 @@ html{
 .Submit li .address{
 	text-align: right;
 	margin-right: .2rem;
-	width: 10rem;
+	width: 3rem;
 }
 .bottom_nav	{
 	height: 10rem;
@@ -101,5 +110,6 @@ html{
 	color: white;
 	margin-top: 1rem;
 	outline: none;
+	border-radius: .08rem;
 	border: 0;
 }
