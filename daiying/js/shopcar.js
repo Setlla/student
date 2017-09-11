@@ -146,12 +146,6 @@ $(document).on("click",".complete",function(){
 		}
 	});	
 })
-$(document).on("click",".shop",function(){
-	location.href="details.html";
-})
-$(document).on("click",".shopcar",function(){
-	location.href="shopcar.html";
-})
 $(document).on("click",".hockshop",function(){
 	location.href="hockshop.html";
 })
