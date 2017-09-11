@@ -32,6 +32,7 @@
 			$('.sex option:selected').text(user.gender);
 			$('.intercalate_head').attr('src',user.headImage);
 		}
+		
 		users();
 
 		//修改本地图片为动态图片		
