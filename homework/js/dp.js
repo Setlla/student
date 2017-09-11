@@ -16,11 +16,7 @@ $.post('http://39.108.219.59/productList',function(data,status){
     					+ '</div>'
     					+ '</div>'
     	
-    	
-//	            	var node = document.createElement('div');
-//	            	var dx=document.querySelector(".thing");
-//	            	var shu=document.querySelector(".books")
-//	            	node.innerHTML = resContent;
+    		            	
     var thing=$("div .thing");
 	var books=$("div .books");
     	if(data.result[i].IsBook == 0){
@@ -30,8 +26,9 @@ $.post('http://39.108.219.59/productList',function(data,status){
     	}
     	$(".bike").click(function(){
     		var id=$(this).data("id")
-    		location.href="/next/detail.html?id="+id;
+    		location.href="detail.html?id="+id;           
     	})
     		
     }
 })
+

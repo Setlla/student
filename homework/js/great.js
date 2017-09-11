@@ -16,7 +16,7 @@ $(".submit").click(function(){
 			
 			if(data.isChange==true){		
 				
-		        location.href="http://127.0.0.1:8020/next/denglu.html";		
+		        location.href="denglu.html";		
 			}else{
 				alert("格式错误")
 				console.log(data)

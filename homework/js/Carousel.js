@@ -17,3 +17,5 @@ $(".math img").hover(function(){
 },function(){
 	 a = setInterval(Carousel,1000);
 })
+
+console.log("http://39.108.219.59/getShopCar")

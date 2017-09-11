@@ -18,14 +18,14 @@ var montage=function(data){
 		              +'<div class="present">'
 		              +'<p>'+ data.result[i].product.Name +'</p>'
 		              +'<div class="post">'
-		              +'<span class="bag">'+ data.result[i].product.Carriage +'</span>'
+		              +'<span>'+ data.result[i].product.Carriage +'</span>'
 		              +'<span>'+ data.result[i].product.Destination +'</span>'
 		              +'</div>'
 		              +'<a>'+ data.result[i].product.Status + '</a>'
 		              +'<div class="price">'
 		              +'<p class="now"> ￥ <span class="money">' + data.result[i].product.CurPrice +'</span></p>'
 		              +'<p class="before">价格：￥'+data.result[i].product.OldPrice +'</p>'
-		              +'<p class="muiltiple">X <span class="power">'+data.result[i].ProductNumber+'</span></p>'
+		              +'<p>X <span class="power">'+data.result[i].ProductNumber+'</span></p>'
 		              +'</div>'
 		              +'</div>'
 		              +'<div class="editor" data-id='+ data.result[i].id +'>'		              		              
@@ -67,10 +67,6 @@ $(document).on("click",".delete",function(e){
 				}
 			}
 		});
-	})
-
-$(document).on("click",".hockshop",function(){
-	location.href="dp.html"
 })
 
 $(document).on("click",".add",function(){	   

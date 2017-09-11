@@ -55,7 +55,7 @@ var xhr;
 		      if(result.isSuccess == true){
 		      	 alert("注册成功")
 		         console.log("result");
-		         location.href="http://127.0.0.1:8020/next/denglu.html";
+		         location.href="denglu.html";
 		      }else{
 		      	alert("请重新注册")
 		      }

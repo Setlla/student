@@ -23,7 +23,7 @@ var user= {
  		 if(result.islogin == true){
  		 	alert("登陆成功")
  		 	token:localStorage.setItem("token",result.token)
- 		 	location.href="http://127.0.0.1:8020/next/dp.html";
+ 		 	location.href="dp.html";
  		 }else{
  		 	console.log(result)
  		 }
@@ -41,3 +41,8 @@ var zhuce=document.querySelector(".you");
     zhuce.addEventListener("click",function(){
     	location.href="zhuce.html";
     })
+    
+
+var user = JSON.parse(localStorage.getItem("user"));
+var image = document.querySelector(".blue img");
+    $(".blue img").attr("src",user.headImage);

@@ -18,7 +18,7 @@ $(document).ready(function(){
 		}),
 		success:function(data){
 			if(data.isSuccess == true){
-				location.href="shop car.html"
+				location.href="ShopCar.html"
 			}else{
 				console.log(data)
 			}

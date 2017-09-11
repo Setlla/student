@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				position: relative;
+			}
+			.arrow{
+				width: 20px;
+				height: 20px;
+				border-top: solid red 4px;
+				border-right: solid red 4px;
+				display: inline-block;
+				position: absolute;		
+					
+			}
+			.top{
+				transform: rotate(-45deg);
+				
+			}
+			.right{
+				margin:0 100px;	
+				transform: rotate(45deg);
+			}
+			.bottom{
+				margin: 0 200px;
+				transform: rotate(135deg);
+			}
+			.left{
+				margin: 0 300px;
+				transform: rotate(-135deg);
+			}
+		</style>
+	</head>
+	<body>
+		    <span class="top arrow"></span>
+			<span class="right arrow"></span>
+			<span class="bottom arrow"></span>
+			<span class="left arrow"></span>
+	</body>
+</html>

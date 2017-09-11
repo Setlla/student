@@ -14,21 +14,19 @@ html{
 .head{
 	background-color: #33ccff;
 	text-align: center;
-	height: .9rem;
+	height: 1.28rem;
 	padding: 0 .15rem;
-	line-height: .9rem;
 }
 .head p{
 	font-size: .3rem;
 	color: #FFFFFF;	
-
+	line-height: 1.28rem;
 	float: left;
-	text-align: left;
-	position: absolute;
 }
 .head a{
 	font-size: .3rem;
 	color: #FFFFFF;	
+	line-height: 1.28rem;
 }
 .switch{
 	width: 1.2rem;
@@ -39,7 +37,7 @@ html{
 	display: none;
 }
 .head img{
-	margin-top: .22rem;
+	margin-top: .4rem;
 	width: .45rem;
 	height: .45rem;
 	float: right;
@@ -48,29 +46,31 @@ html{
 	overflow: hidden;
 	position: relative;
 	margin-top: .2rem;
+	height: 3rem;
 }
 .bike .button{
 	display: inline-block;
 	position: absolute;
 	width: .28rem;
 	height: .28rem;
+	/*background-color:#33ccff;*/
 	box-shadow: 0 0 0 .05rem #FFFFFF inset;
 	border: solid #000 1px;
 	border-radius: .16rem;
-	top:50%;
-	transform: translateY(-50%);
+	top:1rem;
 	left: .15rem;
 	
 }
 .bike img{
-	width: 26%;
-	/*height: 2rem;*/
+	width: 1.7rem;
+	height: 2rem;
 	float: left;
 	margin: .2rem .2rem 0 .7rem;	
 }
 .present{
-	float: right;
+	float: left;
 	width: 59%;
+	height: 2rem;
 }
 .bike p{
 	color: #333333;
@@ -83,9 +83,6 @@ html{
 	font-size: .24rem;
 	color: #999999;
 }
-.bag{
-	margin-right: .5rem;
-}
 .bike a{
 	font-size: .2rem;
 	color: #FFFFFF;
@@ -97,12 +94,9 @@ html{
 }
 .price{
 	margin-top: .15rem;
-	padding-bottom: .1rem;
 	float: left;
 	border-bottom: solid #e5e5e5 1px;
 	width: 100%;
-	display: flex;
-	justify-content: space-between;
 }
 .price .now{
 	font-size: .2rem;
@@ -115,8 +109,8 @@ html{
 .price .before{
 	font-size: .18rem;
 	color: #999999;
-	padding-top: .1rem;
-	text-decoration: line-through;
+	margin-left: .25rem;
+	/*width: 1.3rem;*/
 }
 .price p{
 	display: inline-block;
@@ -125,66 +119,58 @@ html{
 	margin-left: .2rem;
 }
 .balance{
+	position: relative;
 	overflow: hidden;
 	border-top: solid #808080 1px;
 	border-bottom: solid #808080 1px;
 }
-.checkall{
-	position: relative;
-}
 .checkall span{
-	/*display: inline-block;*/	
+	display: inline-block;	
 	position: absolute;
 	width: .28rem;
 	height: .28rem;
 	box-shadow: 0 0 0 .05rem #FFFFFF inset ;
 	border: solid #000 1px;
 	border-radius: .16rem;
-	top:-50%;
-	transform: translateY(140%);
+	top:.3rem;
 	left: .15rem;
 }
 .checkall p{
 	position: absolute;
 	font-size: .28rem;
-	top:50%;
-	transform: translateY(100%);
+	top:.28rem;
 	left:.64rem;
 }
+/*.checkall .all{
+	width: .16rem;
+	height: .16rem;
+	display: block;
+	background-color: #FFFFFF;
+	border-radius: .8rem;
+	margin: .06rem auto;	
+}*/
 .balance .settle{
 	font-size: .3rem;
 	background-color: #ee8219;
-	padding: .35rem .3rem;
+	padding: .3rem .3rem;
 	color: #FFFFFF;
 	display: inline-block;
 }
 .total{
+	margin-right: .2rem;
 	display: inline-block;
-	width: 1.8rem;
-	overflow: hidden;
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	right: 2rem;
 }
 .total p{
 	font-size: .24rem;
-	float: right;
-    margin-right: .2rem;	
 }
 .total span{
+	font-size: .2rem;
 	color:#ee8219 ;
-    width: .45rem;
-    display: inline-block;
-    margin-right: .4rem;
-    margin-top: .15rem;
+	display: inline-block;
 }
 .select{
-	position: relative;
-	float: right;	
-}
-.settle{
 	float: right;
+	
 }
 .bot{
 	width: 100%;
@@ -220,7 +206,4 @@ html{
 }
 .blue{
 	background-color: #33ccff!important;
-}
-.muiltiple{
-	margin-right: .25rem;
 }

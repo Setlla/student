@@ -1,39 +1,70 @@
 {
-  "denglu.html": {
-    "resources": [
-      "css/denglu.css",
-      "js/denglu.js",
-      "img/timg.jpg",
-      "img/input_23.png",
-      "img/input_19.png",
-      "css/all.css"
-    ],
-    "refer": []
-  },
-  "zhuce.html": {
-    "resources": [
-      "img/zc_13.png",
-      "css/zhuce.css",
-      "img/zc_10.png",
-      "js/zc.js",
-      "img/logo-test-7.png",
-      "img/zc_06.png",
-      "js/md5.js",
-      "img/ý_03.png",
-      "img/ý_03.png",
-      "css/all.css",
-      "img/zc_03.png"
-    ],
-    "refer": []
-  },
   "dp.html": {
     "resources": [
       "img/dp_03.png",
+      "img/dp_20.png",
       "css/dp.css",
       "img/dp_10.png",
+      "img/dp_17.png",
+      "img/dp_23.png",
       "img/dp_12.png",
       "img/dp_07.png",
+      "css/all.css",
+      "img/dp_15.png",
+      "js/dp.js",
+      "js/click.js",
+      "ShopCar.html"
+    ],
+    "refer": []
+  },
+  "ShopCar.html": {
+    "resources": [
+      "dp.html",
+      "img/shopcar_03.png",
+      "img/dp_03.png",
+      "img/dp_20.png",
+      "js/JoinShopCar.js",
+      "css/ShopCar.css",
+      "css/EditorAll.css",
+      "js/CheckAllButton.js",
+      "js/jquery-3.2.1.js",
+      "img/dp_17.png",
+      "img/shopcar_04.png",
       "css/all.css"
+    ],
+    "refer": [
+      "dp.html"
     ]
+  },
+  "personal.html": {
+    "resources": [
+      "img/trees.jpg",
+      "css/personal.css",
+      "img/revin.jpg",
+      "css/all.css",
+      "img/personal_03.png",
+      "img/personal_10.png",
+      "img/personal_13.png",
+      "img/personal_08.png",
+      "img/personal_06.png",
+      "img/personal_24.png",
+      "img/personal_21.png",
+      "img/shopcar_03.png",
+      "img/dp_20.png",
+      "img/dp_15.png",
+      "img/personal_26.png",
+      "img/personal_29.png"
+    ],
+    "refer": []
+  },
+  "information.html": {
+    "resources": [
+      "img/revin.jpg",
+      "css/all.css",
+      "css/information.css",
+      "js/information.js",
+      "js/jquery-3.2.1.js"
+    ],
+    "refer": []
   }
 }

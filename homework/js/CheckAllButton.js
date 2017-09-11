@@ -1,22 +1,22 @@
 $(document).ready(function(){
 	$(document).on("click",".checkall span",function(){		
-			$(".all").toggleClass("blue");
-			if($(".all").hasClass("blue")){
-				$(".single").addClass("blue")
+			$(".checkall span").toggleClass("blue");
+			if($(".checkall span").hasClass("blue")){
+				$(".button").addClass("blue")
 			}else{
-				$(".single").removeClass("blue")
+				$(".button").removeClass("blue")
 			}
 		money();
 	})
 	
 $(document).on("click",".button",function(){
-		for(var i=0;i<$(".button").children().length;i++){
-			$(this).children().eq(i).toggleClass("blue");	
+		for(var i=0;i<$(".button").length;i++){
+			$(this).eq(i).toggleClass("blue");	
 		}  	
-		if($(".button").children().length == $(".single.blue").length){
-			$(".all").addClass("blue")
+		if($(".button").length == $(".button.blue").length){
+			$(".checkall span").addClass("blue")
 		}else{
-			$(".all").removeClass("blue")
+			$(".checkall span").removeClass("blue")
 		}
 		money();
 	 })
@@ -25,7 +25,7 @@ $(document).on("click",".button",function(){
  function money(){
 	
 //  $(".settle i").html($(".single.blue").length);
-	var content = $(".single.blue");
+	var content = $(".button.blue");
 	var total = 0;
 	var number = 0;
 	for(var i = 0; i < content.length; i++){

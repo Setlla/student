@@ -71,7 +71,7 @@
 				var isSuc=JSON.parse(xmlhttp.responseText);
 				if(isSuc.isSuccess==true){
 					alert("恭喜注册成功！^_^");
-					location.href="http://192.168.0.115:8020/login/login.html"; 
+					location.href="login.html"; 
 				}
 			}
 		}
