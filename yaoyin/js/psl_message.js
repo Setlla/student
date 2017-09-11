@@ -8,14 +8,38 @@
 			$(this).attr("readonly","readonly").css("text-align","right");
 		})
 		
+		//本地预览图片函数
+		function getObjectURL(file) {
+			var url = null ;
+			if (window.createObjectURL!=undefined) { // basic
+			url = window.createObjectURL(file) ;
+			} else if (window.URL!=undefined) { // mozilla(firefox)
+			url = window.URL.createObjectURL(file) ;
+			} else if (window.webkitURL!=undefined) { // webkit or chrome
+			url = window.webkitURL.createObjectURL(file) ;
+			}
+			return url ;
+		}
+		
 		
 		//公用token
 		var token=localStorage.getItem("token");
+		//调用个人中心页面的存储用户信息
+		var user=function(){
+			$('.address').val(localStorage.address);
+			$('.name').val(localStorage.name);
+			$('.sex option:selected').text(localStorage.gender);
+			$('.intercalate_head').attr('src',localStorage.headImage);
+		}
+		user();
+
 		//修改本地图片为动态图片		
 		$(document).on("change",".file_img",function(){
 			var datas=new FormData();
 			datas.append("token",token);
 			datas.append("file",$(".file_img")[0].files[0]);
+			var img=getObjectURL($(".file_img")[0].files[0]);
+			$('.intercalate_head').attr('src',img);
 			$.ajax({
 				type:"post",
 				url:"http://39.108.219.59/setHeadImage",
@@ -31,32 +55,6 @@
 				}
 			})
 		})
-		//渲染函数
-		var xuanran=function(){
-			$.ajax({
-				type:"post",
-				url:"http://39.108.219.59/getPerson",
-				async:true,
-				contentType:"application/JSON",
-				data:JSON.stringify({
-						token:token
-					}),
-				success:function(data){
-					modify(data);
-					console.log(data+"测试数据");
-				}
-			})
-		}
-		xuanran();
-		
-		
-		//修改函数
-		var  modify=function(data){
-			$('.name').val(data.result[0].name);
-			$('.sex option:selected').text(data.result[0].gender);
-			$('.address').val(data.result[0].address);
-			$('.intercalate_head').attr('src',data.result[0].headImage);
-		}					
 	
 		//修改昵称地址性别		
 		$(document).on("click",".reg",function(){

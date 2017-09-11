@@ -179,7 +179,19 @@
 				}
 			})
 		})
-
+		
+		//结算跳转
+		$(document).on("click",".foot_fruit",function(){
+			var result=parseInt($('.result').text());
+			if (result!=0) {
+				$('.foot_fruit button').removeAttr("disabled");
+				location.href="order_confirm.html";
+			} else{
+				$('.foot_fruit button').attr("disabled","disabled");
+			}
+		})
+		
+		
 	
 		//当铺页面跳转
 		$('.hockshop').click(function(){
@@ -190,4 +202,5 @@
 		$('.personal_message').click(function(){
 			location.href="personal_center.html";
 		})
+		
 	})//ready的括号

@@ -7,7 +7,14 @@ $(document).ready(function(){
 			$('.scu_name').text(data.result[0].name);
 			$('.scu_circle').attr('src',data.result[0].headImage);
 		}
-		
+		//把地址姓名图片电话等都存入到localStorage
+		var local=function(data){
+			localStorage.setItem("headImage",data.result[0].headImage);
+			localStorage.setItem("name",data.result[0].name);
+			localStorage.setItem("gender",data.result[0].gender);
+			localStorage.setItem("address",data.result[0].address);			
+		}
+
 		//渲染函数
 		var xuanran=function(){
 			$.ajax({
@@ -19,17 +26,14 @@ $(document).ready(function(){
 						token:token
 					}),
 				success:function(data){
-					modify(data);
-					console.log(data+"测试数据");
-					
+					modify(data);//调用从后台渲染的函数
+					local(data);//调用存储用户各种信息的函数
+					console.log(data+"测试数据");					
 				}
 			})
 		}
 		xuanran();
-	
-	
-	
-	
+
 	
 		//当铺页面跳转
 		$('.shopping_trolley').click(function(){

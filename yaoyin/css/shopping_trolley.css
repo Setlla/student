@@ -129,7 +129,14 @@
 		line-height: 0.88rem;
 		font-size: 0.3rem;
 		background: #ee8219;
-		color: #FFFFFF;
 		text-align: center;
 		
+	}
+	.foot_fruit button{
+		border: 0;
+		color: #FFFFFF;
+		outline: none;
+		width: 100%;
+		height: 100%;
+		background: #ee8219;
 	}
