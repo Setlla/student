@@ -59,27 +59,27 @@
 				//判断 。111
 
 
-		var id = 0;// 自动播放时的图片索引	
-		var length=$(".round a").length; 	//当前图片总数
-		$(document).on("click",".round a",function(e){
-	        var index =$(".round a").index(this);
-			$(this).css("background","#33CCFF").siblings().css("background","white");
-			$(".banner").children().eq(index).show().siblings("img").hide();
-			id = index ;	//
-		})
-		var a=setInterval("PicNumClick()",1000);	
-			$(".banner img").mouseover(function(){
-		 		clearTimeout(a)
-		 	})
-			$(".banner img").mouseout(function(){
-		 	a=	setInterval("PicNumClick()",1000);
-		 })			
-	
-	function PicNumClick() {
-		$(".round a").eq(id).trigger("click");
-		id = (id +1) % length;
-	}
-	
+//		var id = 0;// 自动播放时的图片索引	
+//		var length=$(".round a").length; 	//当前图片总数
+//		$(document).on("click",".round a",function(e){
+//	        var index =$(".round a").index(this);
+//			$(this).css("background","#33CCFF").siblings().css("background","white");
+//			$(".banner").children().eq(index).show().siblings("img").hide();
+//			id = index ;	//
+//		})
+//		var a=setInterval("PicNumClick()",1000);	
+//			$(".banner img").mouseover(function(){
+//		 		clearTimeout(a)
+//		 	})
+//			$(".banner img").mouseout(function(){
+//		 	a=	setInterval("PicNumClick()",1000);
+//		 })			
+//	
+//	function PicNumClick() {
+//		$(".round a").eq(id).trigger("click");
+//		id = (id +1) % length;
+//	}
+//	
 	
 	$(document).on("click",".shopCart",function(){
 		$.ajax({

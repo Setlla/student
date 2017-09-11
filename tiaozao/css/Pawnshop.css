@@ -73,6 +73,8 @@
 }
 .content_noe img{
 	float: left;
+	width: 1.7rem;
+	height: 2rem;
 	margin-bottom: .2rem;
 }
 .right_one{

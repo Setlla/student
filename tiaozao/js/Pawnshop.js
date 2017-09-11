@@ -48,7 +48,7 @@ $.ajax({
 				
 		for(var i=0;i<result.length;i++){
 			var	textContent='<div class="content_noe" data-id="'+result[i].id+'">'
-					+'<img src="'+result[i].Image+'"/ width="180" height="140">'
+					+'<img src='+result[i].Image+'/>'
 					+'<div class="right_one">'
 					+'<p>'+result[i].Des+'</p>'
 					+'<span>'+result[i].Carriage+'</span>'
