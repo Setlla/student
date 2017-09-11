@@ -1,8 +1,22 @@
+function getObjectURL(file) {
+var url = null ;
+	if (window.createObjectURL!=undefined) { // basic
+		url = window.createObjectURL(file) ;
+	} else if (window.URL!=undefined) { // mozilla(firefox)
+		url = window.URL.createObjectURL(file) ;
+	} else if (window.webkitURL!=undefined) { // webkit or chrome
+		url = window.webkitURL.createObjectURL(file) ;
+	}
+	return url ;
+}
+
 $(document).on("change",".imgInput",function(){
 	var data=new FormData();
 	console.log(localStorage.getItem("token"));
 	data.append("token",localStorage.getItem("token"));
 	data.append("file",$(".imgInput")[0].files[0]);
+	var imgurl=getObjectURL($(".imgInput")[0].files[0]);
+	$(".imgInput").attr("src",imgurl);
 	$.ajax({
 		type:"post",
 		url:"http://39.108.219.59/setHeadImage",
@@ -73,7 +87,9 @@ $(document).on("click",".foot",function(){
 		}
 	});
 })
-
+$(document).on("click",".backs",function(){
+	history.go(-1);
+})
 
 
 

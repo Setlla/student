@@ -25,24 +25,24 @@
 		function fun(data){ 
 			var conpicture='<div class="heighter">'
 								+'<div class="math">'
-									+'<p class="height">'+data.result.product.Name+'</p>'
-									+'<p></p>'
-									+'<span>'+data.result.product.CurPrice+'</span>'
-									+'<span>'+data.result.product.OldPrice+'</span>'
-									+'<button>'+data.result.product.Status+'</button>'
+								+'<p class="height">'+data.result.product.Name+'</p>'
+								+'<p></p>'
+								+'<span>'+data.result.product.CurPrice+'</span>'
+								+'<span>'+data.result.product.OldPrice+'</span>'
+								+'<button>'+data.result.product.Status+'</button>'
 								+'</div>'
 								+'<div class="express">'
-									+'<span>'+data.result.product.Carriage+'</span>'
-									+'<span>23人看过</span>'
-					                +'<span>'+data.result.product.Destination+'</span>'
+								+'<span>'+data.result.product.Carriage+'</span>'
+								+'<span>23人看过</span>'
+				                +'<span>'+data.result.product.Destination+'</span>'
 								+'</div>'
-							+'</div>'
+								+'</div>'
 							
 							
-							+'<div class="content">'
+								+'<div class="content">'
 								+'<p>宝贝描述</p>'
 								+'<p>'+data.result.product.Des+'<p>'
-							+'</div>'
+								+'</div>'
 			$(".heighter").html(conpicture);
 		}
 		
@@ -118,5 +118,5 @@ $(".shopcar").click(function(){
 })
 
 $(document).on("click",".head a",function(){
-	location.href="hockshop.html";
+	history.back();
 })
