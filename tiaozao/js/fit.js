@@ -72,28 +72,22 @@
 //	})
 //	
 //	
-	
-	$.ajax({				
-		type:"post",
-		url:"http://39.108.219.59/getPerson",
-		async:true,
-		contentType:"application/json",
-		data:JSON.stringify({
-			"token": localStorage.getItem("token"),			
-		}),
-		success:function(data){
-			if(data.isSuccess==true){
-				$(".lis_one img").attr("src",data.result[0].headImage);
-				$(".name").val(data.result[0].name);
-				if($(data.result[0].gender)=="女"){
-					$(".woman").attr("selected","selected");
-				}else{
-					$(".man").attr("selected","selected");
-				}
-				$(".address").val(data.result[0].address);
+		function mation(){
+			var user=JSON.parse(localStorage.getItem("user"));		
+			$(".lis_one img").attr("src",user.headImage);
+			$(".name").val(user.name);
+			if($(user.gender)=="女"){
+				$(".woman").attr("selected","selected");
+			}else{
+				$(".man").attr("selected","selected");
 			}
+				$(".address").val(user.address);			
 		}
-	});
+		mation();	
+
+			
+	
+
 	
 	
 		//点击返回上一个页面

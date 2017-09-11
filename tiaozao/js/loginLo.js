@@ -1,4 +1,7 @@
 
+	var userinfo = JSON.parse(localStorage.getItem("user"));	
+	document.querySelector(".top_nav img").setAttribute("src",userinfo.headImage);
+
 	document.querySelector("#login").addEventListener("click",function(){
 		var xhr=new XMLHttpRequest();
 		var phone=document.querySelector(".zhanghao").value;
@@ -10,11 +13,14 @@
 		xhr.open("POST","http://39.108.219.59/login");
 		xhr.setRequestHeader("content-type","application/json");
 		xhr.send(JSON.stringify(user));
-					
+		
+		
+		
 		xhr.onreadystatechange=function(){
 			if(xhr.readyState==4&&xhr.status==200){
 				var result = JSON.parse(xhr.responseText);
 				 if(result.islogin == true ) {
+				 	
 				 	localStorage.setItem("token", result.token);
 				 	location.href="Pawnshop.html";
 				 }else {

@@ -6,7 +6,8 @@
 		contentType:"application/json",
 		data:JSON.stringify({"token":localStorage.getItem("token")}),
 		success:function(data){
-			if(data.isSuccess==true){
+			if(data.isSuccess==true){						
+				localStorage.setItem("user",JSON.stringify(data.result[0]));				
 				$(".banner img").attr("src", data.result[0].headImage);
 				$(".NaMe").html(data.result[0].name);
 			}
@@ -18,3 +19,19 @@
 		location.href="loginLo.html";
 	})
 	
+
+
+
+
+
+
+		//底部跳转
+	$(document)	.on("click",".goods",function () {
+//		location.href=""
+	})
+	$(document)	.on("click",".ShoCart",function () {
+		location.href="gouwuche.html"
+	})
+	$(document)	.on("click",".Pawnshop",function () {
+		location.href="Pawnshop.html"
+	})

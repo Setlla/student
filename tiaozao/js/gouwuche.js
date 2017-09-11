@@ -182,3 +182,14 @@
 			alert("亲。已经没有物品啦~")
 		}
 	})			
+
+				//底部跳转
+	$(document)	.on("click",".goods",function () {
+//		location.href=""
+	})
+	$(document)	.on("click",".Pawnshop",function () {
+		location.href="Pawnshop.html"
+	})
+	$(document)	.on("click",".personal",function () {
+		location.href="geren.html"
+	})	

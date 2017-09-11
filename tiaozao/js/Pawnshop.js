@@ -86,7 +86,16 @@ $.ajax({
 
 	
 
-
+			//底部跳转
+	$(document)	.on("click",".goods",function () {
+//		location.href=""
+	})
+	$(document)	.on("click",".ShoCart",function () {
+		location.href="gouwuche.html"
+	})
+	$(document)	.on("click",".personal",function () {
+		location.href="geren.html"
+	})	
 
 
 
