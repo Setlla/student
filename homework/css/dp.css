@@ -18,29 +18,31 @@ html{
 .head{
 	background-color: #33ccff;
 	position: relative;
+	height: 1.28rem;
 	overflow: hidden;
 	display: flex;
 	justify-content: space-between;
+	padding: 0 .2rem;
 }
+
 select{
 		-webkit-appearance: none;	
 		background-color: #33ccff;
 		border: none;	
 		font-size: .3rem;
-		color: #fff;
-		margin-left: .2rem;
+		color: #fff;	
 		float: left;
 	}
 .bton{
 		overflow: hidden;
-		padding: .3rem 0;
+		margin-top: .3rem;
 	}
 .bton a{
 	display:inline-block;	
 	border: solid #FFFFFF 1px;
 	font-size: .3rem;
 	color:#fff ;
-	padding: .17rem .35rem;	
+	padding: .15rem .35rem;	
 	float: left;
 }
 .res{
@@ -59,34 +61,40 @@ select{
 	border-left: solid #ddd 1px;				
 	-webkit-transform:translateY(-50%) rotate(-135deg);
 	position: absolute;
-	bottom:.6rem;
+	top: 50%;
 	left: .9rem;
 }
 .head img{
-	width: .47rem;
-	float: right;
-	margin-right: .2rem;	
-	padding: .3rem 0;
+	width: .45rem;
+	height: .45rem;
+	margin-top: .4rem;
 }
 .bike{
 	margin-top: .2rem;
 	margin-left: .2rem;
 	width: 100%;
-	height: 2rem;
+	height: 2.4rem;
 	overflow: hidden;
-	padding-bottom: .1rem;
+	/*padding-bottom: .1rem;*/
 	/*display: none;*/
 }
 .bike img{
-	width: 2rem;
+	width: 25%;
 	display: block;
 	margin-right: .2rem;
 	float: left;
+}
+.present{
+	float: left;
+	width: 70%;
+	height: 2.4rem;
+
 }
 .bike p{
 	font-size: .3rem;
 	display: block;
 	margin-bottom: .1rem;
+	
 }
 .bike .title{
 	word-break: break-all;
@@ -133,25 +141,27 @@ select{
 	margin-left: .6rem;
 }
 .bike .dot{
-	font-size: .08rem;
 	color: #999;
 	float: right;	
 	margin-right: .2rem;
 	margin-top: .05rem;
 }
 .much{
-	/*border-bottom: solid #e5e5e5 1px;*/
+	margin-top: .15rem;
+	border-bottom: solid #e5e5e5 1px;
+	width: 100%;
 }
 
 .bot{
 	position: fixed;
-	bottom: .1rem;
+	bottom: 0;
 	width: 100%;
 	z-index: 999;
 	/*margin-top: 1.86rem;*/
 	border-top: solid #808080 1px;
-	padding-top: .1rem;
+	padding: .1rem 0;
 	display: block;
+	background-color: #FFFFFF;
 }
 .bot li{
 	width: 24%;
@@ -165,7 +175,8 @@ select{
 	display: block;
 }
 .bot li img{
-	display: inline-block;
+	width: .45rem;
+	height: .45rem;
 }
 .serch{
 	display: none;

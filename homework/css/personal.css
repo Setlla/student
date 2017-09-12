@@ -168,6 +168,8 @@ ul li{
 }
 .bot li img{
 	display: inline-block;
+	height: .45rem;
+	width: .45rem;
 }
 .bj{
 	display: block;

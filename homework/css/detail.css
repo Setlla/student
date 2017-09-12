@@ -1,10 +1,20 @@
 html{
 	font-size: 100px;
 }
+@media only screen and (min-width: 414px) and (max-width: 640px) {
+	html{
+		font-size: 64.7px;
+	}
+}
+@media only screen and (min-width: 320px) and (max-width: 414px) {
+	html{
+		font-size:50px ;
+	}
+}
 .head{
 	position: relative;
 	background-color: #33ccff;
-	height: 1.3rem;
+	height: 1rem;
 	text-align: center;
 }
 .head span{
@@ -22,7 +32,7 @@ html{
 .head p{
 	color: #FFFFFF;
 	font-size: .3rem;
-	line-height: 1.3rem;
+	line-height: 1rem;
 }
 .math{
 	padding: .5rem 0;
@@ -33,15 +43,16 @@ html{
 	margin: 0 auto;
 	width: 2.44rem;
 }
-.math .dot{
+.dot{
 	position: absolute;
-	left: 40%;
+	/*width: 1rem;*/
+	left: 43%;
 	bottom: .1rem;
 }
 .math img{
 	display: block;
-	/*width: 30%;*/
-	height: 2.5rem;
+	width: 2.4rem;
+	height: 3.5rem;
 }
 .dot span{	
 	display: inline-block;
@@ -59,6 +70,9 @@ html{
 	/*width: 5.8rem;*/
 	font-size: .28rem;
 	color: #333333;
+}
+.rate{
+	margin-top: .2rem;
 }
 .rate p{
 	display: inline-block;
@@ -86,24 +100,27 @@ i{
 .city{
 	display: flex;
 	justify-content: space-between;
+	width: 100%;
+	margin-top: .25rem;
 }
 .city p{
 	display: inline-block;
 	color: #999999;
 	font-size: .2rem;
 }
-.describe{
-	padding: .2rem;
-}
+
 .describe .baby{
 	font-size: .28rem;
 	color: #333333;
 	border-left: solid #33ccff 2px;
 	padding-left: .2rem;
+	margin: .2rem;
 }
 .depict p{
+	padding: .2rem;
 	font-size: .28rem;
 	color: #999999;
+	border-top: solid #808080 1px;
 }
 .bottom{
 	text-align: center;

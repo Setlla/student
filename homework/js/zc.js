@@ -18,12 +18,6 @@ var zc=document.querySelector(".zhuce");
 		mob.style.display="none";  
    	}	   	   	 	  	   	   	 
    })
-   
-
-	
-//  phonename();
-//	emailname();	
-//  
 
 
 var submit = function(){
@@ -67,6 +61,10 @@ var xhr;
 }
 submit();
 
+var revert = document.querySelector(".blue span");
+    revert.addEventListener('click',function(){
+    	history.go(-1);
+    })
 
 	 	
 

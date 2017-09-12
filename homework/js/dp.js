@@ -2,6 +2,7 @@ $.post('http://39.108.219.59/productList',function(data,status){
 	for(var i=0;i<data.result.length;i++ ){
     	var resContent = '<div class="bike" data-id='+ data.result[i].id +'>'
     					+ '<img class="img" src="'+ data.result[i].Image +'" />'
+    					+ '<div class="present">'
     					+ '<p class="title">'+data.result[i].Des +'</p>'
     					+ '<div class="way">'
     					+ '<span>'+ data.result[i].Carriage +'</span>'    					
@@ -12,7 +13,8 @@ $.post('http://39.108.219.59/productList',function(data,status){
     					+ '<p class="nub">'
     					+ '<span>￥</span>'+ data.result[i].CurPrice +'</p>'
     					+ '<p class="nub2">￥' + data.result[i].OldPrice +'</p>'
-//  					+ '<i class="dot">● ● ●</i>'
+    					+ '<i class="dot">. . .</i>'
+    					+ '</div>'
     					+ '</div>'
     					+ '</div>'
     	

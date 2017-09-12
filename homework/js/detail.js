@@ -32,31 +32,31 @@ $(document).ready(function(){
 		async:true,
 		contentType:"application/JSON",
 		data:JSON.stringify({"id": id}),
-		success:function(data,status){
-			
-			
-//	    for(var i=0;i<data.result.lenght;i++){
-	  	 var bokContent=
-	  	               '<img src="'+ data.result.product.Image +'" />';
-	  	     $('.math').append(bokContent);
-	  	var bokContent1= 
-	  	               
-	  	               '<p class="present">'+ data.result.product.Des +'</p>'
-	  	               +'<div class="rate">'
-	  	               +'<p>￥<span>'+ data.result.product.CurPrice +'</span></p>'
-	  	               +'<i>'+ data.result.product.OldPrice +'</i>'
-	  	               +'<button>'+ data.result.product.Status +'</button>'
-		  	           +'<div class="city">'  
-					   +'<p>'+ data.result.product.Carriage +'</p>'			
-					   +'<P>'+ data.result.product.Destination +'</P>'		
-					   +'</div>'	               
-	  	    $('.price').append(bokContent1);	  	              
+		success:function(data){
+			if(data.isSuccess == true){
+				books(data);
+			}				
 		}
-		
 	});
 })
-
-
+var books = function(data){
+				 for(var i=0;i<data.result.lenght;i++){
+	var bokContent1='<p class="present">'+ data.result.product.Des +'</p>'
+  	               +'<div class="rate">'
+  	               +'<p>￥<span>'+ data.result.product.CurPrice +'</span></p>'
+  	               +'<i>'+ data.result.product.OldPrice +'</i>'
+  	               +'<button>'+ data.result.product.Status +'</button>'
+	  	           +'<div class="city">'  
+				   +'<p>'+ data.result.product.Carriage +'</p>'			
+				   +'<P>'+ data.result.product.Destination +'</P>'		
+				   +'</div>'	               
+  	     $('.price').append(bokContent1);	 
+  	   }
+	
+}
+$(document).on("click",".head span",function(){
+	history.go(-1);
+})
 
 	 
 

@@ -7,57 +7,60 @@ html{
 }
 @media only screen and (min-width: 414px) and (max-width: 640px) {
 	html{
-		font-size:64.7px;
+ 	     font-size: 64px;
+       }
+}
+@media only screen and (min-width: 320px) and (max-width: 414px) {
+	html{
+		font-size: 50px;
 	}
 }
 .blue img{
 	display: block;
 	width: 1.84rem;
 	height: 1.84rem;
-	/*background: url("../img/timg.jpg") no-repeat;*/
-	background-size: 100%;
+	/*background-size: 100%;*/
 	border: solid #fff 2px;
-	border-radius: .92rem;
-	margin: 0 auto;
+	border-radius: .92rem;	
+	position: absolute;
+	left: 50%;
+	top: 25%;
+	transform: translateX(-50%);
 }
 .blue{
 	background-color: #33ccff;
-	/*width: 100%;*/
-	height: 2.88rem;
-	/*margin-bottom: .72rem;*/
-	padding-top: 1.32rem;
+	width: 100%;
+	height: 3.9rem;
+	position: relative;
 }
 input{
-	font-size: .2rem;
+	font-size: .3rem;
 	color: #575757;
 	border: solid red 0;
 	border-bottom: solid #12a2e5 1px;	
-	padding: .25rem .65rem;
-	width: 50%;
+	padding: .4rem 1rem;
+	width: 55%;
 	display: block;
 	margin: 0 auto;
 }
 .phone{
-	background: url("../img/input_19.png")4%  no-repeat;
+	background: url("../img/input_19.png") 5%   no-repeat;
 	margin-top: .72rem;
 }
 input::-webkit-input-placeholder{
 	color: #e3e3e3;
 }
 .password{
-	font-size: .2rem;
-	/*color: #e3e3e3;*/
+	font-size: .3rem;
 	border: solid red 0;
 	border-bottom: solid #12a2e5 1px;
-	background:url("../img/input_23.png")4%  no-repeat;
-	padding: .2rem .65rem;
-	width: 50%;
+	background:url("../img/input_23.png") 5%   no-repeat;	
 	display: block;
 	margin: 0 auto;
-	margin-top: .32rem;
+	margin-top: .5rem;
 }
 .denglu{
-	font-size: .32rem;
+	font-size: .26rem;
 	display: block;
 	color: #33ccff;	
 	background-color: #fff;
@@ -70,10 +73,9 @@ input::-webkit-input-placeholder{
 	/*text-decoration: none;*/
 }
 .bottom{
-	margin-top: 2.2rem;
+	margin-top: 1.5rem;
 	overflow: hidden;
 }
-
 .zuo{
 	border: solid red 0;
 	border-bottom:solid #12a2e5 1px;
@@ -83,13 +85,13 @@ input::-webkit-input-placeholder{
 	text-decoration: none;
 	float: left;
 	display: block;
-	/*width: 1.1rem;*/
+	width: 1.2rem;
 	margin-left: .2rem;
-	/*margin: .15rem .3rem;*/
+	margin-top: .3rem;
 }
  .you{
 	border: solid #33ccff 1px;
-	padding: .1rem .34rem;
+	padding: .15rem .35rem;
 	border-radius: .05rem;
 	background-color: #FFFFFF;
 	color:#33ccff;
