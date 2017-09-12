@@ -93,7 +93,7 @@
 		var gouwu=function(){
 			$.ajax({
 				type:"post",
-				url:"http://39.108.219.59/getShopCar ",
+				url:"http://39.108.219.59/getShopCar",
 				async:true,
 				contentType:'application/JSON',
 				data:JSON.stringify({
@@ -101,6 +101,9 @@
 				}),
 				success:function(data,status){
 					datas(data);//调用渲染函数
+//					if ($('.list_radio').hasClass("radio_1")) {
+						localStorage.setItem("ware",JSON.stringify(data.result));
+//					}	
 				}
 			})	
 		}

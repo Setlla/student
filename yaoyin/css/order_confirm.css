@@ -27,7 +27,8 @@
 		width: 0.26rem;
 		height: 0.35rem;
 		margin: 0 0.28rem  0 0;
-		vertical-align: middle;
+		align-self: center;
+		/*vertical-align: middle;*/
 	}
 	.cargo_adress{
 		height: 0.6rem;
@@ -70,10 +71,15 @@
 	}
 	
 	/*店铺商品信息*/
+	.warelist{
+		background: #FFFFFF;
+	}
 	.recharge{
 		font-size: 0.28rem;
 		display: flex;
 		display: -webkit-flex;
+		margin-bottom: 0.1rem;
+		background: #EEEEEE;
 	}
 	.recharge img{
 		width: 1.52rem;
@@ -172,8 +178,11 @@
 		height: 0.55rem;
 		border-radius: 0.27rem;
 		display: block;
-		border: 1px solid #ececec;
-		float: left;
+		border: 1px solid #9d9c9c;
+		background: #FFFFFF;
+	}
+	.btn_1{
+		float: right;	
 	}
 	/*页尾*/
 	.foot{
