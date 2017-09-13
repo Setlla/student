@@ -100,10 +100,8 @@
 					token:token
 				}),
 				success:function(data,status){
-					datas(data);//调用渲染函数
-//					if ($('.list_radio').hasClass("radio_1")) {
-						localStorage.setItem("ware",JSON.stringify(data.result));
-//					}	
+					datas(data);//调用渲染函数		
+					localStorage.setItem("ware",JSON.stringify(data.result));
 				}
 			})	
 		}
@@ -183,8 +181,9 @@
 			})
 		})
 		
-		//结算跳转
+		//结算跳转			
 		$(document).on("click",".foot_fruit",function(){
+			//判断结算是否大于0
 			var result=parseInt($('.result').text());
 			if (result!=0) {
 				$('.foot_fruit button').removeAttr("disabled");
@@ -192,6 +191,16 @@
 			} else{
 				$('.foot_fruit button').attr("disabled","disabled");
 			}
+			//从ajax里面拿到ware
+			var aa=JSON.parse(localStorage.getItem("ware"));
+			//选中的放到新数组里
+			var rad=[];			
+			for (var i=0;i<$('.list_radio').length;i++) {
+				if ($('.list_radio').eq(i).hasClass("radio_1")) {
+					rad.push(aa[i]);					
+				}					
+			}
+			localStorage.setItem("ware1",JSON.stringify(rad));
 		})
 		
 	})//ready的括号

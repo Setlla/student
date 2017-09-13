@@ -9,7 +9,7 @@
 		users();
 		
 		//获取购物车的商品信息
-		var ware=JSON.parse(localStorage.getItem("ware"));
+		var ware=JSON.parse(localStorage.getItem("ware1"));
 		var warelist=function(){
 			var s=0;
 			var s1=0;
