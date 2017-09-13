@@ -5,13 +5,12 @@
 	        if ($(this).hasClass("radio_1")) {
 	        	$(this).removeClass('radio_1');
 	        	$(".list_radio").removeClass('radio_1');
-	        	$('.foot_fruit button').removeClass('foot_button').attr("disabled","disabled");
 	        }else {
 	        	$(this).addClass('radio_1');
 	        	$(".list_radio").addClass('radio_1');
-	        	$('.foot_fruit button').addClass('foot_button').removeAttr("disabled");
 	        }
 	        num();
+	        judge();
 		})
 		
 		//单选按钮
@@ -22,24 +21,38 @@
 			} 
 			else{
 				$(this).addClass('radio_1');
-			}
-			//判断单选按钮选中状态个数大于0，就移除disabled
-			if ($('.list_radio.radio_1').length>0) {
-				$('.foot_fruit button').addClass('foot_button').removeAttr("disabled");
-			} else{
-				$('.foot_fruit button').removeClass('foot_button').attr("disabled","disabled");
-			}
-			
+			}			
 	    	//内圆长度等于外圆长度，全选按钮亮
 		    if ($('.list_radio.radio_1').length==$('.list_radio').length) {
 	    		$(".select_radio").addClass('radio_1');
-	    		$('.foot_fruit button').addClass('foot_button').removeAttr("disabled");
 	    	} 
 	    	else{
 	    		$(".select_radio").removeClass('radio_1');
 	    	}
-	    	num();  	
+	    	num();
+	    	judge();
 		})
+		
+		var judge=function(){
+			//判断单选按钮选中状态个数大于0，就移除disabled
+			if ($('.list_radio.radio_1').length>0) {
+				$('.foot_fruit button').addClass('foot_button').removeAttr("disabled");
+			} 
+			else if($('.select_radio').hasClass("radio_1")&&$('.list_radio').length==0){
+				$('.foot_fruit button').removeClass('foot_button').attr("disabled","disabled");
+			}
+			else{
+				$('.foot_fruit button').removeClass('foot_button').attr("disabled","disabled");
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
 		//计算商品数量和价格函数		
 		var num=function(){
 			var s=0;
@@ -194,9 +207,7 @@
 		
 		//结算跳转			
 		$(document).on("click",".foot_fruit button",function(){
-			if($(this).hasClass('foot_button')){
-				location.href="order_confirm.html";
-			}			
+			location.href="order_confirm.html";		
 			//从ajax里面拿到data
 			var data=JSON.parse(localStorage.getItem("data"));
 			//选中的放到新数组里
