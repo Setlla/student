@@ -3,7 +3,7 @@ body{
 	padding: 0;
 }
 html{
-	font-size:50px;
+	font-size:100px;
 }
 a{
 	text-decoration: none;
@@ -14,7 +14,7 @@ ul{
 	list-style-type: none;
 }
 .head{
-	height:1.66rem;
+	height:.9rem;
 	background-color: #33ccff;
 	display: flex;
 	justify-content:space-around;
@@ -24,7 +24,7 @@ ul{
 	align-self: center;
 }
 .suspend span{
-	font-size: .39rem;
+	font-size: .28rem;
 	color:#fff;
 	line-height:1.66rem;
 }
@@ -38,7 +38,7 @@ ul{
 	margin-left:.1rem;
 }
 .things a{
-	font-size: .34rem;
+	font-size: .3rem;
 	color:#fff;
 	display:block;
 	width: 50%;
@@ -46,61 +46,56 @@ ul{
 }
 .things{
 	overflow: hidden;
-	width:3rem;
+	width:1.8rem;
 	border: solid #fff 1px;
 	border-radius:.1rem ;
 	text-align: center;
-	height:.72rem;
-	line-height: .72rem;
+	height:.5rem;
+	line-height: .5rem;
 }
 .things .cur{
 	background: rgba(225,225,225,0.8);
 	color:#33ccff;
 }
 .news img{
-	width:.6rem;
+	width:.5rem;
 	display: block;
 }
 .bicycle{
 	display: flex;
 }
 .bicycle img{
-	width:2.6rem;
-	margin-top: .56rem;
+	width:2rem;
+	margin-top: .3rem;
 }
 .shanghai{
 	flex: 1;
 	margin-left: .32rem;
 }
-.min{
-	border-bottom: solid #c9c9c9 1px;
-}
 .free p{
 	word-break: break-all;
-	font-size:.39rem;
-	padding-top:.26rem;
+	font-size:.3rem;
+	padding-top:.2rem;
 }
 .free span{
 	display: inline-block;
-	padding:.1rem .66rem .13rem 0;
-	font-size: .31rem;
+	padding:.05rem .3rem .13rem 0;
+	font-size: .24rem;
 	color:#999;
 }
 .free a{
 	color:#fff;
 	display: block;
-	width: .8rem;
+	width: 1rem;
 	text-align: center;
-	padding:.07rem .4rem;
+	padding:.05rem 0;
 	background-color: #33cc33;
 }
 .round{
 	position: absolute;
     right: .26rem;
-    bottom: .3rem;
+    bottom: .1rem;
 }
-
-
 .round p{
 	margin-left:.1rem;
 	width: 3px;
@@ -113,7 +108,7 @@ ul{
 	display: inline-block;
 }
 .price span:first-child{
-	font-size:.5rem;
+	font-size:.3rem;
 	color:#ff9900;
 }
 .price span:nth-child(2){
@@ -124,7 +119,8 @@ ul{
 }
 .price{
 	position: relative;
-	padding-bottom: .26rem;
+	padding-bottom: .1rem;
+	border-bottom: solid #c9c9c9 1px;
 }
 .max{
 	padding-left: .26rem;
@@ -141,18 +137,18 @@ ul{
 	background-color: #fff;
 }
 .foot li{
-	
 	text-align: center;
 	display: inline-block;
 }
 .foot p{
-	font-size: .26rem;
+	font-size: .2rem;
 	color:#808080;
-	padding-bottom: .18rem;	
+	padding-bottom: .18rem;
 }
 .foot li img{
-	width:.6rem;
-	padding: .16rem 0 .16rem 0;
+	width:.47rem;
+	height:.46rem;
+	padding: .12rem 0 .1rem 0;
 }
 .footer{
 	height:3rem;

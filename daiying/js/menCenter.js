@@ -1,4 +1,3 @@
-
 	$.ajax({
 		type:"post",
 		url:"http://39.108.219.59/getPerson",
@@ -13,14 +12,10 @@
 		}
 	});
 
-
-
-
 $(document).on("click",".logout",function(){
 	localStorage.removeItem("token");
 	location.href="denglu.html";
 })
-
 
 $(document).on("click",".shopcar",function(){
 	location.href="shopcar.html";

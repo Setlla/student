@@ -73,7 +73,7 @@ html{
 	border-bottom: solid .2rem #efefef;
 }
 .serve li{
-	padding:.22rem;
+	padding:.22rem 0;
 	text-align: center;
 	float: left;
 	width:20%;
@@ -134,7 +134,7 @@ html{
 	padding-bottom: .16rem;	
 }
 .foot li img{
-	width: .43rem;
-    padding: .12rem 0 .1rem 0;
-    height: .47rem;
+	width:.47rem;
+	height:.46rem;
+	padding: .12rem 0 .1rem 0;
 }

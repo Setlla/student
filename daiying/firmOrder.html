@@ -9,15 +9,15 @@
 	</head>
 	<body>
 		<div class="head">
-			<a></a>
+			<a class="back"></a>
 			<span>确认订单</span>
 		</div>
 		<div class="people">
 			<img src="img/firm-order_03.png" />
 			<div class="detail">
-				<span>收货人：戴瑛</span>
-				<span>13036745639</span>
-				<p>收货地址：长沙市长沙县新人村菜鸟 </p>
+				<span>收货人：<i class="name">戴瑛</i></span>
+				<span class="phone">13036745639</span>
+				<p>收货地址：<i class="address">长沙市长沙县新人村菜鸟基地</i> </p>
 				<p>(收货不便时，可选择免费代收货服务)</p>
 			</div>
 			<a></a>
@@ -25,7 +25,7 @@
 		<div class="shop">
 			<img class="cat" src="img/firm-order_07.png" />
 			<span>当当网官方旗舰店</span>
-			<div class="book">
+			<!--<div class="book">
 				<img src="img/firm-order_10.png" />
 				<div class="seven">
 					<p>【当当网 正版书籍】基业长青（珍藏版）柯林...</p>
@@ -35,7 +35,37 @@
 					<p>￥26.5</p>
 					<a>X1</a>
 				</div>
-			</div>
+			</div>-->
 		</div>
+		<ul class="list">
+			<li class="ways">
+				<span>配送方式</span>
+				<span>快递￥5.00</span>
+				<a class="arrow"></a>
+			</li>
+			<li>
+				<span>开具发票</span>
+				<span class="botton"><a class="round"></a></span>
+			</li>
+			<li class="buyer">
+				<span>买家留言：</span>
+				<input value="选填：对本次交易的说明（建议填..."/>
+			</li>
+			<li class="calculate">
+				<a>共<i class="numbers">0</i>件商品</a>
+				<span>小计：</span>
+				<span class="price">￥<i class="total">00.00</i></span>
+			</li>
+		</ul>
+		<div class="foot">
+			<div class="all">
+				<span>共<i class="numbers">0</i>件，合计：</span>
+				<span class="price">￥<i class="total">00.00</i></span>
+			</div>
+			<a>提交订单</a>
+			
+		</div>
+		<script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
+		<script type="text/javascript" src="js/firmOrder.js" ></script>
 	</body>
 </html>

@@ -60,19 +60,23 @@ html{
 	color:#000;
 }
 .sex select{
+	color:#999;
+	font-size: .24rem;
 	float:right;
 	margin-right: .67rem;
 	border: none;
 	height:.4rem;
 	outline: none;
 	-webkit-appearance:none;
+	background-color: #fff;
 }
 .nickname input,.my input{
+	color:#999;
+	font-size: .24rem;
 	float: right;
 	margin-right: .67rem;
 	border: none;
 	outline: none;
-	/*line-height: .38rem;*/
 	height:.36rem;
 	text-align: right;
 }

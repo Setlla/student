@@ -53,7 +53,7 @@ html{
 }
 .detail span:first-child{
 	font-size:.28rem;
-	padding-right:.82rem;
+	padding-right:.3rem;
 }
 .detail span:nth-child(2){
 	font-size:.24rem;
@@ -77,13 +77,14 @@ html{
 .book{
 	position: relative;
 	background-color: #f6f6f6;
+	border-bottom: solid .2rem #fff;
 }
 .book img{
 	padding: .15rem .24rem;
 	width:1.54rem;
 }
 .seven{
-	width:2.7rem;
+	width:2.6rem;
 	position: absolute;
 	left:50%;
 	top:.15rem;
@@ -91,11 +92,12 @@ html{
 }
 .seven p{
 	font-size:.24rem;
+	text-align:left;
 }
 .seven a{
 	font-size: .18rem;
 	color:#de2d3d;
-	padding:0 .07rem;
+	padding:0 .06rem;
 	border:solid 1px #de2d3d;
 	border-radius:.05rem ;
 	margin-top: .16rem;
@@ -114,3 +116,118 @@ html{
 	font-size: .18rem;
 	color:#a4a4a4;
 }
+.list{
+	padding:0 .24rem;
+	overflow: hidden;
+	border-bottom: solid .18rem #eee;
+	margin-bottom: 1.3rem;
+}
+.list li{
+	padding:.3rem 0;
+	position: relative;
+}
+.list li:not(:last-child){
+	border-bottom: solid 1px #dfdfdf;
+}
+.list span:first-child{
+	font-size:.28rem;
+	color:#1a2632;
+}
+.ways{
+	overflow: hidden;
+}
+.ways span:nth-child(2){
+	float:right;
+	font-size: .28rem;
+	padding-right: .36rem;
+}
+.arrow{
+	display: block;
+	width:.18rem;
+	height:.18rem;
+	border-right:solid 1px #c6c6c6;
+	border-bottom: solid 1px #c6c6c6;
+	transform:rotate(-45deg) translateY(-50%);
+	position: absolute;
+	right: .1rem;
+	top:50%;
+}
+.botton{
+	display: block;
+	width:.96rem;
+	height:.56rem;
+	border: solid 2px #e4e4e4;
+	border-radius:.3rem;
+	position:absolute;
+	right:0;
+	top:50%;
+	transform: translateY(-50%);
+}
+.botton a{
+	display: block;
+    width: .56rem;
+    height: .56rem;
+    border-radius: 50%;
+    border: solid 1px #e4e4e4;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.cur{
+	background-color: #33ccff !important;
+}
+.buyer input{
+	width:73%;
+	border: none;
+	outline: none;
+	font-size: .28rem;
+	color:#c7c7c9;
+}
+.calculate{
+	float: right;
+}
+.calculate a,span{
+	font-size: .24rem;
+	color:#0f1923;
+}
+.price{
+	font-size: .3rem;
+	color:#bb1d34;
+}
+.foot{
+	width:100%;
+	position: fixed;
+	bottom:0;
+	height:1rem;
+	line-height: 1rem;
+	border-top:solid 1px #cacaca;
+}
+.all{
+	height:1rem;
+	width:70%;
+	text-align:right;
+	float:left;
+	background-color:#fff;
+}
+.all span:first-child{
+	font-size:.28rem;
+	color:#0f1923;
+}
+.all span:last-child{
+	padding-right: .22rem;
+}
+.all i{
+	color:#bb1d34;
+}
+.foot a{
+	text-align:center;
+	height:1rem;
+	width:30%;
+	display: block;
+	font-size: .3rem;
+	color:#fff;
+	background-color: #ee8c21;
+	float:right;
+}
+

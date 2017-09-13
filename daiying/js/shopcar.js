@@ -10,7 +10,7 @@ $.ajax({
 });
 var setData=function(data){
 	for(var n=0;n<data.result.length;n++){
-		var strings='<li class="bicycle">'
+		var strings='<li class="bicycle" data-id='+data.result[n].product.id+'>'
 					+'<span class="dots round"></span>'
 					+'<img src='+data.result[n].product.Image+'/>'
 					+'<div class="right">'
@@ -126,7 +126,7 @@ $(document).on("click",".complete",function(){
 		var ProductNumber = $(".contents").eq(i).find(".one").html();
 		var product = {
 			id: id,
-			ProductNumber: ProductNumber
+			ProductNumber:ProductNumber
 		}
 		products.push(product);
 	}
@@ -153,5 +153,27 @@ $(document).on("click",".menCenter",function(){
 	location.href="menCenter.html";
 })
 
+var getProducts = function() {}
 
-
+$(document).on("click",".two",function(){
+	var products = [];
+	var content = $(".bicycle .cur");
+	for(var i = 0; i<content.length;i++){
+		var id = content.eq(i).parents(".bicycle").data("id");
+		var ProductNumber = content.eq(i).parents(".bicycle").find(".number").html();
+		var priture=content.eq(i).parents(".bicycle").find("img")[0].src;
+		var price=content.eq(i).parents(".bicycle").find(".newPrice").html();
+		var suggest=content.eq(i).parents(".bicycle").find(".top p").html();
+		var product = {
+			suggest:suggest,
+			priture:priture,
+			price:price,
+			id:id,
+			ProductNumber:ProductNumber
+	}
+		products.push(product);
+		localStorage.setItem("products",JSON.stringify(products));
+		location.href="firmOrder.html";
+	}
+	
+})

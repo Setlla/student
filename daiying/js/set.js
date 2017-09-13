@@ -46,18 +46,11 @@ function common(){
 
 common();
 
-$(document).on("focus",".name",function(){
-	$(".name").css("text-align","left");
+$(document).on("focus","input",function(){
+	$(this).css("text-align","left");
 })
-$(document).on("blur",".name",function(){
-	$(".name").css("text-align","right");
-})
-
-$(document).on("focus",".address",function(){
-	$(".address").css("text-align","left");
-})
-$(document).on("blur",".address",function(){
-	$(".address").css("text-align","right");
+$(document).on("blur","input",function(){
+	$(this).css("text-align","right");
 })
 
 $(document).on("click",".foot",function(){
