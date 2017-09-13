@@ -33,25 +33,15 @@
 	    	judge();
 		})
 		
+		//此函数用来判断结算按钮变暗还是变亮
 		var judge=function(){
 			//判断单选按钮选中状态个数大于0，就移除disabled
 			if ($('.list_radio.radio_1').length>0) {
 				$('.foot_fruit button').addClass('foot_button').removeAttr("disabled");
-			} 
-			else if($('.select_radio').hasClass("radio_1")&&$('.list_radio').length==0){
-				$('.foot_fruit button').removeClass('foot_button').attr("disabled","disabled");
-			}
-			else{
+			}else{
 				$('.foot_fruit button').removeClass('foot_button').attr("disabled","disabled");
 			}
 		}
-		
-		
-		
-		
-		
-		
-		
 		
 		//计算商品数量和价格函数		
 		var num=function(){
@@ -112,7 +102,8 @@
 			}
 			
 		}
-			
+		//把确认订单的信息存到data_result里面
+		var data_result;	
 		//购物车页面渲染
 		var gouwu=function(){
 			$.ajax({
@@ -125,7 +116,7 @@
 				}),
 				success:function(data,status){
 					datas(data);//调用渲染函数		
-					localStorage.setItem("data",JSON.stringify(data.result));
+					data_result=data.result;
 				}
 			})	
 		}
@@ -208,13 +199,11 @@
 		//结算跳转			
 		$(document).on("click",".foot_fruit button",function(){
 			location.href="order_confirm.html";		
-			//从ajax里面拿到data
-			var data=JSON.parse(localStorage.getItem("data"));
 			//选中的放到新数组里
 			var warelist=[];			
 			for (var i=0;i<$('.list_radio').length;i++) {
 				if ($('.list_radio').eq(i).hasClass("radio_1")) {
-					warelist.push(data[i]);					
+					warelist.push(data_result[i]);					
 				}					
 			}
 			localStorage.setItem("warelist",JSON.stringify(warelist));
