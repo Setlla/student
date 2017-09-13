@@ -4,25 +4,36 @@
 		$(document).on("click",".select_radio",function() {
 	        if ($(this).hasClass("radio_1")) {
 	        	$(this).removeClass('radio_1');
-	        	$(".list_radio").removeClass('radio_1');				
+	        	$(".list_radio").removeClass('radio_1');
+	        	$('.foot_fruit button').removeClass('foot_button').attr("disabled","disabled");
 	        }else {
 	        	$(this).addClass('radio_1');
 	        	$(".list_radio").addClass('radio_1');
+	        	$('.foot_fruit button').addClass('foot_button').removeAttr("disabled");
 	        }
 	        num();
 		})
 		
 		//单选按钮
-		$(document).on("click",".list_radio",function() {			
+		$(document).on("click",".list_radio",function() {
+			//判断单选按钮是否选中
 			if ($(this).hasClass("radio_1")) {
 				$(this).removeClass('radio_1');
 			} 
 			else{
 				$(this).addClass('radio_1');
 			}
+			//判断单选按钮选中状态个数大于0，就移除disabled
+			if ($('.list_radio.radio_1').length>0) {
+				$('.foot_fruit button').addClass('foot_button').removeAttr("disabled");
+			} else{
+				$('.foot_fruit button').removeClass('foot_button').attr("disabled","disabled");
+			}
+			
 	    	//内圆长度等于外圆长度，全选按钮亮
 		    if ($('.list_radio.radio_1').length==$('.list_radio').length) {
 	    		$(".select_radio").addClass('radio_1');
+	    		$('.foot_fruit button').addClass('foot_button').removeAttr("disabled");
 	    	} 
 	    	else{
 	    		$(".select_radio").removeClass('radio_1');
@@ -101,7 +112,7 @@
 				}),
 				success:function(data,status){
 					datas(data);//调用渲染函数		
-					localStorage.setItem("ware",JSON.stringify(data.result));
+					localStorage.setItem("data",JSON.stringify(data.result));
 				}
 			})	
 		}
@@ -182,25 +193,20 @@
 		})
 		
 		//结算跳转			
-		$(document).on("click",".foot_fruit",function(){
-			//判断结算是否大于0
-			var result=parseInt($('.result').text());
-			if (result!=0) {
-				$('.foot_fruit button').removeAttr("disabled");
+		$(document).on("click",".foot_fruit button",function(){
+			if($(this).hasClass('foot_button')){
 				location.href="order_confirm.html";
-			} else{
-				$('.foot_fruit button').attr("disabled","disabled");
-			}
-			//从ajax里面拿到ware
-			var aa=JSON.parse(localStorage.getItem("ware"));
+			}			
+			//从ajax里面拿到data
+			var data=JSON.parse(localStorage.getItem("data"));
 			//选中的放到新数组里
-			var rad=[];			
+			var warelist=[];			
 			for (var i=0;i<$('.list_radio').length;i++) {
 				if ($('.list_radio').eq(i).hasClass("radio_1")) {
-					rad.push(aa[i]);					
+					warelist.push(data[i]);					
 				}					
 			}
-			localStorage.setItem("ware1",JSON.stringify(rad));
+			localStorage.setItem("warelist",JSON.stringify(warelist));
 		})
 		
 	})//ready的括号

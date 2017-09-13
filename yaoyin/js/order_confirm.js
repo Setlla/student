@@ -9,8 +9,8 @@
 		users();
 		
 		//获取购物车的商品信息
-		var ware=JSON.parse(localStorage.getItem("ware1"));
-		var warelist=function(){
+		var ware=JSON.parse(localStorage.getItem("warelist"));
+		var warelists=function(){
 			var s=0;
 			var s1=0;
 			for (var i=0;i<ware.length;i++) {
@@ -30,14 +30,14 @@
 			        
 			    $('.warelist').append(content);
 			    
-			    s=s+parseInt($('.warelist').find('.num').eq(i).text());//数量
-			    s1=s1+parseInt($('.warelist').find('.price').eq(i).text()*$('.warelist').find('.num').eq(i).text());//价格
+			    s=s+parseInt(ware[i].ProductNumber);//数量
+			    s1=s1+parseInt(ware[i].product.CurPrice*ware[i].ProductNumber);//价格
 			    
 			}
 			$('.sum').text(s);
 			$('.result').text(s1);
 		}
-		warelist();
+		warelists();
 		
 		//是否开具发票
 		$(document).on('click','.js_btn',function(){
