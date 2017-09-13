@@ -36,7 +36,7 @@ html{
 .lis_one{
 	line-height: 1.7rem;
 }
-.ggg{
+.browse{
 	text-align: left;
 	position: absolute;
 	top: 50%;
@@ -45,6 +45,7 @@ html{
 	right: .4rem;
 	width: 3rem;
 }
+
 .lis_one span{
 	line-height: 1.7rem;
 }
@@ -60,6 +61,11 @@ html{
 	width: 1.2rem;
 	height: 1.2rem;
 }
+.name{
+	color:#999 ;
+	margin-right: .2rem;
+	display: block;
+}
 .gender{
     margin-top: .2rem;
     width: .8rem;
@@ -70,6 +76,7 @@ html{
     font-size: .24rem;
     color: #999;  
     outline: none;
+    background: white;
     -webkit-appearance: none; 
     border: 0;
 }
@@ -85,7 +92,6 @@ html{
 	transform: translateY(-50%) rotate(-135deg);		
 }
 .Submit  li input{
-	width: 1rem;	
 	line-height: .9rem;
 	float: right;
 	padding-right: .5rem;
@@ -95,6 +101,7 @@ html{
 	text-align: right;
 	margin-right: .2rem;
 	width: 3rem;
+	color: #999999;
 }
 .bottom_nav	{
 	height: 10rem;

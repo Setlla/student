@@ -13,13 +13,13 @@
 	}
 	
 			//图片的浏览　　　和　切换图片
-	$(document).on("change",".ggg",function() {
+	$(document).on("change",".browse",function() {
 		var form= new FormData();
 		form.append("token", localStorage.getItem("token"));
-		form.append("file",$(".ggg")[0].files[0]);	
+		form.append("file",$(".browse")[0].files[0]);	
 		
-		var imgurl=getObjectURL($(".ggg")[0].files[0]);
-		$(".ggg").attr("src",imgurl);
+		var imgurl=getObjectURL($(".browse")[0].files[0]);
+		$(".browse").attr("src",imgurl);
 		
 		$.ajax({
 			type:"post",
@@ -62,16 +62,16 @@
 	})
 	
 		//对焦
-//	$(document).on("focus",".name",function() {
-//		$(".name").css("text-align","left");
-//		$(".address").css("text-align","left");
-//	})
-//	$(document).on("blur",".name",function () {
-//		$(".name").css("text-align","right");
-//		$(".address").css("text-align","right");
-//	})
-//	
-//	
+	$(document).on("focus","input",function() {
+		$(this).css("text-align","left");
+
+	})
+	$(document).on("blur","input",function () {
+		$(this).css("text-align","right");
+
+	})
+	
+	
 		function mation(){
 			var user=JSON.parse(localStorage.getItem("user"));		
 			$(".lis_one img").attr("src",user.headImage);

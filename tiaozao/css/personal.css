@@ -1,0 +1,143 @@
+.top_nav{
+	background: #33CCFF;
+	line-height: 1rem;
+	position: relative;
+}
+.top_nav a{
+    position: absolute;
+    left: .2rem;
+	font-size: .28rem;
+	color: white;
+
+}
+.top_nav span{
+	display: block;
+	text-align: center;
+	font-size: .32rem;
+	color: white;	
+}
+.top_nav i{
+	top: 0;
+	position: absolute;
+	font-size: .28rem;
+	color: white;
+	right: .2rem;
+}
+.banner{
+	background:url(../image/gerenzx_02.png) no-repeat;
+	background-size: 100% 100%;
+	text-align: center;
+}
+.banner img{
+	margin-top: .4rem;
+	border-radius: 50%;
+}
+.banner p{
+	display: block;
+	color: white;
+	font-size: .3rem;
+	text-align: center;
+	padding-top: .2rem;
+	padding-bottom: .2rem;
+}
+.banner ul{
+	background: #474216;
+	opacity: 0.3;
+	width: 100%;
+	overflow: hidden;
+}
+.banner ul li{
+	margin: .2rem 0 .2rem 0;
+	box-sizing: border-box;
+	float: left;
+	width: 50%;
+	color: white;
+	font-size: .24rem;
+	border-right: 1px solid #6c603c;
+	line-height: .4rem;
+}
+.banner ul li:nth-child(2){
+	border-right: 0;
+}
+.banner ul li span{
+	display: block;
+}
+
+.content ul{
+	overflow: hidden;
+	box-sizing: border-box;
+	text-align: center;
+	padding:.25rem .2rem ;
+	border-bottom: .2rem solid #efefef;	
+}
+.content ul li{
+	float: left;
+	width: 20%;
+}
+.content ul li img{
+	height: .33rem;
+}
+.content ul li a{
+	display: block;
+	font-size: .2rem;
+	color: #666666;
+	padding-top: .15rem;
+}
+.content_noe ul{
+	
+}
+.content_noe ul li{	
+	border-bottom: 1px solid #efefef;
+}
+.content_noe ul li img{
+	padding: .25rem;
+}
+.content_noe ul li a{
+	color: #666666;
+	font-size: .3rem;
+	line-height: 1rem;	
+}
+.content_noe ul li:nth-child(2){
+	border-bottom: .2rem solid #efefef;
+}
+.content_noe ul li:nth-child(3){
+	border-bottom: 2rem solid #efefef;
+}
+.bottom_nav{
+	border-top: 0.02rem solid #e5e5e5;
+	position: fixed;  
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	background: white;
+}
+.bottom_nav ul{
+}
+.bottom_nav ul li{
+	padding-top: 0.22rem;
+	float: left;
+	width: 25%;
+	margin: 0 auto;
+}
+.bottom_nav ul li i{
+	width: 25px;
+	height: 25px;
+	margin: 0 auto;
+	display: block;
+	background: url(../image/dang_back03.png);
+	background-size: 50px 100px;
+}
+.bottom_nav ul li span{
+	line-height: 0.4rem;
+	font-size: 0.2rem;
+	display: block;
+	color: #555;
+	text-align: center;
+}
+.tips .cur{
+	background-position-x: -25px!important;
+}
+.bottom_nav .car{
+	color: #33CCFF;
+}

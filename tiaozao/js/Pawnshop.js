@@ -91,10 +91,10 @@ $.ajax({
 //		location.href=""
 	})
 	$(document)	.on("click",".ShoCart",function () {
-		location.href="gouwuche.html"
+		location.href="ShopCart.html"
 	})
 	$(document)	.on("click",".personal",function () {
-		location.href="geren.html"
+		location.href="personal.html"
 	})	
 
 
