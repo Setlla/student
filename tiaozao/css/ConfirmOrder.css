@@ -150,13 +150,14 @@
     float: right;
 }
 .two_content ul li strong:nth-child(3){
-	width: .6rem;
-    height: .6rem;
+	width: .62rem;
+    height: .62rem;
     border: 1px solid #dadada;
     display: block;
     position: absolute;
-    top: .12rem;
+    top: .14rem;
     right: .42rem;
+    /*background: #33CCFF;*/
     border-radius: 50%;	
 }
 .two_content ul li i{

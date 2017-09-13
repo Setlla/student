@@ -30,8 +30,23 @@
 		$(".money").html("￥"+sum);		
 		$(".nummber").html(num);		
 	}
-
-
+		
+		$(document).on("click",".small_ruond", function () {
+			
+			if($(this).css("background-color")=="rgb(51, 204, 255)"){
+				$(this).css({background:"#dadada",right:".42rem"});
+				$(".big_ruond").css("border-color","#dadada");
+			}else{
+				$(this).css({background:"#33CCFF",right:"0",border:"#33CCFF"});
+				$(".big_ruond").css("border-color","#33CCFF");
+			}
+			
+		})
+		
+		//箭头返回
+	$(document).on("click",".arrow",function () {
+		history.back()
+	})
 
 
 
