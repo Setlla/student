@@ -64,7 +64,7 @@
 		var datas=function(data){
 			for (var i=0;i<data.result.length;i++) {
 				var content=
-					'<div class="ware" data-id="'+data.result[i].id+'">'
+					'<div class="ware" data-id="'+data.result[i].product.id+'">'
 					+'<div class="ware_radio">'
 					+'<span class="list_radio"></span>'
 		        	+'</div>'
@@ -124,7 +124,7 @@
 		
 		//点击购物车商品查询详情订单
 		$(document).on("click",".ware_explain",function(){
-			var id=$(this).data('id');
+			var id=$(this).parents().data('id');
 	        location.href="DetailsPage.html?id=" + id;
 		})
 		
@@ -210,10 +210,11 @@
 			location.href="order_confirm.html";		
 			//选中的放到新数组里
 			var warelist=[];			
-			for (var i=0;i<$('.list_radio').length;i++) {
-				if ($('.list_radio').eq(i).hasClass("radio_1")) {
-					warelist.push(data_result[i]);					
-				}					
+			for (var i=0;i<$('.list_radio.radio_1').length;i++) {
+//				if ($('.list_radio').eq(i).hasClass("radio_1")) {
+				var j=$('.list_radio.radio_1').eq(i).parents('.ware').index();
+					warelist.push(data_result[j]);					
+//				}					
 			}
 			localStorage.setItem("warelist",JSON.stringify(warelist));
 		})

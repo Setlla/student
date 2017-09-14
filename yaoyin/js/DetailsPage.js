@@ -83,7 +83,7 @@
 
 		//箭头返回当铺页面
 		$('.header_arr').click(function(){
-			location.href="hockshop.html";
+			history.go(-1);
 		})
 		
 		//轮郭效果
