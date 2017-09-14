@@ -1,3 +1,4 @@
+var get;
 $.ajax({
 	type:"post",
 	url:"http://39.108.219.59/getShopCar",
@@ -6,6 +7,7 @@ $.ajax({
 	data:JSON.stringify({token:localStorage.getItem("token")}),
 	success:function(data){
 		setData(data);
+		get=data.result;
 	}
 });
 var setData=function(data){
@@ -56,6 +58,7 @@ $(document).on("click",".bicycle .dots",function(e){
 	   $(".all .dot").removeClass("cur");
 	}
 	setsum();
+	setDisabled();
 })
 $(document).on("click",".all .dot",function(e){
 	var round=$(".bicycle .dots");
@@ -67,7 +70,16 @@ $(document).on("click",".all .dot",function(e){
 		round.addClass("cur");
 		}
 	setsum();
+	setDisabled();
 })
+
+function setDisabled() {
+	if($(".dots.round.cur").length) {
+		$(".balance").removeAttr("disabled").removeClass("gray");
+	}else {
+		$(".balance").attr("disabled","disabled").addClass("gray");
+	}
+}
 
 function setsum(){
  	var sum=0;
@@ -118,7 +130,6 @@ $(document).on("click",".decrease",function(){
 	}
 })
 
-
 $(document).on("click",".complete",function(){
 	var products = [];
 	for(var i = 0; i<$(".contents").length;i++){
@@ -132,7 +143,7 @@ $(document).on("click",".complete",function(){
 	}
 	$.ajax({
 		type:"post",
-		url:"http://39.108.219.59/updateShopCar ",
+		url:"http://39.108.219.59/updateShopCar",
 		async:true,
 		contentType:"application/json",
 		data:JSON.stringify({
@@ -153,27 +164,16 @@ $(document).on("click",".menCenter",function(){
 	location.href="menCenter.html";
 })
 
-var getProducts = function() {}
 
-$(document).on("click",".two",function(){
+
+$(document).on("click",".balance",function(){
 	var products = [];
-	var content = $(".bicycle .cur");
+	var content = $(".bicycle");
 	for(var i = 0; i<content.length;i++){
-		var id = content.eq(i).parents(".bicycle").data("id");
-		var ProductNumber = content.eq(i).parents(".bicycle").find(".number").html();
-		var priture=content.eq(i).parents(".bicycle").find("img")[0].src;
-		var price=content.eq(i).parents(".bicycle").find(".newPrice").html();
-		var suggest=content.eq(i).parents(".bicycle").find(".top p").html();
-		var product = {
-			suggest:suggest,
-			priture:priture,
-			price:price,
-			id:id,
-			ProductNumber:ProductNumber
+		if(content.eq(i).find(".dots").hasClass("cur")){
+			products.push(get[i]);
+		}
 	}
-		products.push(product);
-		localStorage.setItem("products",JSON.stringify(products));
-		location.href="firmOrder.html";
-	}
-	
+	localStorage.setItem("products",JSON.stringify(products));
+	location.href="firmOrder.html";
 })

@@ -198,12 +198,13 @@ html{
 	font-size: .24rem;
 	color:#ee8219;
 }
-.two{
+.balance{
 	padding: .25rem;
     background: #ee8219;
     float: right;
     color:#fff;
     font-size: .3rem;
+    border: 0;
 }	
 .max{
 	width: 100%;
@@ -212,4 +213,7 @@ html{
 }
 .last{
 	display: none;
+}
+.gray{
+	background: #C6C6C6;
 }
