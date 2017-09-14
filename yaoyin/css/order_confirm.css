@@ -1,0 +1,232 @@
+	body{
+		background: #EEEEEE;
+	}
+	/*收货人和收货地址*/
+	.cargo{
+		background: #FFFFFF;
+		overflow: hidden;
+		margin-bottom: 0.2rem;
+		padding: 0.2rem;
+		display: flex;
+		display: -webkit-flex;	
+	}
+	.cargo li{
+		height: 1.6rem;
+		font-size: 0.28rem;
+		color: #444444;
+		position: relative;
+		
+	}
+	.cargo li:nth-of-type(1){
+		line-height: 1.6rem;
+	}
+	.cargo li:nth-of-type(2){
+		flex: 1;
+	}	
+	.cargo img{
+		width: 0.26rem;
+		height: 0.35rem;
+		margin: 0 0.28rem  0 0;
+		align-self: center;
+		/*vertical-align: middle;*/
+	}
+	.cargo_adress{
+		height: 0.6rem;
+	}
+	.cargo_adress p{
+		margin-top: 0.1rem;
+		font-size: 0.24rem;
+		color: #ffd567;
+	}
+	.cargo_name{
+		height: 0.6rem;
+		display: table-cell;
+		vertical-align: bottom;
+		padding-bottom: 0.05rem;
+	}
+	.carrgo_arr{
+		width: 0.2rem;
+		height: 0.2rem;
+		border-top: 1px solid #ababab;
+		border-right: 1px solid #ababab;
+		position: absolute;
+		top: 50%;
+		right: 0.2rem;
+		transform: translate(0,-50%) rotate(45deg);
+	}
+	
+	/*当当网旗舰店标题*/
+	.monopoly{
+		height: 0.85rem;
+		line-height: 0.85rem;
+		background: #FFFFFF;
+		font-size: 0.28rem;
+		color: #333333;		
+	}
+	.monopoly img{
+		width: 0.38rem;
+		height: 0.31rem;
+		margin: 0 0.2rem;
+		vertical-align: middle;
+	}
+	
+	/*店铺商品信息*/
+	.warelist{
+		background: #FFFFFF;
+	}
+	.recharge{
+		font-size: 0.28rem;
+		overflow: hidden;
+		margin-bottom: 0.1rem;
+		background: #EEEEEE;
+	}
+	.recharge li{
+		float: left;
+	}
+	.recharge img{
+		width: 1.52rem;
+		height: 1.52rem;
+		vertical-align: middle;
+	}
+	.recharge li:nth-of-type(1){
+		width: 25%;
+	}
+	.recharge li:nth-of-type(3){
+		width: 25%;
+	}
+	.recharge li:nth-of-type(2){
+		width: 50%;
+		padding-left: 0.3rem;		
+	}
+	.recharge li:nth-of-type(2) span{
+		color: #666666;
+	}
+	.serven a{
+		display: block;
+		width: 1rem;
+		height: 0.32rem;
+		line-height: 0.31rem;
+		border: 1px solid #d28a9e;
+		font-size: 0.2rem;
+		color: #d28a9e;
+	}
+	.recharge li{
+		padding: 0 0.2rem;
+		margin: 0.2rem 0;
+	}
+	.recharge li p{
+		text-align: right;
+	}
+	.recharge li p:not(:nth-of-type(1)){		
+		color: #999999;
+	}
+	
+	/*配送方式，开具发票*/
+	.invoice{
+		background: #FFFFFF;
+		font-size: 0.28rem;
+		padding: 0.2rem;
+		margin-bottom: 0.2rem;
+	}
+	.invoice li{
+		height: 0.88rem;
+		line-height: 0.88rem;
+		border-bottom: 1px solid #e0e0e0;
+		position: relative;
+	}
+	.invoice li:nth-of-type(1){
+		overflow: hidden;
+	}
+	.invoice li:nth-of-type(1) div{		
+		width: 50%;
+		height: 100%;
+		float: left;
+	}
+	.invoice_mode{
+		text-align: left;
+	}
+	.invoice_delivery{
+		text-align: right;
+		padding-right: 0.4rem;
+		position: relative;
+	}
+	.invoice_arr{
+		width: 0.2rem;
+		height: 0.2rem;
+		border-top: 1px solid #a5a5a5;
+		border-right: 1px solid #a5a5a5;
+		position: absolute;
+		top: 50%;
+		right: 0.1rem;
+		transform: translate(0,-50%) rotate(45deg);
+	}
+	.invoice input{
+		border: 0;
+		width: 70%;
+	}
+	.invoice input::-webkit-input-placeholder{
+		color: #cecdd2;
+	}
+	.invoice_right{
+		text-align: right;
+	}
+	.invoice_right span:nth-last-child(1),.invoice_right span:nth-last-child(2){
+		color: #c32f3f;
+	}
+	/*发票按钮*/
+	.js_btn{
+		width: 1rem;
+		height: 0.58rem;
+		border-radius: 0.5rem;
+		border: 1px solid #ececec;
+		display: block;
+		overflow: hidden;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translate(0,-50%);
+	}
+	.js_btn span{
+		width: 0.55rem;
+		height: 0.55rem;
+		border-radius: 0.27rem;
+		display: block;
+		border: 1px solid #ececec;
+		background: #FFFFFF;
+	}
+	.btn_1{
+		float: right;	
+	}
+	/*页尾*/
+	.foot{
+		width: 100%;
+		height: 1rem;
+		line-height: 0.8rem;
+		padding-top: 0.2rem;
+		font-size: 0.28rem;
+		background: #FFFFFF;
+		position: relative;
+		position: fixed!important;
+		overflow: hidden;
+		text-align: right;
+		bottom: 0;
+	}
+	.foot div{
+		border-top: 1px solid #e0e0e0;
+		width: 75%;
+		float: left;
+		padding-right: 0.2rem;
+	}
+	.foot_red{
+		color: #c32f3f;
+	}
+	.foot_btn{
+		width: 25%;
+		height: 0.9rem;
+		line-height: 0.7rem;
+		background: #ee8219;
+		color: #FFFFFF;
+		border: 0;
+		font-size: 0.3rem!important;
+		outline: none;		
+	}

@@ -1,0 +1,166 @@
+	body{
+		background: #ebeced;
+	}
+	body>div{
+		background: #FFFFFF;
+	}
+	/*商品轮郭部分*/
+	.ware{
+		text-align: center;
+		position: relative;
+		margin-bottom: 0.4rem;
+	}
+	.ware_pic img{
+		width: 2.4rem;
+		height: 3rem;
+		margin: 0.7rem 0rem;
+		vertical-align: middle;
+	}
+	.dot{
+		overflow: hidden;
+		text-align: center;
+		position: absolute;
+		bottom: 0.2rem;
+		left: 50%;
+		transform: translate(-50%,0);
+	}
+	.dot span{
+		float: left;
+		border: 1px solid #afafaf;
+		width: 0.24rem;
+		height: 0.24rem;
+		border-radius: 0.12rem;
+		display: block;
+		margin: 0rem 0.08rem;
+	}
+	.dotscolor{
+		background: #33ccff;
+		border: #33CCFF;
+	}
+	.ware_pic_none{
+		display: none;
+	}
+	
+	
+	/*商品详细介绍*/
+	.details{
+		padding: 0.4rem;
+		margin-bottom: 0.4rem;
+	}
+	.details_name{
+		font-size: 0.38rem;
+		color: #333333;
+	}
+	.details_price{
+		height: 1rem;
+		line-height: 0.5rem;
+		position: relative;
+	}
+	.details_price span:nth-of-type(1){
+		color: #ff9900;
+		font-size: 0.34rem;
+	}
+	.details_price span:nth-of-type(2){
+		color: #ff9900;
+		font-size: 0.5rem;
+	}
+	.details_price span:nth-of-type(3){
+		color: #b4b4b4;
+		font-size: 0.34rem;
+		margin-left: 0.4rem;
+		text-decoration: line-through;
+	}
+	.details_price span:nth-of-type(4){
+		color: #b4b4b4;
+		font-size: 0.34rem;
+		text-decoration: line-through;
+	}
+	.details_price span:nth-of-type(5){
+		display: inline-block;
+		color: #FFFFFF;
+		font-size: 0.34rem;
+		background: #33cc33;
+		width: 2rem;
+		height: 0.6rem;
+		line-height: 0.6rem;
+		text-align: center;
+		font-weight: 600;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translate(0,-50%);
+		
+	}
+	.details_adress{
+		color: #b4b4b4;
+		font-size: 0.34rem;
+		position: relative;
+	}
+	.details_adress span:nth-of-type(2){
+		margin-left: 0.4rem;
+	}
+	.details_adress span:nth-of-type(4){
+		margin-left: 1rem;
+	}
+	.details_adress span:nth-of-type(6){
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translate(0,-50%);
+	}
+	
+	/*宝贝描述*/
+	.baby{
+		padding: 0.4rem 0 0.4rem 0.4rem;
+	}
+	.baby_depict{
+		font-size: 0.38rem;
+		color: #333333;
+	}
+	.baby_depict span{
+		border-left: 2px solid #33ccff;
+		padding-left: 0.5rem;
+	}
+	
+	.baby_introduce{
+		color: #b4b4b4;
+		font-size: 0.38rem;
+		border-top: 1px solid #808080;
+		padding-top: 0.2rem;
+		margin-top: 0.2rem;
+		height: 6rem;
+	}
+	/*底部*/
+	.foot{
+		overflow: hidden;
+		height: 1.6rem;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+	}
+	.foot>div{
+		float: left;
+		color: #FFFFFF;
+		height: 1.6rem;
+		text-align: center;
+	}
+	.foot div:nth-of-type(1){
+		width: 40%;
+		font-size: 0.36rem;
+		text-align: center;
+		padding: 0.3rem 0.1rem;
+		background: #33CCFF;
+	}	
+	.foot div:nth-of-type(2){
+		width: 30%;
+		font-size: .4rem;
+		background: #ff9933;
+		line-height: 1.6rem;
+	}
+	.foot div:nth-of-type(3){
+		width: 30%;
+		font-size: .4rem;
+		background: #ff6600;
+		line-height: 1.6rem;
+		
+	}
