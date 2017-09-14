@@ -12,7 +12,7 @@ html{
 	}
 }
 .head{
-	height: 1rem;
+	height: 1.28rem;
 	background-color: #33ccff;
 	text-align: center;
 	position: relative;
@@ -20,13 +20,13 @@ html{
 .head p{
 	font-size: .34rem;
 	color: #FFFFFF;
-	line-height: 1rem;
+	line-height: 1.28rem;
 }
 .head span{
-	width: .28rem;
-	height: .28rem;
-	border-left: solid #FFFFFF .05rem;
-	border-bottom: solid #FFFFFF .05rem;
+	width: .15rem;
+	height: .15rem;
+	border-left: solid #FFFFFF 1px;
+	border-bottom: solid #FFFFFF 1px;
 	top: 50%;
 	left: .35rem;
 	transform:translateY(-50%) rotate(45deg);
@@ -66,6 +66,7 @@ html{
 }
 .ShopAddress{
 	font-size: .26rem;
+	display: inline-block;
 }
 .serve{
 	color: #dcb83d;
@@ -232,6 +233,9 @@ li input{
 	height: 1rem;
 	border-top: solid #EEEEEE 1px;
 	overflow: hidden;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
 }
 .bot{
 	padding-top: .3rem;

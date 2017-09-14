@@ -16,7 +16,7 @@ body{
 }
 .head{
 	background-color: #33CCFF;
-	height: .9rem;
+	height: 1.28rem;
 	overflow: hidden;
 	position: relative;
 }
@@ -24,14 +24,14 @@ body{
 	font-size: .3rem;
 	color: #FFFFFF;
 	text-align: center;
-	line-height: .9rem;
+	line-height: 1.28rem;
 }
 .head span{
 	display: block;
 	width: .15rem;
 	height: .15rem;
-	border-left: solid #fff .04rem;
-	border-top: solid #fff .04rem;
+	border-left: solid #fff 1px;
+	border-top: solid #fff 1px;
     -webkit-transform:translateY(-50%) rotate(-45deg);
 	position: absolute;
 	left: .25rem;

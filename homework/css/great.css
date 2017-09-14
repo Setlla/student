@@ -3,19 +3,24 @@ html{
 }
 @media only screen and (min-width: 414px) and (max-width: 640px) {
 	html{
-		font-size: 64.7px;
+ 	     font-size: 64.7px;
+       }
+}
+@media only screen and (min-width: 320px) and (max-width: 414px) {
+	html{
+		font-size: 50px;
 	}
 }
 .head{
 	position: relative;
 	background-color: #33ccff;
-	height: 1.2rem;
+	height: 1.28rem;
 	text-align: center;
 }
 .head a{
 	color: #fff;
 	font-size: .24rem;
-    line-height: 1.2rem;
+    line-height: 1.28rem;
 }
 .head span{
 	position: absolute;

@@ -1,3 +1,4 @@
+var product0;
 $.ajax({
 	type:"post",
 	url:"http://39.108.219.59/getShopCar",
@@ -9,20 +10,21 @@ $.ajax({
 		product0 = data.result;
 	}
 });
-var product0;
+
 $(document).on("click",".settle",function(){
 var product1=[];
-	for(var i=0;i<$(".button.blue").length;i++){
-		if($(".button").hasClass("blue")){
-		    product1.push(product0[i])
-		}
+var content=$(".button.blue");
+	for(var i=0;i<content.length;i++){
+		var j = content.eq(i).parent(".bike").index();
+		    product1.push(product0[j])
+		
 	}
 	localStorage.setItem("product2",JSON.stringify(product1));
 	location.href = "FirmOrder.html";
 })
 var montage=function(data){
 	for(var i=0;i<data.result.length;i++){
-		var carContent='<div class="bike">'
+		var carContent='<div class="bike" data-id='+ data.result[i].product.id +'>'
 		              +'<span class="button">'
 //		              +'<i class="single"></i>'
 		              +'</span>'
@@ -118,6 +120,10 @@ $(document).on("click",".finish",function(){
 	});
 })
 	
+$(document).on("click",".present",function(){
+		var id=$(this).parent(".bike").data("id")
+		location.href="detail.html?id="+id;           
+	})
 
 
 

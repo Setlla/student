@@ -40,8 +40,8 @@ $(document).ready(function(){
 	});
 })
 var books = function(data){
-				 for(var i=0;i<data.result.lenght;i++){
-	var bokContent1='<p class="present">'+ data.result.product.Des +'</p>'
+//for(var i=0;i<data.result.lenght;i++){
+	  var bokContent1='<p class="present">'+ data.result.product.Des +'</p>'
   	               +'<div class="rate">'
   	               +'<p>￥<span>'+ data.result.product.CurPrice +'</span></p>'
   	               +'<i>'+ data.result.product.OldPrice +'</i>'
@@ -51,7 +51,10 @@ var books = function(data){
 				   +'<P>'+ data.result.product.Destination +'</P>'		
 				   +'</div>'	               
   	     $('.price').append(bokContent1);	 
-  	   }
+  	var bokContent2='<div class="depict">'
+					+'<p>'+ data.result.product.Des +'</p>'
+					+'</div>'
+		$('.describe').append(bokContent2);   
 	
 }
 $(document).on("click",".head span",function(){

@@ -18,11 +18,13 @@ html{
 	padding: 0 .15rem;
 	position: relative;
 }
-.head p{
+.change p{
 	font-size: .3rem;
 	color: #FFFFFF;	
 	line-height: 1.28rem;
 	float: left;
+	text-align: left;
+	position: absolute;
 }
 .head a{
 	font-size: .3rem;
@@ -48,8 +50,8 @@ html{
 .bike{
 	overflow: hidden;
 	position: relative;
-	margin-top: .2rem;
-	height: 3rem;
+	margin-top: .25rem;
+	/*height: 3rem;*/
 }
 .bike .button{
 	display: inline-block;
@@ -66,7 +68,7 @@ html{
 }
 .bike img{
 	width: 28%;
-	height: 2rem;
+	/*height: 2rem;*/
 	float: left;
 	margin-left: 10%;
 }
@@ -106,7 +108,7 @@ html{
 	font-size: .2rem;
 	color: #ff9900;
 	margin: 0;
-	float: left;
+	text-align: left;
 }
 .now span{
 	font-size: .3rem;
@@ -115,16 +117,16 @@ html{
 	font-size: .18rem;
 	color: #999999;
 	margin-top: .05rem;
-	margin-left: .5rem;
-	float: left;	
 	text-decoration: line-through;
+	width: 40%;
+	text-align: left;
 }
 .price p{
 	display: inline-block;
 	color: #333333;
 	font-size: .26rem;
-	float: right;
-	margin-right:.2rem ;
+	width: 30%;
+	text-align: right;
 }
 .balance{
 	position: relative;
@@ -149,20 +151,14 @@ html{
 	top:.28rem;
 	left:.64rem;
 }
-/*.checkall .all{
-	width: .16rem;
-	height: .16rem;
-	display: block;
-	background-color: #FFFFFF;
-	border-radius: .8rem;
-	margin: .06rem auto;	
-}*/
 .balance .settle{
 	font-size: .3rem;
-	background-color: #ee8219;
+	background-color: #979797;
 	padding: .3rem .3rem;
 	color: #FFFFFF;
 	display: inline-block;
+	border: none;
+	disabled:disabled;
 }
 .total{
 	margin-right: .2rem;
@@ -184,7 +180,7 @@ html{
 .bot{
 	width: 100%;
 	z-index: 999;
-	padding-top: .1rem;
+	padding: .1rem 0;
 	display: block;
 }
 .bot li{

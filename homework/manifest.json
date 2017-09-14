@@ -10,7 +10,7 @@
     "icons": {
         "72": "icon.png"
     },
-    "launch_path": "information.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+    "launch_path": "ShopCar.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
     "developer": {
         "name": "",/*开发者名称*/
         "email": "",/*开发者邮箱地址*/
@@ -214,7 +214,10 @@
 					"img/dp_15.png",
 					"js/dp.js",
 					"js/click.js",
-					"ShopCar.html"
+					"ShopCar.html",
+					"js/skip.js",
+					"detail.html",
+					"personal.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -232,7 +235,12 @@
 					"js/jquery-3.2.1.js",
 					"img/dp_17.png",
 					"img/shopcar_04.png",
-					"css/all.css"
+					"css/all.css",
+					"js/settle.js",
+					"js/skip.js",
+					"detail.html",
+					"FirmOrder.html",
+					"personal.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -254,7 +262,13 @@
 					"img/dp_20.png",
 					"img/dp_15.png",
 					"img/personal_26.png",
-					"img/personal_29.png"
+					"img/personal_29.png",
+					"js/personal.js",
+					"information.html",
+					"denglu.html",
+					"js/skip.js",
+					"dp.html",
+					"ShopCar.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -265,7 +279,67 @@
 					"css/all.css",
 					"css/information.css",
 					"js/information.js",
-					"js/jquery-3.2.1.js"
+					"js/jquery-3.2.1.js",
+					"personal.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"denglu.html": {
+				"resources": [
+					"img/input_19.png",
+					"img/input_23.png",
+					"js/denglu.js",
+					"js/jquery-3.2.1.js",
+					"css/denglu.css",
+					"js/md5.js",
+					"dp.html",
+					"zhuce.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"detail.html": {
+				"resources": [
+					"img/timg0.jpg",
+					"img/timg.jpg",
+					"js/Carousel.js",
+					"img/timg 1.jpg",
+					"img/cat.jpeg",
+					"css/detail.css",
+					"js/detail.js",
+					"css/all.css",
+					"img/detail_03.png",
+					"ShopCar.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"FirmOrder.html": {
+				"resources": [
+					"img/order_03.png",
+					"img/order_17.png",
+					"css/FirmOrder.css",
+					"js/span.js",
+					"js/FirmOrder.js",
+					"ShopCar.html",
+					"css/all.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"zhuce.html": {
+				"resources": [
+					"img/zc_13.png",
+					"css/zhuce.css",
+					"img/zc_10.png",
+					"denglu.html",
+					"js/zc.js",
+					"img/logo-test-7.png",
+					"img/zc_06.png",
+					"css/all.css",
+					"img/zc_03.png",
+					"js/zzbds.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -274,24 +348,13 @@
 		"idle": {
 			"resources": [
 				"css/OrderDetail.css",
-				"js/Carousel.js",
-				"js/detail.js",
 				"img/order_01.png",
-				"img/zc_03.png",
 				"js/SendYzm.js",
 				"css/pc.css",
 				"img/book_03.png",
-				"img/zc_10.png",
-				"img/input_23.png",
 				"img/icon_1.png",
-				"css/detail.css",
 				"arrow.html",
-				"img/order_03.png",
-				"img/zc_13.png",
 				"js/great.js",
-				"img/input_19.png",
-				"css/zhuce.css",
-				"js/denglu.js",
 				"css/great.css",
 				"img/order_14.png",
 				"img/car_07.png",
@@ -300,30 +363,15 @@
 				"js/findPswd.js",
 				"img/sj_03.png",
 				"index.html",
-				"img/timg 1.jpg",
-				"css/denglu.css",
-				"js/skip.js",
-				"zhuce.html",
-				"js/md5.js",
-				"detail.html",
 				"img/order_07.png",
 				"js/register.js",
 				"img/car_10.png",
-				"denglu.html",
 				"img/order_11.png",
-				"js/zc.js",
 				"great.html",
-				"img/logo-test-7.png",
 				"OrderDetail.html",
-				"img/cat.jpeg",
-				"js/zzbds.js",
-				"img/timg0.jpg",
-				"img/timg.jpg",
 				"css/Carousel.css",
 				"img/logo.png",
 				"css/mob.css",
-				"img/zc_06.png",
-				"img/detail_03.png",
 				"mob.html"
 			]
 		}

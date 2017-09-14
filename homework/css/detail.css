@@ -14,7 +14,7 @@ html{
 .head{
 	position: relative;
 	background-color: #33ccff;
-	height: 1rem;
+	height: 1.28rem;
 	text-align: center;
 }
 .head span{
@@ -32,7 +32,7 @@ html{
 .head p{
 	color: #FFFFFF;
 	font-size: .3rem;
-	line-height: 1rem;
+	line-height: 1.28rem;
 }
 .math{
 	padding: .5rem 0;
@@ -125,6 +125,9 @@ i{
 .bottom{
 	text-align: center;
 	overflow: hidden;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
 }
 .bottom a{
 	color: #FFFFFF;

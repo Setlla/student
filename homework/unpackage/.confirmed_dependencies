@@ -13,7 +13,10 @@
       "img/dp_15.png",
       "js/dp.js",
       "js/click.js",
-      "ShopCar.html"
+      "ShopCar.html",
+      "js/skip.js",
+      "detail.html",
+      "personal.html"
     ],
     "refer": []
   },
@@ -30,7 +33,12 @@
       "js/jquery-3.2.1.js",
       "img/dp_17.png",
       "img/shopcar_04.png",
-      "css/all.css"
+      "css/all.css",
+      "js/settle.js",
+      "js/skip.js",
+      "detail.html",
+      "FirmOrder.html",
+      "personal.html"
     ],
     "refer": [
       "dp.html"
@@ -53,7 +61,13 @@
       "img/dp_20.png",
       "img/dp_15.png",
       "img/personal_26.png",
-      "img/personal_29.png"
+      "img/personal_29.png",
+      "js/personal.js",
+      "information.html",
+      "denglu.html",
+      "js/skip.js",
+      "dp.html",
+      "ShopCar.html"
     ],
     "refer": []
   },
@@ -63,8 +77,68 @@
       "css/all.css",
       "css/information.css",
       "js/information.js",
-      "js/jquery-3.2.1.js"
+      "js/jquery-3.2.1.js",
+      "personal.html"
     ],
     "refer": []
+  },
+  "denglu.html": {
+    "resources": [
+      "img/input_19.png",
+      "img/input_23.png",
+      "js/denglu.js",
+      "js/jquery-3.2.1.js",
+      "css/denglu.css",
+      "js/md5.js",
+      "dp.html",
+      "zhuce.html"
+    ],
+    "refer": []
+  },
+  "detail.html": {
+    "resources": [
+      "img/timg0.jpg",
+      "img/timg.jpg",
+      "js/Carousel.js",
+      "img/timg 1.jpg",
+      "img/cat.jpeg",
+      "css/detail.css",
+      "js/detail.js",
+      "css/all.css",
+      "img/detail_03.png",
+      "ShopCar.html"
+    ],
+    "refer": [
+      "ShopCar.html"
+    ]
+  },
+  "FirmOrder.html": {
+    "resources": [
+      "img/order_03.png",
+      "img/order_17.png",
+      "css/FirmOrder.css",
+      "js/span.js",
+      "js/FirmOrder.js",
+      "ShopCar.html",
+      "css/all.css"
+    ],
+    "refer": []
+  },
+  "zhuce.html": {
+    "resources": [
+      "img/zc_13.png",
+      "css/zhuce.css",
+      "img/zc_10.png",
+      "denglu.html",
+      "js/zc.js",
+      "img/logo-test-7.png",
+      "img/zc_06.png",
+      "css/all.css",
+      "img/zc_03.png",
+      "js/zzbds.js"
+    ],
+    "refer": [
+      "denglu.html"
+    ]
   }
 }

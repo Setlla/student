@@ -1,4 +1,5 @@
-$.post('http://39.108.219.59/productList',function(data,status){
+var data = {productName:""};
+$.post('http://39.108.219.59/productList',data,function(data,status){
 	for(var i=0;i<data.result.length;i++ ){
     	var resContent = '<div class="bike" data-id='+ data.result[i].id +'>'
     					+ '<img class="img" src="'+ data.result[i].Image +'" />'
