@@ -64,7 +64,7 @@
 		var datas=function(data){
 			for (var i=0;i<data.result.length;i++) {
 				var content=
-					'<div class="ware" data-id="'+data.result[i].id+'">'
+					'<div class="ware" data-id="'+data.result[i].product.id+'">'
 					+'<div class="ware_radio">'
 					+'<span class="list_radio"></span>'
 		        	+'</div>'
@@ -124,7 +124,7 @@
 		
 		//点击购物车商品查询详情订单
 		$(document).on("click",".ware_explain",function(){
-			var id=$(this).data('id');
+			var id=$(this).parents().data('id');
 	        location.href="DetailsPage.html?id=" + id;
 		})
 		
