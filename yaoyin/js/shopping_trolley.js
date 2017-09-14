@@ -122,6 +122,15 @@
 		}
 		gouwu();
 		
+		//点击购物车商品查询详情订单
+		$(document).on("click",".ware_explain",function(){
+			var id=$(this).data('id');
+	        location.href="DetailsPage.html?id=" + id;
+		})
+		
+		
+		
+		
 		//编辑全部
 		$(document).on("click",".head_left",function(){
 			$(this).css("display","none").siblings('.head_left1').css("display","block");

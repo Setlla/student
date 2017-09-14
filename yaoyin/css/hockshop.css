@@ -11,11 +11,6 @@
 		justify-content: space-between;
 		padding: 0 0.34rem;
 	}
-	/*.head_left{
-		position: relative;
-		height:1.6rem;
-		width: 1.2rem;
-	}*/
 	.head_left{
 		position: relative;
 		height: 0.88rem;
@@ -72,7 +67,7 @@
 		display: block;
 	}
 	.list1{
-		margin-bottom: 2rem;
+		margin-bottom: 2rem!important;
 		display: none;
 	}
 	.dot{
