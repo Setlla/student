@@ -101,38 +101,39 @@ html{
 	background-color: #f6f6f6;
 }
 .commodity img{
-	width: 23%;
+	width: 20%;
 	height: 1.5rem;
 	margin-left: .22rem;
 	margin-top: .12rem;
 }
 .means{
 	display: inline-block;
-	width: 65%;
+	width: 68%;
 	margin-left: .25rem;
 	margin-top: .2rem;
 	overflow: hidden;
 }
 .nickname{
 	font-size: .26rem;
-	width: 55%;
+	width: 80%;
 	float: left;
+	word-break: break-all;
 }
 .price{
 	font-size: .26rem;
 	float: right;
-	width: 45%;
+	width: 20%;
 	text-align: right;
 }
 .small{
 	font-size: .24rem;
 }
-.amount{
+.amount1{
 	font-size: .2rem;
 	color: #979797;
 	float: right;
 	text-align: right;
-	width: 45%;
+	width: 20%;
 	margin-top: .2rem;
 }
 .means button{
@@ -152,15 +153,38 @@ li{
 	padding: .3rem 0;
 	border-bottom: solid #EEEEEE 1px;
 	overflow: hidden;
+	position: relative;
 }
 li .left{
 	text-align: left;
 	font-size: .26rem;
 	display: inline-block;
-	
+	/*line-height: 1rem;*/
+}
+.round{
+	display: block;
+	width: 1.12rem;
+	height: .56rem;
+	border: solid #e6e6e6 .03rem;
+	float: right;
+	border-radius: .28rem;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color:#FFFFFF ;
+}
+.round i{
+	display: block;
+	height: .56rem;
+	width: .56rem;
+	border-radius: .28rem;
+	float: left;
+	background-color:#FFFFFF ;
+	/*border: solid #e6e6e6 1px;*/
+	box-shadow: 0 0 0 1px #e6e6e6 inset ;
 }
 li .right{
-	/*text-align: right;*/
 	font-size: .26rem;
 	float: right;
 }

@@ -6,6 +6,7 @@ $(document).ready(function(){
 			}else{
 				$(".button").removeClass("blue")
 			}
+		disable();
 		money();
 	})
 	
@@ -17,14 +18,13 @@ $(document).on("click",".button",function(){
 			$(".checkall span").addClass("blue")
 		}else{
 			$(".checkall span").removeClass("blue")
-		}
+		}	
+		disable();
 		money();
-	 })
-      
+	 })    
 })
+ 
  function money(){
-	
-//  $(".settle i").html($(".single.blue").length);
 	var content = $(".button.blue");
 	var total = 0;
 	var number = 0;
@@ -38,4 +38,13 @@ $(document).on("click",".button",function(){
 	$(".sum").text(total);
 	$(".settle i").text(number);
 }
-
+var disable = function(){
+	if($(".button.blue").length == 0){
+		$(".settle").attr("disabled","disabled");
+		$(".settle").css("background","#979797");
+	}else{
+		$(".settle").removeAttr("disabled");
+		$(".settle").css("background","#ee8219");
+	}
+}
+	

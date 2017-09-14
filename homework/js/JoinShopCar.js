@@ -5,9 +5,21 @@ $.ajax({
 	contentType:"application/JSON",
 	data:JSON.stringify({token:localStorage.getItem("token")}),
 	success:function(data){
-		montage(data);		
+		montage(data);
+		product0 = data.result;
 	}
 });
+var product0;
+$(document).on("click",".settle",function(){
+var product1=[];
+	for(var i=0;i<$(".button.blue").length;i++){
+		if($(".button").hasClass("blue")){
+		    product1.push(product0[i])
+		}
+	}
+	localStorage.setItem("product2",JSON.stringify(product1));
+	location.href = "FirmOrder.html";
+})
 var montage=function(data){
 	for(var i=0;i<data.result.length;i++){
 		var carContent='<div class="bike">'
@@ -105,3 +117,10 @@ $(document).on("click",".finish",function(){
 		}
 	});
 })
+	
+
+
+
+
+
+ 
