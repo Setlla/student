@@ -210,10 +210,11 @@
 			location.href="order_confirm.html";		
 			//选中的放到新数组里
 			var warelist=[];			
-			for (var i=0;i<$('.list_radio').length;i++) {
-				if ($('.list_radio').eq(i).hasClass("radio_1")) {
-					warelist.push(data_result[i]);					
-				}					
+			for (var i=0;i<$('.list_radio.radio_1').length;i++) {
+//				if ($('.list_radio').eq(i).hasClass("radio_1")) {
+				var j=$('.list_radio.radio_1').eq(i).parents('.ware').index();
+					warelist.push(data_result[j]);					
+//				}					
 			}
 			localStorage.setItem("warelist",JSON.stringify(warelist));
 		})
