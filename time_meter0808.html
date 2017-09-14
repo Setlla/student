@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>计时器</title>
+		<style>
+			button{
+				width: 60px;
+				height: 30px;
+				display: block;
+				color: #333333;
+				border: 1px solid #333333;
+				background-color: #FFFFFF;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>11</li>
+			<li>22</li>
+			<li>33</li>
+			<li>44</li>
+		</ul>
+		<br /><br /><br />
+		<button class="button" value="发送">发送</button>
+		
+		<script>
+		var num=10;
+		var str='发送';
+		var a1=document.querySelector("button");
+		var a2;
+		var time = function () {
+			a1.innerHTML=num;
+			a2=setTimeout("time()",1000);
+			if(num==0){
+				clearTimeout(a2);
+				a1.removeAttribute('disabled');
+				a1.style.color='#333333';
+				a1.style.borderColor='#333333';
+				a1.innerHTML='发送';
+				num=10;
+			}else{
+				a1.setAttribute('disabled','disabled');
+				a1.style.color='#c0baba';
+				a1.style.borderColor='#c0baba';
+				num--;
+			}
+		}
+		document.querySelector("button").addEventListener("click",function(){
+			time();
+		})
+		
+		
+		var xmlhttp;
+		if (window.XMLHttpRequest) {
+			xmlhttp=new XMLHttpRequest();
+		} else{
+			xmlhttp=new ActiveXObject();
+		}
+		
+		xmlhttp.open("post","http://192.168.0.127:8000/menu","true");
+		xmlhttp.send();
+		
+		var s=document.querySelectorAll("li");
+		xmlhttp.onreadystatechange=function(){
+			if(xmlhttp.readyState==4 && xmlhttp.status==200){
+				console.log("后台拿到的数据"+xmlhttp.responseText);
+				var table=JSON.parse(xmlhttp.responseText);
+				console.log(table);
+				for (var i =0;i<s.length;i++) {
+					s[i].innerText=table.result[i].menuName;
+					console.log(s[i].innerText);
+				}
+			}
+		}
+		</script>
+	</body>
+</html>

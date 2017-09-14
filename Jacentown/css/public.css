@@ -1,0 +1,96 @@
+	.price{
+		width: 100%;
+		height: 6.4rem;
+		background-color: #FFFFFF;
+		overflow: hidden;
+		margin-bottom: 0.24rem;
+		position: relative;
+	}
+	.price_left{
+		width: 50%;
+		height: 100%;
+		padding: 0.4rem 0.7rem;
+		float: left;
+		border-top: 1px solid #dadada;
+		border-right: 1px solid #dadada;
+	}
+	.price_left a{
+		display: inline-block;
+		margin-bottom: 0.3rem;
+	}
+	.price_left i{
+		width: 3rem;
+		height: 2.2rem;
+		display: block;
+		background: url(../img/ware/ware_49.png) no-repeat;
+		background-size: 3rem 2.2rem;
+	}
+	.price_right1{
+		width: 50%;
+		height: 45%;
+		float: right;
+		overflow: hidden;
+		padding: 0.3rem 0.2rem 0.3rem 0.4rem;
+		border-top: 1px solid #dadada;
+		border-bottom: 1px solid #dadada;
+	}
+	.price_right1 a{
+		width: 50%;
+		display: block;
+		float: left;
+	}
+	.price_right1 i{
+		width: 50%;
+		height: 2.24rem;
+		display: block;
+		background: url(../img/ware/ware_47.png)50% 50% no-repeat;
+		background-size: 1.4rem 2.1rem;
+		padding: 0rem 0rem 0rem 0.1rem;
+		float: right;
+	}
+	.price_right2{
+		padding: 0.2rem 0.2rem;
+		width: 50%;
+		height: 50%;
+		float: right;
+		overflow: hidden;
+	}
+	.price_right2 a{
+		margin-top: 0.2rem;
+		width: 50%;
+		display: block;
+		float:right;
+	}
+	.price_right2 i{
+		width: 50%;
+		height: 2.1rem;
+		background: url(../img/ware/ware_53.png) no-repeat;
+		background-size: 1.64rem 2.1rem;
+		display: block;
+	}
+
+
+	.title{
+		font-size: 0.5rem;
+		color: #666666;
+		margin: 0.2rem 0.3rem;
+		padding: 0rem 0.3rem;
+		border-left: 0.1rem solid #2a89de;
+
+	}
+	.title1{
+		font-size: 0.32rem;
+		color: #333333;
+		margin: 0rem 0rem 0.24rem 0rem;
+		text-indent: -0.14rem;
+	}
+	.title2{
+		font-size: 0.36rem;
+		color: #ff4000;
+		margin: 0.2rem 0rem 0.1rem 0rem;
+		overflow: hidden;
+	}
+	.title2 span{
+		display: block;
+		float: left;
+	}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>简易计算器</title>
+		<style>
+			div{
+				text-align: center;
+			}
+			table{
+				margin: 0 auto;
+				width: 200px;
+				height: 100px;
+				text-align: center;
+				
+			}
+			table tr td{
+				background-color: white;
+				border: 1px solid #a69c9c;
+			}
+			table tr th{
+				background-color: white;
+				border: 1px solid #a69c9c;
+			}
+			input{
+				margin: 0 auto;
+				width: 192px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+        	作者：492680716@qq.com
+        	时间：2017-07-26
+        	描述：计算器
+        -->
+		<div>
+			<input type="text" disabled="disabled" name="input" value="" placeholder="计算结果"/>
+			<table>
+				<tr>
+					<td class="td2">C</td>
+					<td>+</td>
+					<td>-</td>
+					<td>*</td>
+					
+				</tr>
+				<tr>
+					<td>7</td>
+					<td>8</td>
+					<td>9</td>
+					<td>/</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+					<th rowspan="3" class="result">=</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+				</tr>
+				<tr>
+					<td>%</td>
+					<td>0</td>
+					<td>.</td>
+				</tr>
+			</table>
+		</div>
+		
+		
+		<script>
+			//计算器
+			//鼠标事件获取值
+			//委托事件子级
+			function td(){
+				var td=document.querySelectorAll("tr td");
+				for (var i=0;i<td.length;i++) {
+					td[i].addEventListener("mouseup",function(td_1){
+						td_1.target.style.backgroundColor="#FFFFFF";
+					})
+					td[i].addEventListener("mousedown",function(td_2){
+						td_2.target.style.backgroundColor="#a69c9c";
+					})
+				}
+			}
+			//委事件父级
+			document.querySelector("table").addEventListener("click",function(tab){
+				//清空input内容
+				document.querySelector('.td2').addEventListener("click",function(){
+					document.querySelector("input").value="";
+				})
+				//执行子事件
+				td();
+				//获取input字符串
+				document.querySelector('input').value+=tab.target.innerHTML;
+				var x=document.querySelector('input').value;
+				//判断运算
+				var y=x.split("");
+				console.log(y+"这是数组内容");
+				
+				var index=x.indexOf('+');
+				var s1=x.substring(0,index);
+				var s2=x.substring(index+1);
+				var s3=x[index];
+				console.log(s1+"s1");
+				console.log(s2+"s2");
+				document.querySelector(".result").addEventListener('click',function(){
+					var result='';
+					switch(s3)
+					{
+						case '+':
+						result=parseInt(s1)+parseInt(s2);
+						break;
+						case '-':
+						result=parseInt(s1)-parseInt(s2);
+						break;
+						case '*':
+						result=parseInt(s1)*parseInt(s2);
+						break;
+						case '/':
+						result=parseInt(s1)/parseInt(s2);
+						break;
+						default:
+						console.log('请按例子2+2的格式来输入！');
+						break;
+					}
+					document.querySelector('input').value=result;
+					console.log(document.querySelector('input').value);
+				})
+			})
+		</script>
+	</body>
+</html>

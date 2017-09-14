@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>DOM操作</title>
+	</head>
+	<body>
+		<p id="test-p">test1</p>
+		<div id="list">
+			<p id="p1">test2</p>
+			<p id="p2">test3</p>
+			<p id="p3">test4</p>
+		</div>
+		
+		<img class="img" src="img/item.jpg" />
+		<a href="#">点击改变图片大小</a>
+		
+		<script>
+			//插入DOM
+			var s=document.getElementById("test-p");
+			var list=document.getElementById("list");
+			list.appendChild(s);
+			//重新创建一个节点，然后插入到指定位置
+			var s1=document.getElementById("test-p");
+			var list1=document.createElement("p");
+			list1.id='list1';
+			list1.innerText="dasfdsaf";
+			s.appendChild(list1);
+			
+			//添加样式，然后插入到head里面
+			var d = document.createElement('style');
+			d.setAttribute('type', 'text/css');
+			d.innerHTML = 'p { color: red }';
+			document.getElementsByTagName('head')[0].appendChild(d);
+			
+			//改变图片的宽高
+			var num=0;
+			document.querySelector("a").addEventListener("click",function (e) {
+				var s=document.querySelector("img").width;
+				console.log(s);
+					if (num%2==0) {
+						document.querySelector("img").width='100'; //页面的第一个img
+						document.getElementsByClassName("img")[0].src="img/item2.jpg";//缩小就变这个图片
+					}
+					if (num%2==1) {
+						document.querySelector("img").width='300'; 
+						document.getElementsByClassName("img")[0].src="img/item.jpg";//变大就变这个图片
+					}
+					num++;	
+			})
+		</script>
+	</body>
+</html>

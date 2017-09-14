@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>简易计算器</title>
+		<style>
+			div{
+				text-align: center;
+			}
+			table{
+				margin: 0 auto;
+				width: 200px;
+				height: 100px;
+				text-align: center;
+			}
+			input{
+				margin: 0 auto;
+				width: 196px;
+			}
+		</style>
+		<script>
+			//找出数组最大值跟最小值
+			var a = [-1,2,3,4,5,0,7,9,11];
+			var s1=a[0];
+			for(var i=1;i<a.length;i++){
+				if(a[i]<s1){
+					s1=a[i];
+				}
+			}
+			console.log(s1);
+			
+			var s2=a[0];
+			for(var i=1;i<a.length;i++){
+				if(a[i]>s2){
+					s2=a[i];
+				}
+			}
+			console.log(s2);
+			
+			
+			//成绩判断
+			var mark=76;
+			switch(true){
+				case mark<60:
+				console.log('不及格');
+				break;
+				case mark<70:
+				console.log('及格');
+				break;
+				case mark<80:
+				console.log('良好');
+				break;
+				case mark>80:
+				console.log('优秀');
+				break;
+			}
+			
+			
+			//1加到100
+			var s=0;
+			for(var a=0;a<100;a++){
+				s=s+a;
+			}
+			
+			
+			//计算器
+			function add(num1,num2){
+				var addition=num1+num2;
+				return addition;
+			}
+//		console.log(document.querySelector('td').innerText);	
+		</script>
+	</head>
+	<body>
+		<!--
+        	作者：492680716@qq.com
+        	时间：2017-07-26
+        	描述：计算器
+        -->
+		<div>
+			<input type="text" disabled="disabled" value="计算结果"/>
+			<table border="1" cellspacing="0" cellpadding="0">
+				<tr>
+					<td><button>+</button></td>
+					<td><button>-</button></td>
+					<td><button>x</button></td>
+					<td><button>C</button></td>
+				</tr>
+				<tr>
+					<td><button>7</button></td>
+					<td><button>8</button></td>
+					<td><button>9</button></td>
+					<td><button>/</button></td>
+				</tr>
+				<tr>
+					<td><button>4</button></td>
+					<td><button>5</button></td>
+					<td><button>6</button></td>
+					<td rowspan="3"><button>=</button></td>
+				</tr>
+				<tr>
+					<td><button>1</button></td>
+					<td><button>2</button></td>
+					<td><button>3</button></td>
+				</tr>
+				<tr>
+					<td><button>%</button></td>
+					<td><button>0</button></td>
+					<td><button>.</button></td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

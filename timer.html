@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>计时器</title>
+	</head>
+	<body>
+		<input value="" name="input" class="ipt"/>
+		<a href="#" style="text-decoration: none;" class="start">计时开始</a>
+		<a href="#" style="text-decoration: none;" class="end">计时结束</a>
+		
+		<script>
+			var a=1;
+			var watchs  = function () {
+				document.querySelector(".ipt").value = a;
+				a++;
+//				setTimeout('watchs()',1000);
+			}
+			//计时开始调用watchs函数
+			var b=null;
+			document.querySelector(".start").addEventListener("click",function(){
+//				watchs();
+				b=setInterval('watchs()',1000);
+			})
+			
+			//计时停止调用clearInterval函数;
+			document.querySelector(".end").addEventListener("click",function(e){
+				clearInterval(b);
+			})
+		</script>
+	</body>
+</html>

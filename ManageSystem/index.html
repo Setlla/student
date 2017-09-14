@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>有为APP后台管理系统</title>
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/system.css" />
+		<script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
+	</head>
+	<body>
+		<!--
+        	作者：492680716@qq.com
+        	时间：2017-09-09
+        	描述：有为APP后台管理系统左边模块
+        -->
+        <ul class="head">
+        	<li class="head_left">
+        		<span>有为APP</span>后台管理系统
+        	</li>
+        	<li class="head_right">
+        		你好,管理员!<a class="quit" href="#">退出</a>
+        	</li>       	
+        </ul>
+        
+        <!--
+        	作者：492680716@qq.com
+        	时间：2017-09-09
+        	描述：管理列表
+        -->
+        <ul class="managelist">
+        	<li>
+        		<span style="background-position:-1px 0;"></span>
+        		<span>学生管理</span>
+        	</li>
+        	<li>
+        		<span style="background-position:-2px -24px;"></span>
+        		<span>企业管理</span>
+        	</li>
+        	<li>
+        		<div class="motion">
+	        		<span style="background-position:0 -72px;"></span>
+	        		<span>运营管理</span>
+	        		<span class="arr"></span>
+        		</div>
+        		<ul>
+        			<li>
+        				<a href="#">活动管理</a><br />
+        				<a href="#">系统消息</a><br />
+        				<a href="#">评论管理</a><br />
+        				<a href="#">动态管理</a><br />
+        				<a href="#">信息管理</a><br />
+        			</li>
+        		</ul>
+        	</li>
+        	<li>
+        		<span style="background-position:-1px -48px;"></span>
+        		<span>课程管理管理</span>
+        	</li>
+        	<li>
+        		<span style="background-position:-1px -48px;"></span>
+        		<span>虚拟学生管理</span>
+        	</li>
+        	<li>
+        		<span style="background-position:-2px -24px;"></span>
+        		<span>虚拟企业管理</span>
+        	</li>
+        </ul>
+        <!--
+        	作者：492680716@qq.com
+        	时间：2017-09-10
+        	描述：管理内容---检索
+        -->
+        <div class="content">
+        	<!-- 检索模块 -->
+        	<div class="search">
+        		<p>检索</p>
+        		<select>
+        			<option>北京</option>
+        			<option>上海</option>
+        			<option>广州</option>
+        			<option>深圳</option>
+        			<option>长沙</option>
+        			<option>天津</option>
+        		</select>
+        		<select>
+        			<option>海淀</option>
+        			<option>朝阳</option>
+        		</select>
+        		<span class="area">
+        			<input type="text" placeholder="输入企业名称或ID"/><button class="area_btn"></button>
+        		</span>       		
+        	</div>
+        	<!-- 最新注册模块 -->
+        	<div class="reg">
+        		<div class="reg_head">
+	        		<span>最新注册</span>
+	        		<ul class="add">
+	        			<li><a href="#">添加功能</a></li>
+	        			<li><a href="#">编辑功能</a></li>
+	        			<li><a href="#">删除功能</a></li>
+	        			<li></li>
+	        		</ul>
+        		</div>
+	        	<table class="data" cellpadding="0" cellspacing="0" border="1">
+	        		<tr class="first">
+	        			<td>ID</td>
+	        			<td>头像</td>
+	        			<td>手机号</td>
+	        			<td>姓名</td>
+	        			<td>企业名称</td>
+	        			<td>企业性质</td>
+	        			<td>地点</td>
+	        			<td>公司规模</td>
+	        			<td>发布职位数</td>
+	        			<td>站内信</td>
+	        			<td>最后登录时间</td>
+	        			<td>操作</td>
+	        		</tr>
+	        		<tr>
+	        			<td>1001</td>
+	        			<td>dfadf</td>
+	        			<td>13617456698</td>
+	        			<td>姚胤</td>
+	        			<td>国新世纪公司</td>
+	        			<td>私营</td>
+	        			<td>北京</td>
+	        			<td>111</td>
+	        			<td>11</td>
+	        			<td>10</td>
+	        			<td>2017-09-10 14:22:15</td>
+	        			<td><a href="">查看</a></td>
+	        		</tr>
+	        		<tr>
+	        			<td>1001</td>
+	        			<td>dfadf</td>
+	        			<td>13617456698</td>
+	        			<td>姚胤</td>
+	        			<td>国新世纪公司</td>
+	        			<td>私营</td>
+	        			<td>北京</td>
+	        			<td>111</td>
+	        			<td>11</td>
+	        			<td>10</td>
+	        			<td>2017-09-10 14:22:15</td>
+	        			<td><a href="">查看</a></td>
+	        		</tr>
+	        		<tr>
+	        			<td>1001</td>
+	        			<td>dfadf</td>
+	        			<td>13617456698</td>
+	        			<td>姚胤</td>
+	        			<td>国新世纪公司</td>
+	        			<td>私营</td>
+	        			<td>北京</td>
+	        			<td>111</td>
+	        			<td>11</td>
+	        			<td>10</td>
+	        			<td>2017-09-10 14:22:15</td>
+	        			<td><a href="">查看</a></td>
+	        		</tr>
+	        		<tr>
+	        			<td>1001</td>
+	        			<td>dfadf</td>
+	        			<td>13617456698</td>
+	        			<td>姚胤</td>
+	        			<td>国新世纪公司</td>
+	        			<td>私营</td>
+	        			<td>北京</td>
+	        			<td>111</td>
+	        			<td>11</td>
+	        			<td>10</td>
+	        			<td>2017-09-10 14:22:15</td>
+	        			<td><a href="">查看</a></td>
+	        		</tr>
+	        		<tr>
+	        			<td>1001</td>
+	        			<td>dfadf</td>
+	        			<td>13617456698</td>
+	        			<td>姚胤</td>
+	        			<td>国新世纪公司</td>
+	        			<td>私营</td>
+	        			<td>北京</td>
+	        			<td>111</td>
+	        			<td>11</td>
+	        			<td>10</td>
+	        			<td>2017-09-10 14:22:15</td>
+	        			<td><a href="">查看</a></td>
+	        		</tr>
+	        	</table>
+		        <ul class="numlist">
+		        	<li><a href="#"><<</a></li>
+		        	<li><a href="#">1</a></li>
+		        	<li><a href="#">2</a></li>
+		        	<li><a href="#">3</a></li>
+		        	<li><a href="#">4</a></li>
+		        	<li><a href="#">5</a></li>
+		        	<li><a href="#">>></a></li>
+		        </ul>
+        	</div>
+        </div>       
+	</body>
+</html>

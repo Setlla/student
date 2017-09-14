@@ -1,0 +1,325 @@
+		*{
+				margin: 0rem;
+				padding: 0rem;
+				box-sizing: border-box;
+			}
+			p{
+				margin: 0rem;
+			}
+			ul{
+				margin: 0rem;
+				padding: 0rem;
+				list-style-type: none;
+			}
+			a{
+				text-decoration: none;
+			}
+			html{
+				font-family: "微软雅黑";
+				font-size: 50px;
+			}
+			/*头部A链接*/
+			.head{
+				width: 100%;
+				height: 12rem;
+				font-size: 0.32rem;
+				margin-bottom: 1rem;
+				background: url(../img/slider/banner.jpg) 100% no-repeat;	
+			}
+			.head_title{
+				width: 100%;
+				height: 1.4rem;
+				line-height: 1.4rem;
+				background-color: rgba(21,21,21,0.7);
+				padding: 0rem 16%;
+				display: block;
+			}
+			.head_BLUE{
+				font-weight: bold;
+				color: #FFFFFF;
+				display: inline-block;
+			}
+			.title1{
+				height: 1.4rem;
+				float: right;
+			}
+			.title1 a{
+				padding: 0rem 0.6rem;
+				color: #FFFFFF;
+			}
+			.head_title a:hover{
+				color:rgba(18,141,195,0.7);
+			}
+			.head_menu{
+				width: 0.7rem;
+				height: 0.7rem;
+				border-radius: 0.1rem;
+				border: 2px solid #FFFFFF;
+				display: inline-block;
+				float: right;
+				margin: 0.3rem 0rem;
+				display: none;
+			}
+			.head_menu span{
+				width: 0.4rem;
+				height: 2px;
+				background-color: #FFFFFF;
+				display: block;
+				margin: 0.12rem 0.1rem;
+			}
+			
+			/*@media only screen and (max-width: 900px){
+				.head_title{
+					width: 100%;
+					height: 1.4rem;
+					line-height: 1.4rem;
+					background-color: rgba(21,21,21,0.7);
+					padding: 0rem 5%;
+					overflow: hidden;
+				}
+				.head_menu{
+					width: 0.7rem;
+					height: 0.7rem;
+					border-radius: 0.1rem;
+					border: 2px solid #FFFFFF;
+					display: inline-block;
+					float: right;
+					display: block;
+				}
+				.title1{
+					display: none;
+				}
+			}*/
+			
+			/*头部动画部分*/
+			.head_font{
+				width: 100%;
+				text-align: center;
+				padding: 1.6rem 0rem;
+			}
+			.head_font p{
+				color: white;
+			}
+			.head_font p:nth-child(1){
+				font-size: 0.7rem;
+			}
+			.head_font p:nth-child(2){
+				margin: 0.8rem 0rem;
+				font-size: 0.4rem;
+			}
+			/*head动画特效*/
+			.animation_blue{
+				width: 3rem;
+				height: 1rem;
+				background: rgba(18,141,195,0.7);
+				margin: 0.8rem 0rem;
+				display: inline-block;
+				text-align: center;
+				line-height: 1rem;
+				position: relative;
+			}
+			.animation_white{
+				width: 0rem;
+				height: 1rem;
+				background: rgba(255,255,255,0.9);	
+				transition:width 1s;
+				-webkit-transition:width 1s;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			.animation_blue:hover .animation_white{
+				width: 3rem;
+			}
+			.animation_blue:hover .span1{
+				color: rgba(18,141,195,0.7);
+				transition:ease 1.5s;
+				-webkit-animation:ease 1.5s;/*ease延迟1.5秒*/
+			}
+			.span1{
+				color: white;
+				font-size: 0.3rem;
+				display: inline-block;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				z-index: 1000;
+			}
+			/*project标题下的图片效果 */
+			.projects{
+				padding: 0rem 2rem;
+				overflow: hidden;
+				margin: 0rem auto;	
+			}
+			.projects_title{
+				width: 100%;
+				text-align: center;
+			}
+			.projects_title p:nth-of-type(1){
+				font-size: 0.7rem;
+				color: #666666;
+			}
+			.projects_solid{
+				width: 2rem;
+				border-bottom: 1px solid #019ee3;
+				margin: 0.4rem auto;
+			}
+			.projects_title p:nth-of-type(3){
+				font-size: 0.4rem;
+				color: #666666;
+				margin: 0.4rem auto;
+			}
+			.projects_ul li{
+				float: left;
+				width: 49%;
+				margin: 0.06rem;
+				position: relative;
+				overflow: hidden;
+			}
+			.projects_ul li img{
+				width: 100%;
+				display: block;
+			}
+			
+			.projects_transition{
+				width: 100%;
+				height: 1.8rem;
+				background: rgba(72,70,64,0.8);
+				position: absolute;
+				bottom: -1.8rem;
+				transition:all 1.1s; 
+				padding: 0.3rem 0.6rem;
+				-webkit-transition:all 1.1s; 
+			}
+			.projects_ul li:hover .projects_transition{
+				bottom: 0;
+			}
+			
+			.projects_transition p:nth-child(1){
+				font-size:0.4rem;
+				color: #FFFFFF;
+			}
+			.projects_transition p:nth-child(2){
+				font-size:0.3rem;
+				color: #FFFFFF;
+			}
+			
+
+			/*蓝色背景fixed*/
+			.fixed{
+				width: 100%;
+				height: 12rem;
+				margin: 0.8rem auto;
+				background: url("../img/parallax/testimonial.jpg")50% 50% no-repeat;
+				background-attachment: fixed;
+			}
+			.fixed_blue{
+				width: 100%;
+				height: 12rem;
+				background-color:#3faee4;
+				opacity:0.9;
+				text-align: center;
+				padding-top: 1rem;
+			}
+			.fixed_blue p{
+				color: white;
+			}
+			.fixed_blue p:nth-of-type(1){
+				font-size: 0.5rem;
+			}
+			.fixed_solid{
+				width: 2rem;
+				border-bottom: 1px solid #ffffff;
+				margin: 0.4rem auto;
+			}
+			.fixed_blue p:nth-of-type(3){
+				margin: 0.4rem 0rem;
+				font-size: 0.26rem;
+			}
+			.fixed_blue p:nth-of-type(4){
+				font-size: 0.3rem;
+				width: 60%;
+				margin: 0 auto;
+				line-height: 0.6rem;
+			}
+			.fixed_circle{
+				width: 1.6rem;
+				height: 1.6rem;
+				border-radius: 0.8rem;
+				border: 1px solid #FFFFFF;
+				display: inline-block;
+				background: url("../img/member-1.jpg") no-repeat;
+				background-size: 100% auto;
+			}
+			
+			/*尾部*/
+			.foot{
+				width: 70%;
+				margin: 1rem auto;
+			}
+			.foot_US{
+				border-bottom: 1px solid #019ee3;
+				height: 0.6rem;
+				line-height: 0.6rem;
+				margin-bottom: 0.1rem;
+			}
+			.foot_US p{
+				color: #333;
+				font-size: 0.3rem;
+				font-weight: bold;
+			}
+			.foot_phone li{
+				margin: 0rem;
+				padding: 0rem;
+				width: 100%;
+				overflow: hidden;
+			}
+			.foot_phone li:nth-of-type(1){
+				padding: 0.2rem 0rem;
+			}
+			.foot_phone li a{
+				margin: 0rem 0rem 0.2rem 0.8rem;
+			}
+			.foot_phone li a:hover{
+				color: red;
+			}
+			.foot_phone li a{
+				color: #818181;
+				font-size: 0.3rem;
+				display: block;
+			}
+			.foot_phone span{
+				background: url(../img/img_icon.png) no-repeat;
+				background-size: 28px auto;
+				width: 0.56rem;
+				height: 0.48rem;
+				display: inline-block;
+				vertical-align: middle;
+			}
+			.foot_span1{
+				background-position:-2px -29px !important;
+				float: left;
+			}
+			.foot_span2{
+				background-position:-3px 0 !important;
+				float: left;
+			}
+			.foot_span3{
+				background-position:0 -65px !important;
+				float: left;
+			}
+			/*all right*/
+			.all_right{
+				width: 100%;
+				height: 1rem;
+				background-color: #2e2e2e;
+				text-align: center;
+				line-height: 1rem;
+				
+			}
+			.all_right p{
+				color:white;
+				font-size: 0.16rem;
+			}
+			
