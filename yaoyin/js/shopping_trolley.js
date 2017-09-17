@@ -206,17 +206,15 @@
 		})
 		
 		//结算跳转			
-		$(document).on("click",".foot_fruit button",function(){
-			location.href="order_confirm.html";		
+		$(document).on("click",".foot_fruit button",function(){	
 			//选中的放到新数组里
 			var warelist=[];			
 			for (var i=0;i<$('.list_radio.radio_1').length;i++) {
-//				if ($('.list_radio').eq(i).hasClass("radio_1")) {
 				var j=$('.list_radio.radio_1').eq(i).parents('.ware').index();
-					warelist.push(data_result[j]);					
-//				}					
+				warelist.push(data_result[j]);								
 			}
 			localStorage.setItem("warelist",JSON.stringify(warelist));
+			location.href="order_confirm.html";	
 		})
 		
 	})//ready的括号

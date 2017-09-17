@@ -51,6 +51,10 @@
 		font-weight: 500;
 		color: #666666;
 		margin: 0.16rem 0rem;
+		overflow: hidden;
+		display: -webkit-box;
+   		-webkit-line-clamp: 2;
+    	-webkit-box-orient: vertical;
 	}
 	.ware_explain p:nth-of-type(2){
 		font-size: 0.24rem;

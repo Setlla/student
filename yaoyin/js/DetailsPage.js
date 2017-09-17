@@ -60,7 +60,7 @@
 				datas(data);//插入动态数据				
 			}
 		})
-		//购物车
+		//加入购物车
 		$('.addshopcar').click(function(){
 			$.ajax({
 				type:"post",
