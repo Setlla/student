@@ -4,9 +4,13 @@ var user = JSON.parse(localStorage.getItem("user"));
     $(".address").html(user.address);
 var product2 = JSON.parse(localStorage.getItem("product2"));
 
+
+
+
+
 var firmoder = function(){
 	for(var i=0; i<product2.length; i++){
-		var firmContent =   '<div class="commodity">'
+		var firmContent =   '<div class="commodity" data-id='+ product2[i].product.id +'>'
 							+'<img src="'+ product2[i].product.Image +'" />'
 							+'<div class="means">'
 							+'<p class="nickname">'+ product2[i].product.Name +'</p>'
@@ -37,6 +41,8 @@ var number = 0;
 	}
 	$(".sum").text(total);
 	$(".one").text(number);
+	totalCost = total;
+	totalNum = number;
 }
 money();
 
@@ -44,8 +50,52 @@ $(document).on("click",".round",function(){
 	if($(".round i").css("float") == "left"){
 		$(".round i").css("float","right");
 		$(".round").css("background","#33ccff");
+		isInvoice = 1;
 	}else{
 		$(".round i").css("float","left");
-		$(".round").css("background","#FFFFFF");	}
+		$(".round").css("background","#FFFFFF");
+		isInvoice = 0;
+	}
 })
-
+var totalCost;
+var totalNum;
+var isInvoice = 0;	 
+$(document).on("click",".push",function(){
+	
+	var message = $("li input").val();
+	var ProductNumber;
+	var productId;
+	var id = "[";
+	var Number = "[";
+	for(var i=0; i<product2.length; i++){		
+		    productId = product2[i].product.id;
+		    id = id + productId + ",";
+		    ProductNumber = product2[i].ProductNumber + ",";
+		    Number = Number + ProductNumber;
+	}
+	id = id + "]";
+	Number = Number + "]";
+	var productId = id.replace(",]","]");
+	var ProductNumber = Number.replace(",]","]");
+	var data = {
+			token:localStorage.getItem("token"),
+			totalCost:totalCost,
+			totalNum:totalNum,
+			message:message,
+			isInvoice:isInvoice,
+			productId:productId,
+			productNum:ProductNumber
+	      }
+$.ajax({
+	type:"post",
+	url:"http://39.108.219.59/addOrder",
+	async:true,
+	contentType:"application/JSON",
+	data:JSON.stringify(data),
+	success:function(data){
+		if(data.isSuccess == true){
+			location.href = "OrderList.html";
+		}
+	}
+ });
+})

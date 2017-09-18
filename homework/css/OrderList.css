@@ -1,0 +1,180 @@
+html{
+	font-size: 100px;
+}
+@media only screen and (min-width: 414px) and (max-width: 640px) {
+	html{
+ 	     font-size: 64px;
+       }
+}
+@media only screen and (min-width: 320px) and (max-width: 414px) {
+	html{
+		font-size: 50px;
+	}
+}
+.head{
+	height: 1.28rem;
+	position: relative;
+	border-bottom: solid #18252D 1px;
+	width: 100%;
+	text-align: center;
+}
+.head span{
+	display: block;
+	height: .15rem;
+	width: .15rem;
+	border-left: solid #6b6b6b 1px;
+	border-bottom: solid #6b6b6b 1px;
+	transform:translateY(-50%) rotate(45deg);
+	position: absolute;
+	top: 50%;
+	left: .25rem;
+}
+.list{
+	font-size: .38rem;
+	color: #18252d;
+	line-height: 1.28rem;
+}
+.head img{
+	position: absolute;
+	height: .36rem;
+	width: .36rem;
+	top: 50%;
+	transform: translateY(-50%);
+	right: .95rem;
+}
+.dot{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: .38rem;
+}
+.dot i{
+	display: inline-block;
+	width: .08rem;
+	height: .08rem;
+	background-color: #676767;
+	border-radius: .04rem;
+}
+.input{
+	background-color: #EEEEEE;
+	padding: .15rem;
+}
+#Allorders{
+	background: url("../img/lister_07.png")33% no-repeat;
+	background-size: 5%;
+	width: 100%;
+	/*border: solid #EEEEEE .15rem;*/
+	padding: .1rem 0;
+	background-color: #FFFFFF;
+	border: none;
+	text-align: center;
+}
+.success{
+	padding: .3rem 0;
+	position: relative;
+}
+.success img{
+	width: .35rem;
+	height: .3rem;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: .3rem;
+}
+.success p{
+	font-size: .3rem;
+	display: inline-block;
+	margin-left: 1rem;
+}
+.success span{
+	display: inline-block;
+	width: .2rem;
+	height: .2rem;
+	border-right: solid #000000 1px;
+	border-bottom: solid #000000 1px;
+	transform: rotate(-45deg);
+}
+.success a{
+	font-size: .28rem;
+	color: #f8256f;
+	float: right;
+	margin-right: .3rem;
+}
+.card{
+	overflow: hidden;
+	background-color: #F6F6F6;
+	padding: .2rem 0;
+}
+.card img{
+	height: 1.9rem;
+	width:25% ;
+	float: left;
+	margin-left: .3rem;
+}
+.text{
+	overflow: hidden;
+	width: 65%;
+	float: right;
+	margin-right: .3rem;
+}
+.text p{
+	font-size: .3rem;
+	display: inline-block;
+	float: left;
+	width: 60%;
+}
+.text span{
+	display: block;
+	width: 40%;
+	float: right;
+	text-align: right;
+	font-size: .26rem;
+}
+.noprice{
+	color: #808080;
+	text-decoration: line-through;
+}
+.number{
+	color: #808080;
+}
+li{
+	overflow: hidden;
+	padding: .2rem 0;
+}
+.product{
+	border-bottom: solid #eeeeee 1px;
+}
+.button{
+	border-bottom: solid #eeeeee .15rem;
+	padding: .2rem 0;
+}
+li p{
+	font-size: .24rem;
+	color: #5a5a5a;
+   margin-right: .2rem;
+	float: right;
+}
+li span{
+	font-size: .28rem;
+	color: #3d3e40;
+}
+li button{
+	font-size: .3rem;
+	width: 1.5rem;
+	padding: .15rem 0;
+	text-align: center;
+	background-color: #FFFFFF;
+	border: none;
+	margin-right: .2rem;
+}
+.delete{
+	border: solid #BBBBBB 1px;
+		float: right;
+
+}
+.assess{
+	border: solid #f5003f 1px;
+	color: #f5003f;
+		float: right;
+
+}

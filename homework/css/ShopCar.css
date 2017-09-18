@@ -213,4 +213,5 @@ html{
 }
 .blue{
 	background-color: #33ccff!important;
+	border: solid #33ccff 1px!important;
 }
