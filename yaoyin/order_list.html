@@ -6,6 +6,7 @@
 		<link rel="stylesheet" href="css/public_1.css" />
 		<link rel="stylesheet" href="css/order_list.css" />
 		<script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
+		<script type="text/javascript" src="js/order_list.js" ></script>
 	</head>
 	<body>
 		<!--
@@ -44,20 +45,21 @@
         	时间：2017-08-29
         	描述：充值
         -->
-        <ul class="recharge">
-        	<li>
-        		<img src="img/ware/ware_77.png"/>
-        	</li>
-        	<li>
-        		<span>上海移动100元 充值 快充 及时到账...</span>
-        	</li>
-        	<li>
-        		<p><span>￥</span><span>99.80</span></p>
-        		<p><span>￥</span><span>99.80</span></p>
-        		<p>X1</p>   
-        	</li>
-        </ul>
-        
+        <div class="warelist">
+	        <ul class="recharge">
+		        	<li>
+		        		<img src="img/ware/ware_77.png"/>
+		        	</li>
+		        	<li>
+		        		<span>上海移动100元 充值 快充 及时到账...</span>
+		        	</li>
+		        	<li>
+		        		<p><span>￥</span><span class="new_price">99.80</span></p>
+		        		<p><span>￥</span><span class="old_price">99.80</span></p>
+		        		<p>X<span class="num">1</span></p>   
+		        	</li>
+		      </ul>
+	    </div>
         <!--
         	作者：492680716@qq.com
         	时间：2017-08-29
@@ -70,8 +72,8 @@
         		<span>(含运费 ￥0.00)</span>
         	</li>
         	<li>
-	        	<button class="del_btn">删除订单</button>
-	        	<button class="judge_btn">评价</button>   
+	        	<button class="del_btn"><span>删除订单</span></button>
+	        	<button class="judge_btn"><span>评价</span></button>   
         	</li>
         </ul>
 	</body>

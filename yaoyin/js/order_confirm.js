@@ -45,11 +45,14 @@
 		warelists();
 		
 		//是否开具发票
+		var flag=0;
 		$(document).on('click','.js_btn',function(){
 			if ($(this).children().hasClass('btn_1')) {
 				$(this).css("background","#FFFFFF").children().removeClass('btn_1');
+				flag=0;
 			} else{
 				$(this).css("background","#33CCFF").children().addClass('btn_1');
+				flag=1;
 			}
 		})
 		
@@ -57,6 +60,7 @@
 		var confirm=function(){
 			var totalCost=$('.result_1').text();
 			var totalNum=$('.sum_1').text();
+			var message=$('.message').val();
 			var productId=[];
 			var productNum=[];
 			for (var i=0;i<ware.length;i++) {
@@ -74,11 +78,16 @@
 					token:localStorage.getItem("token"),
 					totalCost:totalCost,
 					totalNum:totalNum,
+					message:message,
+					isInvoice:flag,
 					productId:productId,
 					productNum:productNum
 				}),
 				success:function(data,status){
-					console.log(data);
+					console.log(data+"ddd");
+					if(data.isSuccess==true){
+						location.href="order_list.html";
+					}
 				}
 			});
 		}
