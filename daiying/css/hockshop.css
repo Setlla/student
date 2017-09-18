@@ -65,8 +65,9 @@ ul{
 	display: flex;
 }
 .bicycle img{
-	width:2rem;
-	margin-top: .3rem;
+	width: 2rem;
+    height: 1.8rem;
+    margin-top: .2rem;
 }
 .shanghai{
 	flex: 1;

@@ -44,7 +44,23 @@
 			$(".heighter").html(conpicture);
 		}
 		
-
+$(document).on("click",".shopcar",function(){
+	$.ajax({
+		type:"post",
+		url:"http://39.108.219.59/addShopCar",
+		async:true,
+		contentType:"application/json",
+		data:JSON.stringify({
+			id: getParams('id'),
+			token:localStorage.getItem("token")
+			}),
+		success:function(data){
+			if(data.isSuccess==true){
+				location.href="shopcar.html";
+			}
+		}
+	});
+})
 
 			//setTimeout 的方法
 //
@@ -96,24 +112,6 @@
 		},function(){
 			a=setInterval(Carousel,1000);
 		})
-		
-$(".shopcar").click(function(){
-	$.ajax({
-	type:"post",
-	url:"http://39.108.219.59/addShopCar",
-	async:true,
-	contentType:"application/json",
-	data:JSON.stringify({
-		token:localStorage.getItem("token"),
-		id: getParams('id')
-	}),
-	success:function(data){
-		if(data.isSuccess==true){
-			location.href="shopcar.html";
-		}
-	}
-    });
-})
 
 $(document).on("click",".head a",function(){
 	history.back();

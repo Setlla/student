@@ -1,0 +1,113 @@
+html{
+	font-size:100px;
+}
+.head{
+	height:.9rem;
+	background-color: #33ccff;
+	text-align: center;
+	line-height: .9rem;
+	position: relative;
+}
+.head a{
+	display: inline-block;
+	width:.2rem;
+	height:.2rem;
+	border-bottom: solid 2px #fff;
+	border-left: solid 2px #fff;
+	transform:rotate(45deg) translateY(-50%);
+	position: absolute;
+	top:50%;
+	left:.2rem;
+}
+.head span{
+	color:#fff;
+	font-size: .36rem;
+}
+.success{
+	text-align: center;
+	font-size: .42rem;
+	color:#ff0000;
+	padding:.59rem 0;
+	border-bottom: solid .2rem #eee;
+}
+.present{
+	overflow: hidden;
+	border-bottom:  solid .2rem #eee;
+}
+.present img{
+	padding:.4rem .3rem;
+	float: left;
+	width:.25rem;
+}
+.detail{
+	float: left;
+	padding:.24rem 0;
+}
+.detail span,.detail p{
+	font-size: .3rem;
+	color:#888;
+}
+.logo{
+	padding:.3rem .26rem;
+}
+.logo img{
+	width:.35rem;
+}
+.logo span{
+	font-size: .24rem;
+	color:#cecfd1;
+	padding:0 .06rem 0 .2rem;
+}
+.logo a{
+	display: inline-block;
+	width:.15rem;
+	height:.15rem;
+	border-bottom: solid 1px #9a9a9a;
+	border-right: solid 1px #9a9a9a;
+	transform:rotate(-45deg) ;
+}
+.content{
+	position: relative;
+	overflow: hidden;
+	padding:.21rem .26rem .18rem .21rem;
+	background-color: #f6f6f6;
+}
+.content img{
+	padding: 0 .24rem .94rem 0;
+	width:1.94rem;
+	float: left;
+}
+.recharge{
+	font-size: .24rem;
+	margin: 0 auto;
+	width:2.2rem;
+}
+.number{
+	text-align: right;
+	position: absolute;
+	top:.21rem;
+	right:.26rem;
+}
+.newprice,.oldprice{
+	font-size: .2rem;
+}
+.num{
+	font-size: .18rem;
+}
+.oldprice,.num{
+	color:#c3c3c3;
+}
+.button{
+	position: absolute;
+	bottom: .18rem;
+	right:.21rem;
+}
+.advisory,.afterSales{
+	font-size: .26rem;
+	width:1.5rem;
+	padding:.1rem 0;
+	border: solid 1px #c8c8c8;
+	background-color: #fff;
+	border-radius:.1rem ;
+	outline: 0;
+}

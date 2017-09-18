@@ -14,8 +14,9 @@ var setData=function(data){
 	for(var n=0;n<data.result.length;n++){
 		var strings='<li class="bicycle" data-id='+data.result[n].product.id+'>'
 					+'<span class="dots round"></span>'
-					+'<img src='+data.result[n].product.Image+'/>'
 					+'<div class="right">'
+					+'<img src='+data.result[n].product.Image+'/>'
+					+'<div class="together">'
 					+'<div class="top">'
 					+'<p>'+data.result[n].product.Des+'</p>'
 					+'<span>'+data.result[n].product.Carriage+'</span>'
@@ -26,6 +27,7 @@ var setData=function(data){
 					+'<span>￥ <i class="newPrice">'+data.result[n].product.CurPrice+'</i></span>'
 					+'<span>价格￥: '+ data.result[n].product.OldPrice+'</span>'
 					+'<span>X<i class="number">'+data.result[n].ProductNumber+'</i></span>'
+					+'</div>'
 					+'</div>'
 					+'</div>'
 					+'</li>'
@@ -168,12 +170,15 @@ $(document).on("click",".menCenter",function(){
 
 $(document).on("click",".balance",function(){
 	var products = [];
-	var content = $(".bicycle");
+	var content = $(".dots.cur");
 	for(var i = 0; i<content.length;i++){
-		if(content.eq(i).find(".dots").hasClass("cur")){
-			products.push(get[i]);
-		}
+		var m=content.eq(i).parents(".bicycle").index();
+		products.push(get[m]);
 	}
 	localStorage.setItem("products",JSON.stringify(products));
 	location.href="firmOrder.html";
+})
+$(document).on("click",".right",function(){
+	var id=$(this).parents(".bicycle").data("id");
+	location.href = "details.html?id="+id;
 })

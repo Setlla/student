@@ -14,8 +14,8 @@ html{
 	left: .4rem;
 	top:50%;
 	display: inline-block;
-	width:.3rem;
-	height:.3rem;
+	width:.28rem;
+	height:.28rem;
 	border-bottom: solid 2px #535353;
 	border-left: solid 2px #535353;
 	transform: rotate(45deg) translate(-50%);
@@ -27,7 +27,7 @@ html{
 	top:50%;
 	transform: translate(-50%,-50%);
 }
-.img img{
+.shopcar{
 	width:.38rem;
 	position: absolute;
 	top:50%;
@@ -46,12 +46,13 @@ html{
 	text-align: center;
 	height:.58rem;
 	width: 94%;
-	border: solid .2rem #f6f6f6;
+	border: solid .2rem #eee;
 	outline: none;
+	border-radius:.3rem;
 }
 .souch{
 	position: relative;
-	background:#f6f6f6;
+	background:#eee;
 }
 .souch img{
 	width:.36rem;
@@ -67,4 +68,106 @@ html{
 .souch{
 	text-align: center;
 }
-
+.cat{
+	overflow: hidden;
+	padding:.25rem .24rem;
+}
+.cat span{
+	font-size: .24rem;
+}
+.cat span:nth-child(2){
+	padding:0 .1rem 0 .2rem;
+}
+.cat a{
+	text-align: center;
+	display: inline-block;
+	width:.15rem;
+	height:.15rem;
+	border-bottom: solid 1px #a9a9a9;
+	border-right: solid 1px #a9a9a9;
+	transform: rotate(-45deg);
+}
+.success{
+	float:right;
+	color:#cd1d43;
+}
+.cat img{
+	width:.34rem;
+	height:.26rem;
+}
+.content{
+	overflow: hidden;
+	background-color: #f6f6f6;
+}
+.shop{
+	padding:.2rem .24rem;
+	position: relative;
+}
+.shop:not(:last-child){
+	border-bottom: solid .2rem #fff;
+}
+.content img{
+	width:1.92rem;
+}
+.recharge{
+	font-size: .26rem;
+	position: absolute;
+	top:.2rem;
+	left:50%;
+	transform: translate(-50%);
+	width:30%;
+}
+.price{
+	float: right;
+	text-align: right;
+}
+.price_one{
+	font-size: .26rem;
+}
+.price_two{
+	font-size: .26rem;
+	color:#868686;
+	text-decoration:line-through;
+}
+.number{
+	font-size: .2rem;
+	color:#868686;
+}
+.foot{
+	padding:.28rem .26rem;
+	text-align: right;
+	border-bottom: solid 1px #e5e5e5;
+}
+.foot a,.foot span{
+	font-size:.24rem;
+	color:#a7abac;
+}
+.foot i{
+	color:#3d3e40;
+}
+.zero{
+	font-size: .28rem;
+}
+.button{
+	text-align: right;
+	padding:.24rem .2rem;
+	border-bottom: solid .18rem #eee;
+	margin-bottom: 3.88rem;
+}
+.button button{
+	font-size: .24rem;
+	width:1.5rem;
+	padding:.12rem 0;
+	background-color: #fff;
+	outline: 0;
+	border-radius:.1rem;
+}
+.delete{
+	border: solid 1px #bdbdbd;
+	color: #101e21;
+}
+.evaluate{
+	border:solid 1px #f9185a;
+	color:#f9185a;
+	margin-left: .15rem;
+}

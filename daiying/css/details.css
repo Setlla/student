@@ -36,7 +36,7 @@ html{
 	width:.12rem;
 	height:.12rem;
 	border: solid 1px #c9c9c9;
-	border-radius:.06rem;
+	border-radius:50%;
 }
 .book span:first-child{
 	background-color: #33ccff;

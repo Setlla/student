@@ -10,7 +10,20 @@ $(document).on("click",".things a",function(e){
 	 }
 		
 	})
-$.post('http://39.108.219.59/productList',function(data,status){
+
+var data = {productName:""};
+$.ajax({
+	type:"post",
+	url:"http://39.108.219.59/productList",
+	async:true,
+	contentType:"application/json",
+	data:JSON.stringify({token:localStorage.getItem("token")}),
+	success:function(data){
+		setdata(data);
+	}
+});
+
+var setdata=function(data){
 	   for(var n=0;n<data.result.length;n++){
 		   var strings='<div class="bicycle" data-id='+data.result[n].id+'>' 
 						  +'<div class="img">'
@@ -24,8 +37,8 @@ $.post('http://39.108.219.59/productList',function(data,status){
 						  +'<a href="#">'+data.result[n].Status+'</a>'
 						  +'</div>'
 						  +'<div class="price prices">'
-						  +'<span>'+data.result[n].CurPrice+'</span>'
-						  +'<span>'+data.result[n].OldPrice+'<span>'
+						  +'<span>￥'+data.result[n].CurPrice+'</span>'
+						  +'<span>￥'+data.result[n].OldPrice+'<span>'
 						  +'<div class="round">'
 						  +'<p></p>'
 						  +'<p></p>'
@@ -40,13 +53,13 @@ $.post('http://39.108.219.59/productList',function(data,status){
 			$(".books").append(strings);
 	   }
 	}
-})
+}
 
 			      
 $(document).on("click",".bicycle",function(e){
  	console.log(this);
 	var id=$(this).data("id");
-	location.href = "/student/daiying/details.html?id="+id;      
+	location.href = "details.html?id="+id;      
 })
 
 $(document).on("click",".shopcar",function(){
