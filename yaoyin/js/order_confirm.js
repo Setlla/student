@@ -61,14 +61,18 @@
 			var totalCost=$('.result_1').text();
 			var totalNum=$('.sum_1').text();
 			var message=$('.message').val();
-			var productId=[];
-			var productNum=[];
+			var productNum ="[";
+			var productId="[";
 			for (var i=0;i<ware.length;i++) {
-				var id=ware[i].product.id;
-				productId.push(id);
-				var num=ware[i].ProductNumber;
-				productNum.push(num);
-			}			
+				var id = ware[i].product.id;
+				var Num=ware[i].ProductNumber;
+				productId = productId + id + ',';
+				productNum = productNum + Num + ',';
+			}
+			productId = productId + "]";
+			productNum = productNum + "]";
+			var productId=productId.replace(",]","]");
+			var productNum=productNum.replace(",]","]");			
 			$.ajax({
 				type:"post",
 				url:"http://39.108.219.59/addOrder",
@@ -84,7 +88,7 @@
 					productNum:productNum
 				}),
 				success:function(data,status){
-					console.log(data+"ddd");
+					console.log(data+"获取数据测试");
 					if(data.isSuccess==true){
 						location.href="order_list.html";
 					}
