@@ -64,7 +64,7 @@
 		var datas=function(data){
 			for (var i=0;i<data.result.length;i++) {
 				var content=
-					'<div class="ware" data-id="'+data.result[i].product.id+'">'
+					'<li class="ware" data-id="'+data.result[i].id+'">'
 					+'<div class="ware_radio">'
 					+'<span class="list_radio"></span>'
 		        	+'</div>'
@@ -97,7 +97,7 @@
 			    	+'</li>'
 			    	+'</ul>'
 					+'</li>'
-					
+
 					$('.list').append(content);
 			}
 			
@@ -193,13 +193,13 @@
 				async:true,
 				contentType:'application/JSON',
 				data:JSON.stringify({
-					token:token,
+					token:localStorage.getItem("token"),
 					id:id
 				}),
 				success:function(data,status){
 					if(data.isSuccess==true){
 						$(this).parents(".ware").remove();
-						location.href="shopping_trolley.html";
+						location.reload();
 					}					
 				}
 			})

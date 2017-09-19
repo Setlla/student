@@ -38,4 +38,9 @@ $(document).ready(function(){
 			location.href="login.html";
 		})
 		
+		//订单列表页
+		$(document).on("click",".bill_goods",function(){
+			location.href="order_list.html";
+		})
+		
 })//ready的括号

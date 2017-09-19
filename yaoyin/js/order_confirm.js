@@ -4,9 +4,9 @@
 		var users=function(){
 			var user=JSON.parse(localStorage.getItem("user"));
 			//解决控制台这个错误--"Uncaught TypeError: Cannot read property '0' of undefined"
-			if(!user){
-				user={};
-			}
+//			if(!user){
+//				user={};
+//			}
 			$('.name').text(user.name);
 			$('.telephone').text(user.phone);
 			$('.address').text(user.address);
