@@ -1,10 +1,11 @@
 	$(document).ready(function(){
 		//渲染函数
-		var datas=function(data){
-			
+		var orderId;
+		var datas=function(data){		
 			for (var i=0;i<data.result.length;i++) {
 				for (var j=0;j<data.result[i].products.length;j++) {
 					var productNum=JSON.parse(data.result[i].productNum);
+					orderId=JSON.parse(data.result[i].id);
 					var content=
 						'<ul class="recharge">'
 			        	+'<li>'
@@ -35,6 +36,7 @@
 			}
 			
 		}
+		
 		//ajax调用渲染函数
 		$.ajax({
 			type:"post",
@@ -49,6 +51,24 @@
 			}			
 		});
 		
+		
+		//删除订单
+		$(document).on("click",".del_btn",function(){
+			$.ajax({
+				type:"post",
+				url:"http://39.108.219.59/delOrder",
+				async:true,
+				contentType:"application/JSON",
+				data:JSON.stringify({
+					token:localStorage.getItem("token"),
+					orderId:orderId
+				}),
+				success:function(data,status){
+					$(this).parents(".recharge").remove();
+					location.reload();
+				}			
+		});
+		})
 		
 		//箭头返回
 		$(document).on("click",".header_arr",function(){
