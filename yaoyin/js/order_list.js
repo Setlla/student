@@ -1,19 +1,33 @@
 	$(document).ready(function(){
 		//渲染函数	
-		var orderId;
+		var name;
 		var datas=function(data){	
 			for (var i=0;i<data.result.length;i++) {
-				orderId=data.result[i].id;
 				var content=
-					'<div class="monopoly">'
+					'<div class="wl"  data-id="'+data.result[i].id+'">'
+					+'<div class="monopoly">'
 		        	+'<img src="img/icon/icon_63.png"/>'
 		        	+'<span>君宝话费充值专营店</span>'
 		        	+'<span class="mon_arr"></span>'
 		        	+'<span class="mon_success">交易成功</span>'
-		        	+'</div>';
-		        	
-		        	$('.warelist').append(content);  	
-				
+		        	+'</div>'
+		        	+'<div class="product">'
+		        	+'</div>'
+		        	+'<ul class="recharge_2">'
+			    	+'<li>'
+	        		+'<span>共</span><span>'+data.result[i].totalNum+'</span><span>件商品</span>'
+	        		+'<span>合计：￥</span><span>'+data.result[i].totalCost+'</span>'
+	        		+'<span>(含运费 ￥0.00)</span>'
+	        		+'</li>'
+	        		+'<li>'
+		        	+'<button class="del_btn"><span>删除订单</span></button>'
+		        	+'<button class="judge_btn"><span>评价</span></button>' 
+	        		+'</li>'
+	        		+'</ul>'
+	        		+'</div>';
+
+		        $('.warelist').append(content);
+				name = ".wl"+data.result[i].id;
 				for (var j=0;j<data.result[i].products.length;j++) {
 					var productNum=JSON.parse(data.result[i].productNum);
 					var content1=
@@ -31,23 +45,9 @@
 			        	+'</li>'
 			      		+'</ul>';
 			      		
-			      	$('.warelist').append(content1);  	
-				}		
-					var content2=
-		        		'<ul class="recharge_2" data-id="'+data.result[i].id+'">'
-				    	+'<li>'
-		        		+'<span>共</span><span>'+data.result[i].totalNum+'</span><span>件商品</span>'
-		        		+'<span>合计：￥</span><span>'+data.result[i].totalCost+'</span>'
-		        		+'<span>(含运费 ￥0.00)</span>'
-		        		+'</li>'
-		        		+'<li>'
-			        	+'<button class="del_btn"><span>删除订单</span></button>'
-			        	+'<button class="judge_btn"><span>评价</span></button>' 
-		        		+'</li>'
-		        		+'</ul>';
-		   				
-			    	$('.warelist').append(content2);
-			}		
+			      	$(".product").eq(i).append(content1);  	
+				}
+			}
 		}
 		
 		//ajax调用渲染函数
@@ -67,6 +67,7 @@
 		
 		//删除订单
 		$(document).on("click",".del_btn",function(){
+			var orderId=$(this).parents(".wl").data("id");
 			$.ajax({
 				type:"post",
 				url:"http://39.108.219.59/delOrder",
@@ -77,7 +78,7 @@
 					orderId:orderId
 				}),
 				success:function(data,status){
-					$(this).parents(".recharge_2").remove();
+					$(this).parent(".wl").remove();
 					location.reload();
 				}			
 			})
@@ -85,7 +86,7 @@
 		
 		//点击订单列表任何一件商品跳转到订单详情
 		$(document).on("click",".recharge_1",function(){
-			var id=$(this).nextAll(".recharge_2").data('id');
+			var id=$(this).parents(".wl").data("id");
 			location.href="order_details.html?id="+id;
 		})
 		
