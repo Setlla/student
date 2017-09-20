@@ -97,16 +97,16 @@ html{
 }
 .content{
 	overflow: hidden;
-	background-color: #f6f6f6;
 }
 .shop{
+	background-color: #f6f6f6;
 	padding:.2rem .24rem;
 	position: relative;
 }
 .shop:not(:last-child){
 	border-bottom: solid .2rem #fff;
 }
-.content img{
+.shop img{
 	width:1.92rem;
 }
 .recharge{
@@ -152,7 +152,6 @@ html{
 	text-align: right;
 	padding:.24rem .2rem;
 	border-bottom: solid .18rem #eee;
-	margin-bottom: 3.88rem;
 }
 .button button{
 	font-size: .24rem;

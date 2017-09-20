@@ -5,8 +5,9 @@ var setUser = function(){
 	$(".address").html(user.address);
 }
 setUser();
+var products;
 var content=function(){
-	var products=JSON.parse(localStorage.getItem("products"));
+	products=JSON.parse(localStorage.getItem("products"));
 	var sum=0;
  	var num=0;
 	for(var n=0;n<products.length;n++){
@@ -50,34 +51,44 @@ $(document).on("click",".botton",function(){
 })
 
 $(document).on("click",".submit",function(){
-	var contents=[];
-	var totalCost=$(".numbers").html();
-	var totalNum=$(".total").html();
-	var message=$(".message").val();
-	var isInvoice=$(".botton").html();
-	var content = {
-		totalCost:totalCost,
-		totalNum:totalNum,
-		message:message,
-		isInvoice:flag
+	var productId="[";
+	var productNum="[";
+	for (var i=0;i<products.length;i++) {
+		var Id=products[i].ProductId;
+		productId=productId+Id+',';
+		var Num=products[i].ProductNumber;
+		productNum=productNum+Num+',';
 	}
-	contents.push(content);
+	productId=productId+"]";
+	productId=productId.replace(",]","]")
+	
+	productNum=productNum+"]";
+	productNum=productNum.replace(",]","]")
+	
+	
+	var message=$(".message").val();
+	var totalNum=$(".numbers").html();
+	var totalCost=$(".total").html(); 
 	$.ajax({
 	type:"post",
 	url:"http://39.108.219.59/addOrder",
 	async:true,
-	contentType:"application/json",
+	contentType:"application/JSON",
 	data:JSON.stringify({
 		token:localStorage.getItem("token"),
-		content:content
-		}),
+		productNum:productNum,
+		productId:productId,
+		totalNum:totalNum,
+		totalCost:totalCost,
+		message:message,
+		isInvoice:flag	
+	}),
 	success:function(data){
 		if(data.isSuccess==true){
 			location.href="list.html";
+			
 		}
 	}
-});
-	localStorage.setItem("contents",JSON.stringify(content));
+	});
 })
-
 

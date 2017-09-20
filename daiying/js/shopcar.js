@@ -167,7 +167,6 @@ $(document).on("click",".menCenter",function(){
 })
 
 
-
 $(document).on("click",".balance",function(){
 	var products = [];
 	var content = $(".dots.cur");
