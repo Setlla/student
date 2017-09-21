@@ -1,6 +1,24 @@
 	$(document).ready(function(){
+		//搜索功能
+		$(document).on("focus",".search_ipt",function(){
+			$(this).addClass("ser").parents(".search").addClass("search_1").siblings(".header").hide();
+		})
+		$(document).on("blur",".search_ipt",function(){
+			$(this).removeClass("ser").parents(".search").removeClass("search_1").siblings(".header").show();
+			$(".warelist").empty();
+			romance();
+		})	
+		
+		//PC端回车函数
+//		$(".search_ipt").keydown(function(event) {  
+//	        if (event.keyCode == 13) { 
+//	        	$(".warelist").empty();
+//	             romance();	
+//	        }  
+//  	}) 
+		
+		
 		//渲染函数	
-		var name;
 		var datas=function(data){	
 			for (var i=0;i<data.result.length;i++) {
 				var content=
@@ -27,7 +45,6 @@
 	        		+'</div>';
 
 		        $('.warelist').append(content);
-				name = ".wl"+data.result[i].id;
 				for (var j=0;j<data.result[i].products.length;j++) {
 					var productNum=JSON.parse(data.result[i].productNum);
 					var content1=
@@ -51,23 +68,28 @@
 		}
 		
 		//ajax调用渲染函数
-		$.ajax({
-			type:"post",
-			url:"http://39.108.219.59/getOrder",
-			async:true,
-			contentType:"application/JSON",
-			data:JSON.stringify({
-				token:localStorage.getItem("token")
-			}),
-			success:function(data,status){
-				datas(data);
-			}			
-		});
-		
+		var romance=function(){
+			var productName=$(".search_ipt").val();
+			$.ajax({
+				type:"post",
+				url:"http://39.108.219.59/getOrder",
+				async:true,
+				contentType:"application/JSON",
+				data:JSON.stringify({
+					token:localStorage.getItem("token"),
+					productName:productName
+				}),
+				success:function(data,status){
+					datas(data);					
+				}			
+			})
+		}
+		romance();
 		
 		//删除订单
 		$(document).on("click",".del_btn",function(){
 			var orderId=$(this).parents(".wl").data("id");
+			var that = this;
 			$.ajax({
 				type:"post",
 				url:"http://39.108.219.59/delOrder",
@@ -78,8 +100,7 @@
 					orderId:orderId
 				}),
 				success:function(data,status){
-					$(this).parent(".wl").remove();
-					location.reload();
+					$(that).parents(".wl").remove();
 				}			
 			})
 		})

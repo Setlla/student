@@ -26,6 +26,12 @@
 		
 		//渲染函数
 		var datas=function(data){
+			 var cont=
+			 	'<div class="wl" data-id="'+orderId+'">'
+			 	+'</div>'
+			 	
+			 	$('.warelist').append(cont);
+			
 			for (var i=0;i<data.result.products.length;i++) {
 				var productNum=JSON.parse(data.result.productNum);
 				var content=
@@ -43,7 +49,7 @@
 		        	+'</li>'
 		      		+'</ul>';
 		      		
-		      	$('.warelist').append(content);
+		      	$('.wl').append(content);
 			}
 			
 			$('.price').text(data.result.totalCost);
@@ -67,6 +73,24 @@
 			}			
 		});
 		
+		//删除功能
+		$(document).on("click",".del_btn",function(){
+			var that = this;
+			$.ajax({
+				type:"post",
+				url:"http://39.108.219.59/delOrder",
+				async:true,
+				contentType:"application/JSON",
+				data:JSON.stringify({
+					token:localStorage.getItem("token"),
+					orderId:orderId
+				}),
+				success:function(data,status){
+					$(that).parents().find(".wl").remove();
+					location.href="order_list.html";
+				}			
+			})
+		})
 		
 		//箭头返回
 		$(document).on("click",".header_arr",function(){

@@ -15,9 +15,9 @@
 	}
 	/*公共按钮*/
 	.list_radio{
-		width: 0.28rem;
-		height: 0.28rem;
-		border-radius: 0.14rem;
+		width: 14px;
+		height: 14px;
+		border-radius: 7px;
 		border: 1px solid #a1a1a1;
 		background: #FFFFFF;
 		display: inline-block;
@@ -35,8 +35,8 @@
 		text-align: center;/*为了左边的图片左右居中*/
 	}
 	.ware_pic img{
-		width: 1.7rem;
-		height: 1.9rem;
+		width: 1.6rem;
+		height: 1.8rem;
 		vertical-align: middle;
 	}
 	.ware_explain{

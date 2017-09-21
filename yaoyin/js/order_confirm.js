@@ -1,5 +1,5 @@
-	$(document).ready(function(){
-		
+//	$(document).ready(function(){
+//		
 		//获取用户个人中心里面的各种信息，比如地址电话等
 		var users=function(){
 			var user=JSON.parse(localStorage.getItem("user"));
@@ -14,6 +14,8 @@
 		users();
 		
 		//获取购物车的商品信息
+		var productNum =[];
+		var productId=[];
 		var ware=JSON.parse(localStorage.getItem("warelist"));
 		var warelists=function(){
 			var s=0;
@@ -37,7 +39,8 @@
 			    
 			    s=s+parseInt(ware[i].ProductNumber);//数量
 			    s1=s1+parseInt(ware[i].product.CurPrice*ware[i].ProductNumber);//价格
-			    
+			    productNum.push(ware[i].ProductNumber);
+			    productId.push(ware[i].product.id);
 			}
 			$('.sum').text(s);
 			$('.result').text(s1);
@@ -60,19 +63,7 @@
 		var confirm=function(){
 			var totalCost=$('.result_1').text();
 			var totalNum=$('.sum_1').text();
-			var message=$('.message').val();
-			var productNum ="[";
-			var productId="[";
-			for (var i=0;i<ware.length;i++) {
-				var id = ware[i].product.id;
-				var Num=ware[i].ProductNumber;
-				productId = productId + id + ',';
-				productNum = productNum + Num + ',';
-			}
-			productId = productId + "]";
-			productNum = productNum + "]";
-			var productId=productId.replace(",]","]");
-			var productNum=productNum.replace(",]","]");			
+			var message=$('.message').val();		
 			$.ajax({
 				type:"post",
 				url:"http://39.108.219.59/addOrder",
@@ -84,8 +75,8 @@
 					totalNum:totalNum,
 					message:message,
 					isInvoice:flag,
-					productId:productId,
-					productNum:productNum
+					productId:"["+productId+"]",
+					productNum:"["+productNum+"]"
 				}),
 				success:function(data,status){
 					console.log(data+"获取数据测试");
@@ -107,4 +98,4 @@
 			history.go(-1);
 		})
 		
-	})//ready的括号
+//	})//ready的括号
