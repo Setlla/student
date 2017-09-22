@@ -24,7 +24,7 @@
 				if(islog.islogin==true){					
 					localStorage.setItem("token",islog.token);					
 					alert("登录成功，欢迎"+account+"回来！^_^");
-					location.href="hockshop.html"; 
+					location.href="personal_center.html"; 
 				}else{
 					alert("你输入的账户名或者密码错误，请重新输入！");
 					location.reload(); 

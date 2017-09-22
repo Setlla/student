@@ -1,18 +1,4 @@
-//	$(document).ready(function(){
-//		
-		//获取用户个人中心里面的各种信息，比如地址电话等
-		var users=function(){
-			var user=JSON.parse(localStorage.getItem("user"));
-			//解决控制台这个错误--"Uncaught TypeError: Cannot read property '0' of undefined"
-//			if(!user){
-//				user={};
-//			}
-			$('.name').text(user.name);
-			$('.telephone').text(user.phone);
-			$('.address').text(user.address);
-		}
-		users();
-		
+		users();		
 		//获取购物车的商品信息
 		var productNum =[];
 		var productId=[];
@@ -98,4 +84,3 @@
 			history.go(-1);
 		})
 		
-//	})//ready的括号

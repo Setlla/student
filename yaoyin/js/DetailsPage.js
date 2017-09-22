@@ -1,14 +1,6 @@
 	$(document).ready(function(){
-		var getParams =	function (name) {
-			//URL地址&后面的解析
-		 	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
-            var r = window.location.search.substr(1).match(reg);  //匹配目标参数
-            if (r != null) return unescape(r[2]); return null; //返回参数值
-		 }
-		
 		var id=getParams('id');
-		var token=localStorage.getItem("token");
-		
+		var token=localStorage.getItem("token");		
 		//定义一个函数来获取动态数据
 		var datas = function(data){
 				var content=

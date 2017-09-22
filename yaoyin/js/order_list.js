@@ -1,13 +1,17 @@
 	$(document).ready(function(){
 		//搜索功能
 		$(document).on("focus",".search_ipt",function(){
-			$(this).addClass("ser").parents(".search").addClass("search_1").siblings(".header").hide();
+			$(this).addClass("ser").parents(".search").addClass("search_1").siblings(".header").css("visibility","hidden");
 		})
 		$(document).on("blur",".search_ipt",function(){
-			$(this).removeClass("ser").parents(".search").removeClass("search_1").siblings(".header").show();
-			$(".warelist").empty();
-			romance();
-		})	
+			$(this).removeClass("ser").parents(".search").removeClass("search_1").siblings(".header").css("visibility","");
+			if ($(".search_ipt").val().length>0) {
+				$(".warelist").empty();
+				romance();
+			} else{
+				console.log("内容为空");
+			}
+		})
 		
 		//PC端回车函数
 //		$(".search_ipt").keydown(function(event) {  
@@ -80,7 +84,9 @@
 					productName:productName
 				}),
 				success:function(data,status){
-					datas(data);					
+					if(data.isSuccess==true){
+						datas(data);
+					}										
 				}			
 			})
 		}
@@ -100,7 +106,9 @@
 					orderId:orderId
 				}),
 				success:function(data,status){
-					$(that).parents(".wl").remove();
+					if(data.result>0){
+						$(that).parents(".wl").remove();
+					}					
 				}			
 			})
 		})

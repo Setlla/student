@@ -22,3 +22,22 @@
 			return true;
 		}
 	}
+	
+		var users=function(){
+			var user=JSON.parse(localStorage.getItem("user"));
+			//解决控制台这个错误--"Uncaught TypeError: Cannot read property '0' of undefined"
+//			if(!user){
+//				user={};
+//			}
+			$('.name').text(user.name);
+			$('.telephone').text(user.phone);
+			$('.address').text(user.address);
+		}
+		
+		//URL解析函数
+		var getParams =	function (name) {
+			//URL地址&后面的解析
+		 	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+            var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+            if (r != null) return unescape(r[2]); return null; //返回参数值
+		}
