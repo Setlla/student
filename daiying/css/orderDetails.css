@@ -47,6 +47,12 @@ html{
 	font-size: .3rem;
 	color:#888;
 }
+.phones{
+	padding-left:.2rem;
+}
+.detail p{
+	padding-top: .1rem;
+}
 .logo{
 	padding:.3rem .26rem;
 }
@@ -71,6 +77,7 @@ html{
 	overflow: hidden;
 	padding:.21rem .26rem .18rem .21rem;
 	background-color: #f6f6f6;
+	border-bottom: solid .2rem #fff;
 }
 .content img{
 	padding: 0 .24rem .94rem 0;
@@ -88,14 +95,17 @@ html{
 	top:.21rem;
 	right:.26rem;
 }
-.newprice,.oldprice{
+.number span,.number p{
 	font-size: .2rem;
 }
-.num{
+.number a{
 	font-size: .18rem;
 }
-.oldprice,.num{
+.number a,.number p{
 	color:#c3c3c3;
+}
+.number p{
+	text-decoration: line-through;
 }
 .button{
 	position: absolute;
@@ -110,6 +120,9 @@ html{
 	background-color: #fff;
 	border-radius:.1rem ;
 	outline: 0;
+}
+.afterSales{
+	margin-left: .2rem;
 }
 .prices{
 	position: relative;
@@ -169,6 +182,7 @@ html{
 }
 .check span{
 	font-size: .28rem;
+	padding-left: .22rem;
 }
 .buyer,.phone{
 	margin: .15rem 0;
@@ -196,9 +210,12 @@ html{
 .foot p{
 	font-size: .2rem;
 	color:#a8a8a8;
+	line-height: .36rem;
 }
 .foot button{
 	width:1.2rem;
+	padding:.08rem;
+	color: #dcdcdc;
 	position: absolute;
 	top:.18rem;
 	right:.24rem;

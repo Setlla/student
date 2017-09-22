@@ -5,21 +5,25 @@ $(document).on("click",".shopcar",function(){
 	location.href="shopcar.html";
 })
 
-
-$.ajax({
-	type:"post",
-	url:"http://39.108.219.59/getOrder",
-	async:true,
-	contentType:"application/json",
-	data:JSON.stringify({
-		token:localStorage.getItem("token")
-		}),
-	success:function(data){
-		if(data.isSuccess==true){
-			setproducts(data);
+var productlist=function(){
+	var productName=$(".seek").val();
+	$.ajax({
+		type:"post",
+		url:"http://39.108.219.59/getOrder",
+		async:true,
+		contentType:"application/json",
+		data:JSON.stringify({
+			token:localStorage.getItem("token"),
+			productName:productName
+			}),
+		success:function(data){
+			if(data.isSuccess==true){
+				setproducts(data);
+			}
 		}
-	}
-});
+	});
+}
+productlist();
 
 var setproducts=function(data){
 	for(var n=0;n<data.result.length;n++){
@@ -30,7 +34,7 @@ var setproducts=function(data){
 						+'<a></a>'
 						+'<span class="success">交易成功</span>'
 						+'</div>'
-						+'<div class="center'+data.result[n].id+'"></div>'
+						+'<div class="center'+data.result[n].id+'"></div>'//用eq()不需要对class进行字符串拼接
 						+'<div class="foot">'
 						+'<a>共<i class="num">'+data.result[n].totalNum+'</i>件商品</a>'
 						+'<span>合计：￥<i class="zero">'+data.result[n].totalCost+'</i>(含运费￥<i>0.00</i>)</span>'
@@ -52,17 +56,17 @@ var setproducts=function(data){
 						 +'<p class="number">X<i>'+eval(data.result[n].productNum)[i]+'</i></p>'
 						 +'</div>'
 						 +'</div>'
-			var name = ".center" +data.result[n].id;
+			var name = ".center" +data.result[n].id;//在有标识符的地方插入字符串
 			$(name).append(stringone);
+//			$(".center").eq(n).append(stringone);
+			
 		}
 	}
 }
 
 $(document).on("click",".delete",function(data){
-	for (var m=0;m<$(".cat").length;m++){
-		var orderId=$(this).parent(".button").parent(".max").data("id");
-	}
-	
+	var orderId=$(this).parents(".max").data("id");
+	var current=this;
 	$.ajax({
 	type:"post",
 	url:"http://39.108.219.59/delOrder",
@@ -74,11 +78,30 @@ $(document).on("click",".delete",function(data){
 		}),
 	success:function(data){
 			if(data.isSuccess==true){
-				location.reload();
+				$(current).parents(".max").remove();
 			}
 		}
 	});
 })
 $(document).on("click",".shop",function(){
-	location.href="orderDetails.html";
+	var orderId=$(this).parents(".max").data("id");
+	location.href="orderDetails.html?id="+orderId;
 })
+
+
+$(document).on("focus",".search",function(){
+	$(this).addClass("cur");
+	$(".miss").css("display","block");
+})
+
+$(document).on("blur",".search",function(){
+	$(this).removeClass("cur");
+	$(".miss").css("display","none");
+})
+
+$(document).on("change",".search",function(){
+	$(".max").empty();
+	productlist();
+})
+
+

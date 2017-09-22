@@ -6,6 +6,8 @@ var setUser = function(){
 }
 setUser();
 var products;
+var productId=[];
+var productNum=[];
 var content=function(){
 	products=JSON.parse(localStorage.getItem("products"));
 	var sum=0;
@@ -25,6 +27,8 @@ var content=function(){
 		$(".shop").append(strings);
  		var newPrice=parseInt(products[n].product.CurPrice);
  		var number=parseInt(products[n].ProductNumber);
+ 		var Id=productId.push(products[n].ProductId);
+ 		var Num=productNum.push(products[n].ProductNumber);
  		sum=sum+newPrice*number;
  		num=num+number;
 	}
@@ -51,21 +55,6 @@ $(document).on("click",".botton",function(){
 })
 
 $(document).on("click",".submit",function(){
-	var productId="[";
-	var productNum="[";
-	for (var i=0;i<products.length;i++) {
-		var Id=products[i].ProductId;
-		productId=productId+Id+',';
-		var Num=products[i].ProductNumber;
-		productNum=productNum+Num+',';
-	}
-	productId=productId+"]";
-	productId=productId.replace(",]","]")
-	
-	productNum=productNum+"]";
-	productNum=productNum.replace(",]","]")
-	
-	
 	var message=$(".message").val();
 	var totalNum=$(".numbers").html();
 	var totalCost=$(".total").html(); 
@@ -76,8 +65,8 @@ $(document).on("click",".submit",function(){
 	contentType:"application/JSON",
 	data:JSON.stringify({
 		token:localStorage.getItem("token"),
-		productNum:productNum,
-		productId:productId,
+		productNum:"["+productNum+"]",
+		productId:"["+productId+"]",
 		totalNum:totalNum,
 		totalCost:totalCost,
 		message:message,
@@ -86,7 +75,6 @@ $(document).on("click",".submit",function(){
 	success:function(data){
 		if(data.isSuccess==true){
 			location.href="list.html";
-			
 		}
 	}
 	});

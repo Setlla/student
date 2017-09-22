@@ -41,32 +41,45 @@ html{
 	right:.34rem;
 	transform: translate(-50%,-50%);
 }
-.souch input{
+.search input{
 	display: inline-block;
 	text-align: center;
-	height:.58rem;
-	width: 94%;
+	padding:.2rem;
+	box-sizing: border-box;
+	width: 100%;
 	border: solid .2rem #eee;
 	outline: none;
 	border-radius:.3rem;
 }
-.souch{
+.cur{
+	position: fixed !important;
+	top:0;
+	left:0;
+	width:100%;
+	z-index: 100;
+}
+.cur input{
+	text-align: left !important;
+	padding-left:.7rem;
+}
+.cur img{
+	left:.6rem !important;
+}
+.search{
 	position: relative;
 	background:#eee;
+	text-align: center;
 }
-.souch img{
+.search img{
 	width:.36rem;
 	position: absolute;
 	top:50%;
 	left:35%;
 	transform: translate(-50%,-50%);
 }
-.souch input::-webkit-input-placeholder{
+.search input::-webkit-input-placeholder{
 	color:#cdccd1;
 	font-size:.25rem;
-}
-.souch{
-	text-align: center;
 }
 .cat{
 	overflow: hidden;
@@ -96,30 +109,41 @@ html{
 	height:.26rem;
 }
 .content{
+	position: relative;
 	overflow: hidden;
+}
+.miss{
+	position: absolute;
+	width:100%;
+	height:100%;
+	background-color: rgba(51,51,51,0.7);
+	z-index: 1;
+	display: none;
 }
 .shop{
 	background-color: #f6f6f6;
 	padding:.2rem .24rem;
 	position: relative;
+	overflow: hidden;
 }
 .shop:not(:last-child){
 	border-bottom: solid .2rem #fff;
 }
 .shop img{
 	width:1.92rem;
+	float: left;
+	padding-right: .2rem;
 }
 .recharge{
 	font-size: .26rem;
-	position: absolute;
-	top:.2rem;
-	left:50%;
-	transform: translate(-50%);
-	width:30%;
+	width: 50%;
+    margin: 0 auto;
 }
 .price{
-	float: right;
 	text-align: right;
+    position: absolute;
+    top: .2rem;
+    right: .24rem;
 }
 .price_one{
 	font-size: .26rem;
@@ -170,3 +194,4 @@ html{
 	color:#f9185a;
 	margin-left: .15rem;
 }
+

@@ -77,23 +77,22 @@ html{
 }
 .book{
 	position: relative;
+	overflow: hidden;
 	background-color: #f6f6f6;
 	border-bottom: solid .2rem #fff;
 }
 .book img{
 	padding: .15rem .24rem;
 	width:1.54rem;
+	float:left;
 }
 .seven{
-	width:2.6rem;
-	position: absolute;
-	left:50%;
-	top:.15rem;
-	transform: translate(-50%);
+	width:50%;
+	float:left;
+	padding-top: .15rem;
 }
 .seven p{
 	font-size:.24rem;
-	text-align:left;
 }
 .seven a{
 	font-size: .18rem;
