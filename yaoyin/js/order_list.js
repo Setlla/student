@@ -5,13 +5,13 @@
 		})
 		$(document).on("blur",".search_ipt",function(){
 			$(this).removeClass("ser").parents(".search").removeClass("search_1").siblings(".header").css("visibility","");
-			if ($(".search_ipt").val().length>0) {
-				$(".warelist").empty();
-				romance();
-			} else{
-				console.log("内容为空");
-			}
 		})
+		
+		$(document).on("change",".search_ipt",function(){
+			$(".warelist").empty();
+			romance();
+		})
+		
 		
 		//PC端回车函数
 //		$(".search_ipt").keydown(function(event) {  
