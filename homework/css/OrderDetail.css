@@ -1,67 +1,82 @@
 html{
 	font-size: 100px;
 }
+@media only screen and (min-width: 414px) and (max-width: 640px) {
+	html{
+ 	     font-size: 64px;
+       }
+}
+@media only screen and (min-width: 320px) and (max-width: 414px) {
+	html{
+		font-size: 50px;
+	}
+}
 .head{
+	height: 1.28rem;
 	background-color: #33ccff;
 	position: relative;
-	padding: .3rem 0;
 }
 .head span{
 	display: block;
 	width: .2rem;
 	height: .2rem;
 	position: absolute;
-	border-bottom: solid #FFFFFF 2px;
-	border-left: solid #FFFFFF 2px;
+	border-bottom: solid #FFFFFF 1px;
+	border-left: solid #FFFFFF 1px;
 	-webkit-transform:translateY(-50%) rotate(45deg);
 	left: .2rem;
 	top: 50%;
 }
 .head p{
-	/*display: block;*/
 	font-size: .36rem;
 	color: #FFFFFF;
 	text-align: center;
+	line-height: 1.28rem;
 }
 .trade{
-	padding: .6rem 0;
+	height: 1.28rem;
 }
 .trade p{
 	font-size: .42rem;
 	color: #ff0000;
 	text-align: center;
+	line-height: 1.28rem;
 }
 .address{
 	overflow: hidden;
 	padding: .24rem 0;
 	border-top: solid .18rem #EEEEEE;
 	border-bottom:solid .18rem #EEEEEE ;
+	position: relative;
 }
 .address p{
-	font-size: .26rem;
+	font-size: .3rem;
 	color: #666666;
-	display: inline-block;
+	margin-left: 1rem;
 }
 .address img{
-	width: .26rem;
-	display: inline-block;
-	padding: .26rem 0;
-	float: left;
-	margin:0 .28rem;
+	width: .3rem;
+	position: absolute;
+	top: 50%;
+	left: .3rem;
+	transform: translateY(-50%);
 }
 .recharge{
-	padding: .3rem 0;
+	height: 1rem;
 	position: relative;
 }
 .recharge img{
 	width: .35rem;
-	display: inline-block;
-	margin: 0 .25rem;
+	position: absolute;
+	left: .25rem;
+	top: 50%;
+	transform: translateY(-50%);
 }
 .recharge p{
 	color: #2d2e30;
-	font-size: .24rem;
-	display: inline-block;
+	font-size: .3rem;
+	line-height: 1rem;
+	margin-left: .9rem;
 }
 .recharge span{
 	display: block;
@@ -72,5 +87,221 @@ html{
 	-webkit-transform:translateY(-50%) rotate(-135deg);
 	position: absolute;
 	top: 50%;
-	right: 20%;
+	left: 3.8rem;
+}
+.rechargecard{
+	background-color: #f6f6f6;
+	padding: .1rem 0;
+}
+.cards{	
+	padding: .2rem;
+}
+.price img{
+	width: 20%;
+	float: left;
+}
+.price{
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: .1rem;
+}
+.price p{
+	font-size: .3rem;
+	color: #000000;
+	/*display: inline-block;*/
+	width: 50%;
+	float: left;
+	margin-left: 5%;
+}
+.price span{
+	width: 20%;
+	font-size: .3rem;
+	float: right;
+	display: inline-block;
+	text-align: right;
+}
+.price .oldprice{
+	color: #b6b6b6;
+	text-decoration: line-through;
+}
+i{
+	font-size: .24rem;
+	width:80%;
+	float: right;
+	text-align: right;
+	color: #b6b6b6;
+}
+.serve{
+	overflow: hidden;
+	margin-top: .2rem;
+}
+.serve button{
+	border: none;
+	padding: .15rem .2rem;
+	background-color: #FFFFFF;
+	border: solid #cfcfcf 1px;
+	border-radius: .05rem;
+	margin-left: .2rem;
+	font-size: .24rem;
+}
+.consult{
+	float: right;
+}
+.apply{
+	float: right;
+}
+.right{
+	float: right;
+}
+ul{
+	position: relative;
+	background-color: #fff;
+}
+ul li{
+	overflow: hidden;
+	padding: .1rem .2rem;
+	
+}
+li p{
+	float: left;
+	font-size: .2rem;
+	color: #8f8f8f;
+}
+li span{
+	float: right;
+	font-size: .2rem;
+	color: #8f8f8f;
+}
+.orderprice p{
+	font-size: .28rem;
+	color: #000000;
+	position: relative;
+}
+.orderprice span{
+	font-size: .28rem;
+	color: #000000;
+}
+.payment p{
+	font-size: .28rem;
+	color: #000000;
+	margin-left: .2rem;
+}
+.payment span{
+	font-size: .28rem;
+	color: #f10746;
+	margin-right: .2rem;
+}
+.orderprice{
+	
+	padding: .2rem;
+}
+.payment{
+	padding: .2rem 0;
+	border-top: solid #ededed 1px;
+	
+}
+.horn{
+	height: .2rem;
+	width: .2rem;
+	transform: rotate(-45deg);
+	border-top:solid #ededed 1px ;
+	border-right: solid #ededed 1px;
+	background-color: #FFFFFF;
+	position: absolute;
+	bottom: .7rem;
+	right: .5rem;
+}
+.check{
+	border-top: solid #ededed .15rem;
+	border-bottom:solid #ededed .15rem ;
+}
+.bill{
+	padding: .3rem .2rem;
+	position: relative;
+}
+.bill p{
+	font-size: .3rem;
+	color: #000000;
+}
+.bill span{
+	display: inline-block;
+	width: .2rem;
+	height: .2rem;
+	border-top: solid #000000 1px;
+	border-right: solid #000000 1px;
+	transform:translateY(-50%) rotate(45deg);
+	position: absolute;
+	right: .2rem;
+	top: 50%;
+}
+.last{
+	padding: 0;
+	border-top: solid #ededed 1px;
+	position: relative;
+}
+.last a{
+	font-size: .3rem;
+	color: #000000;
+	display: inline-block;
+	width: 50%;
+	text-align: center;
+	float: left;
+	padding: .3rem 0;
+}
+.seller{
+	background: url("../img/orderdetail_03.png")25% no-repeat;
+	background-size: 10%;
+}
+.phone{
+	background: url("../img/orderdetail_06.png")25% no-repeat;
+	background-size: 10%;
+}
+.last span{
+	display: inline-block;
+	height: .5rem;
+	width: 1px;
+	border-left: solid #ededed 1px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.number{
+	padding: .2rem;
+	overflow: hidden;
+	border-bottom: solid #ededed .15rem;
+}
+.number p{
+	font-size: .24rem;
+	color: #aaaaaa;
+	margin: .08rem 0;
+}
+.number button{
+	border: solid #aaa 1px;
+	background-color: #fff;
+	float: right;
+	padding: .05rem .3rem;
+	border-radius: .1rem;
+}
+.bot{
+	overflow: hidden;
+	padding: .2rem;
+}
+.bot button{
+	font-size: .3rem;	
+	background-color: #FFFFFF;
+	width: 1.5rem;
+	text-align: center;
+	float: right;
+}
+.delete{
+	color: #000;
+	border: solid #aaaaaa 1px;
+	padding: .1rem 0;
+}
+.assess{
+	color: #b83f62;
+	border: solid #aaaaaa 1px;
+	padding: .1rem 0;
+	margin-left: .2rem;
 }

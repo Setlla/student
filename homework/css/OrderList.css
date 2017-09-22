@@ -56,11 +56,20 @@ html{
 	border-radius: .04rem;
 }
 .input{
-	background-color: #EEEEEE;
 	padding: .15rem;
+	background-color: #eee;
+}
+.cur{
+	width: 100%;
+	height: 100%;
+	padding:0;
+	background-color: rgba(0,0,0,.5);
+	position: absolute;
+	top: 0;
+	z-index: 1;
 }
 #Allorders{
-	background: url("../img/lister_07.png")33% no-repeat;
+	background: url("../img/lister_07.png")35% no-repeat;
 	background-size: 5%;
 	width: 100%;
 	/*border: solid #EEEEEE .15rem;*/
@@ -121,11 +130,11 @@ html{
 	font-size: .3rem;
 	display: inline-block;
 	float: left;
-	width: 60%;
+	width: 70%;
 }
 .text span{
 	display: block;
-	width: 40%;
+	width: 20%;
 	float: right;
 	text-align: right;
 	font-size: .26rem;

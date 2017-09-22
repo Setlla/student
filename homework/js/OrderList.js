@@ -1,16 +1,21 @@
 $(document).on("click",".head span",function(){          //头部返回箭头
 	history.go(-1);
 })
-$.ajax({
-	type:"post",
-	url:"http://39.108.219.59/getOrder",
-	async:true,
-	contentType:"application/JSON",
-	data:JSON.stringify({token:localStorage.getItem("token")}),
-	success:function(data){
-		list(data);
-	}
-});
+
+var search = function(){
+var productName = $("#Allorders").val();
+	$.ajax({
+		type:"post",
+		url:"http://39.108.219.59/getOrder",
+		async:true,
+		contentType:"application/JSON",
+		data:JSON.stringify({token:localStorage.getItem("token"),productName:productName}),
+		success:function(data){
+			list(data);
+		}
+	});
+}
+search();
 
 var list = function(data){
 var results = data.result;
@@ -53,11 +58,16 @@ var results = data.result;
     	}       
     	 $(".totalCost").eq(i).text(results[i].totalCost);
          $(".totalNum").eq(i).text(results[i].totalNum);
+         $(document).on("click",".card",function(){
+         	var id=$(this).parents(".products").data("id");
+         	location.href="OrderDetail.html?id="+id;
+         })
     }  						
 }
 //删除订单
 $(document).on("click",".delete",function(){
 	  var orderId =$(this).parents(".products").data("id");
+	  var current = this;
 	$.ajax({
 		type:"post",
 		url:"http://39.108.219.59/delOrder",
@@ -66,12 +76,25 @@ $(document).on("click",".delete",function(){
 		data:JSON.stringify({token:localStorage.getItem("token"),orderId:orderId}),
 		success:function(data){
 			if(data.isSuccess == true){
-				location.href = "OrderList.html";
+				$(current).parents(".products").remove();//静态删除
+//              location.reload();
 			}
 		}
 	});
 })
 //跳转购物车
+
 $(document).on("click",".head img",function(){
 	location.href="ShopCar.html";
+})
+//搜索框
+$("#Allorders").focus(function(){
+	$(".input").addClass("cur"); 
+})
+$("#Allorders").blur(function(){
+	$(".input").removeClass("cur"); 
+})
+$(document).on("change","#Allorders",function(){
+	$(".der").empty();
+	search();
 })
