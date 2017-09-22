@@ -21,9 +21,12 @@
 	transform: translateY(-50%);
 }
 .content_one{
-	display: flex;
+	/*display: flex;*/
 	position: relative;
 	margin-top: .1rem;
+}
+.content_ss{
+	display: flex;
 }
 .content_one img{
 	width: 1.7rem;
@@ -113,7 +116,6 @@
 .right span.nine{
 	background: #ff6666;
 }
-
 
 .content_four{
 	display: flex;
@@ -235,12 +237,16 @@
 	display: block;	
 	text-align: right;
 }
-.buy{
+.buy{	
+	outline: none;	
 	flex: 1;
 	color: white;
 	background: #ee8219;
 	text-align: center;
 	line-height: .88rem;	
+}
+.color{
+	background: #C6C6C6;
 }
 .bottom_nav{
 	border-top: 0.02rem solid #e5e5e5;

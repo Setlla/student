@@ -1,66 +1,33 @@
+  
+   	$.ajax({
+   	type:"post",
+   	url:"http://39.108.219.59/changepwd",
+   	async:true,
+   	contentType:"application/json",
+// 	data:JSON.stringify({localStorage.getItem(token)}),
+   	success:function(){
+   		
+   	}
+   });
 
 	
-	$(document).on("click",".login",function(){	
-		var phone=$(".phone");
-		var password=$(".password");
+	$(document).on("click",".send",function () {
 		
-		if(valiphone(phone.val())&&valipassword(password.val())){
-			$.ajax({
-				type:"post",
-				url:"http://39.108.219.59/changepwd",
-				async:true,
-				contentType:"application/JSON",
-				data: JSON.stringify({"phone":phone.val(),"password":hex_md5(password.val())}),
-				success:function(data){
-					console.log(data);	
-					if(data.isChange== true ) {				
-				 		location.href="loginLo.html";
-					}	
-				}				
-			});	
-		}
+		
+		show();
+		
+		
+		clearInterval(T)
 	})
-	
-	var i;
+
 	var T;
-		
+	var i;
+	
 	function show(){
-		if(i>1){
+		if(i>0){
 			i=i-1;
-			$(".send").css("background","#33CC33");	
-			$(".login").css("background","#33CC33");
-			$(".send").attr("disabled",true);
-		}else{
-			i="发送验证码",
-			$(".send").css("background","#fa6c62");	
-			$(".login").css("background","#33CCff");	
-			$(".send").attr("disabled",false);
-			clearInterval(T);
-		}	
-		$(".send").html(i);
+			$(this).css("background","#E9E9E9");	
+			var T=setInterval(show,1000);
+		}
+
 	}
-	
-	
-	
-	$(document).on("click",".send",function(){
-		i=9;	
-		T=setInterval(show,1000);
-	})
-	
-	
-	
-
-	
-	
-
-		
-
-
-
-
-
-
-
-
-
-

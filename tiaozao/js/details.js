@@ -93,13 +93,14 @@
 			}),
 			success: function(data) {
 				if(data.isSuccess==true){
-					location.href="gouwuche.html"
+					location.href="ShopCart.html"
 				}
 				console.log(data);
 			}
-		});
-
-		
+		});		
 	})
-	
+		
+		$(document).on("click",".arrow",function () {
+			history.back()
+		})
 	

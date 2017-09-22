@@ -1,4 +1,5 @@
 	//购物车AJAX数据	
+	var datas;
 	$.ajax({
 		type:"post",
 		url:"http://39.108.219.59/getShopCar",
@@ -7,6 +8,8 @@
 		data:JSON.stringify({token: localStorage.getItem("token"),}),
 		success:function(result){
 			setproduct(result.result);
+			datas=result.result;
+			console.log(datas)
 //			setEdit(result.result);
 		}
 	});
@@ -26,6 +29,7 @@
 //			$(".information_small .round").removeClass("cur");
 //		}
 		setsum();
+		setDisabled();
 	})
 	
 	
@@ -40,16 +44,20 @@
 			$(".content_one .round").addClass("cur");
 		}
 		setsum();
-
+		setDisabled();
 	})
 	
-		// 底部 
-//	  $(document).on("click",".tips li",function(){
-//	  	 $(this).children("span").css("color","#33CCFF");
-//		 $(this).siblings().children("span").css("color","black");
-//	     $(this).children("i").addClass("cur");
-//		 $(this).siblings().children("i").removeClass("cur");  		  	
-//	  })	
+	
+	
+	function setDisabled() {
+		if($(".content_one .cur").length) {
+			$(".buy").removeAttr("disabled").removeClass("color");
+		}else {
+			$(".buy").attr("disabled","disabled").addClass("color");
+		}
+	}
+	
+	
 	  //结算 和 件数
 	function setsum(){
 		var num=0;
@@ -65,13 +73,18 @@
 	 	$(".buy").html("结算("+num+")");
 	}
 	
+	$(document).on("click",".content_ss",function () {
+		
+		location.href="details.html?id="+$(this).parents(".content_one").data("id");//跳转
+	})
 
 	// 购物的数据渲染
 	function  setproduct(result) {
 		for (var i=0;i<result.length;i++) {		
 		var cont='<div class="content_one" data-id = '+result[i].product.id+'><div class="round">'
 //				+'<a class="blue_round" href="#" style="display: none;"></a>'
-				+'</div>'			
+				+'</div>'
+				+'<div class="content_ss">'
 				+'<img src='+result[i].product.Image+'>'
 				+'<div class="right">'
 				+'<p class="Name">'+result[i].product.Name+'</p>'
@@ -81,7 +94,7 @@
 				+'<strong>￥<em class="newPrice">'+result[i].product.CurPrice+'</em></strong>'
 				+'<i class="OldPrice">价格：￥'+result[i].product.OldPrice+'</i>'
 				+'<a>X<i class="number">'+result[i].ProductNumber+'</i></a>'					
-				+'</div></div>'		
+				+'</div></div></div>'		
 				
 		var tt='<div class="content_four" data-id = '+result[i].id+'>'
 				+'<div class="round">'		
@@ -105,15 +118,7 @@
 		$(".content").hide();
 		$(".content_three").show();
 	})
-//		if ($(".qh_a").css("display")=="none") {
-//			$(".qh_a").show().siblings().hide();
-//			$(".content").show();
-//			$(".content_three").hide();
-//		}else {
-//			$(".qh_a").hide().siblings().show();
-//			$(".content").hide();
-//			$(".content_three").show();
-//		}
+
 	
 	// 完成AJAX数据
 	$(document).on("click",".qh_b",function() {
@@ -184,36 +189,19 @@
 	})			
 	//底部结算
 	$(document).on("click",".buy",function () {
-		if ($(".content_one .cur").length>0) {
-			localStorage.setItem("Products",JSON.stringify(getProducts()));
-			location.href="ConfirmOrder.html"
-		} else{
-			alert("没有物品")
-		}
+		var Products = [];
+		var content=$(".content_one .round.cur");		
+		for(var i=0;i<content.length;i++){
+			var j = content.eq(i).parents(".content_one").index();		
+			Products.push(datas[j]);	
+		}	
+		localStorage.setItem("Products",JSON.stringify(Products));
+		location.href="ConfirmOrder.html"
 	})
 	
 	
-	function getProducts() {
-		var  Products = [];
-		var content=$(".content_one .cur");
-		for(var i=0;i<content.length;i++){
-			 var Des=content.eq(i).parent().find(".Name").html();
-	 		 var newPrice=content.eq(i).parent().find(".newPrice").html();
-	 		 var number=content.eq(i).parent().find(".number").html();
-	 		 var Image=content.eq(i).parent().find("img")[0].src;
-	 		 var id = content.eq(i).parent().data("id");
-	 		 var product = {
-				id:id,
-				Des:Des,
-				number:number,
-				Image:Image,
-				newPrice:newPrice,
-			};
-			Products.push(product);	
-		}
-		return Products;
-	}
 
+	
 
 
 

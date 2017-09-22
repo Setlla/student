@@ -1,9 +1,11 @@
 
-
+ 
+ var datas ={productName:""};
 $.ajax({
 	type:"post",
 	url:"http://39.108.219.59/productList",
 	contentType:"application/json",
+	data:JSON.stringify({data:datas}),
 	success:function(result){
 		console.log(result);
 		setProduct(result.result);

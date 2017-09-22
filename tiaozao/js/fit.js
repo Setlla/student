@@ -55,7 +55,7 @@
 				}),
 			success:function(data){
 				if(data.isSuccess==true){
-					location.href="geren.html"
+					location.href="personal.html"
 				}
 			}
 		});

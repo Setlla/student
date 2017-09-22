@@ -108,6 +108,7 @@
 
 .denote p:before{
 	content: "";
+	background: #12A2E5;
 	border: 1px #12A2E5 solid;
 	margin-right: .2rem;
 }
