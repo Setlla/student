@@ -14,16 +14,16 @@ html{
 .head{
 	height: 1.28rem;
 	position: relative;
-	border-bottom: solid #18252D 1px;
 	width: 100%;
 	text-align: center;
+	background-color: #33ccff;
 }
 .head span{
 	display: block;
 	height: .15rem;
 	width: .15rem;
-	border-left: solid #6b6b6b 1px;
-	border-bottom: solid #6b6b6b 1px;
+	border-left: solid #FFFFFF 1px;
+	border-bottom: solid #FFFFFF 1px;
 	transform:translateY(-50%) rotate(45deg);
 	position: absolute;
 	top: 50%;
@@ -33,6 +33,7 @@ html{
 	font-size: .38rem;
 	color: #18252d;
 	line-height: 1.28rem;
+	color: #fff;
 }
 .head img{
 	position: absolute;
@@ -40,20 +41,7 @@ html{
 	width: .36rem;
 	top: 50%;
 	transform: translateY(-50%);
-	right: .95rem;
-}
-.dot{
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	right: .38rem;
-}
-.dot i{
-	display: inline-block;
-	width: .08rem;
-	height: .08rem;
-	background-color: #676767;
-	border-radius: .04rem;
+	right: .25rem;
 }
 .input{
 	padding: .15rem;
@@ -68,15 +56,20 @@ html{
 	top: 0;
 	z-index: 1;
 }
-#Allorders{
+.Allorders{
 	background: url("../img/lister_07.png")35% no-repeat;
 	background-size: 5%;
 	width: 100%;
 	/*border: solid #EEEEEE .15rem;*/
-	padding: .1rem 0;
+	padding: .2rem 0;
 	background-color: #FFFFFF;
 	border: none;
 	text-align: center;
+}
+.allorder{
+	text-align: left;
+	padding: .2rem .5rem;
+	background-position-x: left;
 }
 .success{
 	padding: .3rem 0;
@@ -112,7 +105,7 @@ html{
 .card{
 	overflow: hidden;
 	background-color: #F6F6F6;
-	padding: .2rem 0;
+	padding: .2rem .1rem;
 }
 .card img{
 	height: 1.9rem;
@@ -122,29 +115,30 @@ html{
 }
 .text{
 	overflow: hidden;
-	width: 65%;
-	float: right;
-	margin-right: .3rem;
-}
-.text p{
-	font-size: .3rem;
-	display: inline-block;
+	width: 50%;
 	float: left;
-	width: 70%;
+	margin-left: .2rem;
 }
-.text span{
+.pricess{
+	width:15%;
+	float: right;
+}
+
+.pricess span{
 	display: block;
 	width: 20%;
-	float: right;
 	text-align: right;
 	font-size: .26rem;
+	width: 100%;
 }
 .noprice{
 	color: #808080;
 	text-decoration: line-through;
+	
 }
 .number{
 	color: #808080;
+	/*width: 20%;*/
 }
 li{
 	overflow: hidden;
@@ -179,11 +173,9 @@ li button{
 .delete{
 	border: solid #BBBBBB 1px;
 		float: right;
-
 }
 .assess{
 	border: solid #f5003f 1px;
 	color: #f5003f;
 		float: right;
-
 }
