@@ -11,8 +11,7 @@
 	$.post('http://39.108.219.59/productList',function(s,status){
 		//商品列表
 		for (var i=0;i<s.result.length;i++) {
-			var textCT=
-	    	
+			var textCT=	    	
 	    		'<ul class="ware" data-id="'+s.result[i].id+'">'
 				+'<li class="ware_pic">'
 				+'<img src="'+s.result[i].Image+'" />'
@@ -39,7 +38,7 @@
 	        }
 		}
 		//点击物品按钮
-		$('.alllist div div').click(function(){
+		$('.alllist div ul').click(function(){
 			var id=$(this).data('id');
 	        location.href="DetailsPage.html?id=" + id;
 	   })

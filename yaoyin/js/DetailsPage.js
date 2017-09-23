@@ -6,6 +6,10 @@
 				var content=
 					'<div class="ware_pic">'
 		        	+'<img id="imgid1" src="'+data.result.product.Image+'" />'
+		        	+'<img class="ware_pic_none" src="img/author.jpg" />'
+	        		+'<img class="ware_pic_none" src="img/ware/ware_24.png" />'
+	        		+'<img class="ware_pic_none" src="img/author.jpg" />'
+	        		+'<img class="ware_pic_none" src="img/ware/ware_24.png" />'
 	        		+'</div>'
 					
 //					$('.ware').append(content);
@@ -38,6 +42,7 @@
 					$('.baby').append(content2);
 		}
 		//详情数据渲染
+		var data_result;
 		$.ajax({			
 			type:"post",
 			url:"http://39.108.219.59/productDetail",
@@ -49,9 +54,10 @@
 			}),
 			success:function(data,status){
 				console.log(data.result.product.Name);
-				datas(data);//插入动态数据				
+				datas(data);//插入动态数据
+				data_result=data.result;
 			}
-		})
+		})		
 		//加入购物车
 		$('.addshopcar').click(function(){
 			$.ajax({
@@ -73,12 +79,20 @@
 			});
 		})
 
+		//立即购买
+		$(document).on("click",".purchase button",function(){
+			var warelist=[];
+			warelist.push(data_result);
+			localStorage.setItem("warelist",JSON.stringify(warelist));
+			location.href="order_confirm.html";	
+		})
+
 		//箭头返回当铺页面
 		$('.header_arr').click(function(){
 			history.go(-1);
 		})
 		
-		//轮郭效果
+		//轮播效果
 		var leng=$('.ware_pic img').length;
 		var index=0;		
 		function zidong(){
@@ -86,12 +100,13 @@
 			$('.dot span').eq(index).addClass('dotscolor').siblings().removeClass('dotscolor');
 			index=(index+1)%leng;
 		}
+//		$(document).on("click",".dot span",function(){
 		$('.dot span').click(function(){
 				index=$('.dot span').index(this);
 				zidong();
 		})
 		var it=setInterval(zidong,1000);
-
+//		$(document).on("hover",".ware_pic img",function(){
 		$('.ware_pic img').hover(function(){
 			clearInterval(it);
 		},function(){
