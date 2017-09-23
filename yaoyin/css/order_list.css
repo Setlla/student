@@ -14,36 +14,29 @@
 		width: 100%;
 		height: 0.88rem;
 		line-height: 0.88rem;
-		background: #FFFFFF;
+		background: #33ccff;
 		text-align: center;
 		font-size: 0.3rem;
-		color: #333333;
+		color: #FFFFFF;
 		position: relative;
-		border-bottom: 1px solid #a7a7a7;
 	}
 	.header_arr{
 		display: block;
 		width: 0.24rem;
 		height: 0.24rem;
-		border-left: 2px solid #5c5c5c;
-		border-bottom: 2px solid #5c5c5c;
+		border-left: 2px solid #FFFFFF;
+		border-bottom: 2px solid #FFFFFF;
 		position: absolute;
 		top: 50%;
 		left: 0.34rem;
 		transform: translate(0,-50%) rotate(45deg) ;
 	}
-	.header_dot{
-		position: absolute;
-		right: 0.34rem;
-		font-size: 0.28rem;
-		color: #676767!important;
-	}
 	.header img{
 		width: 0.37rem;
-		height: 0.37rem;
+		height: 0.32rem;
 		position: absolute;
 		top: 50%;
-		right: 1rem;
+		right: 0.34rem;
 		transform: translate(0,-50%);
 	}
 	
@@ -56,8 +49,8 @@
 		border: 0;
 		height: 0.55rem;
 		display: block;
-		padding-left: 40%;
-		background: url(../img/icon/icon_68.png)38% 50% no-repeat;
+		padding-left: 42%;
+		background: url(../img/icon/icon_68.png)35% 50% no-repeat;
 		background-color: #FFFFFF;
 		background-size: 0.34rem 0.34rem;
 	}

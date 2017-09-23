@@ -11,7 +11,7 @@
 		display: -webkit-flex;	
 	}
 	.cargo li{
-		height: 1.6rem;
+		height: 1.5rem;
 		font-size: 0.25rem;
 		color: #444444;
 		position: relative;
@@ -50,7 +50,7 @@
 		border-right: 1px solid #ababab;
 		position: absolute;
 		top: 50%;
-		right: 0.2rem;
+		right: 0.18rem;
 		transform: translate(0,-50%) rotate(45deg);
 	}
 	
@@ -127,8 +127,7 @@
 	.invoice{
 		background: #FFFFFF;
 		font-size: 0.26rem;
-		padding: 0.2rem;
-		margin-bottom: 0.2rem;
+		margin-bottom: 1.2rem;
 	}
 	.invoice li{
 		height: 0.88rem;
@@ -149,7 +148,7 @@
 	}
 	.invoice_delivery{
 		text-align: right;
-		padding-right: 0.4rem;
+		padding-right: 0.5rem;
 		position: relative;
 	}
 	.invoice_arr{
@@ -159,7 +158,7 @@
 		border-right: 1px solid #a5a5a5;
 		position: absolute;
 		top: 50%;
-		right: 0.1rem;
+		right: 0.24rem;
 		transform: translate(0,-50%) rotate(45deg);
 	}
 	.invoice input{
@@ -171,6 +170,7 @@
 	}
 	.invoice_right{
 		text-align: right;
+		padding-right: 0.22rem;
 	}
 	.invoice_right span:nth-last-child(1),.invoice_right span:nth-last-child(2){
 		color: #c32f3f;
@@ -185,7 +185,7 @@
 		overflow: hidden;
 		position: absolute;
 		top: 50%;
-		right: 0;
+		right: 0.22rem;
 		transform: translate(0,-50%);
 	}
 	.js_btn span{

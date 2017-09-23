@@ -12,25 +12,25 @@
 		//商品列表
 		for (var i=0;i<s.result.length;i++) {
 			var textCT=
-				'<div class="ware" data-id="'+s.result[i].id+'">'
-	       	    +'<div class="ware_pic">'
-	        	+'<img src="'+s.result[i].Image+'" />'
-	        	+'</div>'
-	        	+'<div class="ware_explain">'
-	        	+'<p>'+s.result[i].Name+'</p>'
-	        	+'<p>'
-	        	+'<span>'+s.result[i].Carriage+'</span>'
-	        	+'<span>'+s.result[i].Destination+'</span>'
-	        	+'</p>'
-	        	+'<a href="#">'+s.result[i].Status+'</a>'
-	        	+'<p>'
-	        	+'<span>￥</span><span>'+s.result[i].CurPrice+'</span>'
-	    		+'<span>价格：￥</span><span>'+s.result[i].OldPrice+'</span>'
-	    		+'<span class="dot">●●●</span>'
-	        	+'</p>'
-	        	+'</div>'
-	        	+'</div>';
 	    	
+	    		'<ul class="ware" data-id="'+s.result[i].id+'">'
+				+'<li class="ware_pic">'
+				+'<img src="'+s.result[i].Image+'" />'
+				+'</li>'
+				+'<li class="ware_explain">'
+				+'<p>'+s.result[i].Name+'</p>'
+		    	+'<p>'
+		    	+'<span>包邮</span>'
+		    	+'<span>上海</span>'
+		    	+'</p>'
+		    	+'<a href="">7成新</a>'
+		    	+'<p>'
+		        +'<span>￥</span><span>'+s.result[i].CurPrice+'</span>'
+		    	+'<span>价格：￥</span><span>'+s.result[i].OldPrice+'</span>'
+		    	+'</p>'
+				+'</li>'
+				+'</ul>';
+
 	        //动态插入，判断是否为书籍
 	        if (s.result[i].IsBook==0) {
 	        	$('.list').append(textCT);
