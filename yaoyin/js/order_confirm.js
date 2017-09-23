@@ -1,37 +1,67 @@
 		users();		
-		//获取购物车的商品信息
-		var productNum =[];
+		//获取购物车的商品信
+		var ware=JSON.parse(localStorage.getItem("warelist"));				
 		var productId=[];
-		var ware=JSON.parse(localStorage.getItem("warelist"));
-		var warelists=function(){
-			var s=0;
-			var s1=0;
+		var productNum=[];
+		var xuanran=function(){
+			var num1=0;
+			var num2=0;
 			for (var i=0;i<ware.length;i++) {
-				var content='<ul class="recharge">'
-			        +'<li>'
-			        +'<img src="'+ware[i].product.Image+'"/>'
-			        +'</li>'
-			        +'<li>'
-			        +'<span>'+ware[i].product.Name+'</span>'
-			        +'<div class="serven"><a href="#">7天退换</a></div>'
-			        +'</li>'
-			        +'<li>'
-			        +'<p><span>￥</span><span class="price">'+ware[i].product.CurPrice+'</span></p>'
-			        +'<p>X<span class="num">'+ware[i].ProductNumber+'</span></p>' 
-			        +'</li>'
-			        +'</ul>'
-			        
-			    $('.warelist').append(content);
-			    
-			    s=s+parseInt(ware[i].ProductNumber);//数量
-			    s1=s1+parseInt(ware[i].product.CurPrice*ware[i].ProductNumber);//价格
-			    productNum.push(ware[i].ProductNumber);
-			    productId.push(ware[i].product.id);
-			}
-			$('.sum').text(s);
-			$('.result').text(s1);
+				var content=
+					'<ul class="recharge">'
+		        	+'<li>'
+		        	+'<img src="'+ware[i].product.Image+'"/>'
+		        	+'</li>'
+		        	+'<li>'
+		        	+'<span>'+ware[i].product.Name+'</span>'
+		        	+'<div class="serven"><a href="">7天退换</a></div>'	
+		        	+'</li>'
+		        	+'<li>'
+		        	+'<p><span>￥</span><span class="price">'+ware[i].product.CurPrice+'</span></p>'
+		        	+'<p>X<span class="num">'+ware[i].ProductNumber+'</span></p>' 
+		        	+'</li>'
+		        	+'</ul>'
+	        	
+	        	$(".warelist").append(content);
+	        	num1=num1+ware[i].ProductNumber;
+	        	num2=num2+(ware[i].ProductNumber*ware[i].product.CurPrice);
+	        	productId.push(ware[i].product.id);
+	        	productNum.push(ware[i].ProductNumber);
+			}			
+			$('.sum').text(num1);			
+			$('.result').text(num2);
 		}
-		warelists();
+		xuanran();
+		//提交订单
+		$(document).on("click",".foot_btn",function(){
+			cofirm();
+		})
+		
+		var cofirm=function(){
+			var totalNum=$('.sum_1').text();
+			var totalCost=$('.result_1').text();
+			var message=$('.message').val();
+			$.ajax({
+				type:"post",
+				url:"http://39.108.219.59/addOrder",
+				async:true,
+				contentType:"application/JSON",
+				data:JSON.stringify({
+					token:localStorage.getItem("token"),
+					totalCost:totalCost,
+					totalNum:totalNum,
+					isInvoice:flag,
+					message:message,
+					productId:"["+productId+"]",
+					productNum:"["+productNum+"]"
+				}),
+				success:function(data,status){
+					if (data.isSuccess==true) {
+						location.href="order_list.html";
+					}
+				}				
+			})
+		}
 		
 		//是否开具发票
 		var flag=0;
@@ -44,40 +74,6 @@
 				flag=1;
 			}
 		})
-		
-		//提交订单函数
-		var confirm=function(){
-			var totalCost=$('.result_1').text();
-			var totalNum=$('.sum_1').text();
-			var message=$('.message').val();		
-			$.ajax({
-				type:"post",
-				url:"http://39.108.219.59/addOrder",
-				async:true,
-				contentType:"application/JSON",
-				data:JSON.stringify({
-					token:localStorage.getItem("token"),
-					totalCost:totalCost,
-					totalNum:totalNum,
-					message:message,
-					isInvoice:flag,
-					productId:"["+productId+"]",
-					productNum:"["+productNum+"]"
-				}),
-				success:function(data,status){
-					console.log(data+"获取数据测试");
-					if(data.isSuccess==true){
-						location.href="order_list.html";
-					}
-				}
-			});
-		}
-		
-		//提交订单事件
-		$(document).on("click",".foot_btn",function(){
-			confirm();
-		})
-		
 		
 		//箭头跳转
 		$(document).on("click",".header_arr",function(){
