@@ -1,64 +1,61 @@
 	/*公共样式*/
 	body,html{
 		height: 100%;
-		overflow: hidden;
+		min-width: 85%;
 	}
 	/*头部*/
 	.header{
+		width: 100%;
 		height: 50px;
 		line-height: 50px;
 		color: #fff;
+		background: #2b3b4b;
+		overflow: hidden;
 	}
 	.col_1{
+		width: 17%;
 		padding-left: 30px;
 		background: #304354;
 		font-size: 16px;
+		float: left;
 	}
 	.col_2{
-		text-align: right;
-		background: #2b3b4b;
-		font-size: 14px;	
+		float: right;
 	}
 	.col_2 span{
 		margin: 0 36px;
 	}
 	.col_2 a{
 		margin-right: 40px;
-		color: #fff;
-		
+		color: #fff;	
 	}
 	.col_2 a:hover{
 		color: red;
-		text-decoration: none;
-		
+		text-decoration: none;		
 	}
 	/*左侧模块*/
-	.row_div{
-		height: 100%;
-	}
 	.managelist{
+		width: 17%;
 		height: 100%;
 		background: #34485b;
-		padding: 0!important;
+		padding-top: 20px!important;
+		float: left;
 	}
 	.managelist li{		
 		height: 55px;
 		line-height: 55px;
-		padding-left: 35px;
+		padding-left: 33px;
 		font-size: 15px;
 		color: #fff;
 		position: relative;
 		border-bottom: 1px solid #384e61;
 	}
 	.managelist li span:nth-of-type(1){
-		background: url(../img/icon/icon_07.png)50% 50% no-repeat;
+		background: url(../img/icon/icon_08.png)50% 50% no-repeat;
 		width: 20px;
 		height: 18px;
 		display: inline-block;
 		vertical-align: middle;
-	}
-	.managelist_li_1{
-		margin-top: 20px;
 	}
 	.managelist li:hover{
 		background: #e34e42;
@@ -74,13 +71,14 @@
 	/*右侧模块*/
 	.col_10_right{
 		background: #f0f2f5;
+		width: 83%;
 		height: 100%;
+		float: left;
 	}
 	/*检索*/
 	.retrieval{
 		background: #fff;
-		width: auto;
-		margin:20px 15px 20px 5px;
+		margin:20px;
 		padding: 20px;
 	}
 	.retrieval p{
@@ -93,29 +91,15 @@
 	.form_select select option{
 		background:#fff;
 	}
-	.form_select span{
-		position: relative;
-		display: inline-block;
-		width: 226px;
-	}
-	.area_btn{
-		width: 33px;
-		height: 33px;
-		border: 0;
-		outline: none;
-		background: url(../img/icon/icon_05.gif)50% 50% no-repeat;
-		background-color: #64b660;
-		position: absolute;
-		top: 50%;
-		right: 0;
-		transform: translate(0,-50%);		
+	.img_color{
+		background: #64b660;
+		border: 1px solid #64b660;
 	}
 	/*最新注册模块*/
 	.retrieval_1{
-		height: 100%;
-		margin:0px 15px 0px 5px;
-		padding: 20px;
-		background: #fff;		
+		background: #fff;
+		margin:20px 20px 0px 20px;
+		padding: 20px;		
 	}
 	.form_align{
 		position: relative;
@@ -134,4 +118,7 @@
 	}
 	.retrieval_1 table{
 		margin-bottom: 0!important;
+	}
+	.first{
+		background: #efefef;
 	}
