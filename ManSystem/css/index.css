@@ -1,0 +1,137 @@
+	/*公共样式*/
+	body,html{
+		height: 100%;
+		overflow: hidden;
+	}
+	/*头部*/
+	.header{
+		height: 50px;
+		line-height: 50px;
+		color: #fff;
+	}
+	.col_1{
+		padding-left: 30px;
+		background: #304354;
+		font-size: 16px;
+	}
+	.col_2{
+		text-align: right;
+		background: #2b3b4b;
+		font-size: 14px;	
+	}
+	.col_2 span{
+		margin: 0 36px;
+	}
+	.col_2 a{
+		margin-right: 40px;
+		color: #fff;
+		
+	}
+	.col_2 a:hover{
+		color: red;
+		text-decoration: none;
+		
+	}
+	/*左侧模块*/
+	.row_div{
+		height: 100%;
+	}
+	.managelist{
+		height: 100%;
+		background: #34485b;
+		padding: 0!important;
+	}
+	.managelist li{		
+		height: 55px;
+		line-height: 55px;
+		padding-left: 35px;
+		font-size: 15px;
+		color: #fff;
+		position: relative;
+		border-bottom: 1px solid #384e61;
+	}
+	.managelist li span:nth-of-type(1){
+		background: url(../img/icon/icon_07.png)50% 50% no-repeat;
+		width: 20px;
+		height: 18px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.managelist_li_1{
+		margin-top: 20px;
+	}
+	.managelist li:hover{
+		background: #e34e42;
+		background-image: none;
+  		border: 1px solid #e34e42;
+  		border-radius: 2px;
+		-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+		        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+		-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+		     -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+		        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	}
+	/*右侧模块*/
+	.col_10_right{
+		background: #f0f2f5;
+		height: 100%;
+	}
+	/*检索*/
+	.retrieval{
+		background: #fff;
+		width: auto;
+		margin:20px 15px 20px 5px;
+		padding: 20px;
+	}
+	.retrieval p{
+		font-size: 18px;
+	}
+	.form_select select{
+		background-color: #efefef;
+		margin-right: 10px;
+	}
+	.form_select select option{
+		background:#fff;
+	}
+	.form_select span{
+		position: relative;
+		display: inline-block;
+		width: 226px;
+	}
+	.area_btn{
+		width: 33px;
+		height: 33px;
+		border: 0;
+		outline: none;
+		background: url(../img/icon/icon_05.gif)50% 50% no-repeat;
+		background-color: #64b660;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translate(0,-50%);		
+	}
+	/*最新注册模块*/
+	.retrieval_1{
+		height: 100%;
+		margin:0px 15px 0px 5px;
+		padding: 20px;
+		background: #fff;		
+	}
+	.form_align{
+		position: relative;
+		text-align: right;
+		margin-bottom: 20px;		
+	}
+	.form_align a{
+		margin-left: 12px;
+	}
+	.form_align span{
+		font-size: 18px;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translate(0,-50%);
+	}
+	.retrieval_1 table{
+		margin-bottom: 0!important;
+	}
