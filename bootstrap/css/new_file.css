@@ -1,0 +1,94 @@
+body{
+	background: #2b3b4b;
+	overflow: hidden;
+}
+.head a{
+	color: #F9F9F9;
+}
+.head a:hover{
+	background:#304354!important;
+	border: none;
+}
+.head .manager{
+	float: right!important;
+}
+.backer{
+	width: 15%;
+}
+.manag{
+	padding: 0;
+	float: left;
+	width: 15%;
+}
+.manag li{
+	text-align: left;
+	padding: 15px 0px;
+	border: none;
+	background:#2b3b4b ;
+	color:#F9F9F9 ;
+}
+.manag li:hover{
+	background:#e34e42 ;
+	color:#F9F9F9 ;
+}
+.manag img{
+	margin: 0px 10px;
+}
+.boxer{
+	background: #f0f2f5;
+	float: left;
+	padding: 20px;
+	width: 85%;
+}
+.box{
+	background: #fff;
+	padding: 20px 20px;
+}
+.box select{
+	width: 120px;
+	height: 35px;
+	background: #efefef;
+	border: solid #EEEEEE 1px;
+}
+.box input{
+	height: 35px;
+	padding: 0 10px;
+	border: none;
+	border: solid #EEEEEE 1px;
+	background: url("../img/backer_07.png")100% no-repeat;
+}
+.tab{
+	background: #FFF;
+	margin-top: 20px;
+	padding: 10px;
+}
+.table tr td{
+	vertical-align: middle!important;
+}
+.riven{
+	width: 34px;
+	height: 34px;
+	border-radius: 17px;
+}
+.list{
+	margin: 0;
+}
+.list a{
+	color: red!important;
+}
+.button{
+	padding: 10px 0;
+}
+.button p{
+	display: inline-block;
+}
+.button button{
+	float: right;
+	border: none;
+	margin-right: 10px;
+	padding: 5px;
+}
+.button button:hover{
+	background: red;
+	color: #fff;
+}
