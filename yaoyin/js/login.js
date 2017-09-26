@@ -7,7 +7,7 @@
 			xmlhttp=new ActiveXObject();
 		}
 		
-		xmlhttp.open("POST","http://39.108.219.59/login","true");
+		xmlhttp.open("POST",_url+"/login","true");
 		var account=document.querySelector(".account").value;
 		var pwd=document.querySelector(".password").value;
 		var s=phones(account);

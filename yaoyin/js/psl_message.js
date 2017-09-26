@@ -44,7 +44,7 @@
 			$('.intercalate_head').attr('src',img);
 			$.ajax({
 				type:"post",
-				url:"http://39.108.219.59/setHeadImage",
+				url:_url+"/setHeadImage",
 				async:true,
 				data:datas,
 				contentType:false,
@@ -65,7 +65,7 @@
 			var address=$('.address').val();
 			$.ajax({
 				type:"post",
-				url:"http://39.108.219.59/setPerson",
+				url:_url+"/setPerson",
 				async:true,
 				contentType:"application/JSON",
 				data:JSON.stringify({

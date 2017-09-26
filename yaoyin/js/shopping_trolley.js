@@ -64,7 +64,7 @@
 		var datas=function(data){
 			for (var i=0;i<data.result.length;i++) {
 				var content=
-					'<ul class="ware" data-id="'+data.result[i].product.id+'">'
+					'<ul class="ware" data-dpid="'+data.result[i].product.id+'" data-id="'+data.result[i].id+'">'
 					+'<li class="ware_radio">'
 					+'<span class="list_radio"></span>'
 					+'</li>'
@@ -106,7 +106,7 @@
 		var gouwu=function(){
 			$.ajax({
 				type:"post",
-				url:"http://39.108.219.59/getShopCar",
+				url:_url+"/getShopCar",
 				async:true,
 				contentType:'application/JSON',
 				data:JSON.stringify({
@@ -122,7 +122,7 @@
 		
 		//点击购物车商品查询详情订单
 		$(document).on("click",".ware_explain",function(){
-			var id=$(this).parents(".ware").data('id');
+			var id=$(this).parents(".ware").data('dpid');
 	        location.href="DetailsPage.html?id=" + id;
 		})
 		
@@ -149,7 +149,7 @@
 
 			$.ajax({
 				type:"post",
-				url:"http://39.108.219.59/updateShopCar",
+				url:_url+"/updateShopCar",
 				async:true,
 				contentType:'application/JSON',
 				data:JSON.stringify({
@@ -185,9 +185,10 @@
 		//删除数据渲染
 		$(document).on("click",".btn_del",function(){
 			var id =$(this).parents(".ware").data('id');
+			var that=this;
 			$.ajax({
 				type:"post",
-				url:"http://39.108.219.59/delShopCar",
+				url:_url+"/delShopCar",
 				async:true,
 				contentType:'application/JSON',
 				data:JSON.stringify({
@@ -196,8 +197,8 @@
 				}),
 				success:function(data,status){
 					if(data.isSuccess==true){
-						$(this).parents(".ware").remove();
-						location.reload();
+						$(that).parents(".ware").remove();
+//						location.reload();
 					}					
 				}
 			})

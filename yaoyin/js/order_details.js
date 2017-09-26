@@ -34,7 +34,7 @@
 		//ajax调用渲染函数
 		$.ajax({
 			type:"post",
-			url:"http://39.108.219.59/getOrderDetail",
+			url:_url+"/getOrderDetail",
 			async:true,
 			contentType:"application/JSON",
 			data:JSON.stringify({
@@ -54,7 +54,7 @@
 			var that = this;
 			$.ajax({
 				type:"post",
-				url:"http://39.108.219.59/delOrder",
+				url:_url+"/delOrder",
 				async:true,
 				contentType:"application/JSON",
 				data:JSON.stringify({

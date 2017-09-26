@@ -12,7 +12,7 @@ $(document).ready(function(){
 		var xuanran=function(){
 			$.ajax({
 				type:"post",
-				url:"http://39.108.219.59/getPerson",
+				url:_url+"/getPerson",
 				async:true,
 				contentType:"application/JSON",
 				data:JSON.stringify({
@@ -41,6 +41,12 @@ $(document).ready(function(){
 		//订单列表页
 		$(document).on("click",".bill_goods",function(){
 			location.href="order_list.html";
+		})
+		
+		//待付款待发货待评价等
+		$(document).on("click",".WaitHandle li",function(){
+			var id=$(this).index();
+			location.href="my_order.html?id="+id;
 		})
 		
 })//ready的括号

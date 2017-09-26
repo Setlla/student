@@ -32,7 +32,7 @@
 		//页面数据渲染
 		$.ajax({			
 			type:"post",
-			url:"http://39.108.219.59/getCollectionLog",
+			url: _url+"/getCollectionLog",
 			async:true,
 			contentType:'application/JSON',
 			data:JSON.stringify({

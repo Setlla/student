@@ -16,7 +16,7 @@
 		display: inline-block;
 		height: 100%;
 	}
-	.order_header li:nth-of-type(2) span{
+	.ordernumber span{
 		color: #33CCFF!important;
 		border-bottom: 2px solid #33CCFF!important;
 	}

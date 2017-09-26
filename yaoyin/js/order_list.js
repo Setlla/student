@@ -78,7 +78,7 @@
 			var productName=$(".search_ipt").val();
 			$.ajax({
 				type:"post",
-				url:"http://39.108.219.59/getOrder",
+				url:_url+"/getOrder",
 				async:true,
 				contentType:"application/JSON",
 				data:JSON.stringify({
@@ -100,7 +100,7 @@
 			var that = this;
 			$.ajax({
 				type:"post",
-				url:"http://39.108.219.59/delOrder",
+				url:_url+"/delOrder",
 				async:true,
 				contentType:"application/JSON",
 				data:JSON.stringify({

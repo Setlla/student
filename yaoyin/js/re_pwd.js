@@ -27,7 +27,7 @@
 		$('.reg').click(function(){
 			$.ajax({
 				type:"post",
-				url:"http://39.108.219.59/changepwd",
+				url:_url+"/changepwd",
 				async:true,
 				contentType:"application/JSON",
 				data:JSON.stringify({

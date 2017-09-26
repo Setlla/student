@@ -26,7 +26,7 @@
 		        	+'<div class="details_adress">'
 		        	+'<span>'+data.result.product.Carriage+'</span>'
 		        	+'<span>5.00</span><span>元</span>'
-		        	+'<span>23</span><span>人看过</span>'
+		        	+'<span class="BrowseTimes">'+data.result.product.BrowseTimes+'</span><span>人看过</span>'
 		        	+'<span>'
 			        +'<span>'+data.result.product.Destination+'</span><span>宝山</span>'
 		        	+'</span>'
@@ -43,26 +43,54 @@
 		}
 		//详情数据渲染
 		var data_result;
-		$.ajax({			
-			type:"post",
-			url:"http://39.108.219.59/productDetail",
-			async:true,
-			contentType:'application/JSON',
-			data:JSON.stringify({
-				id:id,
-				token:token
-			}),
-			success:function(data,status){
-				console.log(data.result.product.Name);
-				datas(data);//插入动态数据
-				data_result=data.result;
+		var productDetail=function(){
+			$.ajax({			
+				type:"post",
+				url: _url+"/productDetail",
+				async:true,
+				contentType:'application/JSON',
+				data:JSON.stringify({
+					id:id,
+					token:token
+				}),
+				success:function(data,status){
+					console.log(data.result.product.Name);
+					datas(data);//插入动态数据
+					data_result=data.result;
+					Browse();
+				}
+			})
+		}
+		productDetail();
+		
+		//访问次数		
+		var Browse=function(){
+			var bts=$('.BrowseTimes').text();
+			if(bts=="" || bts=="null" || bts==null){
+				bts=0;
 			}
-		})		
+			bts=parseInt(bts)+1;
+			$.ajax({			
+				type:"post",
+				url: _url+"/productBrowseTimes",
+				async:true,
+				contentType:'application/JSON',
+				data:JSON.stringify({
+					id:id,
+					BrowseTimes:bts
+				}),
+				success:function(data,status){
+					console.log(data.result);
+				}
+			})
+		}
+		
+		
 		//加入购物车
 		$('.addshopcar').click(function(){
 			$.ajax({
 				type:"post",
-				url:"http://39.108.219.59/addShopCar",
+				url: _url+"/addShopCar",
 				async:true,
 				contentType:'application/JSON',
 				data:JSON.stringify({

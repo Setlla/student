@@ -43,7 +43,7 @@
 			var message=$('.message').val();
 			$.ajax({
 				type:"post",
-				url:"http://39.108.219.59/addOrder",
+				url:_url+"/addOrder",
 				async:true,
 				contentType:"application/JSON",
 				data:JSON.stringify({
