@@ -69,6 +69,7 @@
 		width: 20%;
 		float: left;
 		margin: 0.2rem 0;
+		position: relative;
 	}
 	.WaitHandle span{
 		display: block;
@@ -78,7 +79,23 @@
 		width: 0.34rem;
 		height: 0.34rem;
 	}
-	
+	.wait_one{
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		line-height: 16px;
+		border-radius: 8px;
+		font-size: 10px;
+		text-align: center;
+		border: 1px solid red;
+		color: red;
+		background: #fff;
+		position: absolute;
+		top: -25%;
+		left: 60%;
+		transform: translate(-50%,0);
+		
+	}
 	
 	/*订单拍单部分*/
 	.bill,.bill_1,.bill_2{
