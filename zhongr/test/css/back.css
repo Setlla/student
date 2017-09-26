@@ -1,0 +1,185 @@
+body{
+	overflow: hidden;
+}
+.backs{
+	background: #2b3b4b;
+	height: 50px;
+	line-height: 50px;
+	width: 100%;
+	overflow: hidden;
+	font-size: 18px;
+	margin-bottom: 0;
+	border: 0;
+	border-radius: 0;
+}
+.back a{
+	background: #304354!important;
+}
+.backs li a{
+	color: #e3e5e7; 
+}
+.backs li a:hover{
+	background: #253240;
+}
+.bs{
+	float: left;
+}
+.bs li a{
+	padding: 0px 15px;
+}
+.bb{
+	float: right;
+	overflow: hidden;
+	line-height: 50px;
+}
+.bb li{	
+	float: left;
+	padding-right: 35px;
+}
+.content{
+	width: 100%;
+	overflow: hidden;
+}
+.aaaa{
+	margin: 0!important;
+}
+.left_guide{
+	padding: 0!important;	
+	float: left;
+	width: 17%;
+	background: #34485b;
+}
+
+.left_guide ul li{
+	position: relative;
+	line-height: 65px;
+	font-size: 15px;
+	border-bottom: 1px solid #384e61;
+}
+.left_guide ul li:hover{
+	background: #e34e42;
+}
+.left_guide ul li img{
+	margin: 25px 15px 20px 35px;
+}
+.left_guide ul li a{
+	color: white;
+}
+.left_guide ul li i{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	display: block;
+	border-bottom:1px white solid;
+	border-left: 1px white solid;
+	transform:translateY(-50%) scaleY(0.8)rotate(45deg);
+	top:50%;
+	right: 15px;
+}
+.right_guide{
+	box-sizing: border-box;
+	float: right;
+	background: #f0f2f5;
+	width: 83%;
+	
+}
+.top_backstage{
+	position: relative;
+	background: white;
+	margin-top: 20px;
+	padding-bottom: 20px;
+}
+.top_backstage p{
+	color:#14151d;
+	font-size: 18px;
+	padding: 20px;
+}
+.top_backstage select{
+	width: 120px;
+	height: 30px;
+	margin-left: 20px;
+}
+.right_flo{
+	padding-left: 20px;
+}
+.inputss{
+	width: 200px!important;
+}
+.magnifierss{
+	width: 34px!important;
+	height: 34px!important;
+	background: #64b660;
+}
+.magnifierss img{
+	text-align: center!important;
+	padding-top: 3px!important;
+}
+.register{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background: white;
+	width: 100%;
+	overflow: hidden;
+}
+.register p{
+	float: left;
+	font-size: 18px;
+	color: #14151d;
+	padding: 24px 18px;
+}
+.register ul{
+	padding-top: 10px;
+	float: right;
+	margin-right: 10px;
+	overflow: hidden;
+}
+.register ul li{	
+	text-align: center;
+	margin-top: 20px;
+	margin: 5px;
+	line-height: 32px;
+	float: left;
+}
+.register ul li button{
+	font-size: 12px!important;
+	border-radius: 0!important;
+	background: #eeeeee;
+}
+.register ul li button:hover{
+	background-color: #e34e42!important;
+	color: white;	
+}
+.tb{
+	margin: 0 auto;
+	width: 97%;
+}
+.tb tr td{
+	padding-left: 15px!important;
+	vertical-align: middle!important;
+}
+.fanyi{
+	padding-top: 20px;
+	padding-left: 15px;
+	margin-bottom: 30px;
+}
+.fanyi button{
+	color: red;
+}
+.sousu {
+	padding-left: 20px;
+}
+.sousu .ll{
+	text-align: left!important;
+	width: 96px;
+	color: #000!important;
+	background: #efefef!important;
+	border-color: #d2d2d2!important;
+}
+.sousu .dd{
+	color: #6f6f6f!important;
+	background: #d9d9d9!important;
+	border-color: #d2d2d2!important;
+}
+.cur_img{
+	text-align: center;
+}
