@@ -41,14 +41,17 @@
 		padding-top: 20px!important;
 		float: left;
 	}
-	.managelist li{		
-		height: 55px;
-		line-height: 55px;
-		padding-left: 33px;
+	.managelist li{			
 		font-size: 15px;
 		color: #fff;
-		position: relative;
 		border-bottom: 1px solid #384e61;
+	}
+	.managelist li div{
+		width: 100%;
+		height: 53px;
+		line-height: 53px;
+		padding-left: 33px;
+		position: relative;
 	}
 	.managelist li span:nth-of-type(1){
 		background: url(../img/icon/icon_08.png)50% 50% no-repeat;
@@ -57,7 +60,7 @@
 		display: inline-block;
 		vertical-align: middle;
 	}
-	.managelist li:hover{
+	.motion:hover{
 		background: #e34e42;
 		background-image: none;
   		border: 1px solid #e34e42;
@@ -66,8 +69,36 @@
 		        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
 		-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
 		     -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-		        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+		        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;	
 	}
+	.managelist li ul{
+		list-style-type: none;
+		padding-left: 58px;	
+	}
+	.managelist>li>ul>li a{
+		color: #fff;
+	}
+	.managelist>li>ul>li>a:hover{
+		color: #e34e42;
+		text-decoration: none;		
+	}
+	.arr{
+		display: block;
+		width: 9px;
+		height: 9px;
+		border-left: 2px solid #ffffff;
+		border-bottom: 2px solid #ffffff;
+		position: absolute;
+		top: 50%;
+		right: 23px;
+		transform: translate(0,-50%) rotate(225deg);
+	}
+	.hide{
+		display: none;
+		margin: 0;
+		padding: 0;
+	}
+	
 	/*右侧模块*/
 	.col_10_right{
 		background: #f0f2f5;
