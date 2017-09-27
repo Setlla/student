@@ -2,7 +2,7 @@
 	var datas;
 	$.ajax({
 		type:"post",
-		url:"http://39.108.219.59/getShopCar",
+		url:_url+"getShopCar",
 		async:true,
 		contentType:"application/json",
 		data:JSON.stringify({token: localStorage.getItem("token"),}),
@@ -25,9 +25,6 @@
 		if ($(".content .round").length==$(".content .cur").length) {
 			$(".information_small .round").addClass("cur");
 		}
-//		else{
-//			$(".information_small .round").removeClass("cur");
-//		}
 		setsum();
 		setDisabled();
 	})
@@ -134,7 +131,7 @@
 		}		
 		$.ajax({
 			type:"post",
-			url:"http://39.108.219.59/updateShopCar ",
+			url:_url+"updateShopCar",
 			async:true,
 			contentType:"application/JSON",
 			data:JSON.stringify({
@@ -165,7 +162,7 @@
 			}),
 			success:function(data){
 				if(data.isSuccess==true){
-					location.href="gouwuche.html";
+					location.href="ShopCart.html";
 					alert("亲爱的已经删除")
 				}
 			}

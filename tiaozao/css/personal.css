@@ -1,6 +1,6 @@
 .top_nav{
 	background: #33CCFF;
-	line-height: 1rem;
+	line-height: .88rem;
 	position: relative;
 }
 .top_nav a{
@@ -22,6 +22,7 @@
 	font-size: .28rem;
 	color: white;
 	right: .2rem;
+	cursor: pointer;
 }
 .banner{
 	background:url(../image/gerenzx_02.png) no-repeat;
@@ -62,7 +63,25 @@
 .banner ul li span{
 	display: block;
 }
-
+.content ul li img{
+	height: .33rem;
+}
+.cur_one img{
+	position: relative;
+}
+.cur_one i{
+	line-height: .22rem;
+	border: 1px solid red;
+	top: 0;
+	right: 0;
+	border-radius: 50%;
+	position: absolute;
+	display: block;
+	width: .22rem;
+	height: .22rem;
+	background: white;
+	color: red;
+}
 .content ul{
 	overflow: hidden;
 	box-sizing: border-box;
@@ -74,28 +93,26 @@
 	float: left;
 	width: 20%;
 }
-.content ul li img{
-	height: .33rem;
-}
 .content ul li a{
 	display: block;
 	font-size: .2rem;
 	color: #666666;
 	padding-top: .15rem;
 }
-.content_noe ul{
-	
+.content_noe ul{	
 }
 .content_noe ul li{	
 	border-bottom: 1px solid #efefef;
+	cursor: pointer;
 }
 .content_noe ul li img{
-	padding: .25rem;
+	width: .4rem;
+	padding: .25rem .2rem;
 }
 .content_noe ul li a{
 	color: #666666;
 	font-size: .3rem;
-	line-height: 1rem;	
+	line-height: .88rem;	
 }
 .content_noe ul li:nth-child(2){
 	border-bottom: .2rem solid #efefef;
@@ -140,4 +157,19 @@
 }
 .bottom_nav .car{
 	color: #33CCFF;
+}
+.personal{
+	cursor: pointer;
+}
+.Pawnshop{
+	cursor: pointer;
+}
+.ShoCart{
+	cursor: pointer;
+}
+.goods{
+	cursor: pointer;
+}
+.tips{
+	cursor: pointer;
 }

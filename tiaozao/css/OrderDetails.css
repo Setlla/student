@@ -4,18 +4,18 @@
 	background: #33CCFF;
 	font-size: .36rem;
 	color: white;
+	position: relative;
 }
 .top_nav a{
 	position: absolute;
-	left: 0;
-	top: 0;	
-	height: .3rem;
-	width: .3rem;	
-	border-left: .04rem solid #fff;
-	border-bottom: .04rem solid #fff;	
-	box-sizing:border-box;
-	margin: .4rem;
-	transform: scaleY(.8) rotate(45deg);
+	left: .2rem;
+	top: 50%;	
+	height: .25rem;
+	width: .25rem;	
+	border-left: .03rem solid #fff;
+	border-bottom: .03rem solid #fff;	
+	transform:translateY(-50%) scaleY(.8) rotate(45deg);
+	cursor: pointer;
 }
 .trade{
 	font-size: .42rem;
@@ -267,6 +267,7 @@
 	height: .55rem;
 	display: block;
 	border: 1px solid #e5e5e5;
+	cursor: pointer;
 }
 .foot span:nth-child(2){
 	border: 1px solid red;

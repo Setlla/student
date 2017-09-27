@@ -1,62 +1,58 @@
 	
 
-	$.ajax({
-		type:"post",
-		url:"http://39.108.219.59/productDetail",
+$.ajax({
+	type:"post",
+	url:_url+"productDetail",
 //		url:"http://39.108.219.59/addShopCar ", 
-		async:true,
-		contentType:"application/json",
-		data:JSON.stringify({
-			id:getParams("id")
-			}),
-		success:function(result){
-			setBanner(result.result);
-			setName(result.result);
-			setDenote(result.result);
+	async:true,
+	contentType:"application/json",
+	data:JSON.stringify({
+		id:getParams("id")
+		}),
+	success:function(result){
+		setBanner(result.result);
+		setName(result.result);
+		setDenote(result.result);
+		ss=result.result;
+	}
+	
+});
+		//内容拼接。
+ function setBanner(result){
+		$(".banner img").attr("src",result.product.Image);
+ }	
+ 
+ function setName(result){
+	    var cont='<p>'+result.product.Name+'</p>'
+		+'<ul>'
+			+'<li>'
+				+'<span class="CurPrice">￥'+result.product.CurPrice+'</span>'
+		 	    +'<span class="OldPrice"><i>价格'+result.product.OldPrice+'</i></span>'
+	    		+'<span class="Status">'+result.product.Status+'</span>'	
+			+'</li>'
+		    +'<li>'
+		   		+'<span>快递:</span>'
+		   		+'<span class="Carriage">'+result.product.Carriage+'</span>'
+		   		+'<span class="Destination"><i class="timeNum">'+result.product.BrowseTimes+'</i>人看过</span>'
+				+'<span class="address">'+result.product.Destination+'</span>'	
+		    +'</li>'
+		+'</ul>';				
+		$(".content").html(cont);
+}
+function setDenote(result){
+		var ameP='<i>'+result.product.Des+'</i>';	
+		$(".denote").append(ameP);
+}
 
-		}
+
 		
-	});
-	function getParams(name) {
-		 	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
-            var r = window.location.search.substr(1).match(reg);  //匹配目标参数
-            if (r != null) return unescape(r[2]); return null; //返回参数值
-		 }
-			//内容拼接。
-	 function setBanner(result){
-			$(".banner img").attr("src",result.product.Image);
-	 }	
-	 
-	 function setName(result){
-		    var cont='<p>'+result.product.Name+'</p>'
-			+'<ul>'
-				+'<li>'
-					+'<span class="CurPrice">￥'+result.product.CurPrice+'</span>'
-			 	    +'<span class="OldPrice"><i>价格'+result.product.OldPrice+'</i></span>'
-		    		+'<span class="Status">'+result.product.Status+'</span>'	
-				+'</li>'
-			    +'<li>'
-			   		+'<span>快递:</span>'
-			   		+'<span class="Carriage">'+result.product.Carriage+'</span>'
-					+'<span class="address">'+result.product.Destination+'</span>'	
-			    +'</li>'
-			+'</ul>';				
-			$(".content").html(cont);
-	}
-	function setDenote(result){
-			var ameP='<i>'+result.product.Des+'</i>';	
-			$(".denote").append(ameP);
-	}
-	
-	
-			
 //			var node=document.createElement("div");  //创造一个元素DIV 
 ////			node.setAttribute("class","textContent");  //设置一个属性textContent
 //			node.innerHTML=textContent;			//选取HTML 的内容 
 //////			textContent.innerHTML=node;
-				
-				
-				//判断 。111
+			
+			
+			//判断 。111
 
 
 //		var id = 0;// 自动播放时的图片索引	
@@ -80,27 +76,31 @@
 //		id = (id +1) % length;
 //	}
 //	
-	
-	$(document).on("click",".shopCart",function(){
-		$.ajax({
-			type:"post",
-			url:"http://39.108.219.59/addShopCar", 
-			async:true,
-			contentType:"application/json",
-			data:JSON.stringify({
-				token: localStorage.getItem("token"),
-				id:getParams("id")
-			}),
-			success: function(data) {
-				if(data.isSuccess==true){
-					location.href="ShopCart.html"
-				}
-				console.log(data);
+
+$(document).on("click",".shopCart",function(){
+	$.ajax({
+		type:"post",
+		url:_url+"addShopCar", 
+		async:true,
+		contentType:"application/json",
+		data:JSON.stringify({
+			token: localStorage.getItem("token"),
+			id:getParams("id")
+		}),
+		success: function(data) {
+			if(data.isSuccess==true){
+				location.href="ShopCart.html"
 			}
-		});		
-	})
-		
-		$(document).on("click",".arrow",function () {
-			history.back()
-		})
+			console.log(data);
+		}
+	});		
+})
 	
+	var ss;
+$(document).on("click",".buy",function () {
+	var Products=[];
+	Products.push(ss);
+	localStorage.setItem("Products",JSON.stringify(Products));
+	location.href="ConfirmOrder.html"
+})
+

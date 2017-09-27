@@ -18,6 +18,7 @@ html{
 	border-bottom: .03rem solid white;
 	border-left: .03rem solid white;
 	transform: translateY(-50%) rotate(45deg);	
+	cursor: pointer;
 }
 .top_nav span{
 	font-size: .3rem;
@@ -32,6 +33,11 @@ html{
 	overflow: hidden;
 	line-height: .9rem;
 	position: relative;
+	cursor: pointer;
+}
+.Submit li:last-child{
+	border-bottom: none;
+	height: 1rem;
 }
 .lis_one{
 	line-height: 1.7rem;
@@ -62,6 +68,9 @@ html{
 	height: 1.2rem;
 }
 .name{
+	/*line-height: .9rem;*/
+	transform: translateY(50%);
+	text-align: right;
 	color:#999 ;
 	margin-right: .2rem;
 	display: block;
@@ -92,19 +101,21 @@ html{
 	transform: translateY(-50%) rotate(-135deg);		
 }
 .Submit  li input{
-	line-height: .9rem;
+	/*line-height: .9rem;*/
 	float: right;
 	padding-right: .5rem;
 	font-size: .24rem;
 }
 .Submit li .address{
+	/*line-height: .9rem;*/
+	transform: translateY(50%);
 	text-align: right;
 	margin-right: .2rem;
 	width: 3rem;
 	color: #999999;
 }
 .bottom_nav	{
-	height: 10rem;
+	height: 2rem;
 }
 .bottom_nav button{
 	text-align: center;
@@ -119,4 +130,5 @@ html{
 	outline: none;
 	border-radius: .08rem;
 	border: 0;
+	cursor: pointer;
 }

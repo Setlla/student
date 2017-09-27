@@ -23,6 +23,7 @@
 	border-bottom: .015rem solid white;
 	border-left: .015rem solid white;
 	transform: scaleY(.8)rotate(-45deg);
+	cursor: pointer;
 }
 .qh{
 	font-size: .2rem;
@@ -31,6 +32,7 @@
 	padding-top: .1rem;
 	overflow: hidden;
 	text-align: center;
+	cursor: pointer;
 }
 .qh p{
 	line-height: .56rem;
@@ -60,7 +62,7 @@
 }
 .content{
 	border-bottom: 1px solid #e5e5e5;
-	
+	padding-bottom: 1.2rem;
 }
 .content_three{
 	display: none;
@@ -69,7 +71,7 @@
 	display: flex;
 	overflow: hidden;
 	margin: .15rem 0 0 .2rem;
-	
+	cursor: pointer;
 }
 .content_noe img{
 	float: left;
@@ -78,20 +80,21 @@
 	margin-bottom: .2rem;
 }
 .right_one{
-	 word-break: break-all;
+	word-break: break-all;
 	flex: 1;
 	float: left;
 	margin-left: .3rem;
 	border-bottom: 1px solid #e5e5e5;
 	position: relative;
+	cursor: pointer;
 }
 .right_one p{
-	font-size: .3rem;
+	font-size: .28rem;
 	color: #333333;
 }
 .right_one span{
 	font-size: .24rem;
-	line-height: .6rem;
+	line-height: .58rem;
 }
 .right_one span:nth-child(2){
 	color: #999999;
@@ -111,7 +114,7 @@
 }
 .right_one span:nth-child(5){
 	color: #ff9900;
-	font-size: .4rem;
+	font-size: .28rem;
 	padding-right: .6rem;
 	line-height: .5rem;
 }
@@ -177,6 +180,21 @@
 }
 .Pawnshop span{
 	color: #33CCFF!important;
+}
+.personal{
+	cursor: pointer;
+}
+.Pawnshop{
+	cursor: pointer;
+}
+.ShoCart{
+	cursor: pointer;
+}
+.goods{
+	cursor: pointer;
+}
+.tips{
+	cursor: pointer;
 }
 
 

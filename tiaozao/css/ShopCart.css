@@ -1,13 +1,14 @@
 .top_nav{
 	background: #33CCFF;
 	color: white;
-	line-height: 1rem;
+	line-height: .88rem;
 	position: relative;
 }
 .qh{
 	font-size: .28rem;
 	position: absolute;
 	left: .2rem;
+	cursor: pointer;
 }
 .title{
 	font-size: .32rem;
@@ -19,6 +20,9 @@
 	right: .2rem;
 	top: 50%;
 	transform: translateY(-50%);
+}
+.content{
+	padding-bottom: 1rem;
 }
 .content_one{
 	/*display: flex;*/
@@ -40,12 +44,14 @@
 	line-height: .38rem;
 	margin-left: .3rem;
 	position: relative;
+	cursor: pointer;
 }
-/*.content_one:last-child .right{
-	border-bottom: none;
-}*/
 .right p{	
 	font-size: .28rem;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp:2;
+	-webkit-box-orient: vertical;
 }
 .right span{
 	font-size: 0.24rem;
@@ -66,7 +72,7 @@
 }
 .right strong{
 	color: #ff9900;
-	font-size: .3rem;
+	font-size: .26rem;
 }
 .right strong em{
 	font-style: normal;
@@ -87,13 +93,14 @@
     box-sizing: border-box;
     box-shadow: 0px 0px 2px #5D5D5D;
     width: .28rem;
-    height: .28rem;: 50%;
+    height: .28rem;
     position: absolute;
     top: 50%;
     display: block;
     left: .1rem;
     border-radius
     border: solid 2px #fff;
+    cursor: pointer;
 }
 
 /*.round a{
@@ -116,7 +123,12 @@
 .right span.nine{
 	background: #ff6666;
 }
-
+.content{
+	padding-bottom: 2rem;
+}
+.content_three{
+	padding-bottom: 1.9rem;
+}
 .content_four{
 	display: flex;
 	position: relative;
@@ -156,6 +168,7 @@
 	float: left;
 	border: 1px solid #333333;
 	padding: .1rem .15rem;
+	cursor: pointer;
 }
 .content_four ul li:nth-child(2){
 	border-right: 0;
@@ -164,10 +177,11 @@
 .content_four span{
 	position: absolute;
 	top: 0;
-	right: .2rem;
+	right: .1rem;
 	background: red;
 	width: 1rem;
 	height: 2rem;
+	cursor: pointer;
 }
 .content_four .round{
 	left: -.5rem;
@@ -239,11 +253,13 @@
 }
 .buy{	
 	outline: none;	
+	border: none;
 	flex: 1;
 	color: white;
 	background: #ee8219;
 	text-align: center;
-	line-height: .88rem;	
+	line-height: .88rem;
+	cursor: pointer;
 }
 .color{
 	background: #C6C6C6;
@@ -285,4 +301,19 @@
 }
 .bottom_nav .car{
 	color: #33CCFF;
+}
+.personal{
+	cursor: pointer;
+}
+.Pawnshop{
+	cursor: pointer;
+}
+.ShoCart{
+	cursor: pointer;
+}
+.goods{
+	cursor: pointer;
+}
+.tips{
+	cursor: pointer;
 }

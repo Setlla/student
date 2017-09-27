@@ -5,6 +5,7 @@
 		<title>个人中心</title>
 		<link rel="stylesheet" type="text/css" href="css/personal.css"/>
 		<link rel="stylesheet" type="text/css" href="css/basic.css"/>
+		<script src="js/url.js" type="text/javascript" charset="utf-8"></script>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 	</head>
 	<body>
@@ -28,32 +29,33 @@
 			</ul>
 		</div>
 		<div class="content">
-			<ul>
-				<li>
+			<ul class="click_lok">
+				<li class="cur_one">
+					<i class="num">1</i>
 					<img src="image/grzx_05.png"/>
-					<a>待付款</a>
+					<a data-id = "0">待付款</a>
 				</li>
 				<li>
 					<img src="image/grzx_08.png"/>
-					<a>待发货</a>
+					<a data-id = "1">待发货</a>
 				</li>
 				<li>
 					<img src="image/grzx_10.png"/>
-					<a>待收货</a>
+					<a data-id = "2">待收货</a>
 				</li>
 				<li>
 					<img src="image/grzx_13.png"/>
-					<a>待评价</a>
+					<a data-id = "3">待评价</a>
 				</li>
 				<li>
 					<img src="image/grzx_16.png"/>
-					<a>退款/售后</a>
+					<a data-id = "4">退款/售后</a>
 				</li>
 			</ul>
 		</div>
 		<div class="content_noe">
 			<ul>
-				<li>
+				<li class="order">
 					<img src="image/gerenzx_05.png"/>
 					<a>我的订单</a>
 				</li>

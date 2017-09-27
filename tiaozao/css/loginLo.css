@@ -15,6 +15,7 @@
 	border-radius: 50%;
 
 }
+
 .textss{
 	margin: .4rem;
 }
@@ -40,7 +41,7 @@
 	border-bottom: 1px #12a2e5 solid;
 	box-sizing: border-box;
 }
-.textss span{
+.textss a{
 	border: 1px solid #12A2E5;
 	text-align: center;
 	width: 100%;
@@ -50,11 +51,11 @@
 	font-size: 0.32rem;
 	color: #12a2e5;
 	border-radius: .12rem;
+	cursor: pointer;
 }
 .bottom_nav{
 	overflow: hidden;
-	padding-top: 1.9rem;
-
+	padding-top: 1.2rem;
 }
 .bottom_nav span a{
 	margin-top: .18rem;
@@ -64,7 +65,7 @@
 	border-bottom: 1px solid #12A2E5;
 	line-height: .46rem;
 	float: left;
-	
+	cursor: pointer;
 }
 .bottom_nav p a{
 	text-align: center;
@@ -77,6 +78,7 @@
 	height: .6rem;
 	line-height: .6rem;
 	border-radius: 4px;
+	cursor: pointer;
 }
 
 

@@ -17,9 +17,10 @@
 	width: 0.25rem;
 	height: .25rem;
 	display: block;
-	border-bottom: .04rem solid white;
-	border-left: .04rem solid white;
+	border-bottom: .03rem solid white;
+	border-left: .03rem solid white;
 	transform:translateY(-50%) scaleY(0.8)rotate(45deg);
+	cursor: pointer;
 }
 .banner{
 	height: 4.4rem;
@@ -58,11 +59,12 @@
 }
 .content p{
 	font-size: .28rem;
-	line-height: .38rem;
+	line-height: .48rem;
 }
 .content span{
 	font-size: .24rem;
 	color: #999;
+	line-height: .4rem;
 }
 .content span.qq{
 	color: #ff9900;
@@ -90,6 +92,9 @@
 }
 .content span.rr{
 	padding-left: 1rem;
+}
+.Destination{
+	padding-left: .6rem;
 }
 .content span.address{
 	float: right;
@@ -146,9 +151,10 @@
 .bottom_nav span.shopCart{
 	background: #ff9933;
 	line-height: 1rem;
-	
+	cursor: pointer;
 }
 .bottom_nav span.buy{
+	cursor: pointer;
 	background: #ff6600;
 	line-height: 1rem;
 }
