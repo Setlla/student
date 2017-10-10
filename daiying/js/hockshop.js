@@ -9,12 +9,12 @@ $(document).on("click",".things a",function(e){
 		$(".books").show();
 	 }
 		
-	})
+})
 
 var data = {productName:""};
 $.ajax({
 	type:"post",
-	url:"http://39.108.219.59/productList",
+	url:_url+"productList",
 	async:true,
 	contentType:"application/json",
 	data:JSON.stringify({token:localStorage.getItem("token")}),
@@ -31,7 +31,7 @@ var setdata=function(data){
 						  +'</div>'
 						  +'<div class="shanghai min">'
 						  +'<div class="free">'
-						  +'<p>'+data.result[n].Name+'</p>'
+						  +'<p class="Name">'+data.result[n].Name+'</p>'
 						  +'<span>'+data.result[n].Carriage+'</span>'
 						  +'<span>'+data.result[n].Destination+'</span>'
 						  +'<a href="#">'+data.result[n].Status+'</a>'
@@ -68,6 +68,7 @@ $(document).on("click",".shopcar",function(){
 $(document).on("click",".menCenter",function(){
 	location.href="menCenter.html";
 })
+
 
 //var xhr =new XMLHttpRequest;
 //var things = document.querySelector(".max");

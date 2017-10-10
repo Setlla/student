@@ -1,12 +1,3 @@
-var setdetail=function(){
-	var detail=$(".detail");
-	var user = JSON.parse(localStorage.getItem("user"));
-	detail.find(".name").html(user.name);
-	detail.children(".phones").html(user.phone);
-	detail.find(".address").html(user.address);
-}
-setdetail();
-
 var content=function(data){
 	for(var n=0;n<data.result.products.length;n++) {
 		var things='<div class="content" data-id='+data.result.id+'>'
@@ -37,7 +28,7 @@ var content=function(data){
 
 $.ajax({
 	type:"post",
-	url:"http://39.108.219.59/getOrderDetail",
+	url:_url+"getOrderDetail",
 	async:true,
 	contentType:"application/json",
 	data:JSON.stringify({
@@ -49,11 +40,7 @@ $.ajax({
 	}
 });
 
-function getParams(name){
-				 	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
-		            var r = window.location.search.substr(1).match(reg);  //匹配目标参数
-		            if (r != null) return unescape(r[2]); return null; //返回参数值
-}
+
 
 $(document).on("click",".delete",function(){
 	var orderId=$(this).parents(".footer").siblings(".max")
@@ -61,7 +48,7 @@ $(document).on("click",".delete",function(){
 	var current=this;
 	$.ajax({
 	type:"post",
-	url:"http://39.108.219.59/delOrder",
+	url:_url+"delOrder",
 	async:true,
 	contentType:"application/json",
 	data:JSON.stringify({
@@ -76,7 +63,4 @@ $(document).on("click",".delete",function(){
 	});
 })
 
-$(document).on("click",".back",function(){
-	history.back();
-})
 

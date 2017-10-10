@@ -1,6 +1,6 @@
 	$.ajax({
 		type:"post",
-		url:"http://39.108.219.59/getPerson",
+		url:_url+"getPerson",
 		async:true,
 		contentType:"application/json",
 		data:JSON.stringify({token:localStorage.getItem("token")}),
@@ -22,4 +22,14 @@ $(document).on("click",".shopcar",function(){
 })
 $(document).on("click",".hockshop",function(){
 	location.href="hockshop.html";
+})
+
+$(document).on("click",".list",function(){
+	location.href="list.html";
+})
+
+
+$(document).on("click",".serve li",function(){
+	var id=$(this).index();
+	location.href="orders.html?id="+id;
 })

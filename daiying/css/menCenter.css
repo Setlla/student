@@ -79,6 +79,23 @@ html{
 	width:20%;
 	box-sizing: border-box;
 }
+.pay{
+	position: relative;
+}
+.round{
+	display: block;
+	width:.2rem;
+	height:.2rem;
+	border-radius:50%;
+	position:absolute;
+	border: solid 1px red;
+	font-size: .05rem;
+    color: red;
+    line-height: 1;
+    left: .7rem;
+    top: .1rem;
+    background-color: #fff;
+}
 .serve img{
 	height:.28rem;
 	padding-bottom: .12rem;

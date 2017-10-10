@@ -11,7 +11,7 @@ html{
 .head a{
 	position: absolute;
 	text-align: left;
-	left: .15rem;
+	left: .22rem;
 	width: 1.2rem;
 	color:#fff;
 	font-size: .28rem;
@@ -22,7 +22,7 @@ html{
 }
 .news{
 	position: absolute;
-    right: .15rem;
+    right: .22rem;
     width: .48rem;
     top: 50%;
     transform: translateY(-50%);
@@ -43,7 +43,7 @@ html{
 .dots{
 	position: absolute;
     top: 50%;
-    left: -.4rem;
+    left: -.3rem;
     transform: translate(-50%,-50%);
 }
 .cur{
@@ -182,7 +182,7 @@ html{
 }
 .dot{
 	float:left;
-	margin:0 .15rem;
+	margin:0 .15rem 0 .3rem;
 }
 .all{
 	float: left;
@@ -207,7 +207,7 @@ html{
 }
 .balance{
 	width:26%;
-	padding: .25rem 0;
+	height:.9rem;
     background: #ee8219;
     float: right;
     color:#fff;

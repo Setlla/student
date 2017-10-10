@@ -1,10 +1,3 @@
-var setUser = function(){
-	var user = JSON.parse(localStorage.getItem("user"));
-	$(".name").html(user.name);
-	$(".phone").html(user.phone);
-	$(".address").html(user.address);
-}
-setUser();
 var products;
 var productId=[];
 var productNum=[];
@@ -36,9 +29,6 @@ var content=function(){
  	$(".numbers").html(num);
 }
 content();
-$(document).on("click",".back",function(){
-	history.back();
-})
 
 var flag = 0;
 $(document).on("click",".botton",function(){
@@ -60,7 +50,7 @@ $(document).on("click",".submit",function(){
 	var totalCost=$(".total").html(); 
 	$.ajax({
 	type:"post",
-	url:"http://39.108.219.59/addOrder",
+	url:_url+"addOrder",
 	async:true,
 	contentType:"application/JSON",
 	data:JSON.stringify({

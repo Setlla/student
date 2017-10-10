@@ -15,7 +15,7 @@ document.querySelector(".login").addEventListener("click",function(){
 			phone:phone,
 			password:hex_md5(password)
 		}
-		xhr.open('post','http://39.108.219.59/login');
+		xhr.open('post',_url+'login');
 		xhr.setRequestHeader("Content-Type","application/json");
 		xhr.send(JSON.stringify(user));
 		
@@ -25,7 +25,7 @@ document.querySelector(".login").addEventListener("click",function(){
 				var a= localStorage.setItem("token",result.token);
 				user = xhr.responseText;
 				if(result.islogin==true){
-					location.href = "hockshop.html";
+					location.href = "menCenter.html";
 				}else{
 					alert("你输入的账号或密码有误")
 					}

@@ -3,15 +3,15 @@ html{
 }
 .head{
 	background-color: #33ccff;
-	height:1.28rem;
+	height:.9rem;
 	position:relative;
 }
 .head a{
 	position: absolute;
 	left:.22rem;
 	top:50%;
-	width:.25rem;
-	height:.25rem;
+	width:.2rem;
+	height:.2rem;
 	border-bottom: solid 2px #fff;
 	border-left: solid 2px #fff;
 	transform: rotate(45deg) translateY(-50%);
@@ -22,7 +22,7 @@ html{
 	color:#fff;
 	text-align: center;
 	display: block;
-	line-height: 1.28rem;
+	line-height: .9rem;
 }
 .book img{
 	height:3rem;

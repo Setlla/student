@@ -19,7 +19,7 @@ $(document).on("change",".imgInput",function(){
 	$(".imgInput").attr("src",imgurl);
 	$.ajax({
 		type:"post",
-		url:"http://39.108.219.59/setHeadImage",
+		url:_url+"setHeadImage",
 		async:true,
 		contentType:false,
 		processData:false,
@@ -59,7 +59,7 @@ $(document).on("click",".foot",function(){
 	var address=$(".address").val();	
 	$.ajax({
 		type:"post",
-		url:"http://39.108.219.59/setPerson",
+		url:_url+"setPerson",
 		async:true,
 		contentType:"application/json",
 		data:JSON.stringify({

@@ -17,7 +17,7 @@
 		.head{
 			position: relative;
 			background-color: #33ccff;
-			line-height: 6.5rem;
+			line-height: 4.2rem;
 		}
 		.head a{
 			margin-left: 1.5rem;
@@ -111,7 +111,7 @@
 			font-size: 1.5rem;
 			border-radius:.4rem ;
 			margin: 1.8rem 5%;
-			padding:1.4rem 0;
+			padding:1.1rem 0;
 		}
 		
 		

@@ -57,7 +57,7 @@ var register = document.querySelector(".foot");
 			email:em.value,
 			password:hex_md5(pass.value)
 		}
-		xhr.open('post','http://39.108.219.59/reg');
+		xhr.open('post',_url+'reg');
 		xhr.setRequestHeader("Content-Type","application/json");
 		xhr.send(JSON.stringify(user));
 		xhr.onreadystatechange=function(){

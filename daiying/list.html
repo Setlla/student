@@ -11,13 +11,14 @@
 	<body>
 		<ul class="head">
 			<li class="one">
-				<a></a>
+				<a class="back" v-on:click="back"></a>
 			</li>
 			<li class="list">订单列表</li>
-			<li>
-				<img class="shopcar" src="img/people/list_03.png" />
+			<li id="title_one">
+				<img class="shopcar" v-on:click="reverseMessage" src="img/people/list_03.png" />
+				<span class="dot">●●●</span>
 			</li>
-			<li class="dot">●●●</li>
+			
 		</ul>
 		<div class="search">
 			<img src="img/people/list_07.png" />
@@ -52,8 +53,11 @@
 		</div>-->
 		<div class="miss"></div>
 		</div>
-		
+		<div class="bottom"></div>
+		<script type="text/javascript" src="js/common.md5/vue.js" ></script>
+		<script type="text/javascript" src="js/url.js" ></script>
 		<script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
+		<!--<script type="text/javascript" src="js/util.js" ></script>-->
 		<script type="text/javascript" src="js/list.js" ></script>
 	</body>
 </html>

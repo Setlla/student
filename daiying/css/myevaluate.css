@@ -1,0 +1,78 @@
+html{
+	font-size: 100px;
+}
+.head{
+	height:.9rem;
+	background-color: #f9f9f9;
+	line-height: .9rem;
+	position: relative;
+	text-align: center;
+}
+.head a{
+	display: block;
+	width:.2rem;
+	height:.2rem;
+	border-bottom: solid 2px #525252;
+	border-left: solid 2px #525252;
+	transform: rotate(45deg) translateY(-50%);
+	position: absolute;
+	left:.22rem,;
+	top:50%;
+}
+.issue{
+	font-size:.32rem;
+}
+.head span:last-child{
+	float:right;
+	font-size: .28rem;
+	color:#ff5436;
+	padding-right:.22rem;
+}
+.bling{
+	position: relative;
+	overflow: hidden;
+	padding:.15rem .22rem;
+	border-bottom: solid 2px #e8e8e8;
+}
+.siuss{
+	float: left;
+	line-height: .58rem;
+}
+.siuss img{
+	width:.58rem;
+}
+.siuss span{
+	font-size: .22rem;
+	color:#a5a5a5;
+	padding-left: .15rem;
+}
+.blings{
+	width:.32rem;
+	background-color: #ff5436;
+	margin-left: .2rem;
+}
+.xingxing{
+	position: absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	padding-left: .3rem;
+}
+.good{
+	font-size: .22rem;
+	color:#d5d4da;
+	position: absolute;
+    top: 50%;
+    right: .22rem;
+    transform: translateY(-50%);
+}
+.baby{
+	padding:.25rem;
+}
+.add{
+	width:1.4rem;
+	height:1.4rem;
+	text-align: center;
+	margin-top: 1.1rem;
+	border: dashed 1px #d8d8d8;
+}

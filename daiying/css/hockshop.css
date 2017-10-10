@@ -16,17 +16,16 @@ ul{
 .head{
 	height:.9rem;
 	background-color: #33ccff;
-	display: flex;
-	justify-content:space-around;
+	position: relative;
 }
 .head li{
 	display: inline-block;
-	align-self: center;
 }
 .suspend span{
 	font-size: .28rem;
 	color:#fff;
-	line-height:1.66rem;
+	line-height: .9rem;
+    padding-left: .22rem;
 }
 .suspend a{
 	width: .1rem;
@@ -49,9 +48,12 @@ ul{
 	width:1.8rem;
 	border: solid #fff 1px;
 	border-radius:.1rem ;
-	text-align: center;
-	height:.5rem;
 	line-height: .5rem;
+	position: absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	
 }
 .things .cur{
 	background: rgba(225,225,225,0.8);
@@ -59,7 +61,10 @@ ul{
 }
 .news img{
 	width:.5rem;
-	display: block;
+	position: absolute;
+	right:.22rem;
+	top:50%;
+	transform: translateY(-50%);
 }
 .bicycle{
 	display: flex;
@@ -67,7 +72,7 @@ ul{
 .bicycle img{
 	width: 2rem;
     height: 1.8rem;
-    margin-top: .2rem;
+    margin-top: .3rem;
 }
 .shanghai{
 	flex: 1;
@@ -75,8 +80,13 @@ ul{
 }
 .free p{
 	word-break: break-all;
+	height:.75rem;
 	font-size:.3rem;
 	padding-top:.2rem;
+	overflow: hidden;
+	display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 .free span{
 	display: inline-block;
@@ -125,7 +135,7 @@ ul{
 }
 .max{
 	padding-left: .26rem;
-	border-bottom: solid 1px #c9c9c9;
+	/*border-bottom: solid 1px #c9c9c9;*/
 }
 .foot{
 	position: fixed;

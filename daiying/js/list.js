@@ -1,15 +1,30 @@
-$(document).on("click",".one a",function(){
-	location.href="firmOrder.html";
+//$(document).on("click",".shopcar",function(){
+//	location.href="shopcar.html";
+//})
+
+var shopcars=new Vue({
+	el:'.one',
+	methods:{
+		back:function(){
+			history.back()
+		}
+	}
 })
-$(document).on("click",".shopcar",function(){
-	location.href="shopcar.html";
+
+var shopcars=new Vue({
+	el:'#title_one',
+	methods:{
+		reverseMessage:function(){
+			location.href="shopcar.html"
+		}
+	}
 })
 
 var productlist=function(){
 	var productName=$(".seek").val();
 	$.ajax({
 		type:"post",
-		url:"http://39.108.219.59/getOrder",
+		url:_url+"getOrder",
 		async:true,
 		contentType:"application/json",
 		data:JSON.stringify({
@@ -69,7 +84,7 @@ $(document).on("click",".delete",function(data){
 	var current=this;
 	$.ajax({
 	type:"post",
-	url:"http://39.108.219.59/delOrder",
+	url:_url+"delOrder",
 	async:true,
 	contentType:"application/json",
 	data:JSON.stringify({
@@ -92,11 +107,17 @@ $(document).on("click",".shop",function(){
 $(document).on("focus",".search",function(){
 	$(this).addClass("cur");
 	$(".miss").css("display","block");
+	if($(".max").length==1){
+		$(".bottom").css("display","block");
+	}
 })
 
 $(document).on("blur",".search",function(){
 	$(this).removeClass("cur");
 	$(".miss").css("display","none");
+	if($(".max").length==1){
+		$(".bottom").css("display","none");
+	}
 })
 
 $(document).on("change",".search",function(){

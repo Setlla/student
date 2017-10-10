@@ -28,3 +28,27 @@ function checkPwd(str) {
 		return true;
 	}
 }
+
+
+//orderDetails,details页面有用到：解析url里面的Id值；
+function getParams(name){
+	 	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+        if (r != null) return unescape(r[2]); return null; //返回参数值
+}
+
+
+//orderDetails,firmOrder页面拿到“user”里面的值；
+var setUser = function(){
+	var detail=$(".detail");
+	var user = JSON.parse(localStorage.getItem("user"));
+	detail.find(".name").html(user.name);
+	detail.children(".phone").html(user.phone);
+	detail.find(".address").html(user.address);
+}
+setUser();
+
+$(document).on("click",".back",function(){
+	history.back();
+})
+

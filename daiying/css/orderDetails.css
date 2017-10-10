@@ -47,7 +47,7 @@ html{
 	font-size: .3rem;
 	color:#888;
 }
-.phones{
+.phone{
 	padding-left:.2rem;
 }
 .detail p{
@@ -184,7 +184,7 @@ html{
 	font-size: .28rem;
 	padding-left: .22rem;
 }
-.buyer,.phone{
+.buyer,.phones{
 	margin: .15rem 0;
 	padding:.15rem 0;
 	width:50%;
@@ -198,7 +198,7 @@ html{
 .buyer img{
 	width:.36rem;
 }
-.phone img{
+.phones img{
 	width:.33rem;
 }
 .foot{

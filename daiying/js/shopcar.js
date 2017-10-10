@@ -1,7 +1,7 @@
 var get;
 $.ajax({
 	type:"post",
-	url:"http://39.108.219.59/getShopCar",
+	url:_url+"getShopCar",
 	async:true,
 	contentType:"application/json",
 	data:JSON.stringify({token:localStorage.getItem("token")}),
@@ -109,7 +109,7 @@ $(document).on("click",".delete",function(e){
 	var id = $(this).parents(".contents").data("id");
 	$.ajax({
 		type:"post",
-		url:"http://39.108.219.59/delShopCar",
+		url:_url+"delShopCar",
 		async:true,
 		contentType:"application/json",
 		data:JSON.stringify({token: localStorage.getItem("token"),id: id}),
@@ -145,7 +145,7 @@ $(document).on("click",".complete",function(){
 	}
 	$.ajax({
 		type:"post",
-		url:"http://39.108.219.59/updateShopCar",
+		url:_url+"updateShopCar",
 		async:true,
 		contentType:"application/json",
 		data:JSON.stringify({
