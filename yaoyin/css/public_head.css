@@ -35,3 +35,10 @@
 		font-size: 0.28rem!important;
 		transform: translate(0,-50%);	
 	}
+	.header_empty{
+		font-size: 0.28rem!important;
+		position: absolute;
+		top: 50%;
+		right: 1.2rem;
+		transform: translate(0,-50%);	
+	}

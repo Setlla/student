@@ -122,13 +122,24 @@
 		})
 		
 		//购物车跳转
-		$(document).on("click",".header img",function(){
-			location.href="shopping_trolley.html";
+		var vm_header_img=new Vue({
+			el:".header img",
+			methods:{
+				header_img:function(){
+					location.href="shopping_trolley.html";
+				}
+			}
 		})
 		
 		//箭头返回
-		$(document).on("click",".header_arr",function(){
-			history.go(-1);
+		var vm_arr=new Vue({
+			el:".header_arr",
+			methods:{
+				header_arr:function(){
+					history.go(-1);
+				}
+			}
 		})
+		
 	})//ready
 	

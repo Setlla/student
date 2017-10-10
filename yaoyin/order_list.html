@@ -8,6 +8,7 @@
 		<script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
 		<script type="text/javascript" src="js/order_list.js" ></script>
 		<script type="text/javascript" src="js/url.js" ></script>
+		<script type="text/javascript" src="js/vue.js" ></script>
 	</head>
 	<body>
 		<!--
@@ -16,9 +17,9 @@
         	描述：头部箭头
         -->
 		<div class="header">
-			<span class="header_arr"></span>
+			<span class="header_arr" @click="header_arr"></span>
 			<span class="header_titl">订单列表</span>
-			<img src="img/icon/icon_67.gif" />
+			<img src="img/icon/icon_67.gif" @click="header_img"/>
 		</div>
 		<!--
         	作者：492680716@qq.com
