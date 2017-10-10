@@ -14,6 +14,7 @@ $.ajax({
 		setName(result.result);
 		setDenote(result.result);
 		ss=result.result;
+		Corresponding(ss.product.BrowseTimes);
 	}
 	
 });
@@ -33,7 +34,7 @@ $.ajax({
 		    +'<li>'
 		   		+'<span>快递:</span>'
 		   		+'<span class="Carriage">'+result.product.Carriage+'</span>'
-		   		+'<span class="Destination"><i class="timeNum">'+result.product.BrowseTimes+'</i>人看过</span>'
+		   		+'<span class="Destination"><i class="num">'+result.product.BrowseTimes+'</i>人看过</span>'
 				+'<span class="address">'+result.product.Destination+'</span>'	
 		    +'</li>'
 		+'</ul>';				
@@ -104,3 +105,23 @@ $(document).on("click",".buy",function () {
 	location.href="ConfirmOrder.html"
 })
 
+var Corresponding=function(BrowseTimes){
+	if(BrowseTimes == null){
+		BrowseTimes = 0;
+	}
+ 	BrowseTimes=parseInt(BrowseTimes)+1;
+	
+	$.ajax({
+		type:"post",
+		url:_url+"productBrowseTimes",
+		async:true,
+		contentType:"application/json",
+		data:JSON.stringify({
+			id:getParams("id"),
+			BrowseTimes:BrowseTimes
+		}),
+		success:function(result){
+			console.log(result)
+		}
+	});
+}

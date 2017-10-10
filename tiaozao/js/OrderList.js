@@ -116,4 +116,18 @@ $(document).on("change",".search", function () {
 	productList();		
 })
 
+
+
+
+
+var topnav=new Vue({
+	el:'.top_nav',
+	methods:{
+		jiantou:function(){
+//			history.go(-1);
+			location.href="ShopCart.html";
+		}		
+	}
+})
+	
 	
