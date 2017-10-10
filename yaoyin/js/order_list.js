@@ -121,25 +121,20 @@
 			location.href="order_details.html?id="+id;
 		})
 		
-		//购物车跳转
-		var vm_header_img=new Vue({
-			el:".header img",
+		
+		var vm_header=new Vue({
+			el:".header",
 			methods:{
+				//购物车跳转
 				header_img:function(){
 					location.href="shopping_trolley.html";
-				}
-			}
-		})
-		
-		//箭头返回
-		var vm_arr=new Vue({
-			el:".header_arr",
-			methods:{
+				},
+				//箭头返回
 				header_arr:function(){
 					history.go(-1);
 				}
 			}
 		})
-		
+	
 	})//ready
 	
