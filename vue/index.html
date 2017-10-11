@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Vue练习</title>
+    <script type="text/javascript" src="js/vue.js" ></script>
+</head>
+<body>
+	<div id="div_1">
+		<p>{{ message+Date() }}</p>
+		<input type="text" v-model="message" />
+	</div>
+	
+	<script>
+		var vm=new Vue({
+			el:'#div_1',
+			data:{
+				message:"默认值"
+			}
+		})
+	</script>
+</body>
+</html>
