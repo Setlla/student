@@ -1,18 +1,28 @@
 	$(document).ready(function(){
 		//搜索功能
-		$(document).on("focus",".search_ipt",function(){
-			$(this).addClass("ser").parents(".search").addClass("search_1").siblings(".header").css("visibility","hidden");
-			$(this).parents("body").css("height","100%");
-		})
-		$(document).on("blur",".search_ipt",function(){
-			$(this).removeClass("ser").parents(".search").removeClass("search_1").siblings(".header").css("visibility","");
-			$(this).parents("body").css("height","100%");
-		})
-		
-		$(document).on("change",".search_ipt",function(){
-			$(".warelist").empty();
-			romance();
-		})
+		var vm_search=new Vue({
+			el:".search",
+			data:{
+				isSearch:false,
+				isSer:false
+			},
+			methods:{
+				search_ipt1:function(){
+					this.isSearch=true;
+					this.isSer=true;
+				},
+				search_ipt2:function(){
+					this.isSearch=false;
+					this.isSer=false;
+				}
+			}
+			
+			
+		})	
+//		$(document).on("change",".search_ipt",function(){
+//			$(".warelist").empty();
+//			romance();
+//		})
 		
 		
 		//PC端回车函数

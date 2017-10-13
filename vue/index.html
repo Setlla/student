@@ -8,9 +8,21 @@
 </head>
 <body>
 	<div id="div_1">
-		<p>{{ message+Date() }}</p>
+		<p>{{ _message }}</p>
 		<input type="text" v-model="message" />
 	</div>
+	
+	<div id="ul_1">
+		<ul  v-for="tab in tabs">
+			<li>
+				{{ tab.text }}
+			</li>
+			<li>
+				{{ tab.tb }}
+			</li>
+		</ul>
+	</div>
+
 	
 	<script>
 		var vm=new Vue({
@@ -19,9 +31,25 @@
 				message:"默认值"
 			},
 			computed:{
-				message:function(){
-					return message;
+				_message:function(){
+					return this.message+Date()
 				}
+			}
+		})
+		
+		var vm_1=new Vue({
+			el:"#ul_1",
+			data:{
+				tabs:[
+					{
+						text:'1',
+						tb:"2"					
+					},
+					{
+						text:"1",
+						tb:'2'
+					}
+				]
 			}
 		})
 	</script>

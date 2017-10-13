@@ -26,8 +26,8 @@
         	时间：2017-08-30
         	描述：搜索所有订单
         -->
-        <div class="search">
-        	<input class="search_ipt" name="" placeholder="搜索所有订单"/>      	
+        <div class="search" v-bind:class="{search_1:isSearch}">
+        	<input class="search_ipt" v-bind:class="{ser:isSer}" @focus="search_ipt1" @blur="search_ipt2" placeholder="搜索所有订单"/>      	
         </div>
         <!--
         	作者：492680716@qq.com

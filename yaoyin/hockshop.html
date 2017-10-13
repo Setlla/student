@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="css/hockshop.css" />
 		<link rel="stylesheet" href="css/public_ware.css" />
 		<link rel="stylesheet" href="css/public_foot.css" />
+		<script type="text/javascript" src="js/vue.js" ></script>
 	</head>
 	<body>
 		<!--
@@ -50,6 +51,23 @@
 		    		</p>
 				</li>
 			</ul>-->
+			<ul class="ware" v-for="ware in warelist">
+				<li class="ware_pic">
+					<img v-bind:src="ware.Image" />
+				</li>
+				<li class="ware_explain">
+					<p>{{ ware.Name }}</p>
+		    		<p>
+		    			<span>包邮</span>
+		    			<span>上海</span>
+		    		</p>
+		    		<a href="">7成新</a>
+		    		<p>
+		    			<span>￥</span><span class="new_price">{{ ware.CurPrice }}</span>
+						<span>价格：￥</span><span>{{ ware.OldPrice }}</span>
+		    		</p>
+				</li>
+			</ul>
 	    </div> 
 	    <div class="list1"></div>
 	    </div>
