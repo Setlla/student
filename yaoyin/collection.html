@@ -3,11 +3,12 @@
 	<head>
 		<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title>我的收藏</title>
-		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/public_1.css"/>
 		<link rel="stylesheet" href="css/collection.css" />
 		<script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
-		<!--<script type="text/javascript" src="js/collection.js" ></script>-->
 		<script type="text/javascript" src="js/url.js" ></script>
+		<script type="text/javascript" src="js/vue.js" ></script>
+		<script type="text/javascript" src="js/axios.js" ></script>
 	</head>
 	<body>
 		<!--
@@ -16,7 +17,7 @@
         	描述：头部header模块
         -->
 		<header>
-			<p class="head_p"></p>
+			<p class="head_p" @click="head_p"></p>
 			<span>我的收藏</span>
 			<div>
 				<a></a>
@@ -30,11 +31,11 @@
         	描述：商品列表warelist
         -->
         <ul class="ware">
-    	    <!--<li class="warelist">
+    	    <li class="warelist" v-for="warelist in liList" :id="warelist.id">
     	    	<div class="list_explain">
-    	    		<img src="img/collection/coll_01.gif" />
-					<p>瑞舞苹果5s手机壳iphone5s保护套</p>
-					<p>￥<span class="price">779</span>.00</p>
+    	    		<img :src="warelist.Image" />
+					<p>{{ warelist.Name }}</p>
+					<p>￥<span class="price">{{ warelist.CurPrice }}</span>.00</p>
 					<p>
 						<span class="gift">赠品</span>
 						<span>补差链接</span>
@@ -45,9 +46,9 @@
 				<div class="list_depreciate">
 					<span class="dep_1">看相似</span>
 					<span class="dep_1">降价通知</span>
-					<span class="img_title"></span>
+					<span class="img_title" @click="img_title"></span>
 				</div>
-			</li>-->
+			</li>
         </ul>
 		<!--
         	作者：492680716@qq.com
@@ -81,7 +82,7 @@
         	</li>
         	<li class="recommend_list">
         		<div class="recommend_list_img">
-        			<img src="img/collection/coll_06.gif" />
+        			<img src="img/collection/coll_07.png" />
         		</div>        		
         		<div class="recommend_list_explain">	        		
 	        		<span><i>自营</i>LG Gram (15Z970-G.AA53C) 15.6英寸超频电视</span>
@@ -94,5 +95,8 @@
         		</div>
         	</li>
         </ul>
+        
+        
+        <script type="text/javascript" src="js/collection.js" ></script>
 	</body>
 </html>

@@ -49,4 +49,9 @@ $(document).ready(function(){
 			location.href="my_order.html?id="+id;
 		})
 		
+		//我的收藏
+		$(document).on("click",".collect",function(){
+			location.href="collection.html";
+		})
+		
 })//ready的括号

@@ -7,32 +7,32 @@
 			$('.list').css('display','block').siblings().css('display','none');
 		}
 	})
+
 	
-	var list=new Vue({
+	var vm=new Vue({
 		el:".list",
 		data:{
-			warelist:[
-				{
-					Image:'./img/ware/ware_24.png',
-					Name:'捷安特24速变速一体轮可折as捷安特24速变速一体轮可折捷安特24',
-					CurPrice:123,
-					OldPrice:231
-				},
-				{
-					Image:'./img/ware/ware_28.png',
-					Name:'捷安特24速变速一体轮可折as捷安特24速变速一体轮可折捷安特24',
-					CurPrice:123,
-					OldPrice:231
-				},
-				{
-					Image:'./img/ware/ware_27.png',
-					Name:'捷安特24速变速一体轮可折as捷安特24速变速一体轮可折捷安特24',
-					CurPrice:123,
-					OldPrice:231
-				}
-			]
+			warelist:[]
+		},
+		created:function(){
+			//VUE的渲染数据
+			var that=this;
+			axios.post("http://39.108.219.59:8080/productList")
+			.then(function(response){
+				console.log(response.data);
+				that.warelist=response.data.result;
+			})
+			.catch(function(error){
+				console.log(error);
+			})
+		},
+		methods:{
+			wareList:function(id){
+				//点击商品跳转到详情页面
+	        	location.href="DetailsPage.html?id=" + id;
+			}
 		}
-	})
+	})	
 	
 //	$.post("http://39.108.219.59:8080/productList",function(s,status){
 //		//商品列表

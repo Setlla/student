@@ -6,8 +6,8 @@
 	body{font-family:"微软雅黑", Arial;}
 	input{outline: none;}
 	textarea{outline: none;}
-	/*i,em{font-style: normal;}
-	strong{font-weight: normal;}*/
+	i,em{font-style: normal;}
+	strong{font-weight: normal;}
 
 	@media only screen and (min-device-width: 400px) {
 		html{font-size: 65px;}

@@ -1,56 +1,38 @@
-	$(document).ready(function(){
-		var token=localStorage.getItem("token");
-		
-		//页面渲染调用函数
-		var collections=function(data){
-			for(var i=0;i<data.result.length;i++){
-				var content=
-					'<li class="warelist">'
-	    	    	+'<div class="list_explain">'
-	    	    	+'<img src="'+data.result[i].product[0].Image+'" />'
-					+'<p>'+data.result[i].product[0].Name+'</p>'
-					+'<p>￥<span class="price">'+data.result[i].product[0].CurPrice+'</span>.00</p>'
-					+'<p>'
-					+'<span class="gift">'+data.result[i].product[0].Status+'</span>'
-					+'<span>补差链接</span>'
-					+'<span>键盘膜</span>'
-					+'<span class="arr"></span>'
-					+'</p>'
-					+'</div>'
-					+'<div class="list_depreciate">'
-					+'<span class="dep_1">看相似</span>'
-					+'<span class="dep_1">降价通知</span>'
-					+'<span class="img_title"></span>'
-					+'</div>'
-					+'</li>';
-					
-					$('.ware').append(content);
-			}
-
+	//箭头返回上个历史页面
+	var vm=new Vue({
+		el:'header',
+		methods:{
+			head_p:function(){
+				history.go(-1);
+			}				
 		}
-		
-		//页面数据渲染
-		$.ajax({			
-			type:"post",
-			url: _url+"/getCollectionLog",
-			async:true,
-			contentType:'application/JSON',
-			data:JSON.stringify({
-				token:token
-			}),
-			success:function(data,status){
-				collections(data);//插入动态数据				
+	})
+	//点击购物车图标跳转购物页面
+	var vm1=new Vue({
+		el:'.list_depreciate',
+		methods:{
+			img_title:function(){
+				location.href="shopping_trolley.html";
 			}
-		})
-
-		
-		//箭头返回上个历史页面
-		$(document).on("click",".head_p",function(){
-			history.go(-1);
-		})
-		//点击购物车图标跳转购物页面
-		$(document).on("click",".img_title",function(){
-			location.href="shopcar.html";
-		})
-		
-	})//ready括号
+		}
+	})
+	//数据渲染
+	var vm2=new Vue({
+		el:".ware",
+		data:{
+			liList:[],			
+		},
+		created:function(){
+			var that=this;
+			axios.post(_url+'/getCollectionLog',{
+				token:localStorage.getItem("token")
+			})
+			.then(function(response){
+				console.log(response.data);
+				that.liList=response.data.result;
+			})
+			.catch(function(error){
+				console.log(error);
+			})
+		}		
+	})

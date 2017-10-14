@@ -48,10 +48,10 @@
 	/*商品列表warelist CSS*/
 	.ware{
 		background: #FFFFFF;
-		padding: 0.34rem 0.25rem 0.34rem 0.32rem;
+		padding: 0.32rem 0.25rem 0.32rem 0.32rem;
 	}
 	.warelist{
-		margin-bottom: 0.2rem;
+		margin-bottom: 0.32rem;
 	}
 	.list_explain{
 		overflow: hidden;
@@ -68,7 +68,7 @@
 		font-size: 0.24rem;
 	}
 	.list_explain p:nth-of-type(1){
-		margin:0.04rem 0 0.32rem 0;
+		margin:0.03rem 0 0.32rem 0;
 		display: block;
 		overflow: hidden;
 		display: -webkit-box;
@@ -93,13 +93,13 @@
 	}
 	.gift{
 		display: inline-block;
-		padding: 0rem 0.03rem;
+		padding: 0rem 0.05rem;
 		border: 0.01rem solid #f7292d;
 		color: #f7292d!important;
 	}
 	.arr{
 		width: 0.24rem;
-		height: 0.21rem;
+		height: 0.24rem;
 		border-bottom: 2px solid #CCCCCC;
 		border-left: 2px solid #CCCCCC;
 		display: block;
@@ -111,11 +111,12 @@
 	.list_depreciate{		
 		text-align: right;
 		position: relative;
+		font-size:0.24rem;
 	}
 	.dep_1{
 		height: 0.5rem;
 		line-height: 0.5rem;		
-		border-radius: 0.1rem;
+		border-radius: 0.08rem;
 		text-align: center;
 		display: inline-block;
 		border: 1px solid #CCCCCC;
@@ -125,7 +126,7 @@
 	}
 	.list_depreciate span:nth-of-type(1){
 		width: 0.9rem;
-		margin-right: 0.2rem;
+		margin-right: 0.1rem;
 	}
 	.list_depreciate span:nth-of-type(2){
 		width: 1.2rem;
@@ -163,12 +164,12 @@
 		overflow: hidden;
 	}
 	.re_ul li{	
-		width: 45.5%;	
+		width: 50%;
+		border:1px solid #f3f3f5;
 		background: #FFFFFF;
 		float: left;
-		padding: 0.1rem;
+		padding: 0 0.25rem;
 		font-size: 0.24rem;
-		margin: 2px;
 	}
 	.recommend_list_img{
 		height: 2.92rem;
