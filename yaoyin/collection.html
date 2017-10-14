@@ -33,9 +33,9 @@
         <ul class="ware">
     	    <li class="warelist" v-for="warelist in liList" :id="warelist.id">
     	    	<div class="list_explain">
-    	    		<img :src="warelist.Image" />
-					<p>{{ warelist.Name }}</p>
-					<p>￥<span class="price">{{ warelist.CurPrice }}</span>.00</p>
+    	    		<img :src="warelist.product[0].Image" />
+					<p>{{ warelist.product[0].Name }}</p>
+					<p>￥<span class="price">{{ warelist.product[0].CurPrice }}</span>.00</p>
 					<p>
 						<span class="gift">赠品</span>
 						<span>补差链接</span>
