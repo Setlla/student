@@ -5,6 +5,11 @@
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Vue练习</title>
     <script type="text/javascript" src="js/vue.js" ></script>
+    <style>
+    	.span7{
+    		color: red;
+    	}
+    </style>
 </head>
 <body>
 	<div id="div_1">
@@ -32,11 +37,39 @@
 	  <span>Selected: {{ selected }}</span>
 	</div>
 	<div id="ex_6">
-		<span>{{ name }}</span>
-		<span>{{ age }}</span>
+		<span v-for="name in names">{{ name.text | sumname }}</span>
+		<span v-for="age in ages">{{ age.text | sumage }}</span>
 	</div>
-	
+	<div id="ex_7">
+		 <span :class="{span7:span_7}">{{ color }}</span>
+		 <button @click="btn">点击</button>
+	</div>
 	<script>
+		Vue.filter("sumname",function(value){
+			return value.charAt(0) == "张";
+		});
+		Vue.filter("sumage",function(value){
+			return value=12;
+		});
+		var vm4=new Vue({
+			el:'#ex_6',
+			data:{
+				items: [{name:"姚胤",age:12}
+				]
+			}
+		})
+		var vm5=new Vue({
+			el:"#ex_7",
+			data:{
+				span_7:false,
+				color:"点击改变字体颜色"
+			},
+			methods:{
+				btn:function(){
+					this.span_7=true;
+				}
+			}
+		})
 		var vm=new Vue({
 			el:'#div_1',
 			data:{
@@ -71,17 +104,8 @@
 		    selected: ''
 		  }
 		})
-	
-		var vm4=new Vue({
-			el:'#ex_6',
-			data:{
-				name:"yaoyin",
-				age:12
-			},
-			methods:{
-				
-			}
-		})
+
+
 	</script>
 </body>
 </html>
