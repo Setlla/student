@@ -7,6 +7,8 @@
 		<link rel="stylesheet" type="text/css" href="css/Pawnshop.css"/>
 		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/url.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 	</head>	
 	<body>
@@ -21,15 +23,15 @@
 		
 		
 		<div class="content  content_two">
-			<!--<div class="content_noe">
-				<img src="image/dang_07.png"/ width="180" height="140">
+			<div class="content_noe" v-for="(item, index) in items" @click="click_(item.id)" >
+				<img :src = "item.Image"/>
 				<div class="right_one">
-					<p>捷安特24速变速一体轮可折叠自行车</p>
-					<span>包邮</span>
+					<p>{{item.Name}}</p>
+					<span>{{item.Carriage}}</span>
 					<span>上海</span>
-					<span>挂起</span>
-					<span><i>￥</i>350</span>
-					<span>￥1358</span>
+					<span>{{item.Status}}</span>
+					<span><i>￥</i>{{item.CurPrice}}</span>
+					<span>￥{{item.OldPrice}}</span>
 					<div class="round">
 						<a></a>
 						<a></a>
@@ -38,7 +40,7 @@
 				</div>
 				
 			</div>
-			<div class="content_noe">
+			<!--<div class="content_noe">
 				<img src="image/dang_11.png"/ width="180" height="140">
 				<div class="right_one">
 					<p>二手apple/苹果iphone5s手机三网无锁 移动4G联通电</p>
@@ -53,9 +55,10 @@
 						<a></a>
 					</div>
 				</div>
-			</div>			
-			<div class="content_noe">-->
-				<!--<img src="image/dang_14.png"/ width="180" height="150">
+			</div>	
+			
+			<div class="content_noe">
+				<img src="image/dang_14.png"/ width="180" height="150">
 				<div class="right_one">
 					<p>二手apple/苹果MacBookAirMC965CH/A笔记本电脑</p>
 					<span>包邮</span>
@@ -73,8 +76,8 @@
 		</div>
 		
 		
-		<div class="content content_three">
-			<!--<div class="content_noe">
+		<!--<div class="content content_three">
+			<div class="content_noe">
 				<img src="image/dang_14.png"/ width="180" height="140">
 				<div class="right_one">
 					<p>捷安特24速变速一体轮可折叠自行车</p>
@@ -106,8 +109,8 @@
 					</div>
 				</div>
 			</div>			
-			<div class="content_noe">-->
-				<!--<img src="image/dang_14.png"/ width="180" height="150">
+			<div class="content_noe">
+				<img src="image/dang_14.png"/ width="180" height="150">
 				<div class="right_one">
 					<p>二手apple/苹果MacBookAirMC965CH/A笔记本电脑</p>
 					<span>包邮</span>
@@ -121,8 +124,8 @@
 						<a></a>
 					</div>
 				</div>
-			</div>			-->
-		</div>		
+			</div>			
+		</div>		-->
 		
 		<div class="bottom_nav">
 			<ul class="tips">

@@ -4,10 +4,10 @@
 		<meta charset="UTF-8">
 		<title>练习</title>
 		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
-		
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	</head>
 	<body>
-		<div id="app">
+		<!--<div id="app">
 		  {{ message }}
 		</div>
 		<div id="app-2">
@@ -18,21 +18,38 @@
 		<div id="app-3">
 		  <p v-if="seen">现在你看到我了</p>
 		</div>
+		
 		<div id="app-4">
 		  <ol>
 		    <li v-for="todo in todos">
-		      {{ todo.text }}
+		      {{ todo.text }}  {{$index}} {{key}}
 		    </li>
 		  </ol>
 		</div>
+		
 		<div id="app-5">
 		  <p>{{ message }}</p>
 		  <button v-on:click="reverseMessage">逆转消息</button>
 		</div>
 		<div id="app-6">
-		  <p>{{ message }}</p>
+		  <p>{{ _message }}</p>
 		  <input v-model="message">
 		</div>
+		
+		
+		<div id="app-10">
+		  <p>{{ _message }}</p>
+		  <input v-model="message" type="text" name="" id="" value="" />
+		</div>
+		-->
+		<div id="app-5">
+		  <p v-bind:"lalala">{{ message }}</p>
+		  <button @click="reverseMessage">点我</button>
+		</div>
+		
+
+
+		
 	</body>
 	<script src="js/LXv.js" type="text/javascript" charset="utf-8"></script>
 </html>

@@ -20,9 +20,9 @@ var productList=function(){
 productList();
 
 //返回购物车
-$(document).on("click",".top_nav img",function () {
-	location.href="ShopCart.html"
-})
+//$(document).on("click",".top_nav img",function () {
+//	location.href="ShopCart.html"
+//})
 function setProduct(result){
 	for (var i=0;i<result.length;i++) {				
 		var conte='<div class="big_box" data-id="'+result[i].id+'">'	
@@ -101,33 +101,84 @@ $(document).on("click",".content_two",function () {
 		}
 	});
 })
-//点击搜索  获得焦点 失去焦点
-$(document).on("focus",".search",function () {
-	$(this).addClass("cur");
-	$(".miss").css("display","block");
+////点击搜索  获得焦点 失去焦点
+//$(document).on("focus",".search",function () {
+//	$(this).addClass("cur");
+//	$(".miss").css("display","block");
+//})
+//
+//$(document).on("blur",".search",function () {
+//	$(this).removeClass("cur");
+//	$(".miss").css("display","none");
+//})
+//$(document).on("change",".search", function () {
+//	$(".content_one").empty();
+//	productList();		
+//})
+
+
+
+var search=new Vue({
+	el:'.search',
+	methods:{
+		focusinput:function(){
+			this.isCur=true,
+			this.divstyle=true
+		},			
+		lose:function(){
+			this.isCur=false,
+			this.divstyle=false
+		}					
+	},
+	data:{
+		isCur:false,
+		divstyle:false
+	}	
 })
 
-$(document).on("blur",".search",function () {
-	$(this).removeClass("cur");
-	$(".miss").css("display","none");
-})
-$(document).on("change",".search", function () {
-	$(".content_one").empty();
-	productList();		
-})
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//箭头符号跳转
 var topnav=new Vue({
 	el:'.top_nav',
 	methods:{
 		jiantou:function(){
-//			history.go(-1);
+			history.go(-1);
+		},
+		tupian:function(){
 			location.href="ShopCart.html";
-		}		
+		}
 	}
 })
-	
-	
+
+
