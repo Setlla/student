@@ -28,7 +28,7 @@
 		</ul>
 	</div>
 	<div id="example-5">
-	  <select v-model="selected">
+	  <select v-model="selected" @filterchange="">
 	    <option disabled value="">请选择</option>
 	    <option>A</option>
 	    <option>B</option>
@@ -36,26 +36,32 @@
 	  </select>
 	  <span>Selected: {{ selected }}</span>
 	</div>
-	<div id="ex_6">
-		<span v-for="name in names">{{ name.text | sumname }}</span>
-		<span v-for="age in ages">{{ age.text | sumage }}</span>
-	</div>
+	<ul id="ex_6">
+		<li v-for="item in items(myitems)">
+			{{ item.age}} - {{ item.name }}
+		</li>
+	</ul>
 	<div id="ex_7">
 		 <span :class="{span7:span_7}">{{ color }}</span>
 		 <button @click="btn">点击</button>
 	</div>
 	<script>
-		Vue.filter("sumname",function(value){
-			return value.charAt(0) == "张";
-		});
-		Vue.filter("sumage",function(value){
-			return value=12;
-		});
 		var vm4=new Vue({
 			el:'#ex_6',
 			data:{
-				items: [{name:"姚胤",age:12}
+				myitems: [
+					{name:"姚胤",age:12},
+					{name:"张三",age:19},
+					{name:"李四",age:11},
+					{name:"张八",age:32}
 				]
+			},
+			methods:{
+				items:function(myitems){
+					return myitems.filter(function(value){
+						return value.name.charAt(0)=="张" && value.age>=20;						
+					})
+				}
 			}
 		})
 		var vm5=new Vue({
@@ -66,7 +72,12 @@
 			},
 			methods:{
 				btn:function(){
-					this.span_7=true;
+					if (this.span_7) {
+						this.span_7=false;
+					} else{
+						this.span_7=true;
+					}
+					
 				}
 			}
 		})
