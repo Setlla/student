@@ -22,7 +22,19 @@
 			</li>
 		</ul>
 	</div>
-
+	<div id="example-5">
+	  <select v-model="selected">
+	    <option disabled value="">请选择</option>
+	    <option>A</option>
+	    <option>B</option>
+	    <option>C</option>
+	  </select>
+	  <span>Selected: {{ selected }}</span>
+	</div>
+	<div id="ex_6">
+		<span>{{ name }}</span>
+		<span>{{ age }}</span>
+	</div>
 	
 	<script>
 		var vm=new Vue({
@@ -50,6 +62,24 @@
 						tb:'2'
 					}
 				]
+			}
+		})
+		
+		var vm3=new Vue({
+		el: '#example-5',
+		  data: {
+		    selected: ''
+		  }
+		})
+	
+		var vm4=new Vue({
+			el:'#ex_6',
+			data:{
+				name:"yaoyin",
+				age:12
+			},
+			methods:{
+				
 			}
 		})
 	</script>
