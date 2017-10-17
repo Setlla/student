@@ -53,5 +53,8 @@ $(document).ready(function(){
 		$(document).on("click",".collect",function(){
 			location.href="collection.html";
 		})
-		
+		//我的足迹
+		$(document).on("click",".track",function(){
+			location.href="Browsing_History.html";
+		})
 })//ready的括号

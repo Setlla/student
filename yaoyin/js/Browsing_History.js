@@ -1,3 +1,4 @@
+	//数据渲染
 	var vm=new Vue({
 		el:".ware",
 		data:{
@@ -17,4 +18,14 @@
 			})
 		}
 		
+	})
+	
+	//箭头返回上个历史页面
+	var vm=new Vue({
+		el:'header',
+		methods:{
+			header_arr:function(){
+				history.go(-1);
+			}				
+		}
 	})

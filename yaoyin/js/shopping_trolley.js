@@ -198,7 +198,6 @@
 				success:function(data,status){
 					if(data.isSuccess==true){
 						$(that).parents(".ware").remove();
-//						location.reload();
 					}					
 				}
 			})

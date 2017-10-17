@@ -7,20 +7,30 @@
 			}				
 		}
 	})
-	//点击购物车图标跳转购物页面
-	var vm1=new Vue({
-		el:'.list_depreciate',
-		methods:{
-			img_title:function(){
-				location.href="shopping_trolley.html";
-			}
-		}
-	})
 	//数据渲染
 	var vm2=new Vue({
 		el:".ware",
 		data:{
 			liList:[],			
+		},
+		methods:{
+			//点击购物车图标跳转购物页面
+			img_titles:function(id){
+				axios.post(_url+"/addShopCar",{
+					token:localStorage.getItem("token"),
+					id:id
+				})
+				.then(function(response){
+					console.log(response.data);
+					if (response.data.isSuccess==true) {
+						location.href="shopping_trolley.html";
+					}
+				})
+				.catch(function(error){
+					console.log(error);
+				})
+	
+			},
 		},
 		created:function(){
 			var that=this;

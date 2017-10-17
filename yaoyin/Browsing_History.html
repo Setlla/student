@@ -17,7 +17,7 @@
         	描述：头部
         -->
         <div class="header">
-			<span class="header_arr"></span>
+			<span class="header_arr" @click="header_arr"></span>
 			<span class="head_record">浏览记录</span>
 			<span class="header_empty">清空</span>
 			<span class="header_dot">编辑</span>
@@ -31,11 +31,11 @@
     	    <li class="warelist" v-for="warelist in liList" :id="warelist.id">
 				<div class="date">{{ warelist.dateTime }}</div>
     	    	<div class="list_explain">
-    	    		<img :src="warelist.Image" />
+    	    		<img :src="warelist.browselogs[0].product[0].Image" />
 				</div>
 				<div class="list_depreciate">
-					<p>{{ warelist.Name }}</p>
-					<span>￥<span class="price">{{ warelist.CurPrice }}</span>.00</span>
+					<p>{{ warelist.browselogs[0].product[0].Name }}</p>
+					<span>￥<span class="price">{{ warelist.browselogs[0].product[0].CurPrice }}</span>.00</span>
 					<span class="dep_1">看相似</span>
 					<span class="img_title"></span>
 				</div>
