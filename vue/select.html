@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	 	<title>Vue练习</title>
+    	<script type="text/javascript" src="js/vue.js" ></script>
+	</head>
+	<body>
+		<div id="ex_8">
+			<select v-model="selected">
+			    <option disabled value="">请选择</option>
+		    	<option>张</option>
+			    <option>姚</option>
+			    <option>李</option>
+		  	</select>
+			<ul>
+				<li v-for="it in its(myits)">
+					{{ it.age}} - {{ it.name }}
+				</li>
+			</ul>
+		</div>
+		<script>
+			var vm=new Vue({
+				el:"#ex_8",
+				data:{
+					selected: '',
+					myits:[
+						{name:"姚胤",age:12},
+						{name:"张三",age:19},
+						{name:"李四",age:11},
+						{name:"张八",age:32}
+					]
+				},
+				methods:{
+					its:function(){
+						var selected=this.selected;
+						if(selected){
+							return this.myits.filter(function(value){
+								return value.name.charAt(0)==selected && value.age>=11;
+							})
+						}
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
