@@ -4,11 +4,9 @@
 		methods:{
 			header_arr:function(){
 				history.go(-1);
-			}				
+			}
 		}
 	})
-	
-	
 	//数据渲染
 	//父组件
 	Vue.component('father',{
@@ -32,12 +30,31 @@
 				+'<p>{{ browselog.product[0].Name }}</p>'
 				+'<span class="listspan">￥<span class="price">{{ browselog.product[0].CurPrice }}</span>.00</span>'
 				+'<span class="dep_1">看相似</span>'
-				+'<span class="img_title"></span>'
-				+'</div></div></div>'				
+				+'<span class="img_title" @click="img_titles(browselog.product[0].id)"></span>'
+				+'</div>'
+				+'</div></div>',
+		//购物车跳转添加数据
+		methods: {
+			img_titles:function(id){
+				axios.post(_url+"/addShopCar",{
+					token:localStorage.getItem("token"),
+					id:id
+				})
+				.then(function(response){
+					console.log(response.data);
+					if (response.data.isSuccess==true) {
+						location.href="shopping_trolley.html";
+					}
+				})
+				.catch(function(error){
+					console.log(error);
+				})	
+			}
+		}
 	})
 	
 
-	new Vue({
+	var vm2=new Vue({
 		el:".warediv",
 		data:{
 			lists:[]

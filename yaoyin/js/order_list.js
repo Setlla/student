@@ -34,75 +34,74 @@
 //  	}) 
 		
 		
-		//渲染函数	
-		var datas=function(data){	
-			for (var i=0;i<data.result.length;i++) {
-				var content=
-					'<div class="wl"  data-id="'+data.result[i].id+'">'
+		//数据渲染
+		var warelist=new Vue({
+			el:".warelist",
+			data:{
+				productName:'',
+				items:[]
+			},
+			created:function(){
+				var that=this;
+				axios.post(_url+"/getOrder",{
+					token:localStorage.getItem("token"),
+					productName:productName
+				})
+				.then(function(response){
+					console.log(response.data);
+					that.items=response.data.result;
+				})
+				.catch(function(error){
+					console.log(error);
+				})
+			}
+		})
+		//数据渲染父组件
+		Vue.component('father',{
+			props:["items"],
+			template:'<div>'
+					+'<div class="wl" v-for="item in items">'
 					+'<div class="monopoly">'
 		        	+'<img src="img/icon/icon_63.png"/>'
 		        	+'<span>君宝话费充值专营店</span>'
 		        	+'<span class="mon_arr"></span>'
 		        	+'<span class="mon_success">交易成功</span>'
-		        	+'</div>'
-		        	+'<div class="product">'
-		        	+'</div>'
+		       		+'</div>'
+					+'<child :products="item.products" v-on:item="productNum"></child>'
 		        	+'<ul class="recharge_2">'
 			    	+'<li>'
-	        		+'<span>共</span><span>'+data.result[i].totalNum+'</span><span>件商品</span>'
-	        		+'<span>合计：￥</span><span>'+data.result[i].totalCost+'</span>'
+	        		+'<span>共</span><span>{{item.totalNum}}</span><span>件商品</span>'
+	        		+'<span>合计：￥</span><span>{{item.totalCost}}</span>'
 	        		+'<span>(含运费 ￥0.00)</span>'
 	        		+'</li>'
 	        		+'<li>'
 		        	+'<button class="del_btn"><span>删除订单</span></button>'
-		        	+'<button class="judge_btn"><span>评价</span></button>' 
+		        	+'<button class="judge_btn"><span>评价</span></button>'
 	        		+'</li>'
 	        		+'</ul>'
-	        		+'</div>';
-
-		        $('.warelist').append(content);
-				for (var j=0;j<data.result[i].products.length;j++) {
-					var productNum=JSON.parse(data.result[i].productNum);
-					var content1=
-						'<ul class="recharge_1">'
-			        	+'<li>'
-			        	+'<img src="'+data.result[i].products[j].Image+'"/>'
-			        	+'</li>'
-			        	+'<li>'
-			        	+'<span>'+data.result[i].products[j].Name+'</span>'
-			        	+'</li>'
-			        	+'<li>'
-			        	+'<p><span>￥</span><span class="new_price">'+data.result[i].products[j].CurPrice+'</span></p>'
-			        	+'<p><span>￥</span><span class="old_price">'+data.result[i].products[j].OldPrice+'</span></p>'
-			        	+'<p>X<span class="num">'+productNum[j]+'</span></p>'
-			        	+'</li>'
-			      		+'</ul>';
-			      		
-			      	$(".product").eq(i).append(content1);  	
-				}
-			}
-		}
+	        		+'</div>'
+	        		+'</div>'
+		})
 		
-		//ajax调用渲染函数
-		var romance=function(){
-			var productName=$(".search_ipt").val();
-			$.ajax({
-				type:"post",
-				url:_url+"/getOrder",
-				async:true,
-				contentType:"application/JSON",
-				data:JSON.stringify({
-					token:localStorage.getItem("token"),
-					productName:productName
-				}),
-				success:function(data,status){
-					if(data.isSuccess==true){
-						datas(data);
-					}										
-				}			
-			})
-		}
-		romance();
+		//数据渲染子组件
+		Vue.component('child',{
+			props:["products"],
+			template:'<div>'
+					+'<ul class="recharge_1" v-for="product in products">'
+		        	+'<li>'
+		        	+'<img :src="product.Image"/>'
+		        	+'</li>'
+		        	+'<li>'
+		        	+'<span>{{product.Name}}</span>'
+		        	+'</li>'
+		        	+'<li>'
+			        +'<p><span>￥</span><span class="new_price">{{product.CurPrice}}</span></p>'
+			        +'<p><span>￥</span><span class="old_price">{{product.OldPrice}}</span></p>'
+			        +'<p>X<span class="num">22</span></p>'
+		        	+'</li>'
+		      		+'</ul>'
+		      		+'</div>'
+		})
 		
 		//删除订单
 		$(document).on("click",".del_btn",function(){

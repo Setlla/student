@@ -6,9 +6,8 @@
 		<link rel="stylesheet" href="css/public_1.css" />
 		<link rel="stylesheet" href="css/order_list.css" />
 		<script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
-		<script type="text/javascript" src="js/order_list.js" ></script>
-		<script type="text/javascript" src="js/url.js" ></script>
 		<script type="text/javascript" src="js/vue.js" ></script>
+		<script type="text/javascript" src="js/axios.js" ></script>
 	</head>
 	<body>
 		<!--
@@ -27,7 +26,7 @@
         	描述：搜索所有订单
         -->
         <div class="search" v-bind:class="{search_1:isSearch}">
-        	<input class="search_ipt" v-bind:class="{ser:isSer}" @focus="search_ipt1" @blur="search_ipt2" placeholder="搜索所有订单"/>      	
+        	<input v-model="productName" class="search_ipt" v-bind:class="{ser:isSer}" @focus="search_ipt1" @blur="search_ipt2" placeholder="搜索所有订单"/>      	
         </div>
         <!--
         	作者：492680716@qq.com
@@ -35,30 +34,44 @@
         	描述：充值
         -->
         <div class="warelist">
-	        <!--<ul class="recharge_1">
-	        	<li class="recharge_li">
-	        		<img src="img/ware/ware_77.png"/>
-	        	</li>
-	        	<li class="recharge_li">
-	        		<span>上海移动100元 充值 快充 及时到账...</span>
-	        	</li>
-	        	<li class="recharge_li">
-	        		<p><span>￥</span><span class="new_price">99.80</span></p>
-	        		<p><span>￥</span><span class="old_price">99.80</span></p>
-	        		<p>X<span class="num">1</span></p>   
-	        	</li>
-		    </ul>
-	        <ul class="recharge_2">
-			    <li>
-	        		<span>共</span><span>1</span><span>件商品</span>
-	        		<span>合计：￥</span><span>99.80</span>
-	        		<span>(含运费 ￥0.00)</span>
-	        	</li>
-	        	<li>
-		        	<button class="del_btn"><span>删除订单</span></button>
-		        	<button class="judge_btn"><span>评价</span></button>   
-	        	</li>
-	        </ul>-->
+        	<father :items="items"></father>
+	        <!--<div class="wl">
+				<div class="monopoly">
+		        	<img src="img/icon/icon_63.png"/>
+		        	<span>君宝话费充值专营店</span>
+		        	<span class="mon_arr"></span>
+		        	<span class="mon_success">交易成功</span>
+		       </div>
+	        	<ul class="recharge_1">
+		        	<li>
+		        		<img src="img/banner/banner_04.png"/>
+		        	</li>
+		        	<li>
+		        		<span>大发发到付答复</span>
+		        	</li>
+		        	<li>
+			        	<p><span>￥</span><span class="new_price">231</span></p>
+			        	<p><span>￥</span><span class="old_price">123</span></p>
+			        	<p>X<span class="num">22</span></p>
+		        	</li>
+		      	</ul>
+		        <ul class="recharge_2">
+			    	<li>
+	        			<span>共</span><span>1</span><span>件商品</span>
+	        			<span>合计：￥</span><span>22</span>
+	        			<span>(含运费 ￥0.00)</span>
+	        		</li>
+	        		<li>
+		        		<button class="del_btn"><span>删除订单</span></button>
+		        		<button class="judge_btn"><span>评价</span></button>
+	        		</li>
+	        	</ul>
+	        </div>-->
 	    </div>
+	    
+	    
+	    
+	    <script type="text/javascript" src="js/order_list.js" ></script>
+		<script type="text/javascript" src="js/url.js" ></script>
 	</body>
 </html>
