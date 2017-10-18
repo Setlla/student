@@ -20,20 +20,21 @@
 			<span class="header_titl">订单列表</span>
 			<img src="img/icon/icon_67.gif" @click="header_img"/>
 		</div>
-		<!--
-        	作者：492680716@qq.com
-        	时间：2017-08-30
-        	描述：搜索所有订单
-        -->
-        <div class="search" v-bind:class="{search_1:isSearch}">
-        	<input v-model="productName" class="search_ipt" v-bind:class="{ser:isSer}" @focus="search_ipt1" @blur="search_ipt2" placeholder="搜索所有订单"/>      	
-        </div>
-        <!--
+
+        <div class="warelist">       	
+			<!--
+	        	作者：492680716@qq.com
+	        	时间：2017-08-30
+	        	描述：搜索所有订单
+	        -->
+	        <div class="search" v-bind:class="{search_1:isSearch}">
+	        	<input v-model="productName" class="search_ipt" v-bind:class="{ser:isSer}" @focus="search_ipt1" @blur="search_ipt2" placeholder="搜索所有订单"/>      	
+	        </div>
+	    <!--
         	作者：492680716@qq.com
         	时间：2017-08-29
         	描述：充值
         -->
-        <div class="warelist">
         	<father :items="items"></father>
 	        <!--<div class="wl">
 				<div class="monopoly">
