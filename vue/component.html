@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>组件注册</title>
+		<script type="text/javascript" src="js/vue.js" ></script>
+	</head>
+	<body>
+		<div id="list">
+		  <input v-model="parentMsg">
+		  <br>
+		  <child v-bind:my-message="parentMsg"></child>
+		</div>
+	
+		<div id="list1">
+			<my-compent></my-compent>
+		</div>
+		<script>
+			//全局注册
+			Vue.component('child', {
+			  // 在 JavaScript 中使用 camelCase
+			  props: ['myMessage'],
+			  template: '<span>{{ myMessage }}</span>'
+			})
+			
+			
+			new Vue({
+				el: "#list"
+			})
+			
+			//局部注册
+			var cld={
+				template:'<div>aaa</div>'
+			}
+			new Vue({
+				el:"#list1"
+				components:{
+					'my-compent':cld
+				}
+			})
+		</script>
+	</body>
+</html>

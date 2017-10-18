@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>父子组件</title>
+		<script type="text/javascript" src="js/vue.js" ></script>
+	</head>
+	<body>
+		<div id="div1">
+			<father :items="items"></father>
+		</div>
+		
+		<script>
+			//父
+			Vue.component('father',{
+				props:["items"],
+				template:'<div><div v-for="item in items">'
+						+'<p>{{item.name}}</p>'
+						+'<span>{{item.age}}</span>'
+						+'<child :products="item.products"></child>'
+						+'</div></div>'
+			})
+			//子
+			Vue.component('child',{
+				props:["products"],
+				template:'<div><div v-for="product in products">'
+						+'<p>{{product.id}}</p>'
+						+'<p>{{product.img}}</p>'
+						+'</div></div>'
+			})
+			
+			new Vue({
+				el:"#div1",
+				data:{
+					items:[
+						{name:"李",age:12},
+						{name:"王",age:32},
+						{
+							products:[
+								{id:1,img:"图片地址"},
+								{id:3,img:"图片地址3"},
+								{id:5,img:"图片地址5"}
+							],
+							products:[
+								{id:1,img:"图片地址"},
+								{id:3,img:"图片地址3"},
+								{id:5,img:"图片地址5"}
+							]
+						}
+					]
+				}
+			})
+		</script>
+	</body>
+</html>

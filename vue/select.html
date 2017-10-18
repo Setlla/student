@@ -32,12 +32,14 @@
 					]
 				},
 				methods:{
-					its:function(){
+					its:function(myits){
 						var selected=this.selected;
 						if(selected){
-							return this.myits.filter(function(value){
+							return myits.filter(function(value){
 								return value.name.charAt(0)==selected && value.age>=11;
 							})
+						}else{
+							return this.myits;
 						}
 					}
 				}

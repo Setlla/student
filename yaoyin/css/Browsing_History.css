@@ -20,6 +20,9 @@
 	.warelist div{
 		float: left;
 	}
+	.browselog{
+		width: 100%;
+	}
 	.list_explain{
 		width: 40%;
 		text-align: center;
@@ -51,6 +54,9 @@
 	.list_depreciate span:nth-of-type(1){
 		color: #f7292d;
 		font-size: 0.24rem;
+	}
+	.listspan{
+		margin-right: 0.4rem;
 	}
 	.dep_1{
 		height: 0.5rem;

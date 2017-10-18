@@ -26,24 +26,15 @@
         	作者：492680716@qq.com
         	时间：2017-09-27
         	描述：日期和浏览记录
-        -->
-        <ul class="ware">
-    	    <li class="warelist" v-for="warelist in liList" :id="warelist.id">
-				<div class="date">{{ warelist.dateTime }}</div>
-    	    	<div class="list_explain">
-    	    		<img :src="warelist.browselogs[0].product[0].Image" />
-				</div>
-				<div class="list_depreciate">
-					<p>{{ warelist.browselogs[0].product[0].Name }}</p>
-					<span>￥<span class="price">{{ warelist.browselogs[0].product[0].CurPrice }}</span>.00</span>
-					<span class="dep_1">看相似</span>
-					<span class="img_title"></span>
-				</div>
-			</li>
-			<!--<li class="warelist">
+       -->
+       	<div class="warediv">
+        	<father :lists="lists"></father>
+        </div>
+        	<ul class="ware">
+			<li class="warelist">
 				<div class="date">9月2号</div>
     	    	<div class="list_explain">
-    	    		<img src="img/collection/coll_04.gif" />
+    	    		<img src="img/collection/coll_06.gif" />
 				</div>
 				<div class="list_depreciate">
 					<p>瑞舞苹果5s手机壳iphone5s保护套瑞舞苹果5s手机壳iphone5s保护套</p>
@@ -51,9 +42,8 @@
 					<span class="dep_1">看相似</span>
 					<span class="img_title"></span>
 				</div>
-			</li>-->
+			</li>
         </ul>
-        
         
         <script type="text/javascript" src="js/Browsing_History.js" ></script>
 	</body>

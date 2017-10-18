@@ -17,7 +17,7 @@
 		created:function(){
 			//VUE的渲染数据
 			var that=this;
-			axios.post("http://39.108.219.59:8080/productList")
+			axios.post(_url+"/productList")
 			.then(function(response){
 				console.log(response.data);
 				that.warelist=response.data.result;
