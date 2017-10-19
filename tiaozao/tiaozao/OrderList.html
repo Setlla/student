@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>订单列表</title>
+		<link rel="stylesheet" type="text/css" href="css/basic.css"/>
+		<link rel="stylesheet" type="text/css" href="css/OrderList.css"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/url.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script src="js/util.js" type="text/javascript" charset="utf-8"></script>
+		
+	</head>
+		<div class="top_nav">
+			<!--<a class="arrow"></a>-->
+			<a @click="jiantou"></a>
+			<span>订单列表</span>
+			<img @click="tupian" src="image/ddlb_03.png"/>		
+			<div class="round">
+				<i></i>
+				<i></i>
+				<i></i>
+			</div>
+		</div>
+					
+		<div class="content_one" >
+			<div class="search" :class='{cur: isCur}'>
+				<input @focus="focusinput" v-model="productName"  @blur="lose" class="inputs" type="text" name="" id="" value="" placeholder="搜索所有订单"/>	
+				<div class="miss" v-show="divstyle"></div>
+			</div>		
+			<father :items="items"></father>
+			<!--<div class="title">
+				<img src="image/ddlb_14.png"/>
+				<span>君宝话费充值专营店</span>
+				<a></a>
+				<i>交易成功</i>
+			</div>
+			<div class="content_two">
+				<img src="image/ddlb_19.png"/>
+				<div class="content_small">
+					<span>上海移动100元充值 快充即使到账...</span>					
+				</div>
+				<div class="right_con">
+					<span>￥<i>99.80</i></span>
+					<span>￥<i>99.80</i></span>
+					<span>X<i>1</i></span>
+				</div>
+			</div>
+			<div class="content_bottom">
+				<span>共计<i>1</i>商品 合计：￥<i>99.90</i> (含运费￥<i>0.00</i>)</span>
+			</div>-->
+			
+		
+		
+		</div>
+		<!--<div class="bottom_nav">
+			<div class="bottom_con">
+				<span>删除订单</span>
+				<span>评价</span>
+			</div>
+				
+		</div>-->
+	<body>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/OrderList.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

@@ -1,66 +1,84 @@
+  
+// 	$.ajax({
+// 	type:"post",
+// 	url:_url+"changepwd",
+// 	async:true,
+// 	contentType:"application/json",
+//// 	data:JSON.stringify({localStorage.getItem(token)}),
+// 	success:function(){
+// 		
+// 	}
+// });
+//
+//	
+//	$(document).on("click",".send",function () {
+//		
+//		
+//		show();
+//		
+//		
+//		clearInterval(T)
+//	})
+//
+//	var T;
+//	var i;
+//	
+//	function show(){
+//		if(i>0){
+//			i=i-1;
+//			$(this).css("background","#E9E9E9");	
+//			var T=setInterval(show,1000);
+//		}
+//
+//	}
+//
 
-	
-	$(document).on("click",".login",function(){	
-		var phone=$(".phone");
-		var password=$(".password");
-		
-		if(valiphone(phone.val())&&valipassword(password.val())){
-			$.ajax({
-				type:"post",
-				url:"http://39.108.219.59/changepwd",
-				async:true,
-				contentType:"application/JSON",
-				data: JSON.stringify({"phone":phone.val(),"password":hex_md5(password.val())}),
-				success:function(data){
-					console.log(data);	
-					if(data.isChange== true ) {				
-				 		location.href="loginLo.html";
-					}	
-				}				
-			});	
+
+
+
+
+var s=10;
+var but= $(".send");
+var time = function(){
+			but.text("重新发送("+s+")");
+			var	n = setTimeout("time()","1000");
+			if(s>0){
+				but.attr("disabled",true);
+			}else{
+				clearTimeout(n);
+				but.attr("disabled",false);
+				but.text("发送验证码") ;
+				s=10;
+			}
+			s--;
 		}
-	})
+
 	
-	var i;
-	var T;
-		
-	function show(){
-		if(i>1){
-			i=i-1;
-			$(".send").css("background","#33CC33");	
-			$(".login").css("background","#33CC33");
-			$(".send").attr("disabled",true);
-		}else{
-			i="发送验证码",
-			$(".send").css("background","#fa6c62");	
-			$(".login").css("background","#33CCff");	
-			$(".send").attr("disabled",false);
-			clearInterval(T);
-		}	
-		$(".send").html(i);
+$(".send").click(function(){
+	time();
+})
+
+var ph = $(".phone");
+var pass = $(".password");
+$(".foot").click(function(){
+	var _data = {
+		phone: ph.val(),
+		password: hex_md5(pass.val()),
 	}
-	
-	
-	
-	$(document).on("click",".send",function(){
-		i=9;	
-		T=setInterval(show,1000);
-	})
-	
-	
-	
-
-	
-	
-
-		
-
-
-
-
-
-
-
-
-
-
+	if(viliphone(ph.val()) && checkPwd(pass.val())){
+		$.ajax({
+		type:"post",
+		url:_url+"changepwd",
+		async:true,
+		contentType:"application/json",
+		data: JSON.stringify(_data),
+		success: function(data) {
+			if(data.isChange==true){
+				location.href="denglu.html";
+			}else{
+				console.log("更改失败")
+			}
+		}
+	    })
+    }	
+})

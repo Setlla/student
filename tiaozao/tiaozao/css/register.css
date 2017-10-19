@@ -1,5 +1,4 @@
 
-
 .top_nav{
 	background: #33ccff;
 	font-size: 0.40rem;
@@ -14,12 +13,13 @@
 	width: .2rem;
 	height: .2rem;
 	display: block;
-	border-bottom: 4px white solid;
-	border-left: 4px white solid;
+	border-bottom: .03rem white solid;
+	border-left: .03rem white solid;
 	transform:translateY(-50%) scaleY(0.8)rotate(45deg);
 	top:50%;
-	left: 0.6rem;
-	position: absolute;				
+	left: 0.3rem;
+	position: absolute;	
+	cursor: pointer;			
 }
 .top_one{
 	line-height: 1.2rem;

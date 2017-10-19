@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>收藏</title>
+		<link rel="stylesheet" type="text/css" href="css/Collection.css"/>
+		<link rel="stylesheet" type="text/css" href="css/basic.css"/>
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/url.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/util.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	</head>
+	<body>
+		<div class="top_nav">
+			<a class="arrow"@click="arrow"></a>
+			<div class="qh">
+				<span>商品</span>
+				<span>店铺</span>
+			</div>
+			<span>编辑</span>
+			<img src="image/Collection_03.png"/>
+		</div>
+		<div class="ct_nav">
+			<span>默认</span>
+			<span>降价</span>
+			<span>促销</span>
+			<span>分类</span>
+			<span>库存</span>
+		</div>
+		<div class="content">
+			<div  class="big_box" v-for="item in items">
+				<div class="content_left">
+					<img :src="item.product[0].Image"/>
+				</div>
+				<div class="content_right">
+					<p>{{ item.product[0].Name }}</p>
+					<span>￥779.00</span>
+					<span>赠品</span>
+					<span>补差链接</span>
+					<span>键盘膜</span>	
+					<a></a>
+				</div>
+				<div class="float">
+					<span>看相似</span>
+					<span>降价通知</span>
+					<img src="image/zujis_06.png" @click="ShopCart(item.product[0].id)"/>						
+				</div>	
+			</div>
+		</div>
+		
+		<!--<div class="content_two">
+			<div class="center">
+				<img src="image/backss_05.png"/>
+				<p>为 <i>·</i> 你 <i>·</i> 推 <i>·</i> 荐</p>
+				<img src="image/backss_03.png"/>
+			</div>
+			<div class="ct_ct">
+				<div class="left_ct">
+					<img src="image/Collection_18.png"/>
+					<div class="ct_left">
+						<span>自营</span>
+						<span>惠普（HP）轻薄系列HP14 14英寸轻薄...</span>
+						<span>￥8299.00</span>
+						<span>券</span>
+						<span>看相似</span>
+					</div>
+				</div>
+				<div class="right_ct">
+					<img src="image/Collection_15.png"/>
+					<div class="ct_right">
+						<div class="tt_tt">
+							<span>轻薄本</span>
+							<span>14寸/四核/32G/商务办公</span>
+						</div>						
+						<p>惠普（HP）轻薄系列HP14 14英寸轻薄/商务办公商务办公...</p>
+						<span>￥8299.00</span>
+						<span>券</span>
+						<span>看相似</span>
+					</div>
+				</div>
+			</div>-->
+		</div>
+	<script src="js/Collection.js" type="text/javascript" charset="utf-8"></script>	
+	</body>
+</html>

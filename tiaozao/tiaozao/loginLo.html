@@ -3,28 +3,28 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>登入</title>	
-		<link rel="stylesheet" type="text/css" href="css/yangshi.css"/>	
+		<link rel="stylesheet" type="text/css" href="css/basic.css"/>	
 		<link rel="stylesheet" type="text/css" href="css/loginLo.css"/>
 		<script src="js/md5.js"></script>
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript" src="js/util.js" ></script>
+		<script src="js/url.js" type="text/javascript" charset="utf-8"></script>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 	</head>
 	<body>
 		<div class="top_nav">
 			<img src="image/zzh.jpg"/>
 		</div>
-		<form class="textss" action="/">
+		<div class="textss">
 			<input type="text" name="phone" id="" class="zhanghao" placeholder="输入手机/邮箱" />
 			<input type="password" name="password" id="" class="mima" placeholder="输入密码" />		
-			<span id="login" type="">登入</span>
-		</form>
+			<a  id="login">登入</a>
+		</div>
 		<div class="bottom_nav">
 			<span><a href="Password.html">忘记密码？</a></span>
-			<p><a href="register.html">注册</a></p>
-		</div>		
-		<script src="js/util.js"></script>
+			<p class="register"><a href="register.html">注册</a></p>
+		</div>			
 		<script src="js/loginLo.js"></script>
-
 		
 	</body>
 </html>

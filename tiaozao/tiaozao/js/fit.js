@@ -1,106 +1,90 @@
+
+		//浏览图的函数
+function getObjectURL(file) {
+var url = null ;
+if (window.createObjectURL!=undefined) { // basic
+url = window.createObjectURL(file) ;
+} else if (window.URL!=undefined) { // mozilla(firefox)
+url = window.URL.createObjectURL(file) ;
+} else if (window.webkitURL!=undefined) { // webkit or chrome
+url = window.webkitURL.createObjectURL(file) ;
+}
+return url ;
+}
+
+		//图片的浏览　　　和　切换图片
+$(document).on("change",".browse",function() {
+	var form= new FormData();
+	form.append("token", localStorage.getItem("token"));
+	form.append("file",$(".browse")[0].files[0]);	//files放上传文件信息
 	
-			//浏览图的函数
-	function getObjectURL(file) {
-	var url = null ;
-	if (window.createObjectURL!=undefined) { // basic
-	url = window.createObjectURL(file) ;
-	} else if (window.URL!=undefined) { // mozilla(firefox)
-	url = window.URL.createObjectURL(file) ;
-	} else if (window.webkitURL!=undefined) { // webkit or chrome
-	url = window.webkitURL.createObjectURL(file) ;
-	}
-	return url ;
-	}
+	var imgurl=getObjectURL($(".browse")[0].files[0]);
+	$(".browse").attr("src",imgurl);
 	
-			//图片的浏览　　　和　切换图片
-	$(document).on("change",".ggg",function() {
-		var form= new FormData();
-		form.append("token", localStorage.getItem("token"));
-		form.append("file",$(".ggg")[0].files[0]);	
-		
-		var imgurl=getObjectURL($(".ggg")[0].files[0]);
-		$(".ggg").attr("src",imgurl);
-		
-		$.ajax({
-			type:"post",
-			url:"http://39.108.219.59/setHeadImage",
-			async:true,
-			data: form,
-			contentType:false,
-			processData: false,
-			success:function(data){
-				
-				if(data.isSuccess==true){
-					$(".lis_one img").attr("src",data.headImage)
-				}				
-			}
-		});			
-	})
-	
-		//点击complete　完成修改
-	$(document).on("click",".complete",function() {
-		var name=$(".name").val();
-		var gender=$(".gender option:selected").html();
-		var address=$(".address").val();
-		$.ajax({
-			type:"post",
-			url:"http://39.108.219.59/setPerson",
-			async:true,
-			contentType:"application/json",
-			data:JSON.stringify({
-				token: localStorage.getItem("token"),
-				name:name,
-				gender:gender,
-				address:address,
-				}),
-			success:function(data){
-				if(data.isSuccess==true){
-					location.href="geren.html"
-				}
-			}
-		});
-	})
-	
-		//对焦
-//	$(document).on("focus",".name",function() {
-//		$(".name").css("text-align","left");
-//		$(".address").css("text-align","left");
-//	})
-//	$(document).on("blur",".name",function () {
-//		$(".name").css("text-align","right");
-//		$(".address").css("text-align","right");
-//	})
-//	
-//	
-	
-	$.ajax({				
+	$.ajax({
 		type:"post",
-		url:"http://39.108.219.59/getPerson",
+		url:_url+"setHeadImage",
+		async:true,
+		data: form,
+		contentType:false,
+		processData: false,
+		success:function(data){		
+			if(data.isSuccess==true){
+				$(".lis_one img").attr("src",data.headImage)
+			}				
+		}
+	});			
+})
+
+	//点击complete　完成修改
+$(document).on("click",".complete",function() {
+	var name=$(".name").val();
+	var gender=$(".gender option:selected").html();  //被选中option 的 里面某一个 。
+	var address=$(".address").val();
+	$.ajax({
+		type:"post",
+		url:_url+"setPerson",
 		async:true,
 		contentType:"application/json",
 		data:JSON.stringify({
-			"token": localStorage.getItem("token"),			
-		}),
+			token: localStorage.getItem("token"),
+			name:name,
+			gender:gender,
+			address:address,
+			}),
 		success:function(data){
 			if(data.isSuccess==true){
-				$(".lis_one img").attr("src",data.result[0].headImage);
-				$(".name").val(data.result[0].name);
-				if($(data.result[0].gender)=="女"){
-					$(".woman").attr("selected","selected");
-				}else{
-					$(".man").attr("selected","selected");
-				}
-				$(".address").val(data.result[0].address);
+				location.href="personal.html"
 			}
 		}
 	});
-	
-	
-		//点击返回上一个页面
-	$(document).on("click",".fanhui",function() {
-		history.go(-1);
-	})
-	
-	
-	
-	
+})
+
+	//对焦
+$(document).on("focus","input",function() {
+	$(this).css("text-align","left");
+
+})
+$(document).on("blur","input",function () {
+	$(this).css("text-align","right");
+
+})
+
+
+function mation(){
+	var user=JSON.parse(localStorage.getItem("user"));		
+	$(".lis_one img").attr("src",user.headImage);
+	$(".name").val(user.name);
+	if(user.gender=="女"){
+		$(".woman").attr("selected","selected");
+	}else{
+		$(".man").attr("selected","selected");
+	}
+		$(".address").val(user.address);			
+}
+mation();	
+
+		
+
+
+
