@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/vue.js" ></script>
+		<style>		
+			
+		</style>
+	</head>
+	<body>
+		
+		<!--<select v-model="selected">
+			<option>张</option>
+			<option>李</option>
+			<option>王</option>
+		</select>
+		<ol id="people">
+			<li v-for="item in myselect">
+				{{item.name}}-{{item.age}}
+			</li>
+		</ol>-->
+		
+		<!--<div id="expale">
+			<input v-model="message" />
+			<br />
+			<my-product v-bind:my-message="message"></my-product>
+		</div>
+		-->
+		<div id="niu">
+			<father :items="items"></father>
+		</div>
+		
+		<script>
+			Vue.component('child', {
+			  // 声明 props
+			  props: ['products'],
+			  // 就像 data 一样，prop 也可以在模板中使用
+			  // 同样也可以在 vm 实例中通过 this.title 来使用
+			  template: '<div><div v-for="product in products">'
+			            +'<p>{{product.color}}</p>'
+			            +'<p>{{product.id}}</p>'
+			            +'</div></div>'
+			})
+			
+			Vue.component('father',{
+				props:['items'],
+				template:'<div><div v-for="item in items">'
+				         +'<p>{{item.name}}</p>'
+				         +'<p>{{item.age}}</p>'
+				         +'<child :products ="item.products"></child>'
+				         +'</div></div>'				
+			})
+			
+			new Vue({
+				el:'#niu',
+				data:{
+					items:[
+						{name:'召唤师',age:12,products:[
+							{id:1,color:'红'}
+						]},
+						{name:'召唤师',age:18,products:[
+							{id:2,color:'白'}
+						]}
+					]
+				}
+			})
+//			var peo = new Vue({
+//				el:'#people',
+//				data:{
+//					selected:'',
+//					items:[
+//					 {name:'李白',age:'20'},
+//					 {name:'王甫',age:'15'},
+//					 {name:'李清照',age:'17'},
+//					 {name:'王勃',age:'22'}
+//					]
+//				},
+//				computed:{
+//					myselect:function(items){
+//						var selected = this.selected;
+//						if(selected){
+////							return item.name
+//						}else{
+//							return item.name&&item.age
+//						}
+//					}
+//				}
+//			})
+//			
+			
+			
+//			Vue.component('my-product', {
+//				props:['myMessage'],
+//			     template:'<p>{{myMessage}}</p>'
+//			})
+//			
+//			new Vue({
+//				el:'#expale',
+//				data:{
+//					message:""
+//				}
+//			})
+//			
+			
+		</script>
+		
+	    
+
+	</body>
+	</html>

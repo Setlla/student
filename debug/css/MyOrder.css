@@ -1,0 +1,61 @@
+html{
+	font-size: 100px;
+}
+@media only screen and (min-width: 414px) and (max-width: 640px) {
+	html{
+ 	     font-size: 64px;
+       }
+}
+@media only screen and (min-width: 320px) and (max-width: 414px) {
+	html{
+		font-size: 50px;
+	}
+}
+.head{
+	height: 1.28rem;
+	position: relative;
+	width: 100%;
+	text-align: center;
+	background-color: #33ccff;
+}
+.head span{
+	display: block;
+	height: .15rem;
+	width: .15rem;
+	border-left: solid #FFFFFF 1px;
+	border-bottom: solid #FFFFFF 1px;
+	transform:translateY(-50%) rotate(45deg);
+	position: absolute;
+	top: 50%;
+	left: .25rem;
+}
+.head p{
+	font-size: .26rem;
+	color: #18252d;
+	line-height: 1.28rem;
+	color: #fff;
+}
+ul{
+	border-bottom: solid #707070 1px;
+}
+ul li{
+	width: 19%;
+	display: inline-block;
+	text-align: center;
+	padding: .2rem 0;	
+}
+.content{
+	text-align: center;
+}
+.content img{
+	width: 20%;
+	margin: 1rem 0;
+}
+.content p{
+	font-size:.3rem ;
+	color: #ABAAA8;
+}
+.blue{
+	border-bottom: solid #33ccff .05rem;
+	color: #33ccff;
+}

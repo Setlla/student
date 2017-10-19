@@ -1,0 +1,192 @@
+{
+  "dp.html": {
+    "resources": [
+      "img/dp_03.png",
+      "img/dp_20.png",
+      "css/dp.css",
+      "img/dp_10.png",
+      "img/dp_17.png",
+      "img/dp_23.png",
+      "img/dp_12.png",
+      "img/dp_07.png",
+      "css/all.css",
+      "img/dp_15.png",
+      "js/dp.js",
+      "js/click.js",
+      "ShopCar.html",
+      "js/skip.js",
+      "detail.html",
+      "personal.html",
+      "js/until.js"
+    ],
+    "refer": []
+  },
+  "ShopCar.html": {
+    "resources": [
+      "dp.html",
+      "img/shopcar_03.png",
+      "img/dp_03.png",
+      "img/dp_20.png",
+      "js/JoinShopCar.js",
+      "css/ShopCar.css",
+      "css/EditorAll.css",
+      "js/CheckAllButton.js",
+      "js/jquery-3.2.1.js",
+      "img/dp_17.png",
+      "img/shopcar_04.png",
+      "css/all.css",
+      "js/settle.js",
+      "js/skip.js",
+      "detail.html",
+      "FirmOrder.html",
+      "personal.html"
+    ],
+    "refer": [
+      "dp.html"
+    ]
+  },
+  "personal.html": {
+    "resources": [
+      "img/trees.jpg",
+      "css/personal.css",
+      "img/revin.jpg",
+      "css/all.css",
+      "img/personal_03.png",
+      "img/personal_10.png",
+      "img/personal_13.png",
+      "img/personal_08.png",
+      "img/personal_06.png",
+      "img/personal_24.png",
+      "img/personal_21.png",
+      "img/shopcar_03.png",
+      "img/dp_20.png",
+      "img/dp_15.png",
+      "img/personal_26.png",
+      "img/personal_29.png",
+      "js/personal.js",
+      "information.html",
+      "denglu.html",
+      "js/skip.js",
+      "dp.html",
+      "ShopCar.html"
+    ],
+    "refer": []
+  },
+  "information.html": {
+    "resources": [
+      "img/revin.jpg",
+      "css/all.css",
+      "css/information.css",
+      "js/information.js",
+      "js/jquery-3.2.1.js",
+      "personal.html"
+    ],
+    "refer": []
+  },
+  "denglu.html": {
+    "resources": [
+      "img/input_19.png",
+      "img/input_23.png",
+      "js/denglu.js",
+      "js/jquery-3.2.1.js",
+      "css/denglu.css",
+      "js/md5.js",
+      "dp.html",
+      "zhuce.html",
+      "js/url.js"
+    ],
+    "refer": []
+  },
+  "detail.html": {
+    "resources": [
+      "img/timg0.jpg",
+      "img/timg.jpg",
+      "js/Carousel.js",
+      "img/timg 1.jpg",
+      "img/cat.jpeg",
+      "css/detail.css",
+      "js/detail.js",
+      "css/all.css",
+      "img/detail_03.png",
+      "ShopCar.html"
+    ],
+    "refer": [
+      "ShopCar.html"
+    ]
+  },
+  "FirmOrder.html": {
+    "resources": [
+      "img/order_03.png",
+      "img/order_17.png",
+      "css/FirmOrder.css",
+      "js/span.js",
+      "js/FirmOrder.js",
+      "ShopCar.html",
+      "css/all.css",
+      "OrderList.html"
+    ],
+    "refer": []
+  },
+  "zhuce.html": {
+    "resources": [
+      "img/zc_13.png",
+      "css/zhuce.css",
+      "img/zc_10.png",
+      "denglu.html",
+      "js/zc.js",
+      "img/logo-test-7.png",
+      "img/zc_06.png",
+      "css/all.css",
+      "img/zc_03.png",
+      "js/zzbds.js"
+    ],
+    "refer": [
+      "denglu.html"
+    ]
+  },
+  "OrderList.html": {
+    "resources": [
+      "img/order_17.png",
+      "js/OrderList.js",
+      "css/OrderList.css",
+      "js/jquery-3.2.1.js",
+      "img/lister_07.png",
+      "img/lister_03.png",
+      "css/all.css",
+      "ShopCar.html",
+      "OrderDetail.html",
+      "js/until.js"
+    ],
+    "refer": []
+  },
+  "OrderDetail.html": {
+    "resources": [
+      "css/OrderDetail.css",
+      "js/OrderDetail.js",
+      "img/orderdetail_06.png",
+      "img/orderdetail_03.png",
+      "img/order_01.png",
+      "OrderList.html",
+      "img/order_03.png"
+    ],
+    "refer": []
+  },
+  "collect.html": {
+    "resources": [
+      "img/car_10.png",
+      "css/collect.css",
+      "css/adaptation.css",
+      "img/lister_07.png",
+      "css/all.css",
+      "js/url.js",
+      "js/vue.js",
+      "img/zj_03.png",
+      "js/collect.js",
+      "img/collect_03.png",
+      "img/collect_05.png",
+      "img/collect_13.png",
+      "img/collect_10.png"
+    ],
+    "refer": []
+  }
+}

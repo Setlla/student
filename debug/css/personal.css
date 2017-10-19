@@ -1,0 +1,201 @@
+html{
+	font-size: 100px;
+}
+@media only screen and (min-width: 414px) and (max-width: 640px) {
+	html{
+ 	     font-size: 64px;
+       }
+}
+@media only screen and (min-width: 320px) and (max-width: 414px) {
+	html{
+		font-size: 50px;
+	}
+}
+body{
+	background-color:#efefef;
+}
+.head{
+	height: 1.28rem;
+	background-color: #33ccff;
+	line-height: 1rem;
+	position: relative;
+}
+.head span{			
+	font-size:.24rem ;
+	color: #FFFFFF;
+	display: inline-block;
+	/*width: .5rem;*/
+	position: absolute;
+	left: .2rem;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.head p{
+	font-size: .3rem;
+	color: #FFFFFF;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	line-height: 1.28rem;
+}
+.head a{
+	font-size:.24rem ;
+	color: #FFFFFF;
+	position: absolute;
+	right: .2rem;
+	top: 50%;
+	transform: translateY(-50%);
+	
+}
+.photo{
+	position: relative;		
+}
+.photo .tree{
+	width: 100%;
+	height: 3.2rem;
+	opacity:0.5;
+	position: absolute;	
+	z-index: -1;
+}
+.picture{
+	padding-top: .4rem;
+}
+.picture img{
+	display: block;
+	height: 1.2rem;
+	width: 1.2rem;
+    box-shadow: 0 0 0 .02rem #FFFFFF;
+	border-radius: .6rem;
+	margin: 0 auto;
+}
+.picture p{
+	font-size: .3rem;
+	color: #FFFFFF;
+	text-align: center;
+	margin-top: .2rem;
+}
+.shade{
+	background-color: black;
+	opacity:0.5;
+	overflow: hidden;
+	margin-top: .3rem;
+}
+.collect{
+	display: inline-block;
+	width: 50%;
+	float: left;
+	text-align: center;
+	padding: .06rem 0;
+}
+.footmark{
+	display: inline-block;
+	width: 50%;
+	text-align: center;
+	padding: .06rem 0;
+}
+.shade{
+	position: relative;
+}
+.shade p{
+	font-size: .24rem;
+	color: #FFFFFF;
+}
+.shade span{
+	font-size: .2rem;
+	color: #FFFFFF;
+}
+.shade i{
+	display: inline-block;
+	height: .5rem;
+	border: solid #605930 1px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+ul{
+	overflow: hidden;
+	background-color: #FFFFFF;
+}
+ul li{
+	float: left;
+	width: 20%;
+	text-align: center;
+	font-size: .2rem;
+	color: #666666;
+	padding: .25rem 0;
+}
+li img{
+	width: .32rem;
+	height: .3rem;
+}
+.my{
+	background-color: #FFFFFF;
+	margin-top: .2rem;
+}
+.my div{
+	position: relative;
+	padding-left: 1rem;
+}
+.my div img{
+	position: absolute;
+	left: .2rem;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.my p{
+	font-size: .3rem;
+	color: #666666;
+	padding: .25rem 0;
+}
+.oderform p{
+	border-bottom: solid #efefef  1px;
+}
+.beatform{
+	border-bottom: solid #efefef .2rem;
+}
+.bot{
+	width: 100%;
+	z-index: 999;
+	padding: .1rem 0;
+	border-top: solid #808080 1px;
+	display: block;
+	position: fixed;
+	bottom: 0;
+}
+.bot li{
+	width: 24.6%;
+	display: inline-block;
+	text-align: center;
+	padding: 0;
+}
+.bot a{
+	color: #808080;
+	font-size: .2rem;
+	display: block;
+}
+.bot li img{
+	display: inline-block;
+	height: .45rem;
+	width: .45rem;
+}
+.bj{
+	display: block;
+	height: 2rem;
+}
+.pay{
+	position: relative;
+}
+.time{
+	/*display: inline-block;*/
+	width: .26rem;
+	height: .26rem;
+	border: solid red 1px;
+	border-radius: .14rem;
+	background: #fff;
+	color: red;
+	position: absolute;
+	top: .06rem;
+	left: 50%;
+	line-height: .26rem;
+}

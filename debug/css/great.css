@@ -1,0 +1,97 @@
+html{
+	font-size: 100px;
+}
+@media only screen and (min-width: 414px) and (max-width: 640px) {
+	html{
+ 	     font-size: 64.7px;
+       }
+}
+@media only screen and (min-width: 320px) and (max-width: 414px) {
+	html{
+		font-size: 50px;
+	}
+}
+.head{
+	position: relative;
+	background-color: #33ccff;
+	height: 1.28rem;
+	text-align: center;
+}
+.head a{
+	color: #fff;
+	font-size: .24rem;
+    line-height: 1.28rem;
+}
+.head span{
+	position: absolute;
+	width:.15rem ;
+	height: .15rem;
+	display: block;
+	border-bottom: solid #FFFFFF 1px;
+	border-left: solid #FFFFFF 1px;
+	-webkit-transform:translateY(-50%) rotate(45deg);
+	left: .6rem;
+	top: 50%;
+}
+.process{
+	width: 6rem;
+	margin: 0 auto;
+	margin-top: .5rem;
+	overflow: hidden;
+}
+.process .number{
+	width: 90%;
+	display:block;
+	padding: .2rem .1rem;
+	border: solid #e8e8ea 2px;
+	border-radius: .2rem;
+	font-size: .2rem;
+}
+.send{	
+	width: 100%;
+	overflow: hidden;
+}
+ .note{
+	display:inline-block;
+	margin-top: .3rem;
+	width: 55%;
+	padding: .2rem;
+	border: solid #e8e8ea 2px;
+	border-radius: .2rem;
+	font-size: .2rem;
+	float: left;
+	margin: .3rem 0;
+}
+.send {
+	width: 30%;
+	border: none;
+	background-color: #fa6c62;
+	padding: .2rem 0;
+	border-radius: .2rem;
+	color: #FFFFFF;
+	font-size: .2rem;
+	margin: .3rem 0;
+	margin-right: .4rem;
+	float: right;
+}
+.process .into{
+	width:90%;
+	display:block;
+	padding: .2rem .1rem;
+	border: solid #e8e8ea 2px;
+	border-radius: .2rem;
+	
+	font-size: .2rem;
+}
+.process .submit{
+	display: block;
+	border: none;
+	background-color: #33ccff;
+	font-size: .24rem;
+	color: #FFFFFF;
+	border-radius: .2rem;
+	padding: .2rem ;
+	width: 95%;
+	margin: .5rem 0;
+}
+

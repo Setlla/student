@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://unpkg.com/vue"></script>
+		<script type="text/javascript" src="js/vue.js" ></script>
+	</head>
+	<body>
+		<div id="input">
+			<p>{{_text}}</p>
+			<input v-model="text" />
+		</div>
+		
+		
+		<div id="ol">
+			<ol>
+				<li v-for="todo in todos">
+					{{todo.text}}
+				</li>
+			</ol>
+		</div>
+		<script>
+			var pp = new Vue({
+				el:'#ol',
+				data:{
+					todos:[
+						{text:'大白菜'},
+						{text:'萝卜'},
+					]
+				}
+			})
+			var app = new Vue({
+				el:'#input',
+				data:{
+					text:'嗨!'
+				},
+				computed:{
+					_text:function(){
+						return Date() + this.text
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

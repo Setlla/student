@@ -1,0 +1,102 @@
+
+.head{
+	height: 1.28rem;
+	position: relative;
+	width: 100%;
+	text-align: center;
+	border-bottom: solid #CECECE 1px;
+	/*background-color: #33ccff;*/
+}
+.head span{
+	display: block;
+	height: .2rem;
+	width: .2rem;
+	border-left: solid #000 1px;
+	border-bottom: solid #000 1px;
+	transform:translateY(-50%) rotate(45deg);
+	position: absolute;
+	top: 50%;
+	left: .25rem;
+}
+.head p{
+	font-size: .38rem;
+	color: #18252d;
+	line-height: 1.28rem;
+	/*color: #fff;*/
+}
+.head a{
+	font-size: .3rem;
+	/*color: #18252d;*/
+	color: #CECECE;
+}
+.empty{
+	position: absolute;
+	right:1rem;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.editor{
+	position: absolute;
+	right:.3rem;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.has li{
+	overflow: hidden;
+}
+li a{
+	width: 98%;
+	font-size: .3rem;
+	color: #CECECE;
+	border-bottom: solid #CECECE 1px;
+	float: right;
+	padding: .2rem 0;
+}
+li img{
+	float: left;
+	width: 25%;
+	margin-left: .2rem;
+	margin-top: .6rem;
+}
+.nes{
+	float: right;
+	width: 70%;
+	margin-top: .6rem;
+	border-bottom: solid #e5e5e5 1px;
+}
+.nes img{
+	width: 5%;
+}
+.product{
+	overflow: hidden;
+	text-align: center;
+	margin-top: .7rem;
+	padding-bottom: .5rem;
+}
+.name{
+	font-size: .32rem;
+}
+.price{
+	color: red;
+	font-size: .28rem;
+	float: left;
+}
+.nub{
+	font-size: .35rem;
+}
+.product .look{
+	font-size: .3rem;
+	padding: .1rem;
+	border: solid #CECECE 1px;
+	border-radius: .1rem;		
+	color: #757575;
+	display: inline-block;
+}
+.nes img{
+	width: 8%;
+	margin: 0;
+	border: solid #CECECE 1px;
+	border-radius: .1rem;
+	padding: .1rem;
+	float: right;
+}
