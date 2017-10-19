@@ -14,7 +14,7 @@
 		
 		//数据渲染父组件
 		Vue.component('father',{
-			props:["item","wls","index"],
+			props:["item","wls","indexNum"],
 			template:'<div class="wl" v-show="wls">'
 					+'<div class="monopoly">'
 		        	+'<img src="img/icon/icon_63.png"/>'
@@ -22,7 +22,9 @@
 		        	+'<span class="mon_arr"></span>'
 		        	+'<span class="mon_success">交易成功</span>'
 		       		+'</div>'
+		       		+'<div @click="rech(item.id)">'
 					+'<child :products="item.products" :product-num="JSON.parse(item.productNum)"></child>'
+		        	+'</div>'
 		        	+'<ul class="recharge_2">'
 			    	+'<li>'
 	        		+'<span>共</span><span>{{item.totalNum}}</span><span>件商品</span>'
@@ -30,13 +32,18 @@
 	        		+'<span>(含运费 ￥0.00)</span>'
 	        		+'</li>'
 	        		+'<li>'
-		        	+'<button class="del_btn" @click="del_btn(item.id,index)"><span>删除订单</span></button>'
+		        	+'<button class="del_btn" @click="del_btn(item.id,indexNum)"><span>删除订单</span></button>'
 		        	+'<button class="judge_btn"><span>评价</span></button>'
 	        		+'</li>'
 	        		+'</ul>'
 	        		+'</div>',
 	        methods:{
-	        	del_btn:function(orderId,index){
+	        	//点击订单跳转到订单详情页面
+	        	rech:function(id){
+					location.href="order_details.html?id="+id;
+				},
+	        	//删除订单
+	        	del_btn:function(orderId,indexNum){
 					var that=this;
 					axios.post(_url+"/delOrder",{
 						token:localStorage.getItem("token"),
@@ -45,8 +52,7 @@
 					.then(function(response){
 						console.log(response.data);
 						if(response.data.result>0){
-							Vue.set(warelist.wls, index, false);
-//							location.reload();
+							Vue.set(warelist.wls, indexNum, false);
 						}
 					})
 				}
@@ -71,7 +77,12 @@
 			        +'<p>X<span class="num">{{ productNum[index] }}</span></p>'
 		        	+'</li>'
 		      		+'</ul>'
-		      		+'</div>'
+		      		+'</div>',
+		      	methods:{
+					rech:function(id){
+						location.href="order_details.html?id="+id;
+					}
+		      	}
 		})
 		//数据渲染
 		var warelist=new Vue({
@@ -91,59 +102,35 @@
 				search_ipt2:function(){
 					this.isSearch=false;
 					this.isSer=false;
+					this.getData();
+				},
+				getData:function(){
+					var that=this;				
+					axios.post(_url+"/getOrder",{
+						token:localStorage.getItem("token"),
+						productName:this.productName
+					})
+					.then(function(response){
+						console.log(response.data);
+						that.items=response.data.result;
+						for(var i=0;i<response.data.result.length;i++){
+							that.wls.push(true);
+						}
+					})
+					.catch(function(error){
+						console.log(error);
+					})
 				}
 			},
 			created:function(){
-				var that=this;
-				axios.post(_url+"/getOrder",{
-					token:localStorage.getItem("token"),
-					productName:this.productName
-				})
-				.then(function(response){
-					console.log(response.data);
-					that.items=response.data.result;
-					for(var i=0;i<response.data.result.length;i++){
-						that.wls.push(true);
-					}
-				})
-				.catch(function(error){
-					console.log(error);
-				})
+				this.getData();
 			}
 		})
-
-		
-		//删除订单
-//		$(document).on("click",".del_btn",function(){
-//			var orderId=$(this).parents(".wl").data("id");
-//			var that = this;
-//			$.ajax({
-//				type:"post",
-//				url:_url+"/delOrder",
-//				async:true,
-//				contentType:"application/JSON",
-//				data:JSON.stringify({
-//					token:localStorage.getItem("token"),
-//					orderId:orderId
-//				}),
-//				success:function(data,status){
-//					if(data.result>0){
-//						$(that).parents(".wl").remove();
-//					}					
-//				}			
-//			})
-//		})
-		
-		
-		
-		
-		
-		
 		//点击订单列表任何一件商品跳转到订单详情
-		$(document).on("click",".recharge_1",function(){
-			var id=$(this).parents(".wl").data("id");
-			location.href="order_details.html?id="+id;
-		})
+//		$(document).on("click",".recharge_1",function(){
+//			var id=$(this).parents(".wl").data("id");
+//			location.href="order_details.html?id="+id;
+//		})
 		
 		
 		var vm_header=new Vue({

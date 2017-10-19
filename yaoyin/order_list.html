@@ -37,7 +37,7 @@
 	        	描述：充值
 	        -->
 	        <div>
-	        	<father v-for="(item,index) in items" :data-id="item.id" :item="item" :wls="wls[index]" :key="item.id"></father>
+	        	<father v-for="(item,index) in items" :data-id="item.id" :index-num="index" :item="item" :wls="wls[index]" :key="item.id"></father>
 	        </div>	
 	        <!--<div class="wl">
 				<div class="monopoly">
