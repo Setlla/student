@@ -1,5 +1,3 @@
-	$(document).ready(function(){
-		//搜索功能
 //		$(document).on("change",".search_ipt",function(){
 //			$(".warelist").empty();
 //			romance();
@@ -18,7 +16,7 @@
 		Vue.component('father',{
 			props:["items"],
 			template:'<div>'
-					+'<div class="wl" v-for="item in items" :data-id="item.id">'
+					+'<div class="wl" v-for="item in items" :data-id="item.id" v-show="wls">'
 					+'<div class="monopoly">'
 		        	+'<img src="img/icon/icon_63.png"/>'
 		        	+'<span>君宝话费充值专营店</span>'
@@ -33,12 +31,28 @@
 	        		+'<span>(含运费 ￥0.00)</span>'
 	        		+'</li>'
 	        		+'<li>'
-		        	+'<button class="del_btn"><span>删除订单</span></button>'
+		        	+'<button class="del_btn" @click="del_btn(item.id)"><span>删除订单</span></button>'
 		        	+'<button class="judge_btn"><span>评价</span></button>'
 	        		+'</li>'
 	        		+'</ul>'
 	        		+'</div>'
-	        		+'</div>'
+	        		+'</div>',
+	        methods:{
+	        	del_btn:function(orderId){
+					var that=this;
+					axios.post(_url+"/delOrder",{
+						token:localStorage.getItem("token"),
+						orderId:orderId
+					})
+					.then(function(response){
+						console.log(response.data);
+						if(response.data.result>0){
+							that.wl=false;
+						}
+					})
+				}
+	        }
+
 		})
 		
 		//数据渲染子组件
@@ -67,7 +81,8 @@
 				productName:'',
 				isSearch:false,
 				isSer:false,
-				items:[]
+				items:[],
+				wls:true
 			},
 			methods:{
 				search_ipt1:function(){
@@ -97,25 +112,30 @@
 
 		
 		//删除订单
-		$(document).on("click",".del_btn",function(){
-			var orderId=$(this).parents(".wl").data("id");
-			var that = this;
-			$.ajax({
-				type:"post",
-				url:_url+"/delOrder",
-				async:true,
-				contentType:"application/JSON",
-				data:JSON.stringify({
-					token:localStorage.getItem("token"),
-					orderId:orderId
-				}),
-				success:function(data,status){
-					if(data.result>0){
-						$(that).parents(".wl").remove();
-					}					
-				}			
-			})
-		})
+//		$(document).on("click",".del_btn",function(){
+//			var orderId=$(this).parents(".wl").data("id");
+//			var that = this;
+//			$.ajax({
+//				type:"post",
+//				url:_url+"/delOrder",
+//				async:true,
+//				contentType:"application/JSON",
+//				data:JSON.stringify({
+//					token:localStorage.getItem("token"),
+//					orderId:orderId
+//				}),
+//				success:function(data,status){
+//					if(data.result>0){
+//						$(that).parents(".wl").remove();
+//					}					
+//				}			
+//			})
+//		})
+		
+		
+		
+		
+		
 		
 		//点击订单列表任何一件商品跳转到订单详情
 		$(document).on("click",".recharge_1",function(){
@@ -137,6 +157,4 @@
 				}
 			}
 		})
-	
-	})//ready
 	
