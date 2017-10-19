@@ -1,6 +1,15 @@
 	.header{
 		line-height: 0.93rem!important;
 	}
+	.note{
+		display: none;		
+	}
+	.noted{
+		text-align: center;
+		font-size: 0.3rem;
+		color: #CCCCCC;
+		margin-top: 0.4rem;
+	}
 	/*商品列表warelist CSS*/
 	.ware{
 		background: #FFFFFF;

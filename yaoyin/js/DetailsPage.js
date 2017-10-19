@@ -128,28 +128,33 @@
 			$('.dot span').eq(index).addClass('dotscolor').siblings().removeClass('dotscolor');
 			index=(index+1)%leng;
 		}
-//		$(document).on("click",".dot span",function(){
 		$('.dot span').click(function(){
 				index=$('.dot span').index(this);
 				zidong();
 		})
 		var it=setInterval(zidong,1000);
-//		$(document).on("hover",".ware_pic img",function(){
 		$('.ware_pic img').hover(function(){
 			clearInterval(it);
 		},function(){
 			it=setInterval(zidong,1000);
 		})
-
-//		$('.ware_pic img').mousemove(function(){
-//			clearInterval(it);
-//		})
-//		$('.ware_pic img').mouseout(function(){
-//			it=setInterval(zidong,1000);
-//		})
-//		$('.dot span').click(function(){				
-//			$(this).addClass('dotscolor').siblings().removeClass('dotscolor');
-//			var index=$('.dot span').index(this);
-//			$('.ware_pic img').eq(index).show().siblings().hide();
-//		})
+		
+		
+		//添加足迹
+		var BHistory=function(){
+			$.ajax({
+				type:"post",
+				url:_url+"/addBrowseLog",
+				async:true,
+				contentType:'application/JSON',
+				data:JSON.stringify({
+					token:token,
+					productId:id
+				}),
+				success:function(data,status){
+					console.log(data.result);
+				}
+			});
+		}
+		BHistory();
 	})//ready的括号

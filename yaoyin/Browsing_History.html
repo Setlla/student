@@ -20,7 +20,7 @@
 	        <div class="header">
 				<span class="header_arr" @click="header_arr"></span>
 				<span class="head_record">浏览记录</span>
-				<span class="header_empty">清空</span>
+				<span class="header_empty" @click="header_empty">清空</span>
 				<span class="header_dot">编辑</span>
 			</div>
 			<!--
@@ -28,7 +28,8 @@
 	        	时间：2017-09-27
 	        	描述：日期和浏览记录
 	       	-->
-        	<father :lists="lists"></father>
+	       	<div class="noted" :class="{note:notes}">浏览记录为空！</div>
+        	<father v-show="shows" :lists="lists"></father>
         </div>
         <!--<ul class="ware">
 			<li class="warelist">

@@ -48,7 +48,8 @@
 	var vm2=new Vue({
 		el:".warediv",
 		data:{
-			show:true,
+			notes:true,
+			shows:true,
 			lists:[]
 		},
 		created:function(){
@@ -59,6 +60,9 @@
 			.then(function(response){
 				console.log(response.data);
 				that.lists=response.data.result;
+				if(response.data.result<=0){
+					that.notes=false;
+				}
 			})
 			.catch(function(error){
 				console.log(error);
@@ -68,6 +72,23 @@
 			//箭头返回上个历史页面
 			header_arr:function(){
 				history.go(-1);
+			},
+			//清空
+			header_empty:function(){
+				var that=this;
+				axios.post(_url+'/delBrowseLog',{
+					token:localStorage.getItem("token")
+				})
+				.then(function(response){
+					console.log(response.data);
+					if(response.data.result>0){
+						that.shows=false;
+						location.reload();
+					}
+				})
+				.catch(function(error){
+					console.log(error);
+				})
 			}
 		}
 		
