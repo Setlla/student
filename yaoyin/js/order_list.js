@@ -14,9 +14,8 @@
 		
 		//数据渲染父组件
 		Vue.component('father',{
-			props:["items"],
-			template:'<div>'
-					+'<div class="wl" v-for="item in items" :data-id="item.id" v-show="wls">'
+			props:["item","wls","index"],
+			template:'<div class="wl" v-show="wls">'
 					+'<div class="monopoly">'
 		        	+'<img src="img/icon/icon_63.png"/>'
 		        	+'<span>君宝话费充值专营店</span>'
@@ -31,14 +30,13 @@
 	        		+'<span>(含运费 ￥0.00)</span>'
 	        		+'</li>'
 	        		+'<li>'
-		        	+'<button class="del_btn" @click="del_btn(item.id)"><span>删除订单</span></button>'
+		        	+'<button class="del_btn" @click="del_btn(item.id,index)"><span>删除订单</span></button>'
 		        	+'<button class="judge_btn"><span>评价</span></button>'
 	        		+'</li>'
 	        		+'</ul>'
-	        		+'</div>'
 	        		+'</div>',
 	        methods:{
-	        	del_btn:function(orderId){
+	        	del_btn:function(orderId,index){
 					var that=this;
 					axios.post(_url+"/delOrder",{
 						token:localStorage.getItem("token"),
@@ -47,7 +45,8 @@
 					.then(function(response){
 						console.log(response.data);
 						if(response.data.result>0){
-							that.wl=false;
+							Vue.set(warelist.wls, index, false);
+//							location.reload();
 						}
 					})
 				}
@@ -82,7 +81,7 @@
 				isSearch:false,
 				isSer:false,
 				items:[],
-				wls:true
+				wls:[]
 			},
 			methods:{
 				search_ipt1:function(){
@@ -103,6 +102,9 @@
 				.then(function(response){
 					console.log(response.data);
 					that.items=response.data.result;
+					for(var i=0;i<response.data.result.length;i++){
+						that.wls.push(true);
+					}
 				})
 				.catch(function(error){
 					console.log(error);

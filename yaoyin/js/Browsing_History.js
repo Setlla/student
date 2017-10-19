@@ -1,12 +1,3 @@
-	//箭头返回上个历史页面
-	var vm=new Vue({
-		el:'.header',
-		methods:{
-			header_arr:function(){
-				history.go(-1);
-			}
-		}
-	})
 	//数据渲染
 	//父组件
 	Vue.component('father',{
@@ -57,6 +48,7 @@
 	var vm2=new Vue({
 		el:".warediv",
 		data:{
+			show:true,
 			lists:[]
 		},
 		created:function(){
@@ -71,6 +63,12 @@
 			.catch(function(error){
 				console.log(error);
 			})
+		},
+		methods:{
+			//箭头返回上个历史页面
+			header_arr:function(){
+				history.go(-1);
+			}
 		}
 		
 	})

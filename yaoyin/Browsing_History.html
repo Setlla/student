@@ -11,23 +11,23 @@
 		<script type="text/javascript" src="js/axios.js" ></script>				
 	</head>
 	<body>
-		<!--
-        	作者：492680716@qq.com
-        	时间：2017-09-27
-        	描述：头部
-        -->
-        <div class="header">
-			<span class="header_arr" @click="header_arr"></span>
-			<span class="head_record">浏览记录</span>
-			<span class="header_empty">清空</span>
-			<span class="header_dot">编辑</span>
-		</div>
-		<!--
-        	作者：492680716@qq.com
-        	时间：2017-09-27
-        	描述：日期和浏览记录
-       -->
        	<div class="warediv">
+	       	<!--
+	        	作者：492680716@qq.com
+	        	时间：2017-09-27
+	        	描述：头部
+	        -->
+	        <div class="header">
+				<span class="header_arr" @click="header_arr"></span>
+				<span class="head_record">浏览记录</span>
+				<span class="header_empty">清空</span>
+				<span class="header_dot">编辑</span>
+			</div>
+			<!--
+	        	作者：492680716@qq.com
+	        	时间：2017-09-27
+	        	描述：日期和浏览记录
+	       	-->
         	<father :lists="lists"></father>
         </div>
         <!--<ul class="ware">
