@@ -1,0 +1,229 @@
+header{
+	background: #33ccff;
+	overflow: hidden;
+	position: relative;
+	line-height: 1rem;
+}
+header p.bianji{
+	cursor: pointer;
+	padding-left: 0.2rem;
+	float: left;
+	font-size: 0.28rem;
+	color: #fff;
+}
+header span{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	color: #fff;
+	font-size: 0.32rem;
+}
+header img{
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	bottom: 0.24rem;
+}
+.porduct{
+	margin-bottom: 1.6rem;
+}
+.porduct ul{
+}
+.porduct ul li{
+	padding: 0 0 0 .60rem;
+	position: relative;
+}
+
+.round{
+	height: .3rem;
+	width: .3rem;
+	border: 1px solid #33CCFF;
+	border-radius: 50%;
+	position: absolute;
+	left: .1rem;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.content_one .cur{
+	background: #33CCFF;
+	height: .3rem;
+	width: .3rem;
+	border: 1px solid #33CCFF;
+	border-radius: 50%;
+	position: absolute;
+	left: .1rem;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.porduct ul li img{
+	width: 1.7rem;
+    height: 1.7rem;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/*隐藏的DIV删除数量*/
+#num_dis{
+	margin-left: 2rem;
+	height:1.7rem;
+	border-bottom: 1px solid #e5e5e5;
+}
+#num_dis div{
+	margin-top: .4rem;
+	font-size: .2rem;
+	display: block;
+	float: left;
+	width: 0.6rem;
+	height: 0.85rem;
+	line-height: 0.85rem;
+	border: 1px solid #BFBFBF;
+	text-align: center;
+}
+#num_dis div:nth-child(1){
+	border-right: 0;
+}
+#num_dis div:nth-child(2){
+	border-right: 0;
+}
+#num_dis div:nth-child(4){
+	margin: 0;
+	float: right;
+	width: 1rem;
+	height: 1.7rem;
+	line-height: 1.7rem;
+	box-sizing: border-box;
+	border-color: red;
+	background:red;
+	color: #fff;
+	cursor: pointer;
+}
+
+.pro_cont{
+	margin-left:2rem;
+	border-bottom: 1px solid #e5e5e5;
+	box-sizing: border-box ;
+}
+.pro_cont p{
+	line-height:.5rem;
+}
+.pro_cont p:nth-child(1){
+	font-size: .3rem;
+}
+.pro_cont p:nth-child(2){
+	font-size: .24rem;
+}
+.pro_cont p:nth-child(2) i{
+	font-size: .24rem;
+}
+.pro_cont p:nth-child(3){
+	text-align: center;
+	font-size: .2rem;
+	background: #33cc33;
+	width: 1rem;
+	height: .3rem;
+	line-height: .3rem;
+}
+.pro_cont p:nth-child(4){
+	color: #ff9900;
+	font-size: .2rem;
+}
+.pro_cont p:nth-child(4) strong{
+	color: #ff9900;
+	font-size: .4rem;
+}
+.pro_cont p:nth-child(4) i{
+	padding-left: .2rem;
+	color: #999999;
+	font-size: .2rem;
+}
+.pro_cont p:nth-child(4) em{
+	font-size: .28rem;
+	color: #333333;
+	font-style: normal;
+}
+
+footer{
+	height: 1.6rem;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+.balance{
+	background: #fff;
+	display: flex;
+	height: 0.8rem;
+	line-height: 0.8rem;
+	border-top:1px solid #BFBFBF ;
+	font-size:.3rem ;
+}
+.cleck{
+	padding-left: .6rem;
+	position: relative;
+}
+.cleck .round{
+	position: absolute;
+	left: .1rem;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.cleck .cur{
+	background: #33CCFF;
+	height: .3rem;
+	width: .3rem;
+	border: 1px solid #33CCFF;
+	border-radius: 50%;
+	position: absolute;
+	left: .1rem;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.freig{
+	padding-right: .2rem;
+	flex: 1;
+	text-align: right;
+	line-height: .4rem;
+}
+.total{
+	background: #ee8219;
+	width: 1.7rem;
+	text-align: center;
+	color: #fff;
+}
+
+.classify{
+	position: fixed;  
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: #fff;	
+}
+.classify ul{
+	border-top: 0.02rem solid #e5e5e5;
+	overflow: hidden;
+}
+.classify ul li{
+	padding-top: 0.1rem;
+	float: left;
+	width: 25%;
+	margin: 0 auto;
+}
+.classify ul li i{
+	width: 25px;
+	height: 25px;
+	margin: 0 auto;
+	display: block;
+	background: url(../images/dang_back03.png);
+	background-size: 50px 100px;
+}
+.classify ul li a{
+	line-height: 0.3rem;
+	font-size: 0.2rem;
+	display: block;
+	text-align: center;
+}
+.classify .cur{
+	background-position-x: -25px!important;
+}

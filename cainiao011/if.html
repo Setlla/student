@@ -1,0 +1,40 @@
+<CTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/vue.js"></script>
+	</head>
+	<body>
+		<div id="test" @click="change">
+			<div v-if="isShow">
+		  	  Now you see me
+			</div>
+			<div v-else>
+			  Now you don't
+			</div>			
+		</div>
+		<script>
+			new Vue({
+				el:"#test",
+				data:{
+					isShow:false
+				},
+				methods:{
+					change:function(){
+						this.isShow=this.isShow?false:true;
+					}
+				}
+			})
+			
+//		function foo(){
+//		  var a=2;
+//		this.bar(); 
+//		  }
+//		function bar(){
+//		console.log(this.a);
+//		}
+//		foo();
+	</script>	
+	</body>
+</html>

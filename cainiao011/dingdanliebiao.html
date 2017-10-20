@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>订单列表</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/dingdanliebiao.css"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	</head>
+	<body>
+		<header>
+			<div id="fanh" ><a v-on:click="rime"></a></div>
+			<p>订单列表</p>
+			<img src="images/ddlb_1.png"/>
+		</header>
+		<div class="search" :class="{cur:isCur}">
+			<input :class="{allorder:isAllorder}" @focus="have" @blur="none" class="Allorder" placeholder="搜索所有订单" />
+		</div>
+		<div id="order">
+			<father :items="items"></father>
+		</div>
+		<script src="js/dingdanliebiao.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

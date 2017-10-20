@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="mm">
+			<p>{{ tt }}</p>
+			<input v-model="message">
+		</div>
+		<script>
+			var app6 = new Vue({
+				el:"#mm",
+				data:{
+					message:"Hello Vue!"
+				},
+				computed:{
+					tt:function(){
+						return Date()+this.message
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

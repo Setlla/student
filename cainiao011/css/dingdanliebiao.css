@@ -1,0 +1,161 @@
+header{
+    position: relative;
+    height: 0.9rem;  
+    border-bottom: 1px solid #a7a7a7;
+}
+header a{
+	position: absolute;
+    width: 0.3rem;
+    height: 0.3rem;
+    top: 50%;
+    left: 0.25rem;
+    border-left: 3px #000 solid;
+    border-bottom: 3px #000 solid;
+    transform: scaleY(0.8) translateY(-50%) rotateZ(45deg);
+    box-sizing: border-box;
+}
+header p{
+	color: #000;
+	font-size: 0.36rem;
+	line-height: 0.9rem;
+	text-align: center;
+}
+header img{
+	width: 1rem;
+	position: absolute;
+	display: block;
+	top: 50%;
+	right: 0.25rem;
+	transform: translateY(-50%);
+}
+.search{
+	background: #eeeeee;
+	height: 0.9rem;
+}
+.search input{
+	width: 100%;
+	height: 0.6rem;
+	margin: 0.15rem;
+	text-align: center;
+	font-size: 0.28rem;
+	background: url(../images/ddlb_2.png) no-repeat white;
+	background-position: 2rem;
+	background-size: 0.35rem 0.36rem;
+}
+.junbao{
+	overflow: hidden;
+	line-height: 0.9rem;
+}
+.junbao img{
+	width: 0.4rem;
+	height: 0.35rem;
+	display: block;
+	float: left;
+	margin: 0.25rem 0.2rem;
+}
+.junbao p{
+	font-size: 0.28rem;
+	float: left;
+	position: relative;
+}
+.junbao p i{
+	position: absolute;
+    width: 0.2rem;
+    height: 0.2rem;
+    top: 50%;
+    right: -0.3rem;
+    border-right: 2px #acacac solid;
+    border-top: 2px #acacac solid;
+    transform: scaleY(0.8) translateY(-50%) rotateZ(45deg);
+}
+.junbao span{
+	float: right;
+	font-size: 0.28rem;
+	color: red;
+	margin-right: 0.2rem;
+}
+.Recharge{
+	background: #f6f6f6;
+	display: flex;
+}
+.Recharge img{
+	width: 1.92rem;
+	height: 1.92rem;
+	display: block;
+	padding: 0.2rem 0.24rem;
+}
+.last{
+	flex: 1;
+	padding-top: 0.2rem;
+}
+.last span{
+	font-size: 0.24rem;
+	height: 0.6rem;
+	display: block;
+}
+.Price{
+	padding-top: 0.2rem;
+	padding-right: 0.3rem;
+	line-height: 0.36rem;
+}
+.Price a{
+	font-size: 0.24rem;
+	display: block;
+	text-align: right;
+}
+.Price p{
+	font-size: 0.24rem;
+	color: #909090;
+	text-decoration: line-through;
+}
+.Price i{
+	text-align: right;
+	color: #9a9a9a;
+	font-size: 0.24rem;
+	display: block;
+}
+.Total{
+	border-bottom: 1px solid #e5e5e5;
+	line-height: 0.8rem;
+	overflow: hidden;
+}
+.Total p{
+	font-size: 0.24rem;
+	float: right;
+}
+.revmo{
+	background: white;
+	overflow: hidden;
+	height: 1rem;
+	border-top: 1px solid #e3e3e3;
+	border-bottom: 0.2rem solid #eeeeee;
+}
+.revmo a{
+	color: #8b3655;
+	border: 1px solid #8B3655;
+	padding: 0.15rem 0.47rem;
+	border-radius: 0.05rem;
+	float: right;
+	margin-right: 0.2rem;
+	margin-top: 0.2rem;
+	box-sizing: border-box;
+	font-size: 0.26rem;
+}
+.revmo a:last-child{
+	color: #162127;
+	border: 1px solid #aeaeae;
+}
+.cur{
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	background-color:rgba(0,0,0,.5) ;
+	position: absolute;
+	top:0;
+	z-index: 1;
+}
+.allorder{
+	text-align: left;
+	padding: .2rem .5rem;
+	background-position-x: left;
+}

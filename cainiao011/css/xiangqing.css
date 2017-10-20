@@ -1,0 +1,159 @@
+header{
+    background: #33ccff;
+    position: relative;
+    height: 0.94rem;  
+}
+span.befuore{
+	position: absolute;
+    width: 0.3rem;
+    height: 0.3rem;
+    top: 50%;
+    left: 0.2rem;
+    border-left: 2px #fff solid;
+    border-bottom: 2px #fff solid;
+    transform: scaleY(0.8) translateY(-50%) rotateZ(45deg);
+    box-sizing: border-box;
+}
+header p{
+	color: #fff;
+	font-size: 0.32rem;
+	line-height: 0.94rem  ;
+	text-align: center;
+}
+.xq{
+	padding: 0.5rem 0;
+	text-align: center;
+}
+.xq img{
+	width: 3.46rem;
+	height: 3.46rem;
+}
+.xq span{
+	padding-top: 0.2rem;
+	position: absolute;
+	display: block;
+	left: 50%;
+	transform: translateX(-50%);
+	overflow: hidden;
+}
+.xq span a{
+	display: block;
+	height: 0.1rem;
+	width: 0.1rem;
+	border: 0.01rem solid #999999;
+	border-radius: 50%;
+	float: left;
+	margin: 0.1rem;
+	background: #FFFFFF;
+}
+.nr{
+	border-top: 0.18rem solid #ebeced ;
+	border-bottom: 0.18rem solid #ebeced;
+	padding: 0.15rem 0.2rem;
+}
+.nr ul li.l_one{
+	font-size: 0.28rem;
+}
+.nr ul li.l_two{
+	font-size: 0.2rem;
+	color: #ff9900;	
+}
+.nr ul li.l_two i{
+	font-size: 0.4rem;
+	color: #ff9900;	
+}
+.nr ul li.l_two span{
+	color: #b2b2b2;
+	margin-left: 0.5rem;
+	background: url(../images/imgne.png) no-repeat 50%;
+	padding: 0 0.1rem;
+}
+.nr ul li.l_two p{
+	float: right;
+	display: block;
+	font-size: 0.2rem;
+	background: #33cc33;
+	color: white;
+	width: 1rem;
+	text-align: center;
+	line-height: 0.3rem;
+}
+.nr ul li.l_three{
+	font-size: 0.24rem;
+	color: #b2b2b2;
+}
+.nr ul li.l_three i{
+	margin-left: 0.3rem;
+}
+.nr ul li.l_three span{
+	margin-left: 1.6rem;
+}
+.nr ul li.l_three p{
+	font-size: 0.22rem;
+	width: 1rem;
+	color: #b2b2b2;	
+	float: right;
+}
+.ms{
+	padding-left: 0.15rem;
+}
+.ms p{
+	font-size: 0.28rem;
+	overflow: hidden;
+	line-height: 0.5rem;
+	border-bottom: 1px solid #808080;
+}
+.ms p i{
+	float: left;
+	display: block;
+	width: 0.03rem;
+	height: 0.25rem;
+	background: #33ccff;
+	margin: 0.15rem 0.2rem 0 0;
+}
+.ms span{
+	color: #999999;
+	font-size: 0.28rem;
+}
+.yj{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	overflow: hidden;
+	height: 1rem;
+	display: flex;
+}
+.yj p.dh{
+	flex: 1;
+	float: left;
+	text-align: center;
+	background: #33ccff;
+	color: #fff;
+	line-height: 0.6rem;
+	font-size: 0.24rem;
+}
+.yj p.dh i{
+	display: block;
+	font-size: 0.2rem;
+	line-height: 0.4rem;
+}
+.yj p.gw{
+	flex: 1;
+	text-align: center;
+	float: left;
+	background: #ff9933;
+	color: #fff;
+	font-size: 0.28rem;
+	line-height: 1rem;
+	cursor: pointer;
+}
+.yj p.gm{
+	flex: 1;
+	text-align: center;
+	float: left;
+	background: #ff6600;
+	color: #fff;
+	font-size: 0.28rem;
+	line-height: 1rem;
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>注册中心</title>
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" type="text/css" href="css/zhuce.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=0.5, user-scalable=0">
+    <script type="text/javascript" src="js/common.js"></script>
+    <script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="js/md5.js"></script>
+</head>
+<body>
+	<header>
+		<span class="befuore"></span>
+		<p>注 册</p>
+	</header>
+	<div class="qh">
+		<p class="phoReg">手机注册</p>
+		<p class="emaReg">邮箱注册</p>
+	</div>
+		<div class="zc">
+			<ul>
+				<li>
+					<input name="phone" type="text" placeholder="请输入手机号码"/ class="sj">
+				</li>				
+				<li style="display: none;">
+					<input name="email" type="text" placeholder="请输入真实邮箱"/ class="sj">
+				</li>
+				<li>
+					<input name="password" type="password" placeholder="6~32位密码"/ id="mm">
+				</li>
+				<li class="yanzheng">
+					<input type="text" placeholder="请输入验证码"/ id="yzm">
+					<a href="#"><img src="images/zhuce_3.png"/></a>
+				</li>
+			</ul>
+		</div>
+		<div class="register">注 册</div>
+		<script src="js/zhuce.js"></script>
+</body>
+</html>

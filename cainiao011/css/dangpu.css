@@ -1,0 +1,182 @@
+header{
+	background: #33ccff;
+    height: 1.2rem;
+}
+.hangUp{
+	position: absolute;
+	left: 10px;
+	top: 0;
+	font-size: .3rem;
+    line-height: 1.2rem;
+    color: #fff;
+}
+.hangUp::after{
+	content: "";
+    position: absolute;
+    right: -.6rem;
+    bottom: 5px;
+    height: 5px;
+    width: 5px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    box-sizing: border-box;
+    margin: .4rem;
+    transform: scaleY(1) rotate(-45deg);
+}
+.book{
+	margin: 0 auto;
+    width:2rem;
+    text-align: center;
+    height: 1.2rem;
+    overflow: hidden;
+}
+.book span{
+	font-size: .26rem;
+    color: #fff;
+    line-height: .8rem;
+    float: left;
+    width: 50%;
+    border: 1px #fff solid;
+    box-sizing: border-box;
+    height: 0.8rem;
+    border-radius: 3px;
+    margin-top: .2rem;
+	}
+
+.book span:nth-child(1){
+	border-right: 0;
+	border-radius:5px 0px 0px 5px;
+}
+.book span:nth-child(2){
+	border-radius:0px 5px 5px 0px;
+	border-left: 0;
+}
+.prodImg{
+	position: absolute;
+	right:0.2rem;
+	top: 0.25rem;
+}
+.prodImg img{
+	display: inline-block;
+	position: absolute;
+	right:0;
+	top: 0;
+	bottom: 0;
+}
+.book .cur{
+	background:#d6f5ff;
+	color:#33ccff;
+}
+/*产品区*/
+.product{
+	
+}
+.product ul{
+	margin-bottom: 3rem;
+}
+.product ul li{
+	padding:.2rem 0;
+	display: flex;
+	border-bottom: 1px solid #e5e5e5;
+	position: relative;
+	
+}
+.product ul li img{
+	width: 2rem;
+    height: 2rem;
+    display: block;
+    position: absolute;
+    left: .2rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.proCont{
+	margin-left: 2.4rem;
+}
+.proCont span{
+	font-size: .3rem;
+	display: block;
+	margin-top:.1rem;
+}
+.proCont span i{
+	font-size: .24rem;
+}
+.proCont span strong{
+	font-size: .2rem;
+}
+.proCont span:nth-child(2){
+	font-size: .24rem;
+	color: #BFBFBF;
+}
+.proCont span:nth-child(2) i{
+	color: #BFBFBF;
+	padding-left:.5rem;
+}
+.proCont span:nth-child(3){
+	font-size: .2rem;
+	color: #fff;
+	text-align: center;
+	line-height: .3rem;
+	height:.3rem;	
+	width:1rem;
+	background: #33cc33;
+}
+.proCont span:nth-child(4){
+	font-size: .4rem;
+	color: #ff9900;
+} 
+.proCont span:nth-child(4) strong{
+	padding-left:.2rem;
+	color: #BFBFBF;
+	font-weight: normal;
+	text-decoration: line-through;
+} 
+.round{
+	position: absolute;
+	right:.2rem;
+	bottom: .35rem;
+}
+.round a{
+	float: left;
+	display: block;
+    height:.08rem;
+    width: .08rem;
+    background: #999;
+    border-radius: 50%;
+    margin: 0 .08rem;
+}
+/*底部*/
+.classify{
+	position: fixed;  
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: #fff;	
+}
+.classify ul{
+	border-top: 0.02rem solid #e5e5e5;
+	overflow: hidden;
+}
+.classify ul li{
+	padding-top: 0.1rem;
+	float: left;
+	width: 25%;
+	margin: 0 auto;
+}
+.classify ul li i{
+	width: 25px;
+	height: 25px;
+	margin: 0 auto;
+	display: block;
+	background: url(../images/dang_back03.png);
+	background-size: 50px 100px;
+}
+.classify ul li span{
+	line-height: 0.3rem;
+	font-size: 0.2rem;
+	display: block;
+	text-align: center;
+}
+.classify .cur{
+	background-position-x: -25px!important;
+}

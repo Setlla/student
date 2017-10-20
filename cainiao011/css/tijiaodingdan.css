@@ -1,0 +1,223 @@
+header{
+    background: #33ccff;
+    position: relative;
+    height: 0.88rem;  
+}
+header a{
+	position: absolute;
+    width: 0.3rem;
+    height: 0.3rem;
+    top: 50%;
+    left: 0.2rem;
+    border-left: 3px #fff solid;
+    border-bottom: 3px #fff solid;
+    transform: scaleY(0.8) translateY(-50%) rotateZ(45deg);
+    box-sizing: border-box;
+}
+header p{
+	color: #fff;
+	font-size: 0.32rem;
+	line-height: 0.88rem;
+	text-align: center;
+}
+.xinxi{
+	position: relative;
+	overflow: hidden;
+	border-bottom: 0.15rem solid #eeeeee;
+}
+.xinxi img{
+	width: 0.3rem;
+	height: 0.4rem;
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 0.3rem;
+	transform:translateY(-50%);
+}
+.content{
+	margin: 0.3rem 0;
+	padding-left: 0.9rem;
+	line-height: 0.6rem;
+}
+.content span{
+	float: left;
+	font-size: 0.3rem;
+	display: block;
+}
+.content a{
+	margin-left: 0.8rem;
+	font-size: 0.26rem;
+}
+.content p{
+	font-size: 0.26rem;
+}
+.content i{
+	font-size: 0.24rem;
+	color: #f6b745;
+}
+.xinxi em{
+	position: absolute;
+    width: 0.3rem;
+    height: 0.3rem;
+    top: 50%;
+    right: 0.3rem;
+    border-right: 2px #c7c7c7 solid;
+    border-top: 2px #c7c7c7 solid;
+    transform: scaleY(0.8) translateY(-50%) rotateZ(45deg);
+    box-sizing: border-box;
+}
+.dangdang{
+	overflow: hidden;
+}
+.dangdang img{
+	width: 0.4rem;
+	height: 0.32rem;
+	display: block;
+	float: left;
+	margin: 0.3rem 0.2rem;
+}
+.dangdang p{
+	font-size: 0.24rem;
+	line-height: 0.9rem;
+	float: left;
+}
+.d_book{
+	background: #f6f6f6;
+	display: flex;
+	line-height: 0.6rem;
+}
+.d_book img{
+	width: 1.54rem;
+	height: 1.54rem;
+	display: block;
+	padding: 0.1rem 0.22rem;
+}
+.last{
+	flex: 1;
+}
+.last span{
+	font-size: 0.24rem;
+	padding-left: 0.1rem;
+}
+.last P{
+	margin: 0.2rem;
+	text-align: center;
+	width: 1rem;
+	height: 0.3rem;
+	line-height: 0.26rem;
+	color: red;
+	display: block;
+	border: 1px solid red;
+	border-radius: 3px;
+	font-size: 0.2rem;
+}
+.jiage{
+	margin-right: 0.3rem;
+}
+.jiage a{
+	font-size: 0.24rem;
+}
+.jiage i{
+	text-align: right;
+	color: #9a9a9a;
+	font-size: 0.24rem;
+	display: block;
+}
+.vivie{
+	display: flex;
+	border-bottom: 1px solid #dbdbdb;
+	margin: 0 0.25rem;
+	overflow: hidden;
+	line-height: 0.9rem;
+	position: relative;
+}
+.vivie p{
+	font-size: 0.24rem;
+	float: left;
+}
+.vivie i{
+	font-size: 0.24rem;
+	float: right;
+	padding-right: 0.4rem;
+}
+.vivie em{
+	position: absolute;
+    width: 0.3rem;
+    height: 0.3rem;
+    top: 50%;
+    right: 0.1rem;
+    border-right: 2px #c7c7c7 solid;
+    border-top: 2px #c7c7c7 solid;
+    transform: scaleY(0.8) translateY(-50%) rotateZ(45deg);
+    box-sizing: border-box;
+}
+.vivie span{
+	position: absolute;
+	right: 0rem;
+	top: 0.15rem;
+	width: 1rem;
+	height: 0.6rem;
+	border: 1px solid #C7C7C7;
+	border-radius: 0.4rem;
+}
+.vivie span a{
+	position: absolute;
+	width: 0.6rem;
+	height: 0.6rem;
+	border: 1px solid #C7C7C7;
+	border-radius: 0.4rem;
+	top: -1px;
+	left: 0;
+}
+.vivie input{
+	flex: 1;
+	line-height: 0.9rem;
+	font-size: 0.24rem;
+}
+.xj{
+	padding-bottom: 1rem;
+	line-height: 0.9rem;
+	overflow: hidden;
+	position: relative;
+}
+.xj p{
+	position: absolute;
+	right: 2rem;
+	width: 1.2rem;
+	font-size: 0.24rem;
+}
+.xj span{
+	float: right;
+	font-size: 0.24rem;
+	padding-right: 0.3rem;
+}
+.xj span i{
+	color: red;
+}
+.heji{
+	position: fixed;
+	line-height: 1rem;
+	background: white;
+	bottom: 0;
+	width: 100%;
+	border-top: 1px solid #cacaca;
+}
+.heji p{
+	margin-right: 2.4rem;
+	text-align: right;
+	font-size: 0.3rem;
+}
+.heji p i{
+	color: red;
+}
+.heji span{
+	position: absolute;
+	right: 0;
+	top: 0;
+	background: #ee8219;
+	color: white;
+	text-align: center;
+	width: 2.2rem;
+	border: 1px solid #ee8219;
+	font-size: 0.3rem;
+}

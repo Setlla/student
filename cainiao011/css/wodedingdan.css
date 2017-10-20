@@ -1,0 +1,62 @@
+header{
+    background: #33ccff;
+    position: relative;
+    height: 0.9rem;  
+}
+header a{
+	position: absolute;
+    width: 0.3rem;
+    height: 0.3rem;
+    top: 50%;
+    left: 0.3rem;
+    border-left: 3px #fff solid;
+    border-bottom: 3px #fff solid;
+    transform: scaleY(0.8) translateY(-50%) rotateZ(45deg);
+    box-sizing: border-box;
+}
+header p{
+	color: #fff;
+	font-size: 0.32rem;
+	line-height: 0.9rem;
+	text-align: center;
+}
+.goods{
+	overflow: hidden;
+	border-bottom: 1px solid #eaecef;
+}
+.goods ul{
+	text-align: center;
+	line-height: 1rem;
+}
+.goods ul li{
+	width: 20%;
+	display: block;
+	float: left;
+}
+.goods ul li a{
+	font-size: 0.3rem;
+	color: #848484;
+	font-weight: 400;
+}
+.wenjian{
+	text-align: center;
+}
+.wenjian img{
+	padding-top: 2rem;
+	width: 1.2rem;
+	height: 1.4rem;
+	display: inline-block;
+	
+}
+.wenjian span{
+	color: #96989b;
+	line-height: 0.8rem;
+	font-size: 0.32rem;
+	display: block;
+}
+.bur{
+	border-bottom: 2px solid #33CCFF;
+}
+.bur a {
+	color: #33ccff !important;
+}

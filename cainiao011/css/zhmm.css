@@ -1,0 +1,65 @@
+header{
+    background: #33ccff;
+    position: relative;
+    height: 1rem;  
+}
+span.befuore{
+	position: absolute;
+    width: 0.2rem;
+    height: 0.2rem;
+    top: 50%;
+    left: 0.5rem;
+    border-left: 2px #fff solid;
+    border-bottom: 2px #fff solid;
+    transform: scaleY(0.8) translateY(-50%) rotateZ(45deg);
+    box-sizing: border-box;
+}
+header p{
+	line-height: 1rem;
+	color: #fff;
+	font-size: 0.3rem;
+	text-align: center;
+}
+.zh{
+	margin:0 0.6rem;
+}
+.zh li{
+	height: 0.78rem;
+	display:flex;
+	padding-top:0.5rem ;
+}
+.zh li input{
+	border: 1px solid #e8e8ea;
+	border-radius: 0.2rem;
+	width: 100%;
+	font-size: 0.24rem;
+	padding-left: 0.3rem;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+}
+.zh li a{
+	margin-left: 0.1rem;
+	border-radius: 0.2rem;
+	height: 0.78rem;
+	line-height: 0.78rem;
+	font-size: 0.24rem;
+	background: #fa6c62;
+	color: #FFFFFF;
+	width: 1.86rem;
+	text-align: center;
+}
+.zh li img{
+	width: 1.86rem;
+	height: 0.78rem;
+	margin-left: 0.1rem;
+}
+.tijiao{
+	margin: 1rem 0.6rem;
+	border: 0;
+	border-radius:0.2rem;
+	background: #33ccff;
+	text-align: center;
+	font-size: 0.3rem;
+	color: #fff;
+	padding: 0.25rem 0;
+}

@@ -1,0 +1,134 @@
+body{
+	background: #eee;
+}
+header{
+	position: relative;
+	height: 1rem;
+	line-height: 1rem;
+	background: #33ccff;
+	text-align: center;
+	color: #fff;
+	font-size: 0.3rem;
+}
+header a{
+	position: absolute;
+    width: 0.3rem;
+    height: 0.3rem;
+    top: 50%;
+    left: 0.2rem;
+    border-left: 2px #fff solid;
+    border-bottom: 2px #fff solid;
+    transform: scaleY(0.8) translateY(-50%) rotateZ(45deg);
+    box-sizing: border-box;
+}
+header p{
+	position: absolute;
+	right: 0.2rem;
+	bottom: 0.4rem;
+	display: block;
+	overflow: hidden;
+}
+header p span{
+	display: block;
+	height: 0.04rem;
+	width: 0.04rem;
+	border: 0.02rem solid #fff;
+	border-radius: 50%;
+	float: right;
+	margin: 0.02rem;
+	background: #fff;
+}
+.last{
+	background: #fff;
+}
+.last li{
+	position: relative;
+	line-height: 0.86rem;
+	margin: 0 0.2rem;
+	overflow: hidden;
+	font-size: 0.28rem;
+	border-bottom:1px solid #999999 ;
+	box-sizing: border-box;
+}
+.last li img{
+	display: block;
+	margin-right: 0.4rem;
+	height: 1.2rem;
+	width: 1.2rem;
+	border: 1px solid #9E9E9E;
+	box-sizing: border-box;
+	margin-top: 0.2rem;
+	border-radius: 50%;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.img input{
+	display: block;
+	margin-right: 0.4rem;
+	height: 1.2rem;
+	width: 1.2rem;
+	border: 1px solid #9E9E9E;
+	box-sizing: border-box;
+	margin-top: 0.2rem;
+	border-radius: 50%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	opacity: 0;
+	z-index: 3;
+}
+.name input{
+	font-size: 0.3rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin-right: 0.4rem;
+    text-align: right;
+}
+.gender input{
+	height: 0.86rem;
+	margin-right: 0.4rem;
+	font-size: 0.3rem;
+	float: right;
+	text-align: right;
+}
+.address{
+	display: flex;
+}
+.address input{
+	flex: 1;
+	width: 100%;
+	height: 0.86rem;
+	margin-right: 0.4rem;
+	float: right;
+	margin-left: 0.4rem;
+	font-size: 0.3rem;
+	text-align: right;
+}
+.last li:nth-child(1){
+	line-height: 1.6rem;
+}
+.last li:nth-child(4){
+	border: 0;
+}
+.last li a{
+	width: 0.3rem;
+	height: 0.3rem;
+	border-right: 2px solid #A3A3A3;
+	border-bottom: 2px solid #A3A3A3;
+	position: absolute;
+	right: 0.1rem;
+	top: 50%;
+	transform:translateY(-50%) scale(0.8) rotate(-45deg) ;
+}
+.bc{
+	margin-top: 2rem;
+	height: 1rem;
+	background: #33CCFF;
+	line-height: 1rem;
+	text-align: center;
+	font-size: 0.32rem;
+	color: #fff;
+}

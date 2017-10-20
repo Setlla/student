@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>当铺</title>
+		<script src="js/common.js"></script>
+		<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/dangpu.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=0.5, user-scalable=0">
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="hangUp">挂起</div>
+			<div class="book">
+				<span class="goods cur">物品</span>
+				<span class="books">书籍</span>
+			</div>
+			<div class="prodImg"><img src="images/gwc_01.png"/></div>
+		</header>
+		<!--第一个-->
+		<div class="product">
+			<ul id="nszdlj">
+				<li v-for="item in items" :key="item.id" @click="tudor(item.id)">
+					<div><img :src="item.Image" alt=""></div>
+					<div class="proCont">
+						<span>{{ item.Name }}</span>
+						<span>{{ item.Carriage }}<i>{{ item.Destination }}</i></span>
+						<span>{{ item.Status }}</span>
+						<span>￥{{ item.CurPrice }}<strong>￥{{ item.OldPrice }}</strong>
+						<div class="round">
+							<a href=""></a>
+							<a href=""></a>
+							<a href=""></a>
+						</div>
+						</span>
+					</div>
+				</li>
+			</ul>
+			<div class="clear"></div>
+		</div>
+		<!--第二个-->
+		<div class="product" style="display: none;">
+			<ul>
+			</ul>
+			<div class="clear"></div>
+		</div>
+		<!--底部-->
+	<div class="classify">	
+		<ul>
+			<li>
+				<i style="background-position: 0 0;"></i>
+				<span>商品</span>
+			</li>
+			<li>
+				<a href="gouwuche.html">
+					<i style="background-position: 0 -26px;"></i>
+					<span>购物车</span>
+				</a>
+			</li>	
+			<li class="cur">
+				<a href="dangpu.html">
+					<i style="background-position: 0 -50px;"></i>
+					<span>当铺</span>
+				</a>
+			</li>	
+			<li>
+				<a href="gerenzhongxin.html">
+					<i style="background-position: 0 -75px;"></i>
+					<span>个人中心</span>
+				</a>
+			</li>	
+		</ul>		
+	</div>
+		<script src="js/dangpu.js"></script>
+	</body>
+</html>

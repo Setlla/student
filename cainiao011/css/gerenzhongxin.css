@@ -1,0 +1,161 @@
+header{
+    background: #33ccff;
+    position: relative;
+    height: 0.88rem;  
+}
+header a{
+	color: #fff;
+	font-size: 0.3rem;
+	position: absolute;
+    top: 50%;
+    left: 0.2rem;
+    transform:translateY(-50%);
+}
+header p{
+	line-height: 0.88rem;
+	color: #fff;
+	font-size: 0.32rem;
+	text-align: center;
+}
+header span{
+	color: #fff;
+	font-size: 0.3rem;
+	position: absolute;
+    top: 50%;
+    right: 0.2rem;
+    transform:translateY(-50%);
+}
+.banner{
+	background: url(../images/grzx_01.png);
+	background-size: 100%;
+	text-align: center;
+}
+.banner img{
+	width: 1.15rem;
+	height: 1.15rem;
+	border-radius: 50%;
+	margin: 0.38rem 0rem 0.2rem 0;
+	border: 2px solid #fff;
+}
+.banner .name{
+	color: #fff;
+	font-size: 0.3rem;
+	padding-bottom: 0.3rem;
+}
+.banner p{
+	background: #808080;
+	height: 0.86rem;
+	display: flex;
+}
+.banner p span{
+	width: 50%;
+	text-align: center;
+	display: block;
+	color: #fff;
+	font-size: 0.24rem;
+	line-height: 0.4rem;
+}
+.banner p span i{
+	display: block;
+}
+.serve{
+	border-bottom: 0.2rem solid #efefef;
+}
+.serve ul{
+	overflow: hidden;
+	padding: 0.16rem 0;
+}
+.serve ul li{
+	float: left;
+	text-align: center;
+	width: 20%;
+	position: relative;
+}
+.serve ul li img{
+	display: block;
+	width: 0.33rem;
+	height: 0.32rem;
+	margin: 0 auto;
+}
+.serve ul li p{
+	padding-top: 0.15rem;
+	font-size: 0.2rem;
+	color: #666666;
+}
+.serve ul li span{
+	position: absolute;
+	top: -0.15rem;
+	right: 43%;
+	color: red;
+	width: 0.2rem;
+	height: 0.2rem;
+	line-height: 0.2rem;
+	display: block;
+	border: 1px solid red;
+	border-radius: 50%;
+	background: #fff;
+}
+.dan{
+	margin-bottom: 4rem;
+	height: 0.8rem;
+}
+.dan li{
+	display: flex;
+}
+.dan li img{
+	display: block;
+	padding-left: 0.2rem;
+	width: 0.32rem;
+	height: 0.32rem;
+	margin-top: 0.4rem;
+	transform: translateY(-50%);
+}
+.dan li p{
+	line-height: 0.8rem;
+	padding-left: 0.2rem;
+	flex: 1;
+	color: #666666;
+	font-size: 0.3rem;
+}
+.dan li.var{
+	border-top: 0.2rem solid #efefef ;
+}
+.dan li p.last{
+	border-bottom: 1px solid #efefef;
+}
+.classify ul{
+	border-top: 0.02rem solid #e5e5e5;
+	overflow: hidden;
+}
+.classify{
+	border-top: 0.02rem solid #e5e5e5;
+	position: fixed;  
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	background: white;	
+}
+.classify li{
+	padding-top: 0.1rem;
+	float: left;
+	width: 25%;
+	margin: 0 auto;
+}
+.classify li i{
+	width: 25px;
+	height: 25px;
+	margin: 0 auto;
+	display: block;
+	background: url(../images/dang_back03.png);
+	background-size: 50px 100px;
+}
+.classify li a{
+	line-height: 0.3rem;
+	font-size: 0.2rem;
+	display: block;
+	text-align: center;
+}
+.classify .cur{
+	background-position-x: -25px!important;
+}
