@@ -1,0 +1,15 @@
+{
+	"index.html": {
+		"resources": [
+			"img/ct1.png",
+			"js/vue-resource.js",
+			"css/index.css",
+			"img/icon.png",
+			"css/com.css",
+			"img/images/waangwang_03.png",
+			"img/images/waangwang_06.png",
+			"js/vue.min.js",
+			"js/index.js"
+		]
+	}
+}
