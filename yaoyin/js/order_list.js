@@ -104,6 +104,7 @@
 					this.isSer=false;
 					this.getData();
 				},
+				//搜索功能
 				getData:function(){
 					var that=this;				
 					axios.post(_url+"/getOrder",{

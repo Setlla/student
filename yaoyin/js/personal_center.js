@@ -8,7 +8,7 @@ $(document).ready(function(){
 			$('.scu_circle').attr('src',data.result[0].headImage);
 		}
 
-		//渲染函数
+		//个人信息渲染函数
 		var xuanran=function(){
 			$.ajax({
 				type:"post",
@@ -26,6 +26,42 @@ $(document).ready(function(){
 			})
 		}
 		xuanran();
+		
+		
+		//收藏数量渲染
+		var coll_num=function(){
+			$.ajax({			
+				type:"post",
+				url:_url+"/getCollectionLog",
+				async:true,
+				contentType:'application/JSON',
+				data:JSON.stringify({
+					token: token
+				}),
+				success:function(data,status){
+					$('.collections').text(data.result.length);
+				}
+			})
+		}
+		coll_num();
+		
+		//足迹数量渲染
+		var track_num=function(){
+			$.ajax({			
+				type:"post",
+				url:_url+"/getBrowseLog",
+				async:true,
+				contentType:'application/JSON',
+				data:JSON.stringify({
+					token: token
+				}),
+				success:function(data,status){
+					$('.tracks').text(data.result.length);
+				}
+			})
+		}
+		track_num();
+		
 		
 		//设置跳转到个人信息		
 		$(document).on("click",".header_left",function(){

@@ -116,7 +116,7 @@
 		})
 
 		//箭头返回当铺页面
-		$('.header_arr').click(function(){
+		$(document).on("click",'.header_arr',function(){
 			history.go(-1);
 		})
 		
@@ -157,4 +157,76 @@
 			});
 		}
 		BHistory();
+		
+		
+		//添加和取消收藏
+		var lovedata;
+		var colls=function(){
+			$.ajax({			
+				type:"post",
+				url:_url+"/getIsCollection",
+				async:true,
+				contentType:'application/JSON',
+				data:JSON.stringify({
+					productId: id, 
+					token: token
+				}),
+				success:function(data,status){
+					lovedata=data;
+					iscollction();
+				}
+			})
+		}
+		colls();
+		
+		//判断收藏之后爱心为红，背景为蓝
+		var iscollction=function(){
+			if (lovedata.isCollection==false) {
+				$(".love").removeClass("loves").parent().removeClass("foot_loves");
+			} else{
+				$(".love").addClass("loves").parent().addClass("foot_loves");
+			}
+		}
+		
+		//收藏点击事件的渲染函数
+		var collection=function(){
+			if ($(".love").hasClass("loves")) {
+				$(".love").removeClass("loves").parent().removeClass("foot_loves");
+				//背景为蓝色，就删除收藏
+				$.ajax({
+					type:"post",
+					url:_url+"/delCollectionLog",
+					async:true,
+					contentType:'application/JSON',
+					data:JSON.stringify({
+						productId: id, 
+						token: token
+					}),
+					success:function(data,status){
+						console.log(data);			
+					}
+				})
+			} else{
+				$(".love").addClass("loves").parent().addClass("foot_loves");
+				//背景为灰色，就添加收藏
+				$.ajax({
+						type:"post",
+						url:_url+"/addCollectionLog",
+						async:true,
+						contentType:'application/JSON',
+						data:JSON.stringify({
+							productId: id, 
+							token: token
+						}),
+						success:function(data,status){
+							console.log(data);				
+					    } 
+				})
+			}			
+		}
+		//收藏点击事件
+		$(document).on("click",".foot_love",function(){
+			collection();
+		})
+		
 	})//ready的括号
