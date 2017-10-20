@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/com.css"/>
+    <link rel="stylesheet" type="text/css" href="css/OrderDatail.css"/>
+    <script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/vue-resource.js" type="text/javascript" charset="utf-8"></script>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>列表详情</title>  
+</head>
+<body>
+	<div id="body">
+	<header>
+			<a href=""></a>
+			<p>订单详情</p>
+		</header>
+		<div class="goods">
+			<p>交易成功</p>
+		</div>
+		<div class="news">
+			<img src="images/icon.png"/>
+			<span>收货人：{{user.name}}</span>
+			<p>收货地址：{{user.phone}}</p>
+		</div>
+	<!--中间内容-->
+	<div class="titleShop">
+		<i><img src="images/ct1.png" alt="" /></i>
+		<p>君宝话费充值专营店<a href=""></a></p>
+	</div>	
+	<pro class="content" :products="item" v-for="item in product" v-if="hide">
+		<!--<i><img src="img/ct2.png"/></i>
+		<div class="contentText">
+			<p>上海移动100元  充值  快充  即时到账...</p>
+			<div class="contentNem">
+				<span>￥99.80</span>
+				<span>￥99.80</span>
+				<em>x1</em>
+			</div>
+		</div>-->
+	</pro>
+	<div class="over">
+		<div class="costomer">
+			<div class="posTomer">
+			<p>在线咨询</p>
+			<p>申请售后</p>
+			</div>
+		</div>
+	</div>
+	<div class="computer">
+		<div class="price"><p>商品总数</p><span v-if="hide">{{content.totalNum}}个</span> </div>
+		<div class="price"><p>运费</p><span v-if="hide">{{content.state}}</span> </div>
+		<div class="price fontPic"><p>订单总价</p><span v-if="hide">{{content.totalCost}}</span> </div>
+		<a></a>
+	</div>
+	
+	<div class="computer">
+		<div class="price fontPic monet"><p>实付款</p><span v-if="hide">{{content.totalCost}}</span> </div>
+	</div>
+	<div class="see">
+		<p>查看花呗账单<i></i></p>
+		<span>
+			<i><strong><a target="blank" href="tencent://message/?uin=1536164129&Site=菜鸟基地&Menu=yes">联系卖家</a></strong></i>
+			<i><strong @click="phone">拨打电话</strong></i>
+		</span>
+	</div>
+	<div class="number">
+		<p>订单编号:43580237858435213<i @click="copy">复制</i></p>
+		<p>支付宝交易号:2017080821001001920268329149</p>
+		<p>创建时间:2017-08-08 14:03:40</p>
+		<p>付款时间:2017-08-08 14:03:40</p>
+		<p>成交时间:2017-08-08 14:03:40</p>	
+	</div>
+	<div class="revmo">
+		<a>评价</a><a @click="delet">删除订单</a>
+	</div>
+	</div>
+	<script src="js/OrderDatail.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
