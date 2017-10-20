@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="css/collect.css" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/@media.css" />
+	</head>
+	<body>
+		<ul class="head">
+			<li>
+				<a class="back" @click="back"></a>
+			</li>
+			<li class="shops">商品</li>
+			<li class="shop">店铺</li>
+			<div class="top_right">
+				<li class="compile">编辑</li>
+				<li class="search">
+					<img src="img/collect/clloect_03.png" />
+				</li>
+			</div>
+		</ul>
+		<ul class="head_two">
+			<li>默认</li>
+			<li>降价</li>
+			<li>促销</li>
+			<li>
+				<select class="classify">
+					<option>分类</option>
+				</select>
+			</li>
+			<li>
+				<select class="stock">
+					<option>库存</option>
+				</select>
+			</li>
+		</ul>
+		<div class="contents">
+			<div class="content" v-for="item in items">
+				<img class="note" :src="item.product[0].Image" @click="content(item.product[0].id)"/>
+				<div class="computer">
+					<div @click="content(item.product[0].id)">
+						<p class="name">{{item.product[0].Name}}</p>
+						<span class="curprice">￥<i>{{item.product[0].CurPrice}}</i>.00</span>
+					</div>
+					<p class="present">
+						<a>赠品</a>
+						<span>补差链接</span>
+						<span>键盘膜</span>
+						<a class="arrow"></a>
+					</p>
+					<a class="same">看相似</a>
+					<a class="inform">降价通知</a>
+					<img class="car" @click="car(item.product[0].id)" src="img/collect/clloect_11.png" />
+				</div>
+			</div>
+		</div>
+		<div class="recommend">
+			<img src="img/collect/clloect_14.png" />
+			<span>为<i>·</i>你<i>·</i>推<i>·</i>荐</span>
+			<img src="img/collect/clloect_16.png" />
+		</div>
+		<div class="list">
+			<div class="products right">
+				<img src="img/collect/clloect_20.png" />
+				<p class="names"><span>自营</span>LG Gram (15Z970-G.AA53C) 15.6英寸超...</p>
+				<p>
+					<span class="price">￥<i>8299</i>.00</span>
+					<a class="ticket">券</a>
+					<a class="same">看相似</a>
+				</p>
+			</div>
+			<div class="products left">
+				<img src="img/collect/clloect_22.png" />
+				<p class="names">蓝影E14 笔记本电脑 轻薄本 上网本 14英寸四核wi...</p>
+				<p>
+					<span class="price">￥<i>799</i>.00</span>
+					<a class="ticket">券</a>
+					<a class="same">看相似</a>
+				</p>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/url.js"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script type="text/javascript" src="js/common.md5/vue.js" ></script>
+		<script type="text/javascript" src="js/collect.js" ></script>
+	</body>
+</html>

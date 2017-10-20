@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<body>
+		<div id="math"></div>
+		<script>
+			var able=new XMLHttpRequest();
+			var xmlhttp;
+			if(window.XMLHttpRequest){
+				XMLHttp=new XMLHttpRequest();
+			}
+			else{
+				XMLHttp=new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			able.open('post','http://192.168.0.127:8000/menu','ture');
+			able.send();
+			able.onreadystatechange=function()
+			  {
+			  if (able.readyState==4 && able.status==200)
+			    {
+			    document.getElementById("math").innerHTML=able.responseText;
+			    }
+			  }
+
+			  
+			  
+			  
+			
+		</script>
+	</body>
+</html>

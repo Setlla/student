@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/common.md5/vue.js" ></script>
+	</head>
+	<body>
+		<div id="head">
+		  <p>{{ _message }}</p>
+		  <input v-model="message">
+		</div>
+		<div id="number">
+			<ul >
+				<li v-for="todo in todos">{{todo.text}}</li>
+			</ul>
+		</div>
+	<!--
+    	作者：D1014520@126.com
+    	时间：2017-10-14
+    	描述：指令   事件处理
+    <!---->
+		<div class="click">
+			<button @click="counter +=1">增加1</button>
+			<p>按钮被点击{{counter}}</p>
+		</div>
+		<!--
+        	作者：D1014520@126.com
+        	时间：2017-10-16
+        	描述：vue 综合例子
+        -->
+		<div id="id1">
+			<span :style="{color:fontColor}">{{message}}</span>
+			<button @click="btn">点击这里！</button>
+		</div>
+		
+		<!--<ul id="id2">
+			<li v-for="item in Name(items)">
+				{{item.Name}} - {{item.Age}}
+			</li>
+		</ul>-->
+		
+		<div id="example-5">
+			  <select v-model="selected">
+			    <option disabled value="">请选择</option>
+			    <option>曾</option>
+			    <option>代</option>
+			    <option>李</option>
+			  </select>
+			<ul id="id2">
+				<li v-for="item in Name">
+					{{item.Name}} - {{item.Age}}
+				</li>
+			</ul>
+		</div>
+		
+		<!--
+        	作者：D1014520@126.com
+        	时间：2017-10-17
+        	描述：子组件练习
+        -->
+		
+		<div class="example_two">
+			<child :message="message"></child3>
+		</div>
+		<!--
+        	作者：D1014520@126.com
+        	时间：2017-10-18
+        	描述：父子组件
+        -->
+		<div class="example_three">
+			<father :exms="exms"></father>
+		</div>
+		
+		<script>
+			
+			Vue.component('father', {
+			  props: ['exms'],
+			  template: '<div><div v-for="exm in exms">'
+			  			+'{{exm.name}}'
+			  			+'<p>{{exm.age}}</p>'
+			  			+'<child :favourites="exm.favourites"></child></div></div>'
+			})
+			
+			Vue.component('child',{
+				props:['favourites'],
+				template:'<div><div v-for="favourite in favourites">'
+			  			+'<p>{{favourite.sports}}</p>'
+			  			+'<p>{{favourite.color}}</p>'
+			  			+'</div></div>'
+			})
+			
+			new Vue({
+				el:'.example_three',
+				data:{
+					exms:
+						[
+						{name:"王听",age:18,
+							favourites:[
+								{sports:"football",color:"purple"},
+								{sports:"surfing",color:"pink"},
+								{sports:"basketball",color:"blue"}
+							]
+						},
+						{name:"Aom",age:18,
+							favourites:[
+								{sports:"running",color:"blue"},
+								{sports:"surfing",color:"pink"},
+								{sports:"basketball",color:"blue"}
+							]
+						},
+						{name:"Saliy",age:18,
+							favourites:[
+								{sports:"running",color:"blue"},
+								{sports:"football",color:"purple"},
+								{sports:"basketball",color:"blue"}
+							]
+						},
+					],
+					
+				}
+			})
+			
+			
+			
+			Vue.component('child', {
+			  // 声明 props
+			  props: ['message'],
+			  // 就像 data 一样，prop 也可以在模板中使用
+			  // 同样也可以在 vm 实例中通过 this.message 来使用
+			  template: '<span>{{ message }}</span>'
+			})
+			var hello=new Vue({
+				el:'.example_two',
+				data:{
+					message:"gfhhg"
+				}
+			})
+			
+			
+			var example_three=new Vue({
+					 el: '#example-5',
+					 data: {
+					 	selected:'',
+					 		items: [
+							    {Name:"曾少",Age:"18"},
+								{Name:"代芯",Age:"12"},
+								{Name:"李少",Age:"20"},
+								{Name:"代悦",Age:"22"},
+								{Name:"曾炫",Age:"20"}
+				    		]
+					  },
+//					 methods:{
+//						 Name: function (items) {
+//						 	var selected=this.selected;
+//						 	if(selected){
+//						 		return items.filter(function (item) {
+//						    	return item.Name.charAt(0) ==selected && item.Age>=18
+//						    	})
+//						 	}
+//						 	return this.items
+//						 }
+//					 }
+					computed:{
+						 Name: function () {
+						 	var selected=this.selected;
+						 	if(selected){
+						 		return this.items.filter(function (item) {
+						    	return item.Name.charAt(0) ==selected && item.Age>=18
+						    	})
+						 	}
+						 	return this.items
+						 }
+					}
+				})
+			
+			
+//			var example_two=new Vue({
+//				el:'#id2',
+//				data:{
+//					items:[
+//						{Name:"曾少",Age:"18"},
+//						{Name:"代悦",Age:"12"},
+//						{Name:"李少",Age:"20"},
+//						{Name:"代悦",Age:"22"},
+//						{Name:"曾炫",Age:"20"}
+//					]
+//				},
+//				computed: {
+//					  Name: function () {
+//					    return this.items.filter(function (item) {
+//					      return item.Name.charAt(1) =="少" && item.Age>=12
+//					    })
+//					  }
+//				}
+//				methods:{
+//					 Name: function (items) {
+//					    return items.filter(function (item) {
+//					    return item.Name.charAt(0) =="曾" && item.Age>=18
+//					    })
+//					  }
+//				}
+//			})
+		
+
+
+			var example_one=new Vue({
+				el:'#id1',
+				data:{
+					message:'My Heading1',
+					fontColor:'blue'
+				},
+				methods:{
+					btn:function(){
+					if(this.fontColor=="blue"){
+							this.fontColor="red";
+						}else{
+							this.fontColor="blue";
+						}
+					}
+				}
+			})
+			
+			
+			var click=new Vue({
+				el:'.click',
+				data:{
+					counter:0
+				}
+			})
+			
+			
+			var heads=new Vue({
+				el:'#head',
+				data:{
+					message:'good!',
+				},
+				computed: {
+						  _message: function () {
+						    return this.message+Date()
+						  }
+				}
+			})
+			
+			var number=new Vue({
+				el:'#number',
+				data:{
+					todos:[
+						{text:'one'},
+						{text:'two'},
+						{text:'three'}
+					]
+				}
+			})
+		</script>
+	</body>
+</html>

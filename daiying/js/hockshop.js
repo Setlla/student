@@ -11,56 +11,118 @@ $(document).on("click",".things a",function(e){
 		
 })
 
-var data = {productName:""};
-$.ajax({
-	type:"post",
-	url:_url+"productList",
-	async:true,
-	contentType:"application/json",
-	data:JSON.stringify({token:localStorage.getItem("token")}),
-	success:function(data){
-		setdata(data);
+var shop=new Vue({
+	el:'.foot',
+	methods:{
+		shop:function(){
+			location.href="collect.html"
+		}
 	}
-});
-
-var setdata=function(data){
-	   for(var n=0;n<data.result.length;n++){
-		   var strings='<div class="bicycle" data-id='+data.result[n].id+'>' 
-						  +'<div class="img">'
-						  +'<img src="'+data.result[n].Image+'"/>'
-						  +'</div>'
-						  +'<div class="shanghai min">'
-						  +'<div class="free">'
-						  +'<p class="Name">'+data.result[n].Name+'</p>'
-						  +'<span>'+data.result[n].Carriage+'</span>'
-						  +'<span>'+data.result[n].Destination+'</span>'
-						  +'<a href="#">'+data.result[n].Status+'</a>'
-						  +'</div>'
-						  +'<div class="price prices">'
-						  +'<span>￥'+data.result[n].CurPrice+'</span>'
-						  +'<span>￥'+data.result[n].OldPrice+'<span>'
-						  +'<div class="round">'
-						  +'<p></p>'
-						  +'<p></p>'
-						  +'<p></p>'
-						  +'</div>'
-					 	  +'</div>'
-					      +'</div>'
-		
-		if(data.result[n].IsBook=="0"){
-			$(".max").append(strings);
-		}else{
-			$(".books").append(strings);
-	   }
-	}
-}
-
-			      
-$(document).on("click",".bicycle",function(e){
- 	console.log(this);
-	var id=$(this).data("id");
-	location.href = "details.html?id="+id;      
 })
+//var data = {productName:""};
+//$.ajax({
+//	type:"post",
+//	url:_url+"productList",
+//	async:true,
+//	contentType:"application/json",
+//	data:JSON.stringify({token:localStorage.getItem("token")}),
+//	success:function(data){
+//		setdata(data);
+//	}
+//});
+
+//var setdata=function(data){
+//	   for(var n=0;n<data.result.length;n++){
+//		   var strings='<div class="bicycle" data-id='+data.result[n].id+'>' 
+//						  +'<div class="img">'
+//						  +'<img src="'+data.result[n].Image+'"/>'
+//						  +'</div>'
+//						  +'<div class="shanghai min">'
+//						  +'<div class="free">'
+//						  +'<p class="Name">'+data.result[n].Name+'</p>'
+//						  +'<span>'+data.result[n].Carriage+'</span>'
+//						  +'<span>'+data.result[n].Destination+'</span>'
+//						  +'<a href="#">'+data.result[n].Status+'</a>'
+//						  +'</div>'
+//						  +'<div class="price prices">'
+//						  +'<span>￥'+data.result[n].CurPrice+'</span>'
+//						  +'<span>￥'+data.result[n].OldPrice+'<span>'
+//						  +'<div class="round">'
+//						  +'<p></p>'
+//						  +'<p></p>'
+//						  +'<p></p>'
+//						  +'</div>'
+//					 	  +'</div>'
+//					      +'</div>'
+//		
+//		if(data.result[n].IsBook=="0"){
+//			$(".max").append(strings);
+//		}else{
+//			$(".books").append(strings);
+//	   }
+//	}
+//}
+
+
+//方法1     axios是请求后台资源的模块，成功则返回在.then函数中，失败则是在.catch函数中。
+//axios.post(_url+"productList")
+//	.then(function (response) {
+//  console.log(response);
+//  if(response.data){
+//		    new Vue({
+//				el:'.max',
+//				data:{
+//					items:response.data.result
+//				},
+//				methods:{
+//					onbicycle:function(id){
+//					location.href = "details.html?id="+id;
+//					}
+//				}
+//	    	})
+// }
+//})
+//.catch(function (error) {
+//  console.log(error);
+//});
+   
+    
+	
+
+
+ 
+////方法2    then:回调函数     catch：
+var max=new Vue({
+		el:".max",
+		data:{
+			items:[],
+			obj: {}
+		},
+		created: function() {//钩子函数
+			var that = this;
+			axios.post(_url+"productList")
+			  .then(function (response) {
+			    console.log(response.data);
+			    that.items = response.data.result;
+			  })
+			  .catch(function (error) {//捕获  catch
+			    console.log(error);
+			  });
+		},
+		methods:{
+			onbicycle:function(id){
+				location.href = "details.html?id="+id;
+			}
+		}
+})	
+
+
+
+//$(document).on("click",".bicycle",function(e){
+// 	console.log(this);
+//	var id=$(this).data("id");
+//	location.href = "details.html?id="+id;      
+//})
 
 $(document).on("click",".shopcar",function(){
 	location.href="shopcar.html";

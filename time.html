@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>计时器</title>
+		<style>
+			button{
+				width:100px;
+				height:60px;
+				background-color:white;
+			}
+		</style>
+	</head>
+	<body>
+		<button>start</button>
+		<script>
+			var s=60;
+			var n;
+			var but = document.querySelector("button");
+			console.log(but.disabled);
+			var time = function(){
+				but.innerHTML = s;
+				if(s>0){
+					but.disabled=true;
+					but.style.color = "black";
+				} 
+				else
+				{
+					clearTimeout(s);
+					but.disabled=false;
+					 but.innerHTML= "start";
+				}
+				n = setTimeout("time()",100);
+				s--;
+			}
+			but.addEventListener("click",function(){
+			time();
+		})
+		</script>
+	</body>
+</html>

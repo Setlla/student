@@ -24,14 +24,36 @@
 			</li>
 		</ul>
 
-		<div class="max">	
+		<div class="max">
+			<div @click="onbicycle(item.id)"class="bicycle" v-for="(item,index) in items">
+				<div class="img">
+					<img :src="item.Image" />
+				</div>
+				<div class="shanghai min">
+				  	<div class="free">
+					  <p class="Name">{{item.Name}}</p>
+					  <span>{{item.Carriage}}</span>
+					  <span>{{item.Destination}}</span>
+					  <a href="#">{{item.Status}}</a>
+				  	</div>
+				  	<div class="price prices">
+						  <span>{{item.CurPrice}}</span>
+						  <span>{{item.OldPrice}}<span>
+						  <div class="round">
+							  <p></p>
+							  <p></p>
+							  <p></p>
+						  </div>
+					</div>
+				</div>
+			</div>
 		</div>
 			
 		<div class="books" style="display: none;">			
 			
 		</div>
 			<ul class="foot">
-				<li class="shop">
+				<li class="shop" @click="shop">
 					<img src="img/hockshop/hockshop_25.png" />
 					<p>商品</p>
 				</li>
@@ -50,6 +72,8 @@
 			</ul>
 		<div class="footer">
 		</div>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script type="text/javascript" src="js/common.md5/vue.js" ></script>
 		<script type="text/javascript" src="js/url.js" ></script>
 		<script type="text/javascript" src="js/hockshop.js" ></script>
 	</body>

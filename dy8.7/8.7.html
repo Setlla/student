@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	
+	<body>
+		<input value=""/>
+		<a href="#">start</a>
+		<script>
+		var s = 0;
+		var n;
+		var settime = function(){
+			document.querySelector('input').value = s;
+			s++;
+			n = setTimeout("settime()",1000);
+			if(s>10){
+				clearTimeout(s);
+			}
+		}
+		document.querySelector("a").addEventListener("click",function(){
+			settime();
+		})
+	</script>
+		<!--<script>
+		var s = 1;
+		var settime = function(){
+			document.querySelector('input').value = s;
+			s++;
+			
+		}
+		document.querySelector("a").addEventListener("click",function(){
+			setInterval("settime()",1000);
+		})
+	</script>-->
+	</body>
+</html>

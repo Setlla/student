@@ -6,7 +6,6 @@ function viliemail(em){
 	}else{
 		return true;
 	}
-		
 }
 function viliphone(ph){
 	var isphone = /^1[34578]\d{9}$/.test(ph);
@@ -16,7 +15,6 @@ function viliphone(ph){
 	}else{
 		return true;
 	}
-	
 }
 
 

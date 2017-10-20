@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+	</head>
+	<body>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+			</ul>
+		<script type="text/javascript">
+			var a = 
+					{
+		    "isSuccess": true,
+		    "result": [
+		        {
+		            "id": 1,
+		            "menuName": "主页",
+		            "createdAt": null,
+		            "updatedAt": null
+		        },
+		        {
+		            "id": 2,
+		            "menuName": "活动",
+		            "createdAt": null,
+		            "updatedAt": null
+		        },
+		        {
+		            "id": 3,
+		            "menuName": "博客",
+		            "createdAt": null,
+		            "updatedAt": null
+		        },
+		        {
+		            "id": 4,
+		            "menuName": "联系我们",
+		            "createdAt": null,
+		            "updatedAt": null
+		        }
+		    ]
+		}
+					
+//			console.log(a);		
+//			console.log(a.isSuccess);
+//			console.log(a.result[0].id);
+			var dd = document.querySelectorAll("li");
+			for(var i = 0;i<dd.length;i++)
+			dd[i].innerHTML = a.result[i].menuName;
+		</script>
+	</body>
+</html>

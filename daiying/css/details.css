@@ -26,7 +26,7 @@ html{
 }
 .book img{
 	height:3rem;
-	width:2.44rem;
+	/*width:2.44rem;*/
 	margin: 0 auto;
 	margin-top: .5rem;
 	display: block;
