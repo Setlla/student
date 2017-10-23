@@ -153,15 +153,25 @@
 		overflow: hidden;
 		background: #f9f9f9;
 		font-size: 0.24rem;
+		margin-bottom: 2px;
+		position: relative;
+		height: 1.4rem;
 	}
 	.information img {
 		width: 1.26rem;
 		height: 1.26rem;
-		float: left;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translate(0,-50%);
 	}
 	.information p {
-		margin: 0.18rem 0;
+		margin: 0.1rem 0 0.15rem 1.5rem;
 		color: #555555;
+		overflow: hidden;
+		display: -webkit-box;
+   		-webkit-line-clamp: 2;
+    	-webkit-box-orient: vertical;
 	}
 	.number {
 		height: 0.9rem;
