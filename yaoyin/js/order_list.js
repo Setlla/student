@@ -55,6 +55,9 @@
 							Vue.set(warelist.wls, indexNum, false);
 						}
 					})
+					.catch(function(error){
+						console.log(error);
+					})
 				}
 	        }
 
