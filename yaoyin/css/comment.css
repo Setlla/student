@@ -62,26 +62,20 @@
 		position: relative;
 		padding-left: 0.32rem;
 		margin-bottom: 0.18rem;
+		font-size: 0.24rem;
 	}
-	/*头像*/
-	
+	/*头像*/	
 	.circle {
 		width: 0.5rem;
 		height: 0.5rem;
-		border-radius: 0.25rem;
-		display: inline-block;
 		vertical-align: middle;
 		margin-right: 0.1rem;
 	}
-	
 	.user {
-		color: #0a151b;
-		font-size: 0.24rem;
-	}
-	
+		color: #0a151b;		
+	}	
 	.write_btn {
 		font-size: 0.22rem;
-		height: 0.5rem;
 		border-radius: 0.2rem;
 		background: #FFFFFF;
 		border: 1px solid #e35d28;
@@ -92,6 +86,8 @@
 		transform: translate(0, -50%);
 		cursor: pointer;
 		outline: none;
+		padding: 0.1rem 0.2rem;
+		text-align: center;
 	}
 	/*追评模块CSS*/
 	
@@ -110,12 +106,10 @@
 	
 	.chase_ratings li {
 		padding: 0 0.25rem 0 0.32rem;
-	}
-	
+	}	
 	.chase_img {
 		overflow: hidden;
-	}
-	
+	}	
 	.chase_img img {
 		width: 1.14rem;
 		height: 1.14rem;
@@ -132,19 +126,20 @@
 		text-align: center;
 		font-size: 0.3rem;
 	}
-	
-	.all li {
+	.all{
 		background: #FFFFFF;
-	}
-	
-	.all li div {
-		position: relative;
 		padding-left: 0.32rem;
-	}
-	
-	.all_list {
+		padding-right: 0.25rem;
 		margin-bottom: 0.18rem;
-	}	
+	}
+	.all li{
+		position: relative;
+	}
+	.user_information {
+		height: 1.06rem;
+		line-height: 1.06rem;
+		font-size: 0.24rem;
+	}
 	.color p:nth-child(1) {
 		color: #989898;
 		font-size: 0.22rem;
@@ -154,44 +149,38 @@
 		font-size: 0.26rem;
 		margin: 0.3rem 0;
 	}
-	
-	.user_information {
-		height: 1.06rem;
-		line-height: 1.06rem;
-	}
-	
 	.information {
 		overflow: hidden;
 		background: #f9f9f9;
 		font-size: 0.24rem;
 	}
-	
-	.information p {
-		margin: 0.18rem 0;
-		color: #555555;
-	}
-	
 	.information img {
 		width: 1.26rem;
 		height: 1.26rem;
 		float: left;
 	}
-	
-	.information div {
-		float: left;
+	.information p {
+		margin: 0.18rem 0;
+		color: #555555;
 	}
-	
 	.number {
 		height: 0.9rem;
 		line-height: 0.9rem;
 		font-size: 0.22rem;
 		color: #989898;
 	}
-	
-	div.information {
-		padding-left: 0 !important;
-	}
-	
-	.evaluate {
-		padding-left: 0.32rem;
+	.write_btn1{
+		font-size: 0.22rem;
+		border-radius: 0.2rem;
+		background: #FFFFFF;
+		border: 1px solid #e35d28;
+		color: #e35d28;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translate(0, -50%);
+		cursor: pointer;
+		outline: none;
+		padding: 0.1rem 0.2rem;
+		text-align: center;
 	}

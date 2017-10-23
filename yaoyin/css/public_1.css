@@ -1,5 +1,5 @@
  	/*公共标签样式*/
- 	*{box-sizing: border-box;margin: 0;padding: 0;}
+ 	*{box-sizing: border-box;margin: 0;padding: 0;-webkit-tap-highlight-color:transparent;/*手机背景点击按钮色去掉*/}
 	a{text-decoration: none;}
 	html{font-family: "微软雅黑";}
 	ul{list-style-type: none;}
