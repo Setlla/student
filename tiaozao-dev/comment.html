@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>我的评论</title>
+		<link rel="stylesheet" type="text/css" href="css/public_1.css"/>
+		<link rel="stylesheet" href="css/comment.css" />
+		<script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
+		<script type="text/javascript" src="js/vue.js" ></script>
+		<script type="text/javascript" src="js/axios.js" ></script>
+		<script type="text/javascript" src="js/url.js"></script>
+	</head>
+	<body>
+		<!--
+        	作者：492680716@qq.com
+        	时间：2017-09-14
+        	描述：头部header模块
+        -->
+    <div id="body">
+		<header>
+			<p @click="back"></p>
+			
+			<span>我的评价</span>
+			<div class="more">
+				<a></a>
+				<a></a>
+				<a></a>
+			</div>
+		</header>			
+		<!--
+        	作者：492680716@qq.com
+        	时间：2017-09-14
+        	描述：写评价模块
+        -->
+		<div class="write">
+			<img class="circle" :src="names" />
+			<span class="user">{{users}}</span>
+			<button class="write_btn" @click="assess">写评价</button>
+		</div>
+		<!--
+        	作者：492680716@qq.com
+        	时间：2017-09-14
+        	描述：没有来得及评价显示的图片-模块
+        -->
+		<ul class="chase_ratings">
+			<li><span class="chase_title">没有来得及评价的宝贝，还有机会去追评！</span></li>
+			<li class="chase_img">
+				<img src= "img/collection/coll_03.gif" />
+				<img src= "img/collection/coll_03.gif" />
+				<img src= "img/collection/coll_03.gif" />
+				<img src= "img/collection/coll_03.gif" />
+				<img src= "img/collection/coll_03.gif" />
+			</li>
+		</ul>
+		<!--
+        	作者：492680716@qq.com
+        	时间：2017-09-14
+        	描述：评价
+        -->
+    	<div class="browse">
+        	<span>全部评价</span>
+        </div>
+        <!--
+        	作者：492680716@qq.com
+        	时间：2017-09-15
+        	描述：评价浏览模块
+        -->
+        <father :items="items" :users="users" :names="names"></father>
+        <!--<div>
+=======
+        <div>
+>>>>>>> 10.23
+        	<ul class="all">
+        		<li class="user_information">
+        			<img class="circle" src="img/collection/head.png" />
+					<span class="user">aaronkwok666</span>
+        		</li>
+        		<li class="color">
+        			<p>05-09 颜色分类：【土豪金】苹果se/5s/5通用</p>
+					<p>此用户没有评价。</p>
+        		</li>
+        		<li class="information">
+        			<img src="img/collection/coll_03.gif" />
+        			<p>瑞舞苹果5s手机壳iphone5s保护套</p>
+					<p>￥98.00</p>	
+        		</li>
+        		<li class="number">
+        			<button class="write_btn1">写追评</button>
+        		</li>
+        	</ul>
+<<<<<<< HEAD
+        </div>-->
+    </div>
+        <script type="text/javascript" src="js/comment.js" ></script>
+	</body>
+</html>
