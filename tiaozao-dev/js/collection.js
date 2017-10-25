@@ -1,15 +1,6 @@
-	//箭头返回上个历史页面
-	var vm=new Vue({
-		el:'header',
-		methods:{
-			head_p:function(){
-				history.go(-1);
-			}				
-		}
-	})
 	//数据渲染
 	var vm2=new Vue({
-		el:".ware",
+		el:"#body",
 		data:{
 			liList:[],			
 		},
@@ -31,6 +22,14 @@
 				})
 	
 			},
+			//箭头返回上个历史页面
+			head_p:function(){
+				history.go(-1);
+			},
+			//点击商品跳转到详情页面
+			explain:function(id){
+				location.href="DetailsPage.html?id=" + id;
+			}
 		},
 		created:function(){
 			var that=this;

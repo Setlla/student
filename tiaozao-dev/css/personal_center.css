@@ -98,7 +98,7 @@
 	}
 	
 	/*订单拍单部分*/
-	.bill,.bill_1,.bill_2{
+	.bill,.bill_2{
 		background: #FFFFFF;
 		height: 0.8rem;
 		line-height: 0.8rem;
@@ -106,19 +106,19 @@
 		overflow: hidden;
 	}
 	.bill_2{
-		margin-top: 0.2rem;
+		margin-top: 0.02rem;
 	}
-	.bill_pic ,.bill_pic_1,.bill_pic_2{
+	.bill_pic ,.bill_pic_2{
 		float: left;
 		width: 10%;
 		text-align: center;
 	}
-	.bill_pic img, .bill_pic_1 img,.bill_pic_2 img{
+	.bill_pic img,.bill_pic_2 img{
 		width: 0.34rem;
 		height: 0.34rem;
 		vertical-align: middle;
 	}
-	.bill_goods,.bill_goods_1,.bill_goods_2{
+	.bill_goods,.bill_goods_2{
 		width: 90%;
 		float: right;
 		text-align: left;
@@ -130,7 +130,7 @@
 	}
 	
 	/*尾部除公共样式public_foot.css外设置的属性*/
-	.foot_warelist li:nth-of-type(4) span{
+	.foot_warelist li:nth-of-type(3) span{
 		color: #33CCFF;
 	}
 	.collections,.tracks{

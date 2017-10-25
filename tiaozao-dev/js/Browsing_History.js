@@ -17,12 +17,11 @@
 				+'<div class="list_explain">'
     	    	+'<img :src="browselog.product[0].Image" />'
 				+'</div>'
-				+'<div class="list_depreciate">'
-				+'<p>{{ browselog.product[0].Name }}</p>'
-				+'<span class="listspan">￥<span class="price">{{ browselog.product[0].CurPrice }}</span>.00</span>'
-				+'<span class="dep_1">看相似</span>'
-				+'<span class="img_title" @click="img_titles(browselog.product[0].id)"></span>'
+				+'<div class="list_depreciate" @click="list_depreciate(browselog.product[0].id)">'
+				+'<p v-html="browselog.product[0].Name"></p>'
+				+'<span class="listspan">￥<span class="price">{{ browselog.product[0].CurPrice }}</span>.00</span>'				
 				+'</div>'
+				+'<span class="img_title" @click="img_titles(browselog.product[0].id)"></span>'
 				+'</div></div>',
 		//购物车跳转添加数据
 		methods: {
@@ -40,6 +39,10 @@
 				.catch(function(error){
 					console.log(error);
 				})	
+			},
+			//点击商品跳转到详情页面
+			list_depreciate:function(id){
+				location.href="DetailsPage.html?id=" + id;
 			}
 		}
 	})

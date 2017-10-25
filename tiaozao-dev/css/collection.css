@@ -52,9 +52,11 @@
 	}
 	.warelist{
 		margin-bottom: 0.32rem;
+		position: relative;
 	}
 	.list_explain{
 		overflow: hidden;
+		position: relative;
 	}
 	.list_explain img{
 		float: left;
@@ -69,7 +71,7 @@
 	}
 	.list_explain p:nth-of-type(1){
 		margin:0.03rem 0 0.32rem 0;
-		display: block;
+		line-height: 0.4rem;
 		overflow: hidden;
 		display: -webkit-box;
    		-webkit-line-clamp: 2;
@@ -77,7 +79,10 @@
 			
 	}
 	.list_explain p:nth-of-type(2){
-		margin-bottom: 0.22rem;
+		position: absolute;
+		bottom: 0.1rem;
+		left: 2.32rem;
+		transform: translate(0,0);		
 		color: #f7292d;
 	}
 	.price{
@@ -91,28 +96,6 @@
 	.list_explain p:nth-of-type(3) span{
 		margin-right: 0.08rem;
 	}
-	.gift{
-		display: inline-block;
-		padding: 0rem 0.05rem;
-		border: 0.01rem solid #f7292d;
-		color: #f7292d!important;
-	}
-	.arr{
-		width: 0.24rem;
-		height: 0.24rem;
-		border-bottom: 2px solid #CCCCCC;
-		border-left: 2px solid #CCCCCC;
-		display: block;
-		position: absolute;
-		top: 50%;
-		right: 0;
-		transform: translateY(-75%) rotate(-45deg);
-	}
-	.list_depreciate{		
-		text-align: right;
-		position: relative;
-		font-size:0.24rem;
-	}
 	.dep_1{
 		height: 0.5rem;
 		line-height: 0.5rem;		
@@ -124,14 +107,6 @@
 		font-size: 0.24rem;
 		cursor: pointer;
 	}
-	.list_depreciate span:nth-of-type(1){
-		width: 0.9rem;
-		margin-right: 0.1rem;
-	}
-	.list_depreciate span:nth-of-type(2){
-		width: 1.2rem;
-		margin-right: 1.1rem;
-	}
 	.img_title{		
 		width: 0.5rem;
 		height: 0.5rem;
@@ -141,7 +116,7 @@
 		border-radius: 0.08rem;
 		border: 1px solid #fb2257!important;
 		position: absolute;
-		bottom: 0;
+		bottom: 0.1rem;
 		right: 0;
 		transform: translate(0,0);
 		cursor: pointer;		

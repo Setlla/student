@@ -1,3 +1,4 @@
+
 //		$(document).on("change",".search_ipt",function(){
 //			$(".warelist").empty();
 //			romance();
@@ -149,4 +150,3 @@
 				}
 			}
 		})
-	

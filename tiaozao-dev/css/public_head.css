@@ -17,7 +17,7 @@
 		border-bottom: 2px solid #FFFFFF;
 		position: absolute;
 		top: 50%;
-		left: 0.34rem;
+		left: 0.25rem;
 		transform: translate(0,-50%) rotate(45deg) ;
 	}
 	.header_dot{
@@ -31,7 +31,7 @@
 	.header_left{
 		position: absolute;
 		top: 50%;
-		left: 0.34rem;
+		left: 0.25rem;
 		font-size: 0.28rem!important;
 		transform: translate(0,-50%);	
 	}
@@ -39,6 +39,6 @@
 		font-size: 0.28rem!important;
 		position: absolute;
 		top: 50%;
-		right: 1.2rem;
+		right: 0.34rem;
 		transform: translate(0,-50%);	
 	}

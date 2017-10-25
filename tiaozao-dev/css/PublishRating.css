@@ -51,12 +51,11 @@
 		padding: 0.2rem 0;
 		border-bottom: 1px solid #e8e8e8;
 	}
-	.appease li:nth-of-type(2){
-		height: 0.8rem;
-		line-height: 0.8rem;
-		position: relative;
-	}
+	
 	.appeasebaby{
+		line-height: .4rem;
+		width: 100%;
+		border: none;
 		margin-bottom: 1rem;
 		display: inline-block;
 	}

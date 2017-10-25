@@ -56,7 +56,13 @@ $(document).ready(function(){
 					token: token
 				}),
 				success:function(data,status){
-					$('.tracks').text(data.result.length);
+					var num = 0;
+					for (var i=0;i<data.result.length;i++) {
+						var a=data.result[i].browselogs.length;
+						num = num + a;
+						$(".tracks").text(num);
+					}
+					
 				}
 			})
 		}
@@ -92,5 +98,9 @@ $(document).ready(function(){
 		//我的足迹
 		$(document).on("click",".track",function(){
 			location.href="Browsing_History.html";
+		})
+		//头像跳转		
+		$(document).on("click",".scu_circle",function(){
+			location.href="personal_message.html";
 		})
 })//ready的括号

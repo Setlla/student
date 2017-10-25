@@ -11,7 +11,7 @@
 		margin-bottom: 0.4rem;
 	}
 	.ware_pic img{
-		width: 2.4rem;
+		width: 3rem;
 		height: 3rem;
 		margin: 0.7rem 0rem;
 		vertical-align: middle;
@@ -133,7 +133,7 @@
 	/*底部*/
 	.foot{
 		overflow: hidden;
-		height: 1.6rem;
+		height: 1.2rem;
 		position: fixed;
 		bottom: 0;
 		width: 100%;
@@ -141,27 +141,27 @@
 	.foot>div{
 		float: left;
 		color: #FFFFFF;
-		height: 1.6rem;
+		height: 1.2rem;
 		text-align: center;
 	}
 	.foot_love{
 		width: 40%;
-		font-size: 0.36rem;
+		font-size: 0.3rem;
 		text-align: center;
 		padding: 0.3rem 0.1rem;
 		background: #CCCCCC;
 	}	
 	.foot div:nth-of-type(2){
 		width: 30%;
-		font-size: .4rem;
+		font-size: .3rem;
 		background: #ff9933;
-		line-height: 1.6rem;
+		line-height: 1.2rem;
 	}
 	.foot div:nth-of-type(3){
 		width: 30%;
-		font-size: .4rem;
+		font-size: .3rem;
 		background: #ff6600;
-		line-height: 1.6rem;		
+		line-height: 1.2rem;		
 	}
 	.addshopcar button,.purchase button{
 		outline: none;

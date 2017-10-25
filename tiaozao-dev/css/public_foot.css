@@ -11,21 +11,17 @@
 		overflow: hidden;
 	}
 	.foot_warelist li{
-		width: 25%;
+		width: 33.33%;
 		float: left;
 		color: #808080;
 		font-size: 0.2rem;
 		text-align: center;
-		margin: 0.13rem 0;
+		margin: 0.1rem 0;
 	}
 	.foot_warelist span{
 		display: block;
 	}
-	/*.foot_warelist li:nth-of-type(2) span{
-		color: #33CCFF;
-	}*/
 	.foot_warelist li img{
-		margin-bottom: 0.14rem;
 		width: 0.44rem;
 		height: 0.44rem;
 	}

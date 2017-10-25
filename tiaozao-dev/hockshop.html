@@ -19,15 +19,10 @@
         	描述：头部
         -->
         <div class="head">
-        	<div class="head_left">
-        		<span class="status">挂起</span>
-        		<span class="head_ar"></span>
-        	</div>
         	<div class="classify">
         		<a href="#" :class="{article:isArticle1}" @click="article">物品</a>
         		<a href="#" class="books" :class="{article:isArticle2}" @click="books">书籍</a>
         	</div>
-        	<img class="head_img" src="img/icon/icon_45.png"/>
         </div>
         
         <!--
@@ -36,7 +31,7 @@
         	描述：商品展示
         -->
         <div class="alllist">
-	    <div class="list" v-show="list">
+	    <div class="list" v-show="isArticle1">
 			<ul class="ware" v-for="ware in warelist" @click="wls(ware.id)" :id="ware.id">
 				<li class="ware_pic">
 					<img :src="ware.Image" />
@@ -55,7 +50,7 @@
 				</li>
 			</ul>
 	    </div> 
-	    <div class="list1" v-show="list1">
+	    <div class="list1" v-show="isArticle2">
 	    	<ul class="ware" v-for="ware in warelists" @click="wls(ware.id)" :id="ware.id">
 				<li class="ware_pic">
 					<img :src="ware.Image" />
@@ -82,10 +77,6 @@
         -->
         <div class="foot">
         	<ul class="foot_warelist">
-        		<li>
-        			<img src="img/icon/icon_46.png"/>
-        			<span>商品</span>
-        		</li>
         		<li class="shopping_trolley">
         			<img src="img/icon/icon_47.png"/>
         			<span>购物车</span>

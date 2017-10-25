@@ -7,29 +7,8 @@
 		display: flex;
 		display: -webkit-flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
 		padding: 0 0.34rem;
-	}
-	.head_left{
-		position: relative;
-		height: 0.88rem;
-		line-height: 0.88rem;
-		width: 0.8rem;
-	}
-	.head_left span:nth-of-type(1){
-		display: block;
-		font-size: 0.28rem;
-	}
-	.head_ar{
-		display: block;
-		width: 0.1rem;
-		height: 0.1rem;
-		border-right: 1px solid #FFFFFF;
-		border-bottom: 1px solid #FFFFFF;
-		position: absolute;
-		top: 55%;
-		right: 0rem;
-		transform: translate(0,-55%) rotate(45deg);
 	}
 	.classify{
 		overflow: hidden;
@@ -53,11 +32,6 @@
 		background: #bfe6f3!important;
 		color: #33ccff!important;
 	}
-	.head_img{
-		width: 0.44rem;
-		height: 0.47rem;
-		vertical-align: middle;
-	}
 	.ware_explain{
 		width: 70%!important;
 	}
@@ -66,6 +40,6 @@
 		margin-bottom: 1.3rem!important;
 	}
 	/*当铺按钮*/
-	.foot_warelist li:nth-of-type(3) span{
+	.foot_warelist li:nth-of-type(2) span{
 		color: #33CCFF;
 	}

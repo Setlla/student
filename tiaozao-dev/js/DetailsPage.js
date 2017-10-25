@@ -6,13 +6,9 @@
 				var content=
 					'<div class="ware_pic">'
 		        	+'<img id="imgid1" src="'+data.result.product.Image+'" />'
-		        	+'<img class="ware_pic_none" src="img/author.jpg" />'
-	        		+'<img class="ware_pic_none" src="img/ware/ware_24.png" />'
-	        		+'<img class="ware_pic_none" src="img/author.jpg" />'
-	        		+'<img class="ware_pic_none" src="img/ware/ware_24.png" />'
 	        		+'</div>'
 					
-//					$('.ware').append(content);
+					$('.ware').append(content);
 					
 				var content1=
 					'<div class="details_name">'
@@ -121,23 +117,23 @@
 		})
 		
 		//轮播效果
-		var leng=$('.ware_pic img').length;
-		var index=0;		
-		function zidong(){
-			$('.ware_pic img').eq(index).show().siblings().hide();
-			$('.dot span').eq(index).addClass('dotscolor').siblings().removeClass('dotscolor');
-			index=(index+1)%leng;
-		}
-		$('.dot span').click(function(){
-				index=$('.dot span').index(this);
-				zidong();
-		})
-		var it=setInterval(zidong,1000);
-		$('.ware_pic img').hover(function(){
-			clearInterval(it);
-		},function(){
-			it=setInterval(zidong,1000);
-		})
+//		var leng=$('.ware_pic img').length;
+//		var index=0;		
+//		function zidong(){
+//			$('.ware_pic img').eq(index).show().siblings().hide();
+//			$('.dot span').eq(index).addClass('dotscolor').siblings().removeClass('dotscolor');
+//			index=(index+1)%leng;
+//		}
+//		$('.dot span').click(function(){
+//				index=$('.dot span').index(this);
+//				zidong();
+//		})
+//		var it=setInterval(zidong,1000);
+//		$('.ware_pic img').hover(function(){
+//			clearInterval(it);
+//		},function(){
+//			it=setInterval(zidong,1000);
+//		})
 		
 		
 		//添加足迹

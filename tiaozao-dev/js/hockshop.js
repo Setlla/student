@@ -4,8 +4,6 @@
 			wlists:[],
 			isArticle1:true,
 			isArticle2:false,
-			list:true,
-			list1:false
 		},
 		created:function(){
 			//VUE的页面渲染数据
@@ -40,14 +38,10 @@
 			article:function(){
 				this.isArticle1=true;
 				this.isArticle2=false;
-				this.list=true;
-				this.list1=false;
 			},
 			books:function(){
 				this.isArticle1=false;
 				this.isArticle2=true;
-				this.list=false;
-				this.list1=true;
 			}
 		}
 	})	

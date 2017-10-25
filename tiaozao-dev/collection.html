@@ -11,6 +11,7 @@
 		<script type="text/javascript" src="js/axios.js" ></script>
 	</head>
 	<body>
+		<div id="body">
 		<!--
         	作者：492680716@qq.com
         	时间：2017-09-14
@@ -19,11 +20,6 @@
 		<header>
 			<p class="head_p" @click="head_p"></p>
 			<span>我的收藏</span>
-			<div>
-				<a></a>
-				<a></a>
-				<a></a>
-			</div>
 		</header>
 		<!--
         	作者：492680716@qq.com
@@ -32,22 +28,12 @@
         -->
         <ul class="ware">
     	    <li class="warelist" v-for="warelist in liList" :id="warelist.id">
-    	    	<div class="list_explain">
+    	    	<div class="list_explain" @click="explain(warelist.product[0].id)">
     	    		<img :src="warelist.product[0].Image" />
-					<p>{{ warelist.product[0].Name }}</p>
-					<p>￥<span class="price">{{ warelist.product[0].CurPrice }}</span>.00</p>
-					<p>
-						<span class="gift">赠品</span>
-						<span>补差链接</span>
-						<span>键盘膜</span>
-						<span class="arr"></span>
-					</p>
+					<p v-html="warelist.product[0].Name"></p>
+					<p>￥<span class="price">{{ warelist.product[0].CurPrice }}</span>.00</p>					
 				</div>
-				<div class="list_depreciate">
-					<span class="dep_1">看相似</span>
-					<span class="dep_1">降价通知</span>
-					<span class="img_title" @click="img_titles(warelist.product[0].id)"></span>
-				</div>
+				<span class="img_title" @click="img_titles(warelist.product[0].id)"></span>
 			</li>
         </ul>
 		<!--
@@ -96,7 +82,7 @@
         	</li>
         </ul>
         
-        
+       </div>
         <script type="text/javascript" src="js/collection.js" ></script>
 	</body>
 </html>

@@ -1,17 +1,15 @@
-	var user=JSON.parse(localStorage.getItem("user"));
-	
 	//评价父组件
 	Vue.component('father',{
-		props:["items","users","names"],
+		props:["items","user"],
 		template:'<div>'
         		+'<ul class="all" v-for="item in items">'
         		+'<li class="user_information">'
-        		+'<img class="circle" :src="names" />'
-				+'<span class="user">{{users}}</span>'
+        		+'<img class="circle" :src="user.headImage" />'
+				+'<span class="user">{{user.name}}</span>'
         		+'</li>'
         		+'<li class="color">'
-        		+'<p>{{item.createdAt}}</p>'
-				+'<p>{{item.logisticsScore}}</p>'
+        		+'<p>{{new Date(item.createdAt).toLocaleDateString()}}</p>'
+				+'<p>{{item.content?item.content:"此用户没有评价，默认好评。"}}</p>'
         		+'</li>'
 				+'<child :products="item.order.products"></child>'
         		+'<li class="number">'
@@ -32,7 +30,7 @@
 		template: '<div>'
 				+'<li class="information" @click="formation(product.id)" v-for="product in products">'
         		+'<img :src="product.Image" />'
-        		+'<p>{{product.Name}}</p>'
+        		+'<p v-html="product.Name"></p>'
 				+'<p>￥{{product.CurPrice}}.00</p>'
         		+'</li>'
         		+'</div>',
@@ -48,8 +46,7 @@
 		el:'#body',
 		data:{
 			items:[],
-			users:user.name,
-			names:user.headImage
+			user:JSON.parse(localStorage.getItem("user"))
 		},
 		methods:{
 			assess:function(){
