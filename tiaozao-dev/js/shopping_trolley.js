@@ -134,6 +134,9 @@
 			$(this).css("display","none").siblings('.head_left1').css("display","block");
 			$('.ware_explain').css("display","none");
 			$('.show').css("display","block");
+			$(".foot_count").css("display","none");
+			$("foot_fruit").css("display","none");
+			$(".alldelete").css("display","block");
 		})
 		
 		//完成按钮
@@ -145,8 +148,6 @@
 				t1.ProductNumber=$(".ware").eq(i).find('.amount').text();
 				products.push(t1);
 			}
-//			"products":[{"id":"29","ProductNumber":"4"},{"id":"28","ProductNumber":"4"}]
-
 			$.ajax({
 				type:"post",
 				url:_url+"/updateShopCar",

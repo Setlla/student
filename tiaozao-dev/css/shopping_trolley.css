@@ -95,18 +95,24 @@
 		line-height: 0.88rem;
 		font-size: 0.3rem;
 		border-top: 1px solid #c3c3c3;
-		
+		position: relative;
+		padding-left: 0.7rem;
 	}
 	/*全选按钮设置*/
 	.select_radio{
-		margin: 0 0.1rem 0 0.2rem;
 		width: 0.28rem;
 		height: 0.28rem;
-		border-radius: 0.14rem;
+		border-radius: 50%;
 		border: 1px solid #a1a1a1;
 		background: #FFFFFF;
 		display: inline-block;
 		box-shadow: 0 0 0 3px #FFFFFF inset;
+	}
+	.selects{
+		position: absolute;
+		top: 50%;
+		left: 0.25rem;
+		transform: translate(0,-50%);
 	}
 	.radio_1{
 		border: 1px solid #33CCFF!important;
@@ -151,7 +157,26 @@
 	.foot_button{
 		background: #ee8219!important;
 	}
-	
+	/*全部删除*/
+	.alldelete{
+		line-height: 0.88rem;
+		width: 60%;
+		position: relative;
+	}
+	.show{
+		display: none;
+	}
+	.btn_del1{
+		padding: 0.3rem;
+		background: #FF0000;
+		color: #FFFFFF;
+		outline: none;
+		border: 0px solid #A1A1A1;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translate(0,-50%);
+	}
 	/*购物车按钮*/
 	.foot_warelist li:nth-of-type(1) span{
 		color: #33CCFF;
