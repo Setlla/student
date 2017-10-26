@@ -1,0 +1,34 @@
+	/*标题模块*/
+	.order_header{
+		overflow: hidden;
+	}
+	.order_header li{
+		width: 20%;
+		height: 0.8rem;
+		line-height: 0.8rem;
+		float: left;
+		font-size: 0.26rem;
+		text-align: center;
+		border-bottom: 1px solid #eaecef;
+		color: #555;
+	}
+	.order_header li span{
+		display: inline-block;
+		height: 100%;
+	}
+	.ordernumber span{
+		color: #33CCFF!important;
+		border-bottom: 2px solid #33CCFF!important;
+	}
+	/*内容模块*/
+	.order_content{
+		text-align: center;
+		font-size: 0.28rem;
+		padding-top: 1rem;
+		color: #888888;
+	}
+	.order_content img{
+		width: 1.14rem;
+		height: 1.44rem;
+		margin-bottom: 0.35rem;
+	}

@@ -1,0 +1,104 @@
+	.header{
+		line-height: 0.93rem!important;
+	}
+	.note{
+		display: none;		
+	}
+	.noted{
+		text-align: center;
+		font-size: 0.3rem;
+		color: #CCCCCC;
+		margin-top: 0.4rem;
+	}
+	/*商品列表warelist CSS*/
+	.ware{
+		background: #FFFFFF;
+		padding-left: 0.34rem;
+	}
+	.warelist{
+		overflow: hidden;
+	}
+	.date{
+		width: 100%;
+		height: 0.8rem;
+		line-height: 0.8rem;
+		color: #777;
+		font-size: 0.24rem;
+		border-bottom: 1px solid #e5e5e5;
+	}
+	.warelist div{
+		float: left;
+	}
+	.browselog{
+		width: 100%;
+		position: relative;
+	}
+	.list_explain{
+		width: 40%;
+		text-align: center;
+		padding: 0.2rem 0;
+	}
+	.list_explain img{
+		width: 2.04rem;
+		height: 2.08rem;
+		border-radius: 0.1rem;
+		vertical-align: middle;
+	}	
+	.price{
+		font-size: 0.3rem!important;
+	}
+	.list_depreciate{
+		width: 60%;
+		height: 2.48rem;
+		position: relative;
+		padding: 0.28rem 0.34rem 0.34rem 0;
+		border-bottom: 1px solid #e5e5e5;
+	}
+	.list_depreciate p:nth-of-type(1){
+		font-size: 0.24rem;
+		line-height: 0.34rem;
+		overflow: hidden;
+		display: -webkit-box;
+   		-webkit-line-clamp: 2;
+    	-webkit-box-orient: vertical;	
+	}
+	.list_depreciate span:nth-of-type(1){
+		color: #f7292d;
+		font-size: 0.24rem;
+	}
+	.listspan{
+		position: absolute;
+		bottom: 0.413rem;
+		left: 0;
+		transform: translate(0,0);
+	}
+	/*.dep_1{
+		height: 0.5rem;
+		line-height: 0.5rem;		
+		border-radius: 0.1rem;
+		text-align: center;
+		display: inline-block;
+		border: 1px solid #e5e5e5;
+		color: #888888;
+		font-size: 0.24rem;
+		padding: 0 0.2rem;
+		cursor: pointer;
+		position: absolute;
+		bottom: 0.413rem;
+		right: 1rem;
+		transform: translate(0,0);;
+	}*/
+	.img_title{		
+		width: 0.5rem;
+		height: 0.5rem;
+		display: inline-block;
+		background: url(../img/collection/coll_02.gif)50% 50% no-repeat;
+		background-size: 0.33rem 0.3rem;
+		border-radius: 0.08rem;
+		border: 1px solid #e5e5e5;
+		position: absolute;
+		bottom: 0.413rem;
+		right: 0.34rem;
+		transform: translate(0,0);
+		cursor: pointer;		
+	}

@@ -1,0 +1,45 @@
+	/*头部*/
+	.head{
+		width: 100%;
+		height: 0.88rem;
+		background: #33ccff;
+		color: #FFFFFF;
+		display: flex;
+		display: -webkit-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0 0.34rem;
+	}
+	.classify{
+		overflow: hidden;
+		border: 1px solid #FFFFFF;
+		border-radius: 0.1rem;
+		width: 2.4rem;
+		height: 0.56rem;
+		line-height: 0.56rem;
+	}
+	.classify a{
+		display: block;
+		font-size: 0.26rem;
+		height: 100%;
+		width: 50%;
+		text-align: center;
+		float: left;
+		background: #33ccff;
+		color: #FFFFFF;
+	}
+	.article{
+		background: #bfe6f3!important;
+		color: #33ccff!important;
+	}
+	.ware_explain{
+		width: 70%!important;
+	}
+	/*商品切换*/
+	.list1,.list{
+		margin-bottom: 1.3rem!important;
+	}
+	/*当铺按钮*/
+	.foot_warelist li:nth-of-type(2) span{
+		color: #33CCFF;
+	}

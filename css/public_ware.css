@@ -1,0 +1,114 @@
+	/*商品列表*/
+	.list{
+		margin-bottom: 2.1rem;
+	}
+	.ware{
+		overflow: hidden;
+		height: 2.2rem;
+	}
+	.ware li{
+		position: relative;
+		float: left;
+	}
+	.ware_radio{
+		width: 10%;
+		height: 100%;
+	}
+	.list_radio{
+		width: 14px;
+		height: 14px;
+		border-radius: 7px;
+		border: 1px solid #a1a1a1;
+		background: #FFFFFF;
+		display: inline-block;
+		box-shadow: 0 0 0 3px #FFFFFF inset;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+	.ware_pic{
+		width: 30%;
+		height: 100%;
+		text-align: cente;
+	}
+	.ware_pic img{
+		width: 1.6rem;
+		height: 1.8rem;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+	.ware_explain{
+		width: 60%;
+		height: 100%;
+		display: block;
+		border-bottom: 1px solid #e5e5e5;
+	}
+	.ware_explain p:nth-of-type(1){
+		padding: 0.2rem 0.12rem 0 0;
+		height: 0.76rem;
+		font-size: 0.24rem;
+		font-weight: 500;
+		color: #666666;
+		overflow: hidden;
+		display: -webkit-box;
+   		-webkit-line-clamp: 2;
+    	-webkit-box-orient: vertical;
+	}
+	.ware_explain p:nth-of-type(2){
+		font-size: 0.24rem;
+		color: #999999;
+		margin: 0.1rem 0rem;
+	}
+	.ware_explain p:nth-of-type(2) span:nth-of-type(1){
+		margin-right: 0.5rem;
+	}
+	.ware_explain a{
+		font-size: 0.2rem;
+		display: block;
+		color: #FFFFFF;
+		width: 1rem;
+		height: 0.3rem;
+		line-height: 0.32rem;
+		background: #33cc33;
+		text-align: center;		
+	}
+	
+	.ware_explain p:nth-of-type(3){
+		font-size: 0.24rem;
+		margin: 0.1rem 0rem;
+		position: relative;
+	}
+	.ware_explain p:nth-of-type(3) span:nth-of-type(1){
+		color: #ff9900;
+		font-size: 0.2rem;
+	}
+	.ware_explain p:nth-of-type(3) span:nth-of-type(2){
+		font-size: 0.26rem;
+		color: #ff9900;
+	}
+	.ware_explain p:nth-of-type(3) span:nth-of-type(3){
+		font-size: 0.2rem;
+		color: #c3c3c3;
+		text-decoration: line-through;
+		margin-left: 0.3rem;
+	}
+	.ware_explain p:nth-of-type(3) span:nth-of-type(4){
+		font-size: 0.2rem;
+		color: #c3c3c3;
+		text-decoration: line-through;
+	}
+	.ware_explain p:nth-of-type(3) span:nth-of-type(5){
+		font-size: 0.28rem;
+		color: #333333;
+		position: absolute;
+		top: 50%;
+		right: 0.08rem;
+		transform: translate(0,-50%);
+	}
+	.new_number{
+		color: #333333!important;
+		font-size: 0.28rem!important;
+	}

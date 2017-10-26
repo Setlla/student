@@ -1,0 +1,27 @@
+	/*页尾*/
+	.foot{
+		width: 100%;
+		background-color: #FFFFFF;
+		position: fixed;
+		bottom: 0;
+	}
+	/*页尾用户商品按钮部分*/
+	.foot_warelist{
+		border-top: 1px solid #c3c3c3;
+		overflow: hidden;
+	}
+	.foot_warelist li{
+		width: 33.33%;
+		float: left;
+		color: #808080;
+		font-size: 0.2rem;
+		text-align: center;
+		margin: 0.1rem 0;
+	}
+	.foot_warelist span{
+		display: block;
+	}
+	.foot_warelist li img{
+		width: 0.44rem;
+		height: 0.44rem;
+	}
