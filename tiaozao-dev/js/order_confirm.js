@@ -6,6 +6,11 @@
 		var xuanran=function(){
 			var num1=0;
 			var num2=0;
+			var content1='<img src="img/icon/icon_69.png"/>'
+        				+'<span>'+ware[0].product.ShopName+'</span>'
+        				
+        				$(".monopoly").append(content1);
+			
 			for (var i=0;i<ware.length;i++) {
 				var content=
 					'<ul class="recharge">'

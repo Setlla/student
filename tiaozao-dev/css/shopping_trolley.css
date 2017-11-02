@@ -118,19 +118,18 @@
 		border: 1px solid #33CCFF!important;
 		background: #33CCFF!important;
 	}
-	/*全选按钮结束*/
-	
+	/*全选按钮结束*/	
 	.foot_count{
 		width: 30%;
 		font-size: 0.24rem;		
 		text-align: right;
-		padding:0.05rem 0.2rem 0 0;		
+		padding:0.08rem 0.2rem 0 0;		
 	}
 	.foot_balance li:not(:nth-of-type(3)){
 		border-top: 1px solid #c3c3c3;
 	}	
 	.foot_count p{
-		margin-top: 0.1rem;
+		margin-top: 0.04rem;
 	}
 	.price_color{
 		color:#ee8219;
@@ -168,7 +167,8 @@
 	}
 	.btn_del1{
 		padding: 0.3rem;
-		background: #FF0000;
+		
+		background: #c3c3c3;
 		color: #FFFFFF;
 		outline: none;
 		border: 0px solid #A1A1A1;
@@ -176,6 +176,9 @@
 		top: 50%;
 		right: 0;
 		transform: translate(0,-50%);
+	}
+	.btn_del2{
+		background: #FF0000!important;
 	}
 	/*购物车按钮*/
 	.foot_warelist li:nth-of-type(1) span{

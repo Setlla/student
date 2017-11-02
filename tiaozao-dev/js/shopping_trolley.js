@@ -5,9 +5,11 @@
 	        if ($(this).hasClass("radio_1")) {
 	        	$(this).removeClass('radio_1');
 	        	$(".list_radio").removeClass('radio_1');
+	        	$(".btn_del1").removeClass("btn_del2");
 	        }else {
 	        	$(this).addClass('radio_1');
 	        	$(".list_radio").addClass('radio_1');
+	        	$(".btn_del1").addClass("btn_del2");
 	        }
 	        num();
 	        judge();
@@ -135,7 +137,7 @@
 			$('.ware_explain').css("display","none");
 			$('.show').css("display","block");
 			$(".foot_count").css("display","none");
-			$("foot_fruit").css("display","none");
+			$(".foot_fruit").css("display","none");
 			$(".alldelete").css("display","block");
 		})
 		

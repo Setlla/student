@@ -1,0 +1,38 @@
+	ul{
+		margin: 0!important;
+		padding: 0!important;
+		list-style-type: none;
+	}
+	ul a:hover{
+		text-decoration: none;
+	}
+	.both{
+		clear: both;
+	}
+	.animation_yy{
+		position: relative;
+	}
+	.animation_yy li{
+		width: 33.33%;
+		float: left;
+	}
+	.animation_yy img{
+		width: 196px;
+		height: 307px;
+	}
+	.animation_yy li:hover{
+		transform: translate(0,-10px);
+		transition-duration: 0.7s;/*整个过度花费1秒时间*/
+		transition-timing-function: linear;
+		-webkit-transition-timing-function: linear;
+		transition-delay: 0s;/*从0秒开始过度*/
+	}
+
+	@media only screen and (max-width: 768px) {
+		.animation_yy li{
+			width: 100%;
+			text-align: center;
+			float: left;
+			position: relative;
+		}
+	}

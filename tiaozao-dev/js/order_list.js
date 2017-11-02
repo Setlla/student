@@ -14,12 +14,13 @@
 //  	}) 
 		
 		//数据渲染父组件
+		
 		Vue.component('father',{
 			props:["item","wls","indexNum"],
 			template:'<div class="wl" v-show="wls">'
 					+'<div class="monopoly">'
 		        	+'<img src="img/icon/icon_63.png"/>'
-		        	+'<span>君宝话费充值专营店</span>'
+		        	+'<span>{{item.products[0].ShopName}}</span>'
 		        	+'<span class="mon_arr"></span>'
 		        	+'<span class="mon_success">交易成功</span>'
 		       		+'</div>'
@@ -34,7 +35,7 @@
 	        		+'</li>'
 	        		+'<li>'
 		        	+'<button class="del_btn" @click="del_btn(item.id,indexNum)"><span>删除订单</span></button>'
-		        	+'<button class="judge_btn"><span @click="topublish(item.id)">评价</span></button>'
+		        	+'<button class="judge_btn"><span @click="topublish(item)">评价</span></button>'
 	        		+'</li>'
 	        		+'</ul>'
 	        		+'</div>',
@@ -43,8 +44,9 @@
 	        	rech:function(id){
 					location.href="order_details.html?id="+id;
 				},
-				topublish:function(id){
-					location.href="PublishRating.html?id="+id;
+				topublish:function(item){
+					localStorage.setItem("order",JSON.stringify(item));
+					location.href="PublishRating.html?id="+item.id;
 				},
 	        	//删除订单
 	        	del_btn:function(orderId,indexNum){

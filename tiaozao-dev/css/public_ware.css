@@ -47,7 +47,7 @@
 		border-bottom: 1px solid #e5e5e5;
 	}
 	.ware_explain p:nth-of-type(1){
-		padding-top: 0.2rem;
+		padding: 0.2rem 0.12rem 0 0;
 		height: 0.76rem;
 		font-size: 0.24rem;
 		font-weight: 500;
