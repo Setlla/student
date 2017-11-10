@@ -5,11 +5,11 @@
 	        if ($(this).hasClass("radio_1")) {
 	        	$(this).removeClass('radio_1');
 	        	$(".list_radio").removeClass('radio_1');
-	        	$(".btn_del1").removeClass("btn_del2");
+	        	$(".btn_del1").removeClass("btn_del2").attr("disabled","disabled");
 	        }else {
 	        	$(this).addClass('radio_1');
 	        	$(".list_radio").addClass('radio_1');
-	        	$(".btn_del1").addClass("btn_del2");
+	        	$(".btn_del1").addClass("btn_del2").removeAttr("disabled");
 	        }
 	        num();
 	        judge();
@@ -184,7 +184,6 @@
 
 		})
 		
-		
 		//删除数据渲染
 		$(document).on("click",".btn_del",function(){
 			var id =$(this).parents(".ware").data('id');
@@ -205,6 +204,26 @@
 				}
 			})
 		})
+
+		//全部删除
+		$(document).on("click",".btn_del1",function(){
+			$.ajax({
+				type:"post",
+				url:_url+"/delAllShopCar",
+				async:true,
+				contentType:'application/JSON',
+				data:JSON.stringify({
+					token:localStorage.getItem("token")
+				}),
+				success:function(data,status){
+					if(data.isSuccess==true){
+						$(".list").empty();
+						location.reload();
+					}
+				}
+			});	
+		})
+		
 		
 		//结算跳转			
 		$(document).on("click",".foot_fruit button",function(){	
