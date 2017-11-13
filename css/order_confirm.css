@@ -97,6 +97,8 @@
     	-webkit-box-orient: vertical;   	
 	}
 	.serven a{
+		margin-top: .1rem;
+		text-align: center;
 		display: block;
 		width: 1rem;
 		height: 0.32rem;

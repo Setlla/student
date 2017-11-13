@@ -16,6 +16,9 @@
 		margin: 0.7rem 0rem;
 		vertical-align: middle;
 	}
+	.header_arr{
+		cursor: pointer;
+	}
 	.dot{
 		overflow: hidden;
 		text-align: center;

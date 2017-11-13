@@ -68,6 +68,20 @@ $(document).ready(function(){
 		}
 		track_num();
 		
+//		var acco=function(){
+//			$.ajax({
+//				type:"post",
+//				url:_url+"/delAllShopCar",
+//				async:true,
+//				contentType:'application/JSON',
+//				data:JSON.stringify({
+//					
+//				})
+//			});
+//		}  
+//		
+//		acco(); 
+		
 		
 		//设置跳转到个人信息		
 		$(document).on("click",".header_left",function(){
@@ -102,5 +116,8 @@ $(document).ready(function(){
 		//头像跳转		
 		$(document).on("click",".scu_circle",function(){
 			location.href="personal_message.html";
+		})
+		$(document).on("click",".bill_2",function(){
+			location.href="comment.html";
 		})
 })//ready的括号

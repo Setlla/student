@@ -126,7 +126,7 @@
 	}
 	.bill_goods{
 		height: 0.799rem;
-		border-bottom: 1px solid #efefef;
+		/*border-bottom: 1px solid #efefef;*/
 	}
 	
 	/*尾部除公共样式public_foot.css外设置的属性*/

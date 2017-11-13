@@ -19,6 +19,7 @@
 		top: 50%;
 		left: 0.25rem;
 		transform: translate(0,-50%) rotate(45deg) ;
+		cursor: pointer;
 	}
 	.header_dot{
 		font-size: 0.28rem!important;
