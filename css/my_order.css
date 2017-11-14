@@ -1,3 +1,6 @@
+	body{
+		background: #FFF!important;
+	}
 	/*标题模块*/
 	.order_header{
 		overflow: hidden;
@@ -24,11 +27,32 @@
 	.order_content{
 		text-align: center;
 		font-size: 0.28rem;
-		padding-top: 1rem;
 		color: #888888;
 	}
-	.order_content img{
+	.no_order img{
 		width: 1.14rem;
 		height: 1.44rem;
 		margin-bottom: 0.35rem;
+	}
+	.recharge{
+		margin-bottom:0!important;
+		border-bottom: 2px solid #FFF;
+	}
+	.recharge li{
+		margin: 0!important;
+	}
+	.allprice{
+		margin: 0.1rem 0;
+		text-align: right;
+		padding-right: 0.2rem;
+		color: #333333;
+	}
+	.recharge li:nth-of-type(3) p:nth-of-type(1){
+		color: #333!important;
+	}
+	.recharge li:nth-of-type(3) p:nth-of-type(2){
+		text-decoration: line-through;
+	}
+	.monopoly{
+		text-align: left;
 	}

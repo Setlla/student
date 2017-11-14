@@ -14,47 +14,16 @@ Vue.component('start',{
 			for(var i=0;i<=4;i++){
 				if(i>index){
 					Vue.set(this.items,i,'img/icon/fb_15.png');
-//					this.items[i].xin = 'img/icon/fb_15.png';
 				}else{
-//					this.items[i].xin = 'img/icon/fbb_03.png';
 					Vue.set(this.items,i,'img/icon/fbb_03.png');
 				}
 			}
 			
 			Vue.set(Release.miss, productIndex, Release.assess[index]);
-			
-			
-			
-//			switch(index) {
-//				case 0: 
-//					Vue.set(Release.miss, productIndex, "差");
-//					break;
-//				case 1: 
-//					Vue.set(Release.miss, productIndex, "一般");
-//					break;
-//				case 2: 
-//					Vue.set(Release.miss, productIndex, "好");
-//					break;
-//				case 3: 
-//					Vue.set(Release.miss, productIndex, "较好");
-//					break;
-//				case 4: 
-//					Vue.set(Release.miss, productIndex, "非常好");
-//					break;
-//				default: 
-//					Vue.set(Release.miss, productIndex, "");
-//			}
-			
-			
 		}
 	},
 	data:function(){
 		return{
-//			items:[{xin:'img/icon/fb_15.png'},
-//			   {xin:'img/icon/fb_15.png'},
-//			   {xin:'img/icon/fb_15.png'},
-//			   {xin:'img/icon/fb_15.png'},
-//			   {xin:'img/icon/fb_15.png'}]
 			items:[
 				'img/icon/fb_15.png',
 				'img/icon/fb_15.png',
