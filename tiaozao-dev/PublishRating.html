@@ -14,7 +14,7 @@
 	    <script type="text/javascript" src="js/vue.js" ></script>
 	</head>
 	<body>
-		<div class="whole">	
+		
 		<!--
         	作者：492680716@qq.com
         	时间：2017-10-23
@@ -31,7 +31,7 @@
         	时间：2017-10-23
         	描述：描述
        -->
-        <div v-for="product in products">     
+        <div v-for="(product,index) in products">     
 		<ul class="describe">
 			<li>
 				<img class="tt_img"  :src="product.Image"/>
@@ -40,10 +40,10 @@
 				<span>描述相符</span>
 			</li>
 			<li class="spot">
-				<start :items="items"></start>
+				<start :product-index="index"></start>
 			</li>
 			<li>
-				<span>非常好</span>
+				<span>{{miss[index]}}</span>
 			</li>
 		</ul>
 		</div>
@@ -55,7 +55,7 @@
         <ul class="appease">
         	<li>
         		<textarea class="appeasebaby" v-model="content">宝贝满足你的期待吗？说说它的有点和它的不足吧 ！</textarea>
-				<!--<img src="img/icon/fbpj_03.png"/>-->
+				<!--<img src="img/icon/fbpj_03.png"/><-->
         	</li>
         </ul>
 		<!--
@@ -70,19 +70,11 @@
 			</li>
 			<li>
 				<span>物流服务</span>
-				<img src="img/icon/fb_15.png"/>
-				<img src="img/icon/fb_15.png"/>
-				<img src="img/icon/fb_15.png"/>
-				<img src="img/icon/fb_15.png"/>
-				<img src="img/icon/fb_15.png"/>
+				<start></start>
 			</li>
 			<li>
 				<span>服务态度</span>
-				<img src="img/icon/fb_15.png"/>
-				<img src="img/icon/fb_15.png"/>
-				<img src="img/icon/fb_15.png"/>
-				<img src="img/icon/fb_15.png"/>
-				<img src="img/icon/fb_15.png"/>
+				<start></start>
 			</li>
 		</ul>
 		</div>

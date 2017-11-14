@@ -6,7 +6,7 @@
 		} else{
 			xmlhttp=new ActiveXObject();
 		}
-var bb=1; function aa(bb){bb=2;alert(bb)}; aa(bb);alert(bb)
+		
 		xmlhttp.open("POST",_url+"/login","true");
 		var account=document.querySelector(".account").value;
 		var pwd=document.querySelector(".password").value;

@@ -58,7 +58,8 @@
 					isInvoice:flag,
 					message:message,
 					productId:"["+productId+"]",
-					productNum:"["+productNum+"]"
+					productNum:"["+productNum+"]",
+					state:3
 				}),
 				success:function(data,status){
 					if (data.isSuccess==true) {

@@ -1,36 +1,56 @@
 
 //var id=getParams('id');
-var token=localStorage.getItem("token");	
-
-
-
+var token=localStorage.getItem("token"),	
+ id=getParams('id')
+ 
 Vue.component('start',{
-	props:['items','index'],
-	template:'<div>'
-	        +'<img v-for="(item,index) in items"  @click="change(index)" :src="item.xin"/>'
-	        +'</div>',
+	props:['productIndex'],
+	template:'<span>'
+	        +'<img v-for="(item,index) in items"  @click="change(index,productIndex)" :src="item"/>'
+	        +'</span>',
+	   
 	methods: {
-		change:function(index){		
+		change:function(index,productIndex){		
+			for(var i=0;i<=4;i++){
+				if(i>index){
+					Vue.set(this.items,i,'img/icon/fb_15.png');
+				}else{
+					Vue.set(this.items,i,'img/icon/fbb_03.png');
+				}
+			}
 			
-			this.items[index].xin = 'img/icon/fbb_03.png';
+			Vue.set(Release.miss, productIndex, Release.assess[index]);
+		}
+	},
+	data:function(){
+		return{
+			items:[
+				'img/icon/fb_15.png',
+				'img/icon/fb_15.png',
+				'img/icon/fb_15.png',
+				'img/icon/fb_15.png',
+				'img/icon/fb_15.png'
+			]
 		}
 	}
 })
 
-var id=getParams('id');
-var token=localStorage.getItem("token");	
+
+
+
 var order=JSON.parse(localStorage.getItem('order'));
 var Release=new Vue({
 	el:'.whole',
 	data: {
+		assess:["差","一般","好","较好","非常好"],
 		content: '',
-		items:[{xin:'img/icon/fb_15.png'},
-			   {xin:'img/icon/fb_15.png'},
-			   {xin:'img/icon/fb_15.png'},
-			   {xin:'img/icon/fb_15.png'},
-			   {xin:'img/icon/fb_15.png'}
-		]
-		products:order.products
+		products:order.products,
+		miss: []
+	},
+	created: function() {
+		for(var i=0;i<order.products.length;i++) {
+			this.miss.push('');
+		}
 	},
 	methods:{
 		Release:function(){
@@ -55,7 +75,4 @@ var Release=new Vue({
 			history.back();
 		},	
 	},
-})
-
-	}
 })

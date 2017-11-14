@@ -19,6 +19,7 @@
        			+'</div>',
        			methods:{
        				evaluate:function(){
+       					
 						location.href="PublishRating.html"
 					},
        			}
