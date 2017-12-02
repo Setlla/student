@@ -8,7 +8,7 @@
 			$(this).attr("readonly","readonly").css("text-align","right");
 		})
 		
-		//本地预览图片函数
+		//本地预览图片函数 浏览器的缓存
 		function getObjectURL(file) {
 			var url = null ;
 			if (window.createObjectURL!=undefined) { // basic
@@ -18,7 +18,7 @@
 			} else if (window.webkitURL!=undefined) { // webkit or chrome
 			url = window.webkitURL.createObjectURL(file) ;
 			}
-			return url ;
+			return url ; //url  地址
 		}
 		
 		
@@ -37,10 +37,10 @@
 
 		//修改本地图片为动态图片		
 		$(document).on("change",".file_img",function(){
-			var datas=new FormData();
+			var datas=new FormData(); // file文件    form表单提交或formdata
 			datas.append("token",token);
 			datas.append("file",$(".file_img")[0].files[0]);
-			var img=getObjectURL($(".file_img")[0].files[0]);
+			var img=getObjectURL($(".file_img")[0].files[0]); //  预览
 			$('.intercalate_head').attr('src',img);
 			$.ajax({
 				type:"post",
@@ -52,8 +52,10 @@
 				success:function(data){
 					if(data.isSuccess==true){
 						$('.intercalate_head').attr('src',data.headImage);
+						var user=JSON.parse(localStorage.getItem("user"));
+						user.headImage = data.headImage;
+						localStorage.setItem("user", JSON.stringify(user));
 					}
-					
 				}
 			})
 		})

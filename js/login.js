@@ -1,22 +1,22 @@
 	//登录按钮功能
 	document.querySelector(".content button").addEventListener("click",function(){
+		var account=document.querySelector(".account").value;
+		var pwd=document.querySelector(".password").value;
+		var s=phones(account);
+		var user={
+			phone:account,
+			password:hex_md5(pwd)  // md5算法加密
+		};
+		
 		var xmlhttp;
 		if (window.XMLHttpRequest) {
 			xmlhttp=new XMLHttpRequest();
 		} else{
 			xmlhttp=new ActiveXObject();
 		}
-		
-		xmlhttp.open("POST",_url+"/login","true");
-		var account=document.querySelector(".account").value;
-		var pwd=document.querySelector(".password").value;
-		var s=phones(account);
-		xmlhttp.setRequestHeader("Content-Type","application/JSON");
-		var user={
-			phone:account,
-			password:hex_md5(pwd)
-		};
-		xmlhttp.send(JSON.stringify(user));
+		xmlhttp.open("POST",_url+"/login");
+		xmlhttp.setRequestHeader("Content-Type","application/JSON");//
+		xmlhttp.send(JSON.stringify(user));//参数——> string     后台string->obj
 		xmlhttp.onreadystatechange=function(){
 			if(xmlhttp.readyState==4 && xmlhttp.status==200){		
 				var islog=JSON.parse(xmlhttp.responseText);
@@ -27,7 +27,7 @@
 					location.href="personal_center.html"; 
 				}else{
 					alert("你输入的账户名或者密码错误，请重新输入！");
-					location.reload(); 
+					location.reload();
 				}
 			}
 		}
@@ -41,6 +41,7 @@
 	document.querySelector(".register").addEventListener("click",function(){
 		location.href="register.html";
 	})
+	
 	
 	//忘记密码
 	document.querySelector(".forgetpwd").addEventListener("click",function(){

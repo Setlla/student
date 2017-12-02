@@ -1,10 +1,10 @@
 	
-	var phone_reg=document.querySelector(".phone_reg");
-	var mail_reg=document.querySelector(".mail_reg");
-	var mail_ipt=document.querySelector(".mail_ipt");
-	var phone_ipt=document.querySelector(".phone_ipt");
-	var pwd_ipt=document.querySelector(".pwd_ipt");
-	var isflag=false;
+	var phone_reg=document.querySelector(".phone_reg"),
+		mail_reg=document.querySelector(".mail_reg"),
+		mail_ipt=document.querySelector(".mail_ipt"),
+		phone_ipt=document.querySelector(".phone_ipt"),
+		pwd_ipt=document.querySelector(".pwd_ipt"),
+		isflag=false;
 	
 	document.querySelector(".register").addEventListener("click",function(e){
 		//手机注册
@@ -32,11 +32,9 @@
 	var judge=function(){
 		//判断是手机注册click || 邮箱注册click
 		if (isflag==true) {
-			phones(phone_ipt.value);
-			return true;
+			return phones(phone_ipt.value);
 		} else{
-			mails(mail_ipt.value);
-			return true;
+			return mails(mail_ipt.value);
 		}
 	}
 	//注册按钮事件
