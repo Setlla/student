@@ -1,0 +1,28 @@
+
+
+
+.banner{height: 2.9rem;background: #33ccff;padding-top: 0.9rem;}
+.banner img{display: block;width: 2rem;height: 2rem;border-radius: 50%;margin: 0 auto;}
+
+.deng{width: 85%;margin: 0 auto;}
+.deng input{display: block;border: 0;border-bottom: 0.02rem solid #12a2e5;width: 85%;margin: 0 auto;margin-top: 0.68rem;height: 0.45rem;line-height: 0.45rem;background-size: 0.35rem 0.45rem;padding: 0.15rem 0 0.15rem 15%;font-size: 0.28rem;outline: none;}
+
+.deng input::-webkit-input-placeholder{font-size: 0.26rem;color: #bfbfbf;}
+
+
+.deng .zhanghao{background: url(../images/zhanghao.png)no-repeat 0.3rem center;background-size: 0.35rem 0.45rem;}
+.deng .mima{background: url(../images/mima.png)no-repeat 0.3rem center;background-size: 0.35rem 0.45rem;margin-top: 0;}
+
+.deng .denglu{display: block;height: 0.8rem;line-height: 0.8rem;font-size: 0.28rem;color:#33CCFF;text-align: center;margin-top: 0.8rem;border: 0.02rem solid #33ccff;border-radius: 0.06rem;}
+
+.bottom{margin-top: 1.6rem;overflow: hidden;}
+.bottom .wangji{float: left;padding-left: 0.2rem;font-size: 0.24rem;color: #33CCFF;height: 0.5rem;line-height: 0.5rem;}
+.bottom .zhuce{float: right;margin-right: 0.2rem;font-size: 0.28rem;color: #33CCFF;width: 1.2rem;height: 0.5rem;line-height: 0.5rem;text-align: center;border: 0.01rem solid #33CCFF;border-radius: 0.06rem;}
+
+
+
+
+
+
+
+

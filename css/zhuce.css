@@ -1,0 +1,36 @@
+.top{height: 0.9rem;line-height: 0.9rem;background: #33ccff;text-align: center;position: relative;}
+.top a{width: 0.3rem;height: 0.3rem;border-left: 0.03rem solid #FFFFFF;
+border-bottom: 0.03rem solid #FFFFFF;transform:rotate(45deg);position: absolute;left: 0.3rem;top: 0.3rem;}
+.top p{font-size: 0.32rem;color: white;margin: 0 auto;}
+
+.fangshi{border-bottom: 0.02rem solid #dddddd;overflow:hidden;}
+.fangshi a{float: left;font-size: 0.28rem;color: #333333;width: 50%;height: 0.78rem;line-height: 0.78rem;text-align: center;}
+
+.fangshi .shouji{border-bottom: 0.05rem solid #33ccff;box-sizing: border-box;}
+.fangshi .youxiang{box-sizing: border-box;}
+
+.box{height: 3.3rem;border: 0.02rem solid #c9c9c9;border-radius: 0.1rem;margin:0.35rem 0.3rem;padding: 0.02rem;position: relative;}
+.box input{border: 0;border-bottom: 0.02rem solid #c9c9c9;width: 85%;display: block;height: 1.05rem;line-height: 1.05rem;padding-left: 15%;font-size: 0.3rem;outline: none;}
+.box input::-webkit-input-placeholder{font-size: 0.26rem;color: #bbbbbb;}
+
+.box .phone{border-top-left-radius: 0.1rem;border-top-right-radius: 0.1rem; }
+.box .email{border-top-left-radius: 0.1rem;border-top-right-radius: 0.1rem;display: none;}
+.box .password{background: url(../images/shuo.png)no-repeat 0.3rem center;background-size: 0.3rem 0.3rem;}
+.box .code{border-bottom: 0;border-bottom-left-radius: 0.1rem;border-bottom-right-radius: 0.1rem }
+.box i{font-size: 0.4rem;color: #969696;position: absolute;top:0.3rem;left: 0.3rem;}
+.box a{font-size: 0.12rem;height: 0.4rem;line-height: 0.4rem;border: 0.02rem solid #308cf0;text-align: center;color: #61a7f3;position: absolute;left: 0.3rem;bottom: 0.32rem;border-radius: 50%;display: block;width: 0.4rem;}
+.box .sendMessage{position: absolute;right: 0.2rem;bottom: 0.245rem;height: 0.6rem;line-height:0.6rem;display: block;border: 0;
+background: red;border-radius: 0.05rem;color: #FFFFFF;width: 2rem;padding: 0;font-size: 0.26rem;}
+
+
+.zhuce{padding: 0 0.3rem;}
+.zhuce a{display: block;height: 0.8rem;line-height: 0.8rem;font-size: 0.28rem;;text-align: center;margin-top: 0.8rem;background: #33CCFF;color: #FFFFFF;border-radius: 0.06rem;}
+
+
+
+
+
+
+
+
+

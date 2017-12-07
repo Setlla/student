@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>个人设置</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/shezhi.css"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	</head>
+	<body>
+		<div class="top">
+			<a href="javascript:history.back(-1)"></a>
+			<p>个人信息</p>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		
+		<div class="infomation">
+			<div class="appear">
+			<p>头像</p>
+			<a></a>
+			<img src="images/shezhitouxiang.png" class="image"/>
+			<input type="file" class="upload" accept="image/*" onchange="selectImage(this);">
+			</div>
+			<ul>
+				<li>
+					<p>昵称</p>
+					<a></a>
+					<input type="text" class="name" value="昵称" />
+				</li>
+				<li>
+					<p>性别</p>
+					<a></a>
+					<select class="sex">
+						<option value="男">男</option>
+						<option value="女">女</option>
+					</select>
+				</li>
+				<li>
+					<p>我的收货地址</p>
+					<a></a>
+					<input type="text" class="address" value="长沙" />
+				</li>
+			</ul>
+		</div>
+		<div class="tijiao">
+			提交
+		</div>
+		
+		
+		
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/shezhi.js"></script>
+	</body>
+</html>
