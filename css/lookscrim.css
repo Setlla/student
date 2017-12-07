@@ -1,0 +1,35 @@
+.header{height: 0.7rem;background: #33CCFF;}
+.tupian-a{position: absolute;
+    top: 0.26rem;
+    left: 0.58rem;
+    height: 0.18rem;}
+.write-a{font-size: 0.28rem;font-style: normal;display: block;text-align: center;line-height: 0.705rem;color: #ffffff;}
+
+.shuru-a{width: 85%;height: 0.76rem;display: block;margin: 0.5rem auto 0;padding-left: 0.35rem;font-size: 0.24rem;
+    border-radius: 0.3rem;
+    border: 0.02rem solid #e8e8ea;outline: none;box-sizing: border-box;}
+    
+    
+    
+.hebing{width: 85%;margin: 0.3rem auto;height: 0.76rem;}
+    
+    
+.shuru-b{height: 0.76rem;width: 70%;font-size: 0.24rem;padding-left: 0.35rem;float: left;box-sizing: border-box;
+    border-radius: 0.3rem;
+    border: 0.02rem solid #e8e8ea;outline: none;}
+
+.shuru-c{height: 0.76rem;width:28%;font-size: 0.24rem;background: #fa6c62;color: #ffffff;
+    border-radius: 0.3rem;float: right;
+    border: 0.02rem solid #e8e8ea;outline: none;}
+
+.shuru-d{width: 85%;height: 0.76rem;display: block;padding-left: 0.35rem;font-size: 0.24rem;margin: 0 auto;
+    border-radius: 0.3rem;
+    border: 0.02rem solid #e8e8ea;outline: none;box-sizing: border-box;}
+ .weibu{height: 0.76rem;width: 85%;display: block;margin: 1.08rem auto 6.78rem;background: #33ccff;
+    border-radius: 0.3rem;
+    border: 0.02rem solid #e8e8ea;outline: none;box-sizing: border-box;box-sizing: border-box;}
+ .tijiao{font-size: 0.3rem;color: #ffffff;text-align: center;display: block;
+    line-height: 0.765rem;} 
+
+
+

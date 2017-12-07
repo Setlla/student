@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		var xxh=new XMLHttpRequest();
+		xxh.open("POST","http://")
+		xxh.setRequestHeader("content-type","application/json")
+		xxh.send(JSON.stringify({id:1}))
+		xxh.onreadystatechang=function(){if(xxh.status==200&&xxh.readyState==4){bann
+			(JSON.parse(xxh.response).result);
+		}
+		}
+		function bann(result){var xhr="";for(var i=0;i<result.length;i++){xhr=xhr+
+		}
+		document.querySeletor(".goods").innerHTML=xhr;
+		
+		}
+		
+		xxh.setRequestHeader("content-type","application/json")
+		xxh.send(JSON.stringify({id:1}))
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
