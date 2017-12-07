@@ -13,7 +13,10 @@ border-bottom: 0.03rem solid #FFFFFF;transform:rotate(45deg);position: absolute;
 
 .infomation .appear{height: 1.7rem;overflow: hidden;padding: 0 0.3rem;line-height: 1.7rem;background: #FFFFFF;position: relative;}
 .infomation p{font-size: 0.3rem;color: #232323;float: left;}
-.infomation .appear img{float: right;width: 1.2rem;height: 1.2rem;border-radius: 50%;position: absolute;top: 0.25rem;right: 1.5rem;z-index: 10;}
+.infomation .appear img{width: 1.2rem;height: 1.2rem;border-radius: 50%;position: absolute;top: 0.25rem;right: 1.2rem;z-index: 10;}
+.upload{position: absolute; z-index: 100; opacity: 0;width: 1.2rem; height: 1.2rem;top: 0.25rem;right: 1.2rem;}
+
+
 .infomation .appear a{width: 0.22rem;height: 0.22rem;border-right: 0.03rem solid #9c9c9c;
 border-top: 0.03rem solid #9c9c9c;transform:rotate(45deg);float: right;margin-top: 0.74rem;}
 
@@ -21,12 +24,9 @@ border-top: 0.03rem solid #9c9c9c;transform:rotate(45deg);float: right;margin-to
 .infomation ul li{overflow: hidden;height: 0.88rem;line-height: 0.88rem;padding-right:0.3rem;border-top: 0.02rem solid #eeeeee;margin-left: 0.3rem;position: relative;}
 
 
-.upload{position: absolute;float: left; z-index: 100; opacity: 0;width: 1.2rem; height: 1.2rem;top: 0.25rem;right: 1.5rem;}
+.infomation ul li select{font-size: 0.3rem;color: #9c9c9c;padding-right: 0.5rem;border: 0;vertical-align: middle;height: 0.4rem;outline: none;margin-top: 0.2rem;-webkit-appearance:none;float: right;margin-right: 0.6rem;padding: 0;}
 
-.infomation ul li select{font-size: 0.3rem;color: #9c9c9c;padding-right: 0.5rem;border: 0;vertical-align: middle;height: 0.4rem;outline: none;margin-top: 0.2rem;position: absolute;
-left: 70%;-webkit-appearance:none}
-
-.infomation ul li input{font-size: 0.3rem;color: #9c9c9c;border: 0;outline: none;width: 25%;height: 0.88rem;position: absolute;left: 70%;}
+.infomation ul li input{font-size: 0.3rem;color: #9c9c9c;border: 0;outline: none;width: 25%;height: 0.88rem;float: right;margin-right:0.6rem;text-align: right;}
 .infomation ul li a{width: 0.22rem;height: 0.22rem;border-right: 0.03rem solid #9c9c9c;
 border-top: 0.03rem solid #9c9c9c;transform:rotate(45deg);float: right;margin-top: 0.33rem;}
 

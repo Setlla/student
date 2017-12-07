@@ -45,6 +45,7 @@ $.ajax({
 	data: JSON.stringify({token}),
 	url:"http://39.108.219.59:8080/getPerson",
 	success:function(result){
+		localStorage.setItem("user",JSON.stringify(result.result[0]))
 		bus(result.result);
 	}
 });
@@ -52,10 +53,12 @@ $.ajax({
 
 function bus(result){
 	$(".nickname").html(result[0].name)
-	$(".banner img").html(result[0].headImage)
+	$(".banner img").attr('src',result[0].headImage)
 }
 
-
+$(".banner img").on('click',function(){
+	location.href="shezhi.html"
+})
 
 
 

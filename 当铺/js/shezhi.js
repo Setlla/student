@@ -1,8 +1,13 @@
-$(".tijiao").on("click", function() {
-	aj(),
-	uploadImage()
-})
 var token = localStorage.getItem("token")
+var user = JSON.parse(localStorage.getItem("user"));
+$(".name").val(user.name)
+$(".image").attr('src',user.headImage)
+
+
+
+$(".tijiao").on("click", function() {
+	aj();
+})
 
 function aj() {
 	var name = $(".name").val();
@@ -25,35 +30,26 @@ function aj() {
 	});
 }
 
-var image = "";
-
-function selectImage(file) {
-	if(!file.files || !file.files[0]) {
-		return;
-	}
-	var reader = new FileReader();
-	reader.onload = function(evt) {
-		document.querySelector(".image").src = evt.target.result;
-		image = evt.target.result;
-	}
-	reader.readAsDataURL(file.files[0]);
-}
-
 function uploadImage() {
-	var axp=JSON.stringify({"file":image,"token":token});
+	var formData = new FormData();
+	var img = $('.upload')[0].files[0];
+	formData.append("file", img);
+	formData.append("token", token);
 	$.ajax({
 		type: "POST",
 		url: "http://39.108.219.59:8080/setHeadImage",
-		contentType: "application/JSON",
-		data:axp,
-		success: function() {
-			
+		contentType: false,
+		processData:false,
+		data:formData,
+		success: function(suces) {
+			$(".image").attr('src',suces.headImage)
 		},
 	});
 }
 
-
-
+$(document).on('change','.upload',function() {
+	uploadImage();
+})
 
 
 
