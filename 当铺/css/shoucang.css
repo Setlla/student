@@ -1,4 +1,4 @@
-.top{height: 0.9rem;line-height: 0.9rem;background: #FFFFFF;text-align: center;position: relative;border-bottom: 0.03rem solid #e5e5e5;}
+.top{height: 0.9rem;line-height: 0.9rem;background: #FFFFFF;text-align: center;position: relative;border-bottom: 0.03rem solid #e5e5e5;box-sizing: border-box;}
 .top a{width: 0.25rem;height: 0.25rem;border-left: 0.03rem solid #4d4c52;
 border-bottom: 0.03rem solid #4d4c52;transform:rotate(45deg);position: absolute;left: 0.3rem;top: 0.3rem;}
 .top img{position: absolute;top: 0.25rem;right: 0.3rem;width: 0.4rem;height: 0.4rem;padding-left: 0.3rem;border-left: 0.03rem solid #CCCCCC;}

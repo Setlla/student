@@ -21,6 +21,7 @@ function exp(result) { //函数申明
 			"</div>" +
 			"</div>"
 	}
+	
 	document.querySelector(".commen").innerHTML = commen;
 }
 
@@ -55,13 +56,26 @@ function isBook(flag) { //是否显示书籍
 	}
 }
 
-document.querySelector(".sousuo input").addEventListener("blur", function() {
+var input=document.querySelector(".sousuo input");
+var beijing=document.querySelector(".beijing");
+input.addEventListener("click", function() {
+	this.style.cssText="position:fixed;top:0;width:100%;border:0;border-radius:0";
+	beijing.style.display="block";
+})
+
+
+input.addEventListener("blur", function() {
+	this.style.cssText="position:none;width:90%;border:0;border-radius: 0.25rem;border: 0.01rem solid #808080;";
+	beijing.style.display="none"
 	var comen = this.value;
 	var pn = JSON.stringify({
 		productName: comen
 	});
 	nner(pn);
 })
+
+
+
 
 //function nner(pn){
 //	var xhr = new XMLHttpRequest();
@@ -100,8 +114,3 @@ function nner(pn) {
 }
 }
 
-document.querySelector(".bottomnav").addEventListener("click",function(e){
-	if(e.target.className == "personal"){
-		location.href="gerenzhongxin.html"
-	}
-})

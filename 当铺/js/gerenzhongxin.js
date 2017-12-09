@@ -1,6 +1,13 @@
 var token=localStorage.getItem("token")
+document.querySelector(".collection").addEventListener("click",function(){
+	location.href="shoucang.html"
+})
 
-$.ajax({										//我的收藏
+document.querySelector(".footprint").addEventListener("click",function(){
+	location.href="zuji.html"
+})
+
+$.ajax({										//我的足迹
 	type:"POST",
 	contentType:"application/json",
 	data: JSON.stringify({token}),
@@ -16,10 +23,10 @@ function banner(result){
 	for(var i=0;i<result.length;i++){
 		frequency=frequency+result[i].browselogs[0].product.length;
 	}
-	document.querySelector(".collection i").innerHTML=frequency;
+	document.querySelector(".footprint i").innerHTML=frequency;
 }
 
-$.ajax({										//我的足迹
+$.ajax({										//我的收藏
 	type:"POST",
 	contentType:"application/json",
 	data: JSON.stringify({token}),
@@ -34,12 +41,12 @@ function bann(result){
 	for(var i=0;i<result.length;i++){
 		footprint=footprint+result[i].product.length;
 	}
-	document.querySelector(".footprint i").innerHTML=footprint;
+	document.querySelector(".collection i").innerHTML=footprint;
 }
 
 
 
-$.ajax({
+$.ajax({										//个人信息
 	type:"POST",
 	contentType:"application/json",
 	data: JSON.stringify({token}),

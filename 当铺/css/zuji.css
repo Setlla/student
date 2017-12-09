@@ -1,0 +1,46 @@
+.top{height: 0.9rem;line-height: 0.9rem;background: #FFFFFF;text-align: center;position: relative;border-bottom: 0.02rem solid #cccccc;}
+.top a{width: 0.3rem;height: 0.3rem;border-left: 0.03rem solid #4c4b50;
+border-bottom: 0.03rem solid #4c4b50;transform:rotate(45deg);position: absolute;left: 0.3rem;top: 0.3rem;}
+.top p{font-size: 0.32rem;color: #28282a;margin: 0 auto;}
+
+.top div{width: 1.4rem;position: absolute;top:0rem;right: 0.5rem;display: block;overflow: hidden;}
+.empty{font-size: 0.26rem;color: #828187;float: left;}
+.editor{font-size: 0.26rem;color: #828187;float: right;}
+
+.content{}
+.content .time{height: 0.8rem;line-height:0.8rem;margin-left: 0.2rem;font-size: 0.28rem;color: #808082;border-bottom: 0.02rem solid #e5e5e5;}
+
+
+.computer{padding:0.5rem 0.2rem 0 0.2rem;overflow: hidden;width: 100%;display: flex;box-sizing: border-box;}
+.computer .left{}
+.computer .left img{width: 2rem;height: 2rem;overflow: hidden;padding: 0.01rem;}
+
+.computer .right{float: left;margin-left: 0.2rem;width: 100%;flex: 1;padding-bottom: 0.4rem;border-bottom: 0.02rem solid #e5e5e5;}
+
+.computer .title{display: block;}
+.computer .title h2{font-size: 0.26rem;color: #333333;overflow: hidden;text-overflow: ellipsis;-webkit-line-clamp: 2;display: -webkit-box;-webkit-box-orient: vertical;}
+.computer p{float: left;padding-top: 0.12rem;}
+.computer p i{font-size: 0.2rem;font-style: normal;color: #ea3b40;}
+.computer p span{font-size: 0.28rem;color: #ea3b40;}
+
+
+
+.xiangshi{overflow: hidden;padding-top: 0.3rem;}
+
+.xiangshi .lock{font-size: 0.22rem;padding: 0.1rem;border: 0.01rem solid #d5d5d5;border-radius: 0.05rem;color: #787878;float: right;margin-right: 0.3rem;}
+.xiangshi .glyphicon{float: right;}
+.xiangshi .glyphicon img{width: 0.26rem;height: 0.26rem;padding: 0.1rem;border: 0.01rem solid #d93445;float: right;border-radius: 0.05rem;color: #d93445;margin-right: 0.2rem;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+rem
