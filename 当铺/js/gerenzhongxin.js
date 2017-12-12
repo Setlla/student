@@ -21,7 +21,7 @@ $.ajax({										//我的足迹
 function banner(result){				
 	var frequency=0;
 	for(var i=0;i<result.length;i++){
-		frequency=frequency+result[i].browselogs[0].product.length;
+		frequency=frequency+result[i].browselogs.length;
 	}
 	document.querySelector(".footprint i").innerHTML=frequency;
 }

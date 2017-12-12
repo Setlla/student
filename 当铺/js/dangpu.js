@@ -21,7 +21,7 @@ function exp(result) { //函数申明
 			"</div>" +
 			"</div>"
 	}
-	
+
 	document.querySelector(".commen").innerHTML = commen;
 }
 
@@ -56,26 +56,22 @@ function isBook(flag) { //是否显示书籍
 	}
 }
 
-var input=document.querySelector(".sousuo input");
-var beijing=document.querySelector(".beijing");
+var input = document.querySelector(".sousuo input");
+var beijing = document.querySelector(".beijing");
 input.addEventListener("click", function() {
-	this.style.cssText="position:fixed;top:0;width:100%;border:0;border-radius:0";
-	beijing.style.display="block";
+	this.style.cssText = "position:fixed;top:0;width:100%;border:0;border-radius:0";
+	beijing.style.display = "block";
 })
 
-
 input.addEventListener("blur", function() {
-	this.style.cssText="position:none;width:90%;border:0;border-radius: 0.25rem;border: 0.01rem solid #808080;";
-	beijing.style.display="none"
+	this.style.cssText = "position:none;width:90%;border:0;border-radius: 0.25rem;border: 0.01rem solid #808080;";
+	beijing.style.display = "none"
 	var comen = this.value;
 	var pn = JSON.stringify({
 		productName: comen
 	});
 	nner(pn);
 })
-
-
-
 
 //function nner(pn){
 //	var xhr = new XMLHttpRequest();
@@ -103,14 +99,13 @@ nner();
 //}
 
 function nner(pn) {
-	var xhr=new XMLHttpRequest();
-	xhr.open("POST","http://39.108.219.59:8080/productList")
-	xhr.setRequestHeader("content-type","application/json")
+	var xhr = new XMLHttpRequest();
+	xhr.open("POST", "http://39.108.219.59:8080/productList")
+	xhr.setRequestHeader("content-type", "application/json")
 	xhr.send(pn);
 	xhr.onreadystatechange = function() {
-		if(xhr.status == 200 && xhr.readyState == 4){
+		if(xhr.status == 200 && xhr.readyState == 4) {
 			exp(JSON.parse(xhr.response).result);
+		}
 	}
 }
-}
-

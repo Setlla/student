@@ -17,11 +17,11 @@ function shabi(result) {
 	var xxh = "";
 	for(var i = 0; i < result.length; i++) {
 		xxh = xxh + "<div class='computer'>" +
-			"<a href='#' class='left'>" +
+			"<a href=xiangqing.html?id=" + result[i].product[0].id + " class='left' >" +
 			"<img src=" + result[i].product[0].Image + "/>" +
 			"</a>" +
 			"<div class='right'>" +
-			"<a href='#' class='title'>" +
+			"<a href=xiangqing.html?id=" + result[i].product[0].id + " class='title'>" +
 			"<h2>" + result[i].product[0].Name + "</h2>" +
 			"</a>" +
 			"<p>" +

@@ -20,22 +20,23 @@ function date(time) {
 }
 
 function bann(result) {
+	
 	var content = "";
 	for(var i = 0; i < result.length; i++) {
 		content = content + "<div class='content'>" +
-			"<p class='time'>" + date(result[i].product[0].createdAt) + "</p>" +
+			"<p class='time'>" + date(result[i].browselogs[i].product[0].updatedAt) + "</p>" +
 			"<div class='computer'>" +
 			"<a href='#' class='left'>" +
-			"<img src=" + result[i].product[0].Image + "/>" +
+			"<img src=" + result[i].browselogs[i].product[0].Image + "/>" +
 			"</a>" +
 			"<div class='right'>" +
 			"<a href='#' class='title'>" +
-			"<h2>" + result[i].product[0].Name + "</h2>" +
+			"<h2>" + result[i].browselogs[i].product[0].Name + "</h2>" +
 			"</a>" +
 			"<div class='xiangshi'>" +
 			"<p>" +
 			"<i>￥</i>" +
-			"<span>" + result[i].product[0].CurPrice + "</span>" +
+			"<span>" + result[i].browselogs[i].product[0].CurPrice + "</span>" +
 			"</p>" +
 			"<a herf='#' class='glyphicon'>" +
 			"<img src='images/gouwuche.png'/>" +
