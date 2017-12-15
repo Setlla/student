@@ -1,19 +1,24 @@
-var xhr = new XMLHttpRequest();
-xhr.open("POST", "http://39.108.219.59:8080/productList")
-xhr.send();
-xhr.onreadystatechange = function() {
-	if(xhr.status == 200 && xhr.readyState == 4) {
-		bann(JSON.parse(xhr.response).result);
-	}
+var data = {productName: document.querySelector('.shuru-a').value}
+getData();
 
+function getData() {
+	var xhr = new XMLHttpRequest();
+	xhr.open("POST", "http://39.108.219.59:8080/productList");
+	xhr.setRequestHeader("content-type","application/json")
+	xhr.send(JSON.stringify(data));
+	xhr.onreadystatechange = function() {
+		if(xhr.status == 200 && xhr.readyState == 4) {
+			bann(JSON.parse(xhr.response).result);
+		}
+	}
 }
 
 function bann(result) {
 	var xxh = "";
 	for(var i = 0; i < result.length; i++) {
 		xxh = xxh +
-			"<div class='tupian-a' data-isbook="+ result[i].IsBook +">" +
-			"<a class='time-a' href=http://39.108.219.59:8080/productDetail >" +
+			"<div class='tupian-a' data-isbook=" + result[i].IsBook + ">" +
+			"<a class='time-a' href=xiangqing.html?id=" + result[i].id + ">" +
 			"<img src=" + result[i].Image + ">" +
 			"</a>" +
 			"<div class='time-b'>" +
@@ -33,9 +38,8 @@ function bann(result) {
 			"</div>"
 
 	}
-	
 	document.querySelector(".goods").innerHTML = xxh;
-	division()
+	hebing()
 }
 document.querySelector(".wupin").addEventListener("click", function() {
 	this.style.cssText = "background:#d6f5ff;color:#33ccff";
@@ -46,7 +50,7 @@ document.querySelector(".wupin").addEventListener("click", function() {
 			computer[i].style.display = "none";
 		} else {
 			computer[i].style.display = "flex";
-		}	
+		}
 	}
 })
 
@@ -63,8 +67,7 @@ document.querySelector(".shuji").addEventListener("click", function() {
 	}
 })
 
-var division = function() {
-	var computer = document.querySelectorAll(".tupian-a");
+function hebing(){var computer = document.querySelectorAll(".tupian-a");
 	for(var i = 0; i < computer.length; i++) {
 		if(computer[i].dataset.isbook == 1) { //.dataset.isbook表示取data-isbook的值
 			computer[i].style.display = "flex";
@@ -73,13 +76,17 @@ var division = function() {
 		}
 	}
 }
+//事件委托 
 
 
 
 
 
-
-
+//失去焦点
+document.querySelector('.shuru-a').addEventListener('blur',function() {
+	data = {productName: document.querySelector('.shuru-a').value};
+	getData();
+})
 
 
 

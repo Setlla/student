@@ -1,7 +1,7 @@
 var xxh=new XMLHttpRequest();
 xxh.open("POST","http://39.108.219.59:8080/productDetail");
 xxh.setRequestHeader("content-type","application/json");
-xxh.send(JSON.stringify({id:1}));
+xxh.send(JSON.stringify({id:getQuerystring("id")}));
 xxh.onreadystatechange=function(){if(xxh.status==200&&xxh.readyState==4){hao(JSON.parse(xxh.response).result);}}
 function hao(result){
 var haa="<div class='banner'>"+
@@ -41,6 +41,12 @@ document.querySelector(".goods").innerHTML=haa
 
 
 
+function getQuerystring(name) {
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+	var r = window.location.search.substr(1).match(reg);
+	if(r != null) return unescape(r[2]);
+	return null;
+}
 
 
 

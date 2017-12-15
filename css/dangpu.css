@@ -5,9 +5,12 @@ border-radius: 0.1rem;}
 .top p a{font-size: 0.26rem;color: #FFFFFF;text-align: center;width: 1.2rem;display: block;float: left;}
 .top .wupin{background: #33CCFF;color: #FFFFFF;}
 .top .shuji{background: #d6f5ff;color: #33CCFF;}
-.top img{position: absolute;top: 0.07rem;right: 0.2rem;}
+.top img{position: absolute;top: 0.21rem;right: 0.2rem;height: 0.46rem;}
 
-
+.shuru-a{height: 0.64rem;width: 100%;display: block;    outline: medium;
+font-size: 0.24rem;border-radius: 0.3rem;
+border: 0.01rem solid #B0B0B0;box-sizing: border-box;
+    padding-left: 0.5rem;}
 
 
 .write-a{font-size: 0.3rem;line-height: 0.9rem;color: #ffffff;}

@@ -51,7 +51,7 @@ function bann(phone, password) {
 	var xxh = new XMLHttpRequest();
 	xxh.open("POST", "http://39.108.219.59:8080/reg")
 	xxh.setRequestHeader("content-type", "application/json")
-	xxh.send(JSON.stringify({ phone: phone, password: password }))
+	xxh.send(JSON.stringify({ phone: phone, password: b64_md5(password)}))
 	xxh.onreadystatechange = function() {
 		if(xxh.status == 200 && xxh.readyState == 4) {
 			console.log(JSON.parse(xxh.response));
