@@ -7,22 +7,24 @@
 }
 .shuru-a{border: none;outline:medium;
     font-size: 0.28rem;
-    padding-left: 0.8rem;
+    padding-left: 1.5rem;
     width: 85%;
     height: 1.26rem;
     border-bottom: 0.01rem solid #12a2e5;
     margin: 0 auto;
     background: url(../img/jpg-ab.png)no-repeat 0.2rem center;
+    background-size: 0.32rem 0.38rem;
     display: block;box-sizing: border-box;}
 
 .shuru-b{border: none;outline:medium;
     font-size: 0.28rem;
-    padding-left: 0.8rem;
+    padding-left: 1.5rem;
     width: 85%;
     height: 1.05rem;
     border-bottom: 0.01rem solid #12a2e5;
     margin: 0 auto;
     background: url(../img/jpg-ac.png)no-repeat 0.2rem center;
+    background-size: 0.32rem 0.38rem;
     display: block;box-sizing: border-box;}
 
 

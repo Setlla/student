@@ -28,11 +28,12 @@ document.querySelector('.write-c').addEventListener('click',function() {
 })
 
 document.querySelector(".write-d").addEventListener("click",function(){
-	location.href=lookscim.html;
+	location.href="lookscim.html"
 })
 
 
-
-
+document.querySelector(".write-e").addEventListener("click",function(){
+	location.href="zhuce.html"
+})
 
 
