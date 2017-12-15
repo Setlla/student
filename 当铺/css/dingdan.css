@@ -1,0 +1,75 @@
+body{background: #efefef;}
+
+
+
+.top{height: 0.9rem;line-height: 0.9rem;background: #33ccff;text-align: center;position: relative;}
+.top a{width: 0.3rem;height: 0.3rem;border-left: 0.03rem solid #FFFFFF;
+border-bottom: 0.03rem solid #FFFFFF;transform:rotate(45deg);position: absolute;left: 0.3rem;top: 0.3rem;}
+.top p{font-size: 0.32rem;color: #0b1a1d;margin: 0 auto;}
+
+
+.info{padding: 0.3rem 0.3rem 0.3rem 0.8rem;overflow: hidden;position: relative;background: #FFFFFF;}
+.info img{width: 0.3rem;height: 0.4rem;position: absolute;top: 0.86rem;left: 0.3rem;}
+.consignee{font-size: 0.3rem;color: #0b1a1d;height: 0.3rem;line-height: 0.3rem;}
+.consignee span{float: right;font-size: 0.24rem;color: #172122;padding-right: 0.3rem;}
+
+.address{font-size: 0.24rem;color: #22272b;padding-top: 0.2rem;padding-right: 0.3rem;}
+
+.prompt{font-size: 0.22rem;color: #d89e4c;padding-top: 0.15rem;}
+
+.info i{width: 0.22rem;height: 0.22rem;border-right: 0.03rem solid #9c9c9c;
+border-top: 0.03rem solid #9c9c9c;transform:rotate(45deg);position: absolute;top: 0.95rem;right: 0.3rem;}
+
+.neirong{margin-top: 0.15rem;}
+.shop{font-size: 0.26rem;color: #0f171a;height: 0.9rem;line-height: 0.9rem;background: #FFFFFF;padding-left: 0.2rem;}
+
+.details{padding: 0.1rem 0.2rem;overflow: hidden;}
+.details img{width: 1.5rem;height: 1.5rem;background: #FFFFFF;float: left;}
+.details .left{float: left;padding: 0 0.22rem;overflow: hidden;}
+.details .left b{overflow: hidden;text-overflow: ellipsis;-webkit-line-clamp: 2;display: -webkit-box;-webkit-box-orient: vertical;width: 3rem;font-size: 0.24rem;color: #3e3e3e;}
+.details .left span{font-size: 0.18rem;color: #b42b3b;border: 0.01rem solid #b42b3b;float: left;margin-top: 0.15rem;padding: 0 0.05rem 0.03rem 0.05rem;border-radius: 0.05rem;}
+
+.details .right{float: right;text-align: right;}
+.details .right span{font-size: 0.2rem;color: #353638;}
+.details .right i{font-size: 0.18rem;color: #a4a4a4;display: block;padding-top: 0.12rem;}
+
+.option{background: #FFFFFF;padding-bottom: 1rem;}
+.option ul{}
+.option ul li{height: 0.88rem;line-height: 0.88rem;margin: 0 0.22rem;font-size: 0.24rem;color: #081b22;border-bottom: 0.02rem solid #dbdbdb;position: relative;font-weight: 600;}
+.option ul li span{float: right;padding-right: 0.6rem;}
+
+
+.option ul li i{width: 0.2rem;height: 0.2rem;border-right: 0.03rem solid #9c9c9c;
+border-top: 0.03rem solid #9c9c9c;transform:rotate(45deg);position: absolute;top: 0.3rem;right: 0.1rem;}
+
+.anniu{width: 1rem;height: 0.56rem;border: 0.02rem solid #d9d9d9;border-radius: 0.28rem;float: right;margin-top: 0.14rem;position: relative;}
+.anniu a{display: block;width: 0.56rem;height: 0.56rem;border-radius: 50%;border: 0.02rem solid #d9d9d9;position: absolute;top: -0.02rem;left: -0.02rem;background: #FFFFFF;}
+
+.button{width: 1rem;height: 0.56rem;border: 0.02rem solid #d9d9d9;border-radius: 0.28rem;float: right;margin-top: 0.14rem;position: relative;background: #c8d9f7;}
+
+.button a{display: block;width: 0.56rem;height: 0.56rem;border-radius: 50%;border: 0.02rem solid #d9d9d9;position: absolute;top: -0.02rem;right: -0.02rem;background: #FFFFFF;}
+
+.words{font-size: 0.24rem;border: 0;outline: none;background: #FFFFFF;}
+
+.words::-webkit-input-placeholder{color: #c7c7c9;}
+
+.money{font-size: 0.2rem;color: #f0182d;float: right;}
+.money span{font-size: 0.28rem;color: #f0182d;padding: 0;}
+
+.subtotal{float: right;font-size: 0.24rem;color: #233340;}
+
+.option ul li:nth-child(3){display: flex;}
+.option ul li:nth-child(3) input{width: 100%;flex: 1;}
+
+.option ul li:nth-child(4) span{padding: 0;}
+.option ul li:nth-child(4){border: 0;}
+
+
+.bottom{height: 1rem;position: fixed;bottom: 0;background: #FFFFFF;display: flex;width: 100%;}
+
+.bottom p{float: right;height: 1rem;line-height: 1rem;overflow: hidden;border-top: 0.02rem solid #cacaca;flex: 1;width: 100%;font-size: 0.26rem;color: #2d2d2d;text-align: right;padding-right: 0.22rem;font-weight: 600;}
+.bottom p i{font-size: 0.18rem;color: #f0182d;}
+.bottom p i span{font-size: 0.28rem;color: #f0182d;}
+
+
+.bottom .submit{height: 1rem;background: #ee8219;float: right;width: 2.2rem;border: 0;outline: none;font-size: 0.32rem;color: #FFFFFF;}

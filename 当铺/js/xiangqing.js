@@ -1,7 +1,6 @@
 var id = JSON.stringify({
 	"id": getQuerystring("id")
 });
-
 var prod = 0;
 
 var token = localStorage.getItem("token");
@@ -20,6 +19,24 @@ $.ajax({
 
 	}
 });
+
+$(".shopping").click(function(){
+	shop();
+})
+
+function shop(){
+	$.ajax({
+		type:"post",
+		url:"http://39.108.219.59:8080/addShopCar",
+		contentType: "application/json",
+		data:JSON.stringify({token:token,id: getQuerystring('id')}),
+		success:function(and){
+			if(and.isSuccess){
+				location.href="gouwuche.html"
+			}
+		}
+	});
+}
 
 //获取当前url的id
 function getQuerystring(name) {
@@ -85,7 +102,7 @@ function panduan(productId) {
 		}),
 		success: function(Collection) {
 			if(Collection.isCollection) {
-				$(".collection").css("background-color", "blue");
+				$(".collection").css("background-color", "#33ccff");
 				$(".collection *").css("background-color", "red");
 			} else {
 				$(".collection").css("background-color", "#999999");
@@ -111,7 +128,7 @@ $(".collection").click(function(){
 				delet();
 				
 			} else {
-				$(".collection").css("background-color", "blue");
+				$(".collection").css("background-color", "#33ccff");
 				$(".collection *").css("background-color", "red");
 				collection();
 			}

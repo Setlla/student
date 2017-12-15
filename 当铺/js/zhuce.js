@@ -21,13 +21,14 @@ function aj() {
 	xhr.open("POST", "http://39.108.219.59:8080/reg");
 	var param = JSON.stringify({
 			phone: phoneObj.value,
-			password: passwordObj.value
+			password: hex_md5(passwordObj.value)
 		} //向后端传输的数据
 	)
 	xhr.send(param);
 	xhr.onreadystatechange = function() {
 		if(xhr.readyState == 4 && xhr.status == 200) {
-			alert(xhr.response)
+			alert(JSON.parse(xhr.response).result)
+			location.href="denglu.html";
 		}
 	}
 }
@@ -48,12 +49,11 @@ function changeDisplay(e) {
 	} else {
 		flag = "emial";
 		phoneObj.style.display = "none"
-		emailObj.style.display = "block"
+		emailObj.style.display = "flex"
 	}
 }
 
 function check() {
-	var flag;
 	var passFlag;
 	var codeFlag;
 
@@ -62,17 +62,25 @@ function check() {
 		flag = match(/^1\d{10}$/, phone, "请输入正确的手机号码！");
 	} else {
 		var email = emailObj.value;
-		flag = match(/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/, email, "请输入正确的邮箱！");
+		flag = match(/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/, phone, "请输入正确的邮箱！");
 	}
-	/*if(!flag) {
+	if(!flag) {
 		return false;
-	};*/
-	passFlag = match(/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,32}$/, password, "你的密码输入有误!");
-	/*	if(!passFlag) {
+	}else{
+		return true;
+	}
+	passFlag = match(/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,32}$/, email, "你的密码输入有误!");
+		if(!passFlag) {
 		return false;
-	};*/
-	codeFlag = testCode();
-	return flag & passFlag & codeFlag
+	}else{
+		return true;
+	}
+	if (!codeFlag == testCode()) {
+		return false;
+	} else{
+		return true;
+	}
+	
 }
 
 function match(regexp, value, des) { //通用匹配函数

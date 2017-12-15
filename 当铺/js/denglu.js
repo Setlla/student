@@ -27,7 +27,7 @@ function match(hhr, value, cls) {
 
 function login() {
 	var xhr = new XMLHttpRequest;
-	var pn=JSON.stringify({"phone":phone.value,"password":password.value})
+	var pn=JSON.stringify({"phone":phone.value,"password":hex_md5(password.value)})
 	xhr.open("POST", "http://39.108.219.59:8080/login");
 	xhr.setRequestHeader("content-type","application/json")
 	xhr.send(pn);
@@ -44,3 +44,6 @@ function login() {
 		}
 	}
 }
+
+
+document.querySelector(".wangji")

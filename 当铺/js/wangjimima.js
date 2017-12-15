@@ -5,7 +5,7 @@ var code = document.querySelector(".yanzheng")
 function aj() {
 	var pn = JSON.stringify({
 		"phone": phone.value,
-		"password": password.value
+		"password": hex_md5(password.value)
 	});
 
 	$.ajax({

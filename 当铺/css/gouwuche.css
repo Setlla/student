@@ -1,0 +1,91 @@
+
+
+
+
+.top{height: 0.9rem;line-height: 0.9rem;background: #33ccff;overflow: hidden;text-align: center;position: relative;}
+.top span{position: absolute;font-size: 0.28rem;color: #FFFFFF;top: 0;left: 0.2rem;}
+.top p{font-size: 0.32rem;color: #FFFFFF;margin: 0 auto;}
+.top .xiaoxi{position: absolute;top: 0.2rem;right: 0.2rem;}
+.top .xiaoxi img{width: 0.48rem;height: 0.48rem;display: block;}
+
+
+.neirong{padding-bottom: 2rem;}
+
+.content{padding: 0.2rem 0 0 0.2rem;overflow: hidden;display: flex;align-items: center;}
+.dian{height: 0.28rem;width: 0.28rem;border: 0.01rem solid #999999;border-radius: 50%;box-shadow: 0px 0px 0px 0.06rem #ffffff inset;background: #FFFFFF;margin-right: 0.25rem;}
+
+.landian{height: 0.28rem;width: 0.28rem;border: 0.01rem solid #33ccff;border-radius: 50%;box-shadow: 0px 0px 0px 0.06rem #ffffff inset;background: #33ccff;margin-right: 0.25rem;}
+
+
+.content img{width: 1.68rem;height: 2rem;}
+
+.message{width: 100%;padding-right: 0.2rem;flex: 1;border-bottom: 0.02rem solid #e5e5e5;margin-left: 0.2rem;padding-bottom: 0.2rem;}
+.message h1{font-size: 0.28rem;overflow: hidden;text-overflow: ellipsis;-webkit-line-clamp: 2;display: -webkit-box;-webkit-box-orient: vertical;color: #333333;}
+
+.message .baoyou{padding: 0.2rem 0;}
+.message .baoyou i{font-size: 0.22rem;color: #999999;}
+.message .baoyou span{font-size: 0.22rem;color: #999999;padding-left: 0.5rem;}
+
+.message .degree{font-size: 0.18rem;color: #FFFFFF;width: 1rem;height: 0.3rem;line-height: 0.3rem;background: #33cc33;text-align: center;}
+
+.message .money{overflow: hidden;margin-top: 0.1rem;position: relative;}
+.message .money i{font-size: 0.15rem;color: #ff9900;}
+.message .money b{font-size: 0.3rem;color: #ff9900;}
+.message .money span{font-size: 0.18rem;color: #999999;padding-left: 0.5rem;}
+
+.message .money strong{font-size: 0.22rem;color: #333333;position: absolute;right: 0.2rem;bottom: 0;}
+.message .money em{font-size: 0.2rem;color: #333333;font-style: normal;position: absolute;bottom: 0.01rem;right: 0;}
+
+.jiesuan{overflow: hidden;position: fixed;bottom: 1rem;width: 100%;display: flex;background: #FFFFFF;}
+.jiesuan .left{width: 100%;flex: 1;border-top: 0.02rem solid #808080;}
+.left .quanxuan{height: 0.28rem;width: 0.28rem;border: 0.01rem solid #646464;border-radius: 50%;margin-top: 0.3rem;box-shadow: 0px 0px 0px 0.06rem #ffffff inset;background: #FFFFFF;float: left;margin-left: 0.2rem;}
+
+.all{height: 0.28rem;width: 0.28rem;border: 0.01rem solid #33ccff;border-radius: 50%;margin-top: 0.3rem;box-shadow: 0px 0px 0px 0.06rem #ffffff inset;background: #33ccff;float: left;margin-left: 0.2rem;}
+
+
+.jiesuan .left span{float: left;height: 0.86rem;line-height: 0.86rem;font-size: 0.28rem;color: #333333;padding-left: 0.22rem;}
+.jiesuan .left b{float: right;font-size: 0.24rem;color: #333333;padding: 0.1rem 0.2rem 0 0;text-align: right;}
+.jiesuan .left b em{font-style: normal;color: #ee8219;}
+
+.jiesuan .left b strong{font-size: 0.24rem;color: #333333;margin-top: 0.1rem;}
+
+
+
+.jiesuan .balance{float: right;height: 0.88rem;line-height: 0.88rem;width: 1.8rem;background: #c3c3c3;font-size: 0.3rem;color: #FFFFFF;text-align: center;}
+
+.jiesuan .alldelete{float: right;height: 0.88rem;line-height: 0.88rem;width: 1.8rem;background: #ff0000;font-size: 0.3rem;color: #FFFFFF;text-align: center;display: none;}
+
+.jiesuan .quanbushanchu{float: right;height: 0.88rem;line-height: 0.88rem;width: 1.8rem;background: #c3c3c3;font-size: 0.3rem;color: #FFFFFF;text-align: center;display: none;}
+
+
+.bottom{border-top: 0.02rem solid #808080;position: fixed;bottom: 0;width: 100%;background: #FFFFFF;}
+.bottom ul{overflow: hidden;}
+.bottom ul li{width: 25%;float: left;text-align: center;height: 0.98rem;}
+.bottom ul li img{width: 0.5rem;height: 0.45rem;padding-top: 0.1rem;}
+.bottom ul li p{font-size: 0.2rem;padding-top: 0.08rem;color: #9f9f9f;}
+
+
+.bottom .shopping p{color: #33ccff;}
+
+
+
+
+
+/*编辑全部*/
+.delet{flex: 1;width: 100%;align-items: center;border-bottom: 0.02rem solid #e5e5e5;height: 2rem;overflow: hidden;padding-bottom: 0.2rem;margin-left: 0.2rem;display: none;}
+.delet p{width: 2.5rem;text-align: center;overflow: hidden;margin-top: 0.83rem;float: right;margin-right: 0.2rem;}
+
+
+.minus{width: 0.4rem;float: left;height: 0.4rem;line-height: 0.38rem;font-size:0.24rem;color: #a1a1a1;text-align: center;border: 0.01rem solid #a1a1a1;cursor: pointer;}
+.amount{width: 0.4rem;float: left;height: 0.4rem;line-height: 0.4rem;font-size:0.26rem;color: #052567;text-align: center;border-top: 0.01rem solid #a1a1a1;border-bottom: 0.01rem solid #a1a1a1;}
+.plus{width: 0.4rem;float: left;height: 0.4rem;line-height: 0.38rem;font-size:0.24rem;color: #a1a1a1;text-align: center;border: 0.01rem solid #a1a1a1;cursor: pointer;}
+.delete{float: right;width: 0.8rem;height: 0.4rem;line-height: 0.4rem;text-align: center;color: #FFFFFF;background: #ff0000;font-size: 0.24rem;cursor: pointer;}
+
+
+
+
+
+
+
+
+

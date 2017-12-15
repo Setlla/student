@@ -21,12 +21,12 @@ border-bottom: 0.03rem solid #4d4c52;transform:rotate(45deg);position: absolute;
 
 .computer .title{display: block;}
 .computer .title h2{font-size: 0.26rem;color: #333333;}
-.computer p{padding-top: 0.35rem;}
+.computer p{padding-top: 0.3rem;}
 .computer p i{font-size: 0.2rem;font-style: normal;color: #ea3b40;}
 .computer p span{font-size: 0.28rem;color: #ea3b40;}
 
 .lianjie{overflow: hidden;font-size: 0.22rem;color: #757575;height: 0.5rem;line-height: 0.5rem;}
-.lianjie i{width: 0.5rem;text-align: center;border: 0.01rem solid #757575;border-radius: 0.05rem;padding:0 0.05rem 0.03rem 0.05rem;}
+.lianjie i{width: 0.5rem;text-align: center;border: 0.01rem solid #757575;border-radius: 0.05rem;padding:0.03rem 0.05rem 0.03rem 0.05rem;}
 .lianjie a{color: #757575;padding-left: 0.1rem;}
 .lianjie span{padding-left: 0.1rem;}
 .lianjie b{width: 0.2rem;height: 0.2rem;float: right;border-right: 0.03rem solid #999999;border-bottom: 0.03rem solid #999999;transform:rotate(45deg);margin-right: 0.3rem;}
@@ -35,8 +35,8 @@ border-bottom: 0.03rem solid #4d4c52;transform:rotate(45deg);position: absolute;
 
 .xiangshi .lock{font-size: 0.22rem;padding: 0.1rem;border: 0.01rem solid #d5d5d5;border-radius: 0.05rem;color: #787878;float: right;margin-right: 0.3rem;}
 .xiangshi .tongzhi{font-size: 0.22rem;padding: 0.1rem;border: 0.01rem solid #d5d5d5;border-radius: 0.05rem;color: #787878;margin-right: 0.5rem;float: right;}
-.xiangshi .glyphicon{}
-.xiangshi .glyphicon img{width: 0.26rem;height: 0.26rem;padding: 0.1rem;border: 0.01rem solid #d93445;float: right;border-radius: 0.05rem;color: #d93445;margin-right: 0.8rem;}
+.xiangshi .glyphicon{float: right;margin-right: 0.28rem;}
+.xiangshi .glyphicon img{width: 0.26rem;height: 0.26rem;padding: 0.1rem;border: 0.01rem solid #d93445;border-radius: 0.05rem;color: #d93445;display: block;}
 
 
 .tuijian{height:0.8rem;line-height: 0.8rem;font-size: 0.28rem;color: #3a3b3f;text-align: center;background: #f2f3f7;}
