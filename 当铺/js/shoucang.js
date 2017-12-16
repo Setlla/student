@@ -1,6 +1,6 @@
 function shousuo() {
 	var xhh = new XMLHttpRequest();
-	xhh.open("POST", "http://39.108.219.59:8080/getCollectionLog");
+	xhh.open("POST", http+"getCollectionLog");
 	xhh.setRequestHeader("content-type", "application/json");
 	var token = localStorage.getItem("token");
 	xhh.send(JSON.stringify({

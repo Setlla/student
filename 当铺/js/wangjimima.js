@@ -12,7 +12,7 @@ function aj() {
 		type: "post",
 		contentType: "application/JSON",
 		data: pn,
-		url: "http://39.108.219.59:8080/changepwd",
+		url: http+"changepwd",
 		success: function(data) {
 			if(data.isChange){
 				location.href="denglu.html"

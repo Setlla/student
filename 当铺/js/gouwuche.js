@@ -24,7 +24,7 @@ function balan() {
 //获取数据
 $.ajax({
 	type: "post",
-	url: "http://39.108.219.59:8080/getShopCar",
+	url: http+"getShopCar",
 	contentType: "application/json",
 	data: JSON.stringify({
 		token: token
@@ -154,7 +154,7 @@ function complete(){
 			}
 			$.ajax({
 				type:"post",
-				url:"http://39.108.219.59:8080/updateShopCar",
+				url:http+"updateShopCar",
 				contentType:"application/json",
 				data:JSON.stringify({
 					token:token,
@@ -162,7 +162,8 @@ function complete(){
 				}),
 				success:function(iss){
 					if(iss.isSuccess){
-						location.reload();
+						alert(iss.result);
+						location.reload();						
 					}
 				}
 			});
@@ -230,7 +231,7 @@ function all() {
 function deleted(that, id) {
 	$.ajax({
 		type: "post",
-		url: "http://39.108.219.59:8080/delShopCar",
+		url: http+"delShopCar",
 		contentType: "application/json",
 		data: JSON.stringify({
 			"token": token,
@@ -253,7 +254,7 @@ $(document).on("click", ".alldelete", function() {
 function alldelete() {
 	$.ajax({
 		type: "post",
-		url: "http://39.108.219.59:8080/delAllShopCar",
+		url: http+"delAllShopCar",
 		contentType: "application/json",
 		data: JSON.stringify({
 			"token": token

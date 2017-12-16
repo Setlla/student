@@ -73,7 +73,7 @@ function submit(){
 	"productId":JSON.stringify(productId),"productNum":JSON.stringify(productNum),"state":1});
 	$.ajax({
 		type:"post",
-		url:"http://39.108.219.59:8080/addOrder",
+		url:http+"addOrder",
 		contentType:"application/json",
 		data:pn,
 		success:function(data){

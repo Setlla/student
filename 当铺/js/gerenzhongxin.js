@@ -11,7 +11,7 @@ $.ajax({										//我的足迹
 	type:"POST",
 	contentType:"application/json",
 	data: JSON.stringify({token}),
-	url:"http://39.108.219.59:8080/getBrowseLog",
+	url:http+"getBrowseLog",
 	success:function(result){
 		banner(result.result)
 	}
@@ -30,7 +30,7 @@ $.ajax({										//我的收藏
 	type:"POST",
 	contentType:"application/json",
 	data: JSON.stringify({token}),
-	url:"http://39.108.219.59:8080/getCollectionLog",
+	url:http+"getCollectionLog",
 	success:function(result){
 		bann(result.result)
 	}
@@ -50,7 +50,7 @@ $.ajax({										//个人信息
 	type:"POST",
 	contentType:"application/json",
 	data: JSON.stringify({token}),
-	url:"http://39.108.219.59:8080/getPerson",
+	url:http+"getPerson",
 	success:function(result){
 		localStorage.setItem("user",JSON.stringify(result.result[0]))
 		bus(result.result);

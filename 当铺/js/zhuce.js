@@ -69,7 +69,7 @@ function check() {
 	}else{
 		return true;
 	}
-	passFlag = match(/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,32}$/, email, "你的密码输入有误!");
+	passFlag = match(/^[\w]{6,12}$/i, email, "你的密码输入有误!");
 		if(!passFlag) {
 		return false;
 	}else{
@@ -81,14 +81,6 @@ function check() {
 		return true;
 	}
 	
-}
-
-function match(regexp, value, des) { //通用匹配函数
-	if(!regexp.test(value)) { //!表示取反，！0=1
-		alert(des);
-		return false;
-	} 
-	return true;
 }
 
 function testCode() {

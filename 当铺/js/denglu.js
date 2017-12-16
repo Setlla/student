@@ -11,24 +11,16 @@ function check() {
 	if(!match(/^1\d{10}$/, phone.value, '你的手机号码输入有误！')) {
 		return false;
 	}
-	if(!match(/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,32}$/, password.value, '你的密码输入有误！')) {
+	if(!match(/^[\w]{6,12}$/i, password.value, '你的密码输入有误！')) {
 		return false;
 	}
 	return true;
 }
 
-function match(hhr, value, cls) {
-	if(!hhr.test(value)) {
-		alert(cls);
-		return false;
-	}
-	return true
-}
-
 function login() {
 	var xhr = new XMLHttpRequest;
 	var pn=JSON.stringify({"phone":phone.value,"password":hex_md5(password.value)})
-	xhr.open("POST", "http://39.108.219.59:8080/login");
+	xhr.open("POST", http+"login");
 	xhr.setRequestHeader("content-type","application/json")
 	xhr.send(pn);
 	xhr.onreadystatechange = function() {

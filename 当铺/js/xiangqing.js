@@ -17,7 +17,7 @@ $(".buy p").click(function(){
 
 //向后台传送当前url的id和ProductId
 $.ajax({
-	url: "http://39.108.219.59:8080/productDetail",
+	url: http+"productDetail",
 	type: "post",
 	data: id,
 	contentType: "application/json",
@@ -37,7 +37,7 @@ $(".shopping").click(function(){
 function shop(){
 	$.ajax({
 		type:"post",
-		url:"http://39.108.219.59:8080/addShopCar",
+		url:http+"addShopCar",
 		contentType: "application/json",
 		data:JSON.stringify({token:token,id: getQuerystring('id')}),
 		success:function(and){
@@ -88,7 +88,7 @@ function render(result) {
 function pro(productId) {
 	$.ajax({
 		type: "post",
-		url: "http://39.108.219.59:8080/addBrowseLog",
+		url: http+"addBrowseLog",
 		contentType: "application/json",
 		data: JSON.stringify({
 			token: token,
@@ -104,7 +104,7 @@ function pro(productId) {
 function panduan(productId) {
 	$.ajax({
 		type: "post",
-		url: "http://39.108.219.59:8080/getIsCollection",
+		url: http+"getIsCollection",
 		contentType: "application/json",
 		data: JSON.stringify({
 			token: token,
@@ -144,7 +144,7 @@ $(".collection").click(function(){
 function collection(){
 	$.ajax({
 		type:"post",
-		url:"http://39.108.219.59:8080/addCollectionLog",
+		url:http+"addCollectionLog",
 		contentType: "application/json",
 		data: JSON.stringify({
 			token: token,
@@ -160,7 +160,7 @@ function collection(){
 function delet(){
 	$.ajax({
 		type:"post",
-		url:"http://39.108.219.59:8080/delCollectionLog",
+		url:http+"delCollectionLog",
 		contentType: "application/json",
 		data: JSON.stringify({
 			token: token,

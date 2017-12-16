@@ -9,6 +9,7 @@ $(".tijiao").on("click", function() {
 	aj();
 })
 
+//点击提交
 function aj() {
 	var name = $(".name").val();
 	var gender = $(".sex").val();
@@ -21,11 +22,12 @@ function aj() {
 	});
 	$.ajax({
 		type: "post",
-		url: "http://39.108.219.59:8080/setPerson",
+		url: http+"setPerson",
 		contentType: "application/JSON",
 		data: pn,
 		success: function(result) {
-			alert(result.des)
+			alert(result.des);
+			location.href="gerenzhongxin.html";
 		}
 	});
 }
@@ -37,7 +39,7 @@ function uploadImage() {
 	formData.append("token", token);
 	$.ajax({
 		type: "POST",
-		url: "http://39.108.219.59:8080/setHeadImage",
+		url: http+"setHeadImage",
 		contentType: false,
 		processData:false,
 		data:formData,

@@ -1,4 +1,4 @@
-var token = localStorage.getItem("token");
+
 
 $.ajax({ //我的足迹
 	type: "POST",
@@ -6,7 +6,7 @@ $.ajax({ //我的足迹
 	data: JSON.stringify({
 		token: token,
 	}),
-	url: "http://39.108.219.59:8080/getBrowseLog",
+	url: http + "getBrowseLog",
 	success: function(result) {
 		bann(result.result)
 	}
@@ -53,18 +53,21 @@ function bann(result) {
 
 $(".empty").click(function() {
 	empty();
-	location.reload();
+	
 })
 
 function empty() {
 	$.ajax({
 		type: "post",
+		url: http+"delBrowseLog",
 		contentType: "application/json",
 		data: JSON.stringify({
-			token: token,
+			token: token
 		}),
-		url: "http://39.108.219.59:8080/delBrowseLog",
-		success: function() {
+		success: function(succ) {
+			if(succ.isSuccess){
+				location.reload();
+			}
 		}
 	});
 }
