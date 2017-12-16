@@ -83,13 +83,21 @@ function hebing(){var computer = document.querySelectorAll(".tupian-a");
 
 
 //失去焦点
-document.querySelector('.shuru-a').addEventListener('blur',function() {
+
+
+document.querySelector('.shuru-a').addEventListener("click",function(){
+		this.style.cssText ="position:fixed;top:0;border-radius: 0rem;width: 100%";
+		document.querySelector(".zuihou").style.display="block";
+	
+	})
+			
+	document.querySelector('.shuru-a').addEventListener('blur',function() {
 	data = {productName: document.querySelector('.shuru-a').value};
 	getData();
+	this.style.cssText="Position:!important";
+	document.querySelector(".zuihou").style.display="none";
+
 })
-
-
-
 
 
 

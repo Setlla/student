@@ -70,7 +70,9 @@ xxh.onreadystatechange=function(){
 
 }
 	
-	
+	document.querySelector(".tupian-a").addEventListener("click",function(){
+		location.href="Denglu.html"
+	})
 	
 
 

@@ -64,3 +64,11 @@ function bann(phone, password) {
 
 	}
 }
+document.querySelector(".tupian-a").addEventListener("click",function(){
+	location.href="Denglu.html"
+})
+
+
+
+
+

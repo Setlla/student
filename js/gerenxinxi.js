@@ -52,7 +52,9 @@ document.querySelector('.wenjian').addEventListener('change',function() {
 	}
 })
 	
-	
+document.querySelector(".tupian-a").addEventListener("click",function(){
+	location.href="gerenzhongxin.html"
+})
 
 
 

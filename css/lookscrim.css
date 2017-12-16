@@ -2,7 +2,11 @@
 .tupian-a{position: absolute;
     top: 0.26rem;
     left: 0.58rem;
-    height: 0.18rem;}
+    width: 0.22rem;
+    height: 0.22rem;
+    border-bottom: 0.03rem solid #FFFFFF;
+    border-left: 0.03rem solid #FFFFFF;
+    transform:rotate(45deg);}
 .write-a{font-size: 0.28rem;font-style: normal;display: block;text-align: center;line-height: 0.705rem;color: #ffffff;}
 
 .shuru-a{width: 85%;height: 0.76rem;display: block;margin: 0.5rem auto 0;padding-left: 0.35rem;font-size: 0.24rem;
