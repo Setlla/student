@@ -63,7 +63,7 @@ function commen(result) {
 			"<div class='delet'>" +
 			"<p>" +
 			"<a class='minus' onclick='minus(this)'>-</a>" +
-			"<a class='amount'>1</a>" +
+			"<a class='amount'>"+ result[i].ProductNumber +"</a>" +
 			"<a class='plus' onclick='plus(this)'>+</a>" +
 			"<a class='delete' onclick='deleted(this," + result[i].id + ")'>删除</a>" +
 			"</p>" +
@@ -147,8 +147,8 @@ function complete(){
 			var products = [];
 			for(var i = 0; i < length; i++) {
 				var num = $('.content').eq(i).index();
-				var id=balance[num].ProductId;
-				var ProductNumber=balance[num].ProductNumber;
+				var id=balance[num].id;
+				var ProductNumber=parseInt($('.content').eq(i).find('.amount').html());
 				var obj={id:id,ProductNumber:ProductNumber};
 				products.push(obj);
 			}
@@ -159,7 +159,12 @@ function complete(){
 				data:JSON.stringify({
 					token:token,
 					products:products
-				})
+				}),
+				success:function(iss){
+					if(iss.isSuccess){
+						location.reload();
+					}
+				}
 			});
 }
 

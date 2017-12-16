@@ -5,6 +5,15 @@ var prod = 0;
 
 var token = localStorage.getItem("token");
 
+var products=[];
+
+$(".buy p").click(function(){
+	var product=JSON.stringify({products})
+	localStorage.setItem("product",product);
+	location.href = "dingdan.html";
+})
+
+
 //向后台传送当前url的id和ProductId
 $.ajax({
 	url: "http://39.108.219.59:8080/productDetail",
@@ -14,9 +23,9 @@ $.ajax({
 	success: function(data) {
 		render(data.result); //显示内容
 		prod = data.result.ProductId;
-		productId(data.result.ProductId); //添加浏览记录
+		pro(data.result.ProductId); //添加浏览记录
 		panduan(data.result.ProductId); //判断是否已收藏
-
+		products=[data.result];
 	}
 });
 
@@ -75,7 +84,7 @@ function render(result) {
 }
 
 //添加浏览记录
-function productId(productId) {
+function pro(productId) {
 	$.ajax({
 		type: "post",
 		url: "http://39.108.219.59:8080/addBrowseLog",
