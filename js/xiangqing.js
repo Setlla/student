@@ -47,7 +47,9 @@ function getQuerystring(name) {
 	if(r != null) return unescape(r[2]);
 	return null;
 }
-
+document.querySelector(".jiantou").addEventListener("click",function(){
+	location.href="dangpu.html"
+})
 
 
 
