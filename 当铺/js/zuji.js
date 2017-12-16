@@ -4,7 +4,7 @@ $.ajax({ //我的足迹
 	type: "POST",
 	contentType: "application/json",
 	data: JSON.stringify({
-		token
+		token: token,
 	}),
 	url: "http://39.108.219.59:8080/getBrowseLog",
 	success: function(result) {
@@ -53,7 +53,7 @@ function bann(result) {
 
 $(".empty").click(function() {
 	empty();
-	window.location.reload();
+	location.reload();
 })
 
 function empty() {
@@ -61,7 +61,7 @@ function empty() {
 		type: "post",
 		contentType: "application/json",
 		data: JSON.stringify({
-			token
+			token: token,
 		}),
 		url: "http://39.108.219.59:8080/delBrowseLog",
 		success: function() {

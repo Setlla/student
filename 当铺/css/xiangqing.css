@@ -33,7 +33,7 @@ border-bottom: 0.03rem solid #FFFFFF;transform:rotate(45deg);position: absolute;
 .miaoshu p{font-size: 0.28rem;color: #aeaeae;padding: 0.2rem 0.2rem 0.2rem 0;margin-left: 0.2rem;border-top: 0.01rem solid #808080;line-height: 0.36rem;}
 
 
-.tel ul{overflow: hidden;}
+.tel ul{overflow: hidden;position: fixed;bottom: 0;width: 100%;}
 .tel ul li{width: 33.333333%;height: 1rem;line-height: 1rem;text-align: center;float: left;}
 .tel ul li p{font-size: 0.28rem;color: #FFFFFF;}
 

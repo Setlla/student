@@ -4,11 +4,8 @@ function exp(result) { //函数申明
 		commen = commen + "<div class='computer' data-isbook=" + result[i].IsBook + ">" +
 			"<a href=xiangqing.html?id=" + result[i].id + " class='left'>" +
 			"<img src=" + result[i].Image + "/>" +
-			"</a>" +
 			"<div class='right'>" +
-			"<a href=xiangqing.html?id=" + result[i].id + " class='title'>" +
 			"<h2>" + result[i].Name + "</h2>" +
-			"</a>" +
 			"<p class='baoyou'>" +
 			"<i>" + result[i].Carriage + "</i>" +
 			"<span>" + result[i].Destination + "</span>" +
@@ -19,6 +16,7 @@ function exp(result) { //函数申明
 			"<del>￥" + result[i].OldPrice + "</del>" +
 			"</p>" +
 			"</div>" +
+			"</a>"+
 			"</div>"
 	}
 

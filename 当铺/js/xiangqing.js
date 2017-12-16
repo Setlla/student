@@ -7,6 +7,7 @@ var token = localStorage.getItem("token");
 
 var products=[];
 
+ 
 $(".buy p").click(function(){
 	var product=JSON.stringify({products})
 	localStorage.setItem("product",product);
@@ -117,33 +118,27 @@ function panduan(productId) {
 				$(".collection").css("background-color", "#999999");
 				$(".collection *").css("background-color", "#FFFFFF");
 			}
+			localStorage.setItem("lection",Collection.isCollection);
 		}
 	})
 }
 
+
 $(".collection").click(function(){
-	$.ajax({
-		type: "post",
-		url: "http://39.108.219.59:8080/getIsCollection",
-		contentType: "application/json",
-		data: JSON.stringify({
-			token: token,
-			productId: prod
-		}),
-		success: function(Collection) {
-			if(Collection.isCollection) {
+	var judge=localStorage.getItem("lection");
+			if(judge=="true") {
 				$(".collection").css("background-color", "#999999");
 				$(".collection *").css("background-color", "#FFFFFF");
+				localStorage.setItem("lection",false);
 				delet();
-				
 			} else {
 				$(".collection").css("background-color", "#33ccff");
 				$(".collection *").css("background-color", "red");
+				localStorage.setItem("lection",true);
 				collection();
 			}
-		}
+		
 	})
-})
 
 //添加收藏
 function collection(){

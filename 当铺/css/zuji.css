@@ -11,11 +11,11 @@ border-bottom: 0.03rem solid #4c4b50;transform:rotate(45deg);position: absolute;
 .content .time{height: 0.8rem;line-height:0.8rem;margin-left: 0.2rem;font-size: 0.28rem;color: #808082;border-bottom: 0.02rem solid #e5e5e5;}
 
 
-.computer{padding:0.5rem 0.2rem 0 0.2rem;overflow: hidden;width: 100%;display: flex;box-sizing: border-box;}
+.computer{padding:0.2rem 0rem 0 0.2rem;overflow: hidden;width: 100%;display: flex;box-sizing: border-box;}
 .computer .left{}
 .computer .left img{width: 2rem;height: 2rem;overflow: hidden;padding: 0.01rem;}
 
-.computer .right{float: left;margin-left: 0.2rem;width: 100%;flex: 1;padding-bottom: 0.4rem;border-bottom: 0.02rem solid #e5e5e5;}
+.computer .right{float: left;margin-left: 0.2rem;width: 100%;flex: 1;padding:0.3rem 0;border-bottom: 0.02rem solid #e5e5e5;}
 
 .computer .title{display: block;}
 .computer .title h2{font-size: 0.26rem;color: #333333;overflow: hidden;text-overflow: ellipsis;-webkit-line-clamp: 2;display: -webkit-box;-webkit-box-orient: vertical;}
