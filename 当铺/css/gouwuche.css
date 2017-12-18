@@ -9,6 +9,11 @@
 .top .xiaoxi img{width: 0.48rem;height: 0.48rem;display: block;}
 
 
+.footprint{width: 100%;height: 100%;position: relative;margin-top: 2rem;display: none;}
+.footprint img{width: 2rem;display: block;margin: 0 auto;}
+.footprint p{font-size: 0.26rem;text-align: center;margin: 0 auto;color: #3E3E3E;}
+
+
 .neirong{padding-bottom: 2rem;}
 
 .content{padding: 0.2rem 0 0 0.2rem;overflow: hidden;display: flex;align-items: center;}
@@ -26,7 +31,7 @@
 .message .baoyou i{font-size: 0.22rem;color: #999999;}
 .message .baoyou span{font-size: 0.22rem;color: #999999;padding-left: 0.5rem;}
 
-.message .degree{font-size: 0.18rem;color: #FFFFFF;width: 1rem;height: 0.3rem;line-height: 0.3rem;background: #33cc33;text-align: center;}
+.message .degree{font-size: 0.18rem;color: #FFFFFF;width: 1rem;height: 0.3rem;line-height: 0.3rem;background: #33cc33;text-align: center;display: block;}
 
 .message .money{overflow: hidden;margin-top: 0.1rem;position: relative;}
 .message .money i{font-size: 0.15rem;color: #ff9900;}

@@ -5,7 +5,7 @@ body{background: #efefef;}
 .top{height: 0.9rem;line-height: 0.9rem;background: #33ccff;text-align: center;position: relative;}
 .top a{width: 0.3rem;height: 0.3rem;border-left: 0.03rem solid #FFFFFF;
 border-bottom: 0.03rem solid #FFFFFF;transform:rotate(45deg);position: absolute;left: 0.3rem;top: 0.3rem;}
-.top p{font-size: 0.32rem;color: #0b1a1d;margin: 0 auto;}
+.top p{font-size: 0.32rem;color: #FFFFFF;margin: 0 auto;}
 
 
 .info{padding: 0.3rem 0.3rem 0.3rem 0.8rem;overflow: hidden;position: relative;background: #FFFFFF;}

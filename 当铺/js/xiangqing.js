@@ -3,7 +3,7 @@ var id = JSON.stringify({
 });
 var prod = 0;
 
-var token = localStorage.getItem("token");
+
 
 var products=[];
 
@@ -30,10 +30,12 @@ $.ajax({
 	}
 });
 
+//加入购物车
 $(".shopping").click(function(){
 	shop();
 })
 
+//加入购物车
 function shop(){
 	$.ajax({
 		type:"post",
@@ -150,8 +152,11 @@ function collection(){
 			token: token,
 			productId: prod
 		}),
-		success:function(){
-			
+		success:function(result){
+			if(result.isSuccess){
+				$(".bomb").slideDown(500).html("成功添加到收藏夹");
+				setTimeout("$('.bomb').hide()",1000)
+			}
 		}
 	});
 }
@@ -166,8 +171,11 @@ function delet(){
 			token: token,
 			productId: prod
 		}),
-		success:function(){
-			
+		success:function(deleted){
+			if(deleted.isSuccess){
+				$(".bomb").slideDown(500).html("已取消收藏");
+				setTimeout("$('.bomb').hide()",1000)
+			}
 		}
 	});
 }

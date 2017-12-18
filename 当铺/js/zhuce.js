@@ -11,7 +11,7 @@ document.querySelector(".fangshi").addEventListener("click", function(e) {
 })
 
 document.querySelector(".zhuce").addEventListener("click", function() {
-	if(check()) {
+	if(!check()) {
 		aj();
 	}
 })

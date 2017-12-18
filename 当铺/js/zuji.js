@@ -8,7 +8,12 @@ $.ajax({ //我的足迹
 	}),
 	url: http + "getBrowseLog",
 	success: function(result) {
-		bann(result.result)
+		if(result.result.length==0){
+			$(".footprint").css("display","block")
+		}else{
+			$(".footprint").css("display","none")
+			bann(result.result)
+		}
 	}
 });
 
@@ -27,29 +32,30 @@ function bann(result) {
 		for(var j = 0; j < result[i].browselogs.length; j++) {
 			content = content + 
 			"<div><div class='computer'>" +
-			"<a href='#' class='left'>" +
+			"<a href=xiangqing.html?id=" + result[i].browselogs[j].product[0].id + " class='left' >" +
 			"<img src=" + result[i].browselogs[j].product[0].Image + "/>" +
 			"</a>" +
+			"<a href=xiangqing.html?id=" + result[i].browselogs[j].product[0].id + ">"+ 
 			"<div class='right'>" +
-			"<a href='#' class='title'>" +
 			"<h2>" + result[i].browselogs[j].product[0].Name + "</h2>" +
-			"</a>" +
 			"<div class='xiangshi'>" +
 			"<p>" +
 			"<i>￥</i>" +
 			"<span>" + result[i].browselogs[j].product[0].CurPrice + "</span>" +
 			"</p>" +
-			"<a herf='#' class='glyphicon'>" +
+			"<a href='gouwuche.html' class='glyphicon'>" +
 			"<img src='images/gouwuche.png'/>" +
 			"</a>" +
 			"<a herf='#' class='lock'>看相似</a>" +
 			"</div>" +
+			"</a>" +
 			"</div></div>";
 		}
 		content = content + "</div>";
 	}
 	$(".neirong").html(content)
 }
+
 
 $(".empty").click(function() {
 	empty();
@@ -65,7 +71,9 @@ function empty() {
 			token: token
 		}),
 		success: function(succ) {
-			if(succ.isSuccess){
+			if(!succ.isSuccess){
+				alert("清空失败")
+			}else{
 				location.reload();
 			}
 		}

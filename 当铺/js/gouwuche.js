@@ -30,8 +30,13 @@ $.ajax({
 		token: token
 	}),
 	success: function(data) {
-		commen(data.result);
+		if(data.result.length==0){
+			$(".footprint").css("display","block")
+		}else{
+			$(".footprint").css("display","none")
+			commen(data.result);
 		balance = data.result;
+		}
 	}
 });
 
@@ -50,7 +55,7 @@ function commen(result) {
 			"<i>" + result[i].product.Carriage + "</i>" +
 			"<span" + result[i].product.Destination + "</span>" +
 			"</p>" +
-			"<p class='degree'>" + result[i].product.Status + "</p>" +
+			"<span class='degree'>" + result[i].product.Status + "</span>" +
 			"<p class='money'>" +
 			"<i>￥</i>" +
 			"<b>" + result[i].product.CurPrice + "</b>" +
@@ -259,9 +264,10 @@ function alldelete() {
 		data: JSON.stringify({
 			"token": token
 		}),
-		success: function() {
-
+		success: function(all) {
+			if(all.isSuccess){
+				location.reload();
+			}
 		}
 	});
-	location.reload();
 }

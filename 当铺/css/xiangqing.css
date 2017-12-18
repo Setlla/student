@@ -1,3 +1,5 @@
+.bomb{height: 1.5rem;width: 3rem;font-size: 0.3rem;color: red;line-height: 1.5rem;text-align: center;position: fixed;top: 0;left: 50%;transform: translateX(-50%);z-index: 100;background: #FFFFFF;display: none;border: 0.01rem solid #c3c3c3;}
+
 .top{height: 0.9rem;line-height: 0.9rem;background: #33ccff;text-align: center;position: relative;}
 .top a{width: 0.3rem;height: 0.3rem;border-left: 0.03rem solid #FFFFFF;
 border-bottom: 0.03rem solid #FFFFFF;transform:rotate(45deg);position: absolute;left: 0.3rem;top: 0.3rem;}

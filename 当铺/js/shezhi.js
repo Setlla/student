@@ -1,13 +1,14 @@
-var token = localStorage.getItem("token")
+
 var user = JSON.parse(localStorage.getItem("user"));
 $(".name").val(user.name)
 $(".image").attr('src',user.headImage)
-
+$(".address").val(user.address)
 
 
 $(".tijiao").on("click", function() {
 	aj();
 })
+
 
 //点击提交
 function aj() {
@@ -26,8 +27,12 @@ function aj() {
 		contentType: "application/JSON",
 		data: pn,
 		success: function(result) {
-			alert(result.des);
+			if(!result.isSuccess){
+				alert("信息修改失败")
+			}else{
+				alert(result.des);
 			location.href="gerenzhongxin.html";
+			}	
 		}
 	});
 }
@@ -44,7 +49,13 @@ function uploadImage() {
 		processData:false,
 		data:formData,
 		success: function(suces) {
-			$(".image").attr('src',suces.headImage)
+			if(!suces.isSuccess){
+				return false;
+				alert("信息头像失败")
+			}else{
+				$(".image").attr('src',suces.headImage)
+				alert(suces.des);
+			}
 		},
 	});
 }
