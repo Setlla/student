@@ -20,25 +20,25 @@ document.querySelector('.tijiao').addEventListener("click", function() {
 	xxh.onreadystatechange = function() {
 		if(xxh.status == 200 && xxh.readyState == 4) {
 			console.log(xxh.responseText)
-			location.href="gerenzhongxin.html"
+			location.href = "gerenzhongxin.html"
 		}
 	}
 })
 
 function anQut() {
-	
+
 }
 
-document.querySelector(".tupian-c").addEventListener("click",function(){
-	document.querySelector(".wenjian").style.cssText="width:1.2rem;height:0.2rem";
+document.querySelector(".tupian-c").addEventListener("click", function() {
+	document.querySelector(".wenjian").style.cssText = "width:1.2rem;height:0.2rem";
 })
-	
-document.querySelector('.wenjian').addEventListener('change',function() {
-	var data = new FormData();  //  上传文件   form 表单
+
+document.querySelector('.wenjian').addEventListener('change', function() {
+	var data = new FormData(); //  上传文件   form 表单
 	var file = document.querySelector('.wenjian').files[0];
-	data.append("token",localStorage.getItem('token'));
-	data.append("file",file);
-	
+	data.append("token", localStorage.getItem('token'));
+	data.append("file", file);
+
 	var xxh = new XMLHttpRequest();
 	xxh.open("POST", "http://39.108.219.59:8080/setHeadImage")
 	xxh.send(data);
@@ -51,16 +51,7 @@ document.querySelector('.wenjian').addEventListener('change',function() {
 		}
 	}
 })
-	
-document.querySelector(".tupian-a").addEventListener("click",function(){
-	location.href="gerenzhongxin.html"
+
+document.querySelector(".tupian-a").addEventListener("click", function() {
+	location.href = "gerenzhongxin.html"
 })
-
-
-
-
-
-
-
-
-

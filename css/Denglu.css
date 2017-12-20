@@ -1,59 +1,103 @@
-.header{height: 3.8rem;background: #33ccff;width: 100%;}
-.tupian{padding-top: 0.96rem;
-    height: 1.88rem;
-    width: 1.88rem;
-    display: block;
-    margin: 0 auto;
+.header {
+	height: 3.8rem;
+	background: #33ccff;
+	width: 100%;
 }
-.shuru-a{border: none;outline:medium;
-    font-size: 0.28rem;
-    padding-left: 0.8rem;
-    width: 85%;
-    height: 1.26rem;
-    border-bottom: 0.01rem solid #12a2e5;
-    margin: 0 auto;
-    background: url(../img/jpg-ab.png)no-repeat 0.2rem center;
-    
-    
-    background-size: 0.32rem 0.38rem;
-    display: block;box-sizing: border-box;}
 
-.shuru-b{border: none;outline:medium;
-    font-size: 0.28rem;
-    padding-left: 0.8rem;
-    width: 85%;
-    height: 1.05rem;
-    border-bottom: 0.01rem solid #12a2e5;
-    margin: 0 auto;
-    background: url(../img/jpg-ac.png)no-repeat 0.2rem center;
-    background-size: 0.32rem 0.38rem;
-    display: block;box-sizing: border-box;}
-    
-    
-
-
-
-
-
-.kongge-a{height: 0.81rem;width: 100%;}
-
-.denglu{border: 0.01rem solid #33ccff;height: 0.84rem;border-radius: 0.1rem;width: 85%;margin: 0 auto;}
-.write-c{display: block;
-    font-size: 0.28rem;
-    font-style: normal;
-    text-align: center;
-    line-height: 0.845rem;color: #33ccff;}
-
-
-.kongge-b{height:2.2rem;width: 100%;}
-.weibu{height: 0.6rem;margin: 0 0.2rem 0 0.2rem;}
-.write-d{font-size: 0.22rem;font-style: normal;display: block;
-float: left;border-bottom: 0.01rem solid #33ccff;color:#33CCFF ;padding-top: 0.3rem;}
-.write-e{font-size: 0.26rem;font-style: normal;display: block;float: right;height: 0.6rem;
-width: 1.28rem;border: 0.01rem solid #33ccff;line-height: 0.605rem;
-    text-align: center;color: #33CCFF;border-radius: 0.1rem;
+.tupian {
+	padding-top: 0.96rem;
+	height: 1.88rem;
+	width: 1.88rem;
+	display: block;
+	margin: 0 auto;
 }
-.last{height: 0.37rem;}
-   
 
+.shuru-a {
+	border: none;
+	outline: medium;
+	font-size: 0.28rem;
+	padding-left: 0.8rem;
+	width: 85%;
+	height: 1.26rem;
+	border-bottom: 0.01rem solid #12a2e5;
+	margin: 0 auto;
+	background: url(../img/jpg-ab.png)no-repeat 0.2rem center;
+	background-size: 0.32rem 0.38rem;
+	display: block;
+	box-sizing: border-box;
+}
 
+.shuru-b {
+	border: none;
+	outline: medium;
+	font-size: 0.28rem;
+	padding-left: 0.8rem;
+	width: 85%;
+	height: 1.05rem;
+	border-bottom: 0.01rem solid #12a2e5;
+	margin: 0 auto;
+	background: url(../img/jpg-ac.png)no-repeat 0.2rem center;
+	background-size: 0.32rem 0.38rem;
+	display: block;
+	box-sizing: border-box;
+}
+
+.kongge-a {
+	height: 0.81rem;
+	width: 100%;
+}
+
+.denglu {
+	border: 0.01rem solid #33ccff;
+	height: 0.84rem;
+	border-radius: 0.1rem;
+	width: 85%;
+	margin: 0 auto;
+}
+
+.write-c {
+	display: block;
+	font-size: 0.28rem;
+	font-style: normal;
+	text-align: center;
+	line-height: 0.845rem;
+	color: #33ccff;
+}
+
+.kongge-b {
+	height: 2.2rem;
+	width: 100%;
+}
+
+.weibu {
+	height: 0.6rem;
+	margin: 0 0.2rem 0 0.2rem;
+}
+
+.write-d {
+	font-size: 0.22rem;
+	font-style: normal;
+	display: block;
+	float: left;
+	border-bottom: 0.01rem solid #33ccff;
+	color: #33CCFF;
+	padding-top: 0.3rem;
+}
+
+.write-e {
+	font-size: 0.26rem;
+	font-style: normal;
+	display: block;
+	float: right;
+	height: 0.6rem;
+	width: 1.28rem;
+	border: 0.01rem solid #33ccff;
+	line-height: 0.605rem;
+	text-align: center;
+	color: #33CCFF;
+	border-radius: 0.1rem;
+}
+
+.last {
+	height: 0.37rem;
+}
