@@ -1,5 +1,5 @@
 
-function bann(phone,password){
+/*function bann(phone,password){
 
 	var xxh=new XMLHttpRequest()
 xxh.open("POST", "http://39.108.219.59:8080/login ")
@@ -18,10 +18,30 @@ xxh.onreadystatechange = function() {
 	}
 }
 }
+	*/
+function bann(phone,password){
+	$.ajax({
+		type:"post",
+		url:"http://39.108.219.59:8080/login ",
+		contentType:"application/json",
+		data:JSON.stringify({ phone: phone, password: hex_md5(password) }),
+		success:function(result){
+		if(result.islogin) {
+			localStorage.setItem("token", result.token); //set 存到  localStorage
+			location.href="dangpu.html"
+		}else {
+			alert("账号或密码错误");
+		}
+		}
+	})
+}
+	
+	
+	
 	
 
 
-document.querySelector('.write-c').addEventListener('click',function() {
+/*document.querySelector('.write-c').addEventListener('click',function() {
 	var phone = document.querySelector('.shuru-a').value;
 	var password= document.querySelector('.shuru-b').value;
 	bann(phone,password);
@@ -35,5 +55,23 @@ document.querySelector(".write-d").addEventListener("click",function(){
 document.querySelector(".write-e").addEventListener("click",function(){
 	location.href="zhuce.html"
 })
+*/
+$(".write-c").click(function(){
+	
+	bann($(".shuru-a").val(),$(".shuru-b").val())
+})
+$(".write-d").click(function(){
+	location.href="lookscim.html"
+})
+$(".write-e").click(function(){
+	location.href="zhuce.html"
+})
+
+
+
+
+
+
+
 
 

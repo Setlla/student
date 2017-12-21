@@ -1,18 +1,31 @@
-var data = {
-	productName: document.querySelector('.shuru-a').value
-}
+var data = "";
+
 getData();
 
+//function getData() {
+//	var xhr = new XMLHttpRequest();
+//	xhr.open("POST", "http://39.108.219.59:8080/productList");
+//	xhr.setRequestHeader("content-type", "application/json")
+//	xhr.send(JSON.stringify(data));
+//	xhr.onreadystatechange = function() {
+//		if(xhr.status == 200 && xhr.readyState == 4) {
+//			bann(JSON.parse(xhr.response).result);
+//		}
+//	}
+//}
+
 function getData() {
-	var xhr = new XMLHttpRequest();
-	xhr.open("POST", "http://39.108.219.59:8080/productList");
-	xhr.setRequestHeader("content-type", "application/json")
-	xhr.send(JSON.stringify(data));
-	xhr.onreadystatechange = function() {
-		if(xhr.status == 200 && xhr.readyState == 4) {
-			bann(JSON.parse(xhr.response).result);
+	$.ajax({
+		type: "post",//- 向指定的资源提交要处理的数据
+		url: "http://39.108.219.59:8080/productList",
+		contentType: "application/json",
+		data: JSON.stringify({
+			"productName": data
+		}),
+		success: function(result) {
+			bann(result.result)
 		}
-	}
+	});
 }
 
 function bann(result) {
@@ -69,7 +82,7 @@ document.querySelector(".shuji").addEventListener("click", function() {
 	}
 })
 
-/*function hebing() {
+function hebing() {
 	var computer = document.querySelectorAll(".tupian-a");
 	for(var i = 0; i < computer.length; i++) {
 		if(computer[i].dataset.isbook == 1) { //.dataset.isbook表示取data-isbook的值
@@ -84,7 +97,7 @@ document.querySelector(".shuji").addEventListener("click", function() {
 
 //失去焦点
 
-document.querySelector('.shuru-a').addEventListener("click", function() {
+/*document.querySelector('.shuru-a').addEventListener("click", function() {
 	this.style.cssText = "position:fixed;top:0;border-radius: 0rem;width: 100%";
 	document.querySelector(".zuihou").style.display = "block";
 
@@ -100,46 +113,17 @@ document.querySelector('.shuru-a').addEventListener('blur', function() {
 
 })*/
 
+$(".shuru-a").click(function() {
+	$(".shuru-a").addClass('selected');
+	$(".zuihou").css("display", "block")
+})
 
-function hebing() {
-	var computer =$(".tupian-a");
-	for(var i = 0; i < computer.length; i++) {
-		if(computer[i].dataset.isbook == 1) { //.dataset.isbook表示取data-isbook的值
-			computer[i].style.display = "flex";
-		} else {
-			computer[i].style.display = "none";
-		}
-	}
-}
-		$(".shuru-a").click(function(){
-		$(".shuru-a").css({"position":"fixed","top":"0","border-radius": "0rem","width": "100%"});
-		$(".zuihou").css("display","block")
-	})
-
-		$(document).on('blur','.shuru-a',function(){
-			data = {
-		productName: $('.shuru-a').val()};
-		getData();
-		$('.shuru-a').css("position","!important");
-		$("zuihou").css("display","none")
-		})
-
-
-
-
-
-
-
-
-
-
-
-
-
-		
-	
-
-
+$(".shuru-a").blur(function() {
+	data = $('.shuru-a').val();
+	$(".shuru-a").removeClass('selected');
+	$(".zuihou").css("display","none")
+	getData();
+})
 
 
 

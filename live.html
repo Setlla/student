@@ -5,38 +5,62 @@
 		<title></title>
 	</head>
 	<body>
-		<script>
-		var xxh=new XMLHttpRequest();
-		xxh.open("POST","http://")
-		xxh.setRequestHeader("content-type","application/json")
-		xxh.send(JSON.stringify({id:1}))
-		xxh.onreadystatechang=function(){if(xxh.status==200&&xxh.readyState==4){bann
-			(JSON.parse(xxh.response).result);
-		}
-		}
-		function bann(result){var xhr="";for(var i=0;i<result.length;i++){xhr=xhr+
-		}
-		document.querySeletor(".goods").innerHTML=xhr;
+	
+	/*<div>
+			<h1>标题</h1>
+			<h2>标题</h2>
+			<h3>标题</h3>
+		</div>
+		<div>
+		<button id="tbn1">点我1</button>
+		<button class="tbn2">点我2</button>
+		<button id="tbn3">点我3</button>
+		<button id="tbn4">点我4</button>
+		</div>
+		<br />
+	
+		<div>
+			<p>Heading1</p>
+			<p>Heading1</p>
+			<p>heading1</p>
+			
+			<button id="bnt1">bnt1</button>
+		</div>
+		<br />
+		<ul class="header">
+			<li>
+				heading1
+				<div>
+					<p class="change">heading2</p>
+				</div>
+			</li>
+			
+			<li>
+				Heading1
+				<p>heading2</p>
+			</li>
+			<button class="bnt2">bnt2</button>
+		</ul>
 		
-		}
-		
-		xxh.setRequestHeader("content-type","application/json")
-		xxh.send(JSON.stringify({id:1}))
-		
-		
-		
-		
-		
-		
-		
-		
-		
+	<!--		<div class="back-c">
+			<p style="width: 240px; float: left;
+				height: 100px; border:0.1px solid #12A2E5;"></p>
+			
+			<p class="back-d" style="width: 240px; float: left;margin: 0 24px 0 24px;
+				height: 100px; border:0.1px solid #12A2E5;"></p>
+			
+			<p style="width: 240px; float: left;
+				height: 100px; border:0.1px solid #12A2E5;"></p>
+			<button id="bnt5">点我</button>
+		</div>
 		
 		
+		-->
 		
 		
 		
-		</script>
+<script src="js/jquery-3.2.1.min.js"></script>		
+<script type="text/javascript" src="js/live.js"></script>
 	</body>
 </html>
 
