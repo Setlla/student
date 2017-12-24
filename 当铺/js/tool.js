@@ -10,17 +10,3 @@ function match(regexp, value, des) { //通用匹配函数
 	return true;
 }
 
-//加入购物车
-function shop(){
-	$.ajax({
-		type:"post",
-		url:http+"addShopCar",
-		contentType: "application/json",
-		data:JSON.stringify({token:token,id: getQuerystring('id')}),
-		success:function(and){
-			if(and.isSuccess){
-				location.href="gouwuche.html"
-			}
-		}
-	});
-}

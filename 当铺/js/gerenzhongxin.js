@@ -1,3 +1,4 @@
+
 var token=localStorage.getItem("token")
 document.querySelector(".collection").addEventListener("click",function(){
 	location.href="shoucang.html"

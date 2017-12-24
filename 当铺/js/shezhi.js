@@ -37,6 +37,7 @@ function aj() {
 	});
 }
 
+//头像提交
 function uploadImage() {
 	var formData = new FormData();
 	var img = $('.upload')[0].files[0];

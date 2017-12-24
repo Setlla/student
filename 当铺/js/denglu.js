@@ -1,6 +1,9 @@
 var phone = document.querySelector(".zhanghao");
 var password = document.querySelector(".mima");
+var user = JSON.parse(localStorage.getItem("user"));
 
+
+document.querySelector(".banner img").src=user.headImage;
 document.querySelector(".denglu").addEventListener("click", function() {
 	if(check()) {
 		login();
@@ -35,6 +38,14 @@ function login() {
 		
 		}
 	}
+}
+
+
+function match(exp, value, des) {
+	if(!exp.test(value)) {
+		alert(des);
+		return false;
+	}return true;
 }
 
 
