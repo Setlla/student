@@ -1,9 +1,15 @@
 
 var user = JSON.parse(localStorage.getItem("user"));
-$(".name").val(user.name)
-$(".image").attr('src',user.headImage)
-$(".address").val(user.address)
+$(".name").val(user.name);
 
+if(user.headImage==null){
+	$(".image").attr('src','images/shezhitouxiang.png');
+}else{
+	$(".image").attr('src',user.headImage)
+}
+
+$(".address").val(user.address)
+$(".sex").val(user.gender)
 
 $(".tijiao").on("click", function() {
 	aj();

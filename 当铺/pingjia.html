@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>发表评价</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/pingjia.css" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	</head>
+
+	<body>
+		<div class="body">
+			<div class="top">
+				<a href="javascript:history.back(-1)"></a>
+				<p>发表评价</p>
+				<span @click="Release">发布</span>
+			</div>
+
+			<div class="assess">
+				<div class="uppr" v-for="product in order.order.products">
+					<img :src="product.Image" />
+					<span>描述相符</span>
+					<star :flag = 'true' type='0'></star>
+				</div>
+				<div class="evaluate">
+					<textarea placeholder="宝贝满足你的期待吗？说说它的优点和美中不足的地方" v-model="val"></textarea>
+					<p>
+						<input type="file" value="" />
+					</p>
+				</div>
+				<div class="form">
+					<input type="checkbox" />
+					<span>匿名</span>
+					<i>你写的评价会以匿名的形式展现</i>
+				</div>
+			</div>
+			<div class="shop">
+				<i></i>
+				<p class="score">
+					<a>店铺评分</a>
+				</p>
+				<p class="logistics">
+					<span>物流服务</span>
+					<star type='1'></star>
+					<!--<ul>
+					<li class="ash"></li>
+					<li class="ash"></li>
+					<li class="ash"></li>
+					<li class="ash"></li>
+					<li class="ash"></li>
+				</ul>-->
+				</p>
+				<p class="attitude">
+					<span>服务态度</span>
+					<star type='2'></star>
+				</p>
+			</div>
+		</div>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/axios.js"></script>
+		<script src="js/vue.js"></script>
+		<script src="js/pingjia.js"></script>
+	</body>
+
+</html>

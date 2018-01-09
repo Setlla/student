@@ -61,7 +61,11 @@ $.ajax({										//个人信息
 
 function bus(result){
 	$(".nickname").html(result[0].name)
-	$(".banner img").attr('src',result[0].headImage)
+	if(result[0].headImage==null){
+		$(".banner img").attr('src','images/tx.jpg')
+	}else{
+		$(".banner img").attr('src',result[0].headImage)
+	}
 }
 
 $(".banner img").on('click',function(){

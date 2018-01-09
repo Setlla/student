@@ -46,16 +46,21 @@
 	color: #c5c4c9;
 }
 
-.product h1 {
+.product{
+	border-top: 2px solid #f6f6f6;
+}
+
+.shop{
 	height: 0.76rem;
 	line-height: 0.76rem;
 	font-size: 0.26rem;
 	color: #313234;
 	position: relative;
 	padding: 0 0.2rem;
+	border-top: 1px solid #eeeeee;
 }
 
-.product h1 i {
+.shop i {
 	width: 0.15rem;
 	height: 0.15rem;
 	border-left: 0.02rem solid #8a8a8a;
@@ -66,7 +71,7 @@
 	left: 2.1rem;
 }
 
-.product h1 span {
+.shop span {
 	float: right;
 	font-size: 0.26rem;
 	color: #d30840;
@@ -76,6 +81,7 @@
 	padding: 0.2rem;
 	background: #f6f6f6;
 	overflow: hidden;
+	border-bottom: 1px solid #FFFFFF;
 }
 
 .content img {
@@ -100,6 +106,7 @@
 .content .money {
 	float: right;
 	font-size: 0.22rem;
+	text-align: right;
 }
 
 .content .money span{
@@ -126,7 +133,7 @@
 	color: #484c4d;
 	text-align: right;
 	padding-right: 0.2rem;
-	border: 0.02rem solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
 }
 
 .assess{
@@ -145,6 +152,7 @@
 	font-size: 0.26rem;
 	color: #ea0043;
 	text-align: center;
+	cursor: pointer;
 }
 
 .assess .delete{
@@ -159,6 +167,7 @@
 	font-size: 0.26rem;
 	color: #101415;
 	text-align: center;
+	cursor: pointer;
 }
 
 .ash{

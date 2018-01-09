@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
@@ -9,66 +10,69 @@
 	</head>
 
 	<body>
-		<div class="beijing">
-				
-		</div>
-		<div class="top">
-			<b>挂起</b>
-			<span id="lan">
+		<div class="body">
+			<div class="beijing">
+
+			</div>
+			<div class="top">
+				<b>挂起</b>
+				<span id="lan">
 				<a class="wupin" style="background:#d6f5ff;color:#33ccff">物品</a>
 				<a class="shuji" style="background:#33ccff;color:#d6f5ff">书籍</a>
 			</span>
-			<a href="#" class="xiaoxi"><img src="images/xiaoxi.png"/></a>
-		</div>
-		<div class="sousuo">
-			<input type="text" placeholder="商品名称"/>
-		</div>
-		<div class="commen"></div>
-		
-		
-		<!--<div class="computer">
-			<a href="#" class="left">
-				<img src="http://39.108.219.59/img/productList/laptop.jpg?ver=0921" />
-			</a>
-			<div class="right">
-				<a href="#" class="title">
-					<h2>二手appl/苹果电脑MacBookAirMC965CH/A笔记本电脑</h2>
-				</a>
-				<p class="baoyou">
-					<i>包邮</i>
-					<span>上海</span>
-				</p>
-				<a href="#" class="guaqi">挂起</a>
-				<p class="money">
-					<span>￥3000</span>
-					<del>￥5000</del>
-				</p>
+				<a href="#" class="xiaoxi"><img src="images/xiaoxi.png" /></a>
 			</div>
-		</div>-->
-        <div class="bottom">
+			<div class="sousuo">
+				<input type="text" v-model="search" placeholder="商品名称" />
+			</div>
+			<div class="commen">
+				<div class="computer" v-for="good in goods">
+					<a :href="'xiangqing.html?id=' + good.id" class="left">
+						<img :src="good.Image" />
+						<div class="right">
+							<h2>{{good.Name}}</h2>
+							<p class="baoyou">
+								<i>包邮</i>
+								<span>{{good.Destination}}</span>
+							</p>
+							<a href="#" class="guaqi">挂起</a>
+							<p class="money">
+								<span>￥{{good.CurPrice}}</span>
+								<del>￥{{good.OldPrice}}</del>
+							</p>
+						</div>
+					</a>
+				</div>
+
+			</div>
+		</div>
+		<div class="bottom">
 			<ul class="bottomnav">
 				<li class="commodity">
-					<img src="images/shangpin.png"/>
+					<img src="images/shangpin.png" />
 					<p>收藏的商品</p>
 				</li>
 				<li class="shopping">
-					<img src="images/shueping.png"/>
+					<img src="images/shueping.png" />
 					<p>购物车</p>
 				</li>
 				<li class="hockshop">
-					<img src="images/house.png"/>
+					<img src="images/house.png" />
 					<p>当铺</p>
 				</li>
 				<li class="personal">
-					<img src="images/gerenzhongxin.png"/>
+					<img src="images/gerenzhongxin.png" />
 					<p>个人中心</p>
 				</li>
 			</ul>
 		</div>
-		
+
+		<script type="text/javascript" src="js/vue.js"></script>
+		<script type="text/javascript" src="js/axios.js"></script>
 		<script src="js/common.js"></script>
 		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 		<script src="js/tool.js"></script>
 		<script src="js/dangpu.js"></script>
 	</body>
+
 </html>

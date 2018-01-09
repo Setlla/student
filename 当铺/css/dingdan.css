@@ -8,10 +8,10 @@ border-bottom: 0.03rem solid #FFFFFF;transform:rotate(45deg);position: absolute;
 .top p{font-size: 0.32rem;color: #FFFFFF;margin: 0 auto;}
 
 
-.info{padding: 0.3rem 0.3rem 0.3rem 0.8rem;overflow: hidden;position: relative;background: #FFFFFF;}
-.info img{width: 0.3rem;height: 0.4rem;position: absolute;top: 0.86rem;left: 0.3rem;}
+.info{padding: 0.3rem 0.3rem 0.3rem 0.6rem;overflow: hidden;position: relative;background: #FFFFFF;}
+.info img{width: 0.3rem;height: 0.4rem;position: absolute;top: 0.86rem;left: 0.2rem;}
 .consignee{font-size: 0.3rem;color: #0b1a1d;height: 0.3rem;line-height: 0.3rem;}
-.consignee span{float: right;font-size: 0.24rem;color: #172122;padding-right: 0.3rem;}
+.consignee span{float: right;font-size: 0.24rem;color: #172122;}
 
 .address{font-size: 0.24rem;color: #22272b;padding-top: 0.2rem;padding-right: 0.3rem;}
 

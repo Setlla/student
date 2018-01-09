@@ -10,90 +10,89 @@
 	</head>
 
 	<body>
-		<div class="top">
-			<a href="javascript:history.back(-1)"></a>
-			<p>确认订单</p>
-		</div>
-		<div class="info">
-			<img src="images/prompt.png" />
-			<p class="consignee">
-				收货人：俺老孙
-				<span>18974000529</span>
-			</p>
-			<p class="address">
-				收获地址：湖南省，长沙市，长沙县，黄兴镇，菜鸟基地
-			</p>
-			<p class="prompt">
-				（收获不便时，可选择免费代收服务）
-			</p>
-			<i></i>
-		</div>
-		<div class="neirong">
-			
-		<!--<div class="goods">
-			<p class="shop">
-				当当网官方旗舰店
-			</p>
-			<div class="details">
-				<img src="images/book.png" />
-				<p class="left">
-					<b>二手appl/苹果电脑MacBookAirMC965CH/A笔记本电脑</b>
-					<span>七天退换</span>
-				</p>
-				<p class="right">
-					<span>￥26.50</span>
-					<i>X 1</i>
-				</p>
+		<div class='body'>
+			<div class="top">
+				<a href="javascript:history.back(-1)"></a>
+				<p>确认订单</p>
 			</div>
-		</div>-->
-		
-		</div>
-		<div class="option">
-			<ul>
-				<li>
-					配送方式
-					<span>快递￥5.00</span>
-					<i></i>
-				</li>
-				<li>
-					开具发票
-					<b class="anniu">
+			<div class="info">
+				<img src="images/prompt.png" />
+				<p class="consignee">
+					<a>收货人：{{user.name}}</a>
+					<span>电话：{{user.phone}}</span>
+				</p>
+				<p class="address">
+					收获地址：{{user.address}}
+				</p>
+				<p class="prompt">
+					（收获不便时，可选择免费代收服务）
+				</p>
+				<i v-on:click="location"></i>
+			</div>
+
+			<div class="neirong">
+				<div class="goods" v-for="(item,index) of items.products">
+					<p class="shop">
+						当当网官方旗舰店
+					</p>
+					<div class="details">
+						<img :src="item.product.Image" />
+						<p class="left">
+							<b>{{item.product.Name}}</b>
+							<span>七天退换</span>
+						</p>
+						<p class="right">
+							<span>￥{{item.product.CurPrice}}</span>
+							<i>X {{item.ProductNumber}}</i>
+						</p>
+					</div>
+				</div>
+
+			</div>
+			<div class="option">
+				<ul>
+					<li>
+						配送方式
+						<span>快递￥5.00</span>
+						<i></i>
+					</li>
+					<li>
+						开具发票
+						<b v-bind:class="{'anniu':isa,'button':!isa}" @click="toggle">
 						<a></a>
 					</b>
-				</li>
-				<li>
-					买家留言：
-					<input type="text" class="words" placeholder="选填：对本次交易的说明" />
-				</li>
-				<li>
-					<p class="money">
-						￥
-						<span>0</span>
-					</p>
-					<p class="subtotal">
-						<a>共0件商品 </a>
-						小计：
-					</p>
-				</li>
-			</ul>
+					</li>
+					<li>
+						买家留言：
+						<input type="text" class="words" placeholder="选填：对本次交易的说明" v-model="mage"/>
+					</li>
+					<li>
+						<p class="money">
+							￥
+							<span>{{money}}</span>
+						</p>
+						<p class="subtotal">
+							<a>共{{num}}件商品 </a>
+							小计：
+						</p>
+					</li>
+				</ul>
+			</div>
+			<div class="bottom">
+				<p>
+					<b>共{{num}}件，合计：</b>
+					<i>
+					￥
+						<span>{{money}}</span>
+					</i>
+				</p>
+				<button class="submit" v-on:click="refer">提交订单</button>
+			</div>
 		</div>
-		<div class="bottom">
-			<p>
-			<b>共0件，合计：</b>
-			<i>
-				￥
-				<span>0</span>
-			</i>
-			</p>
-			<button class="submit">提交订单</button>
-		</div>
 		
 		
-		
-		
-		
-		
-		
+		<script type="text/javascript" src="js/axios.js" ></script>
+		<script src="js/vue.js"></script>
 		<script src="js/jquery-3.2.1.min.js"></script>
 		<script src="js/tool.js"></script>
 		<script src="js/dingdan.js"></script>
